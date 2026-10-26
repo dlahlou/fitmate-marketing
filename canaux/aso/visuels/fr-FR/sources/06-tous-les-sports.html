@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>06 Tous les sports</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .e { margin: 0 12px 10px; background: #fff; border-radius: 20px; padding: 10px; display: flex; gap: 12px; align-items: center; }
+  .e .img { width: 86px; height: 86px; border-radius: 14px; overflow: hidden; flex: none; }
+  .e .img .scene { height: 86px; }
+  .e .t { flex: 1; min-width: 0; }
+  .e b { display: block; font-size: 15.5px; line-height: 1.25; }
+  .e .s { font-size: 13px; color: var(--muted); margin: 3px 0 6px; }
+  .e .tags { display: flex; gap: 5px; flex-wrap: wrap; }
+</style></head>
+<body><div class="canvas">
+  <div class="head">
+    <div class="kicker">🏅 Multisport</div>
+    <h1>Rando, running, <em>padel, trail…</em></h1>
+    <p class="sub">Trouve ta prochaine sortie, quel que soit ton sport</p>
+  </div>
+  <div class="phone"><div class="screen" data-tab="1">
+    <div class="topbar"><h2>Explorer</h2></div>
+    <div class="chips"><span class="chip on">Tous</span><span class="chip">🥾 Rando</span><span class="chip">🏃 Running</span><span class="chip">🎾 Padel</span><span class="chip">🚴 Vélo</span></div>
+    <div class="e"><div class="img"><div class="scene" data-scene="run"></div></div><div class="t"><b>Run club du jeudi, 8 km</b><div class="s">Jeu. 19:30 · Bords de Seine</div><div class="tags"><span class="badge">🏃 Running</span><span class="badge green">Gratuit</span></div></div></div>
+    <div class="e"><div class="img"><div class="scene" data-scene="padel"></div></div><div class="t"><b>Padel 2 contre 2, il manque un 4e</b><div class="s">Mar. 20:00 · Club de padel</div><div class="tags"><span class="badge">🎾 Padel</span><span class="badge ink">8 € / pers.</span></div></div></div>
+    <div class="e"><div class="img"><div class="scene" data-scene="trail"></div></div><div class="t"><b>Trail 22 km dans le Vexin</b><div class="s">Sam. 8:30 · 600 m D+</div><div class="tags"><span class="badge">⛰️ Trail</span><span class="badge green">Gratuit</span></div></div></div>
+    <div class="e"><div class="img"><div class="scene" data-scene="hike"></div></div><div class="t"><b>Rando en forêt de Rambouillet</b><div class="s">Dim. 9:45 · 16 km</div><div class="tags"><span class="badge">🥾 Rando</span><span class="badge green">Gratuit</span></div></div></div>
+    <div class="e"><div class="img"><div class="scene" data-scene="velo"></div></div><div class="t"><b>Sortie vélo de route, 60 km</b><div class="s">Dim. 8:00 · Allure 25 km/h</div><div class="tags"><span class="badge">🚴 Vélo</span><span class="badge green">Gratuit</span></div></div></div>
+    <div class="e"><div class="img"><div class="scene" data-scene="climb"></div></div><div class="t"><b>Escalade en salle, tous niveaux</b><div class="s">Mer. 19:00 · Salle de bloc</div><div class="tags"><span class="badge">🧗 Escalade</span><span class="badge ink">12 € / pers.</span></div></div></div>
+  </div></div>
+</div>
+<script src="common.js"></script></body></html>

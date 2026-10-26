@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>02 Rejoindre en un clic</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .hero { position: relative; height: 200px; margin-top: -54px; }
+  .hero .back { position: absolute; left: 16px; top: 62px; }
+  .det { background: #fff; border-radius: 26px 26px 0 0; margin-top: -24px; position: relative; padding: 20px 18px 0; height: 640px; }
+  .det h3 { font-size: 23px; font-weight: 800; line-height: 1.15; }
+  .orga { display: flex; align-items: center; gap: 10px; margin: 12px 0 14px; font-size: 14px; color: var(--muted); }
+  .orga b { color: var(--ink); display: block; font-size: 15px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .tile { background: var(--bg); border-radius: 14px; padding: 10px 12px; font-size: 14px; font-weight: 700; display: flex; gap: 8px; align-items: center; }
+  .tile small { display: block; font-size: 11.5px; font-weight: 600; color: var(--muted); }
+  .tile span[data-icon] { color: var(--app); display: flex; }
+  .ppl { display: flex; align-items: center; margin: 16px 0 6px; }
+  .ppl .av { border: 3px solid #fff; margin-right: -10px; }
+  .ppl em { font-style: normal; margin-left: 18px; font-size: 14px; font-weight: 600; color: var(--muted); }
+  .desc { font-size: 14.5px; line-height: 1.5; color: #3a3a40; margin-top: 10px; }
+  .cta { margin-top: 16px; display: flex; align-items: center; gap: 14px; }
+  .cta .price { font-size: 13px; color: var(--muted); }
+  .cta .price b { display: block; font-size: 18px; color: var(--ink); }
+  .cta .btn { flex: 1; font-size: 18px; padding: 16px; background: #16a34a; box-shadow: 0 0 0 7px rgba(22,163,74,.18); }
+  .toast { margin-top: 18px; background: var(--ink); color: #fff; border-radius: 18px; padding: 14px 16px; display: flex; gap: 12px; align-items: center; z-index: 31; box-shadow: 0 12px 30px rgba(0,0,0,.25); }
+  .toast .ok { width: 38px; height: 38px; border-radius: 50%; background: #16a34a; display: grid; place-items: center; flex: none; }
+  .toast b { display: block; font-size: 15.5px; }
+  .toast span { font-size: 13px; opacity: .8; }
+</style></head>
+<body><div class="canvas">
+  <div class="head">
+    <div class="kicker">🥾 Une sortie te plaît ?</div>
+    <h1>Rejoins une sortie <em>en un clic</em></h1>
+    <p class="sub">Date, lieu, niveau, participants et prix : tout est sur la fiche</p>
+  </div>
+  <div class="phone"><div class="screen">
+    <div class="hero"><div class="scene" data-scene="hike" style="height:200px"></div><div class="back" data-icon="back"></div></div>
+    <div class="det">
+      <h3>Rando en forêt de Fontainebleau</h3>
+      <div class="orga"><i data-av="1" data-size="36"></i><div><b>Organisateur</b>Membre Fitmates</div><span class="sp" style="flex:1"></span><span class="btn ghost"><span data-icon="chat" style="display:flex;transform:scale(.8)"></span>Discussion</span></div>
+      <div class="grid">
+        <div class="tile"><span data-icon="cal"></span><div><small>Date</small>Sam. 9:30</div></div>
+        <div class="tile"><span data-icon="train"></span><div><small>Rendez-vous</small>Gare de Bois-le-Roi</div></div>
+        <div class="tile"><span data-icon="pin"></span><div><small>Parcours</small>18 km · 350 m D+</div></div>
+        <div class="tile"><span style="color:var(--app);font-size:15px">⚡</span><div><small>Niveau</small>Moyen</div></div>
+      </div>
+      <div class="ppl"><i data-av="0" data-size="38"></i><i data-av="2" data-size="38"></i><i data-av="3" data-size="38"></i><i data-av="4" data-size="38"></i><i data-av="5" data-size="38"></i><em>11/15 participants</em></div>
+      <div class="cta"><div class="price">Prix<b>Gratuit</b></div><span class="btn"><span data-icon="check"></span>Je participe</span></div>
+      <div class="toast"><div class="ok" data-icon="check"></div><div><b>C'est confirmé, tu participes !</b><span>Le chat du groupe est ouvert</span></div></div>
+    </div>
+  </div></div>
+</div>
+<script src="common.js"></script></body></html>

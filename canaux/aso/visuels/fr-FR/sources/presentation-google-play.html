@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Image de présentation Google Play</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .canvas { width: 1024px; height: 500px; }
+  .txt { position: absolute; left: 64px; top: 0; bottom: 0; width: 520px; display: flex; flex-direction: column; justify-content: center; color: #fff; z-index: 2; }
+  .brand { display: flex; align-items: center; gap: 14px; font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 34px; }
+  .brand img { width: 62px; height: 62px; border-radius: 16px; background: #fff; padding: 6px; }
+  h1 { font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 68px; line-height: .98; letter-spacing: -.02em; margin-top: 22px; }
+  h1 em { font-style: normal; color: var(--lime); }
+  p { font-size: 22px; font-weight: 500; margin-top: 16px; opacity: .92; line-height: 1.3; }
+  .ph { position: absolute; width: 417px; height: 876px; padding: 12px; background: #121214; border-radius: 66px; box-shadow: 0 30px 60px rgba(60,0,0,.35); transform-origin: top left; overflow: hidden; }
+  .ph iframe { width: 393px; height: 852px; border: 0; border-radius: 54px; display: block; background: #f4f4f5; }
+  .p1 { left: 610px; top: 60px; transform: scale(.56) rotate(-6deg); }
+  .p2 { left: 790px; top: 40px; transform: scale(.56) rotate(5deg); }
+</style></head>
+<body><div class="canvas">
+  <div class="txt">
+    <div class="brand"><img src="assets/logo.png" alt="">Fitmates</div>
+    <h1>Le sport, <em>à plusieurs.</em></h1>
+    <p>Randos, running, padel, trail : trouve ta sortie et tes partenaires.</p>
+  </div>
+  <div class="ph p1"><iframe src="03-chat-de-groupe.html?screen=1"></iframe></div>
+  <div class="ph p2"><iframe src="01-randos-groupe.html?screen=1"></iframe></div>
+</div>
+<script>
+  let n = 0; const total = document.querySelectorAll('iframe').length;
+  addEventListener('message', e => { if (e.data === 'fitmates-ready' && ++n === total) document.fonts.ready.then(() => { document.body.dataset.ready = '1'; }); });
+</script></body></html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>03 Chat de groupe</title>
+<link rel="stylesheet" href="common.css">
+<style>
+  .screen { background: #fff; }
+  .chathead { display: flex; align-items: center; gap: 10px; padding: 6px 14px 12px; border-bottom: 1px solid var(--line); }
+  .chathead .t { flex: 1; } .chathead b { display: block; font-size: 16.5px; } .chathead span { font-size: 12.5px; color: var(--muted); }
+  .msgs { padding: 14px 12px; display: flex; flex-direction: column; gap: 12px; }
+  .m { display: flex; gap: 8px; align-items: flex-end; max-width: 86%; }
+  .m .b { background: #f0f0f2; border-radius: 20px 20px 20px 6px; padding: 10px 14px; font-size: 15px; line-height: 1.38; }
+  .m .b small { display: block; font-size: 12px; font-weight: 700; color: #d9641a; margin-bottom: 2px; }
+  .m .b i { font-style: normal; font-size: 11px; color: #9a9aa2; margin-left: 6px; }
+  .m.me { align-self: flex-end; } .m.me .b { background: var(--app); color: #fff; border-radius: 20px 20px 6px 20px; } .m.me .b i { color: rgba(255,255,255,.8); }
+  .loc { border-radius: 18px; overflow: hidden; border: 1px solid var(--line); width: 250px; background: #fff; }
+  .loc .map { height: 104px; background: #e8efe4; position: relative; }
+  .loc .map svg { width: 100%; height: 100%; }
+  .loc .l { padding: 9px 12px; font-size: 13.5px; } .loc .l b { display: block; font-size: 14px; }
+  .day { align-self: center; font-size: 12px; font-weight: 700; color: var(--muted); background: var(--bg); padding: 4px 10px; border-radius: 99px; }
+  .input { position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 12px 34px; border-top: 1px solid var(--line); background: #fff; display: flex; gap: 10px; align-items: center; }
+  .input div { flex: 1; background: var(--bg); border-radius: 99px; padding: 12px 16px; color: #9a9aa2; font-size: 15px; }
+  .input .s { width: 44px; height: 44px; border-radius: 50%; background: var(--app); color: #fff; display: grid; place-items: center; flex: none; }
+</style></head>
+<body><div class="canvas">
+  <div class="head">
+    <div class="kicker">💬 Chat de groupe</div>
+    <h1>Un chat pour <em>chaque sortie</em></h1>
+    <p class="sub">Point de rendez-vous, train, covoiturage : on s'organise ensemble</p>
+  </div>
+  <div class="phone"><div class="screen">
+    <div class="chathead"><div class="back" data-icon="back"></div><div class="t"><b>Rando en forêt de Fontainebleau</b><span>12 participants · Sam. 9:30</span></div></div>
+    <div class="msgs">
+      <span class="day">Aujourd'hui</span>
+      <div class="m"><i data-av="1" data-size="30"></i><div class="b"><small>Organisateur</small>Rendez-vous 9h15 devant la gare de Bois-le-Roi 🚉<i>18:02</i></div></div>
+      <div class="m"><i data-av="1" data-size="30"></i><div class="loc"><div class="map"><svg viewBox="0 0 250 104"><path d="M0 70 Q80 40 130 60 T250 40" stroke="#fff" stroke-width="10" fill="none"/><path d="M60 0 L90 104" stroke="#fff" stroke-width="6"/><path d="M0 20 H250" stroke="#cfd8dc" stroke-width="5" stroke-dasharray="12 6"/><circle cx="140" cy="52" r="16" fill="#f0883e" opacity=".25"/><circle cx="140" cy="52" r="7" fill="#f0883e"/></svg></div><div class="l"><b>Point de rendez-vous</b>Gare de Bois-le-Roi</div></div></div>
+      <div class="m"><i data-av="3" data-size="30"></i><div class="b">Je prends le train de 8h46 à Gare de Lyon, qui vient ?<i>18:10</i></div></div>
+      <div class="m me"><div class="b">Moi ! On se retrouve en tête de train 🙌<i>18:12</i></div></div>
+      <div class="m"><i data-av="5" data-size="30"></i><div class="b">J'ai 2 places en covoiturage depuis Melun 🚗<i>18:20</i></div></div>
+      <div class="m"><i data-av="1" data-size="30"></i><div class="b"><small>Organisateur</small>Pensez à 1,5 L d'eau et au pique-nique 💧<i>18:25</i></div></div>
+    </div>
+    <div class="input"><div>Écris un message…</div><span class="s" data-icon="send"></span></div>
+  </div></div>
+</div>
+<script src="common.js"></script></body></html>
