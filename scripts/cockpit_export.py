@@ -239,6 +239,16 @@ def reseaux() -> list[dict]:
             {"reseau": "Instagram", "abonnes": ig.get("followers_count"), "publications": ig.get("media_count"),
              "portee_28j": ins.get("reach"), "vues_profil_28j": ins.get("profile_views"), "clics_site_28j": ins.get("website_clicks")}]
 
+
+def publications() -> list[dict]:
+    """Posts publiés par le dépôt (canaux/social/publications.json), avec les likes et commentaires Instagram."""
+    f = ROOT / "canaux" / "social" / "publications.json"
+    log = json.loads(f.read_text()) if f.exists() else []
+    stats = {m["id"]: m for m in social.instagram_media(50)} if log else {}
+    return [{"date": p["date"][:10], "post": p["id"], "likes": stats.get(p["instagram_media"], {}).get("like_count"),
+             "commentaires": stats.get(p["instagram_media"], {}).get("comments_count"),
+             "lien": stats.get(p["instagram_media"], {}).get("permalink", "")} for p in reversed(log)]
+
 # ---------- Backend ----------
 
 ZONES = {"75": "Paris", "77": "Seine-et-Marne", "78": "Yvelines", "91": "Essonne", "92": "Hauts-de-Seine",
@@ -337,7 +347,7 @@ def a_faire() -> list[dict]:
 
 JOBS = {"ga4_jour": ga4_daily, "ga4_canaux": ga4_channels, "ga4_pages": ga4_pages, "ga4_evenements": ga4_events,
         "gsc_jour": gsc_daily, "gsc_requetes": gsc_queries, "gsc_pages": gsc_pages,
-        "stores": stores, "app_store_stats": app_store_stats, "play_stats": play_stats, "reseaux": reseaux, "sorties": sorties, "listes_attente": listes_attente, "acces": acces, "actions": actions, "a_faire": a_faire}
+        "stores": stores, "app_store_stats": app_store_stats, "play_stats": play_stats, "reseaux": reseaux, "publications": publications, "sorties": sorties, "listes_attente": listes_attente, "acces": acces, "actions": actions, "a_faire": a_faire}
 
 
 def main() -> None:
