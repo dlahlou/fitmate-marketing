@@ -42,6 +42,12 @@ class Edit:
             raise RuntimeError(f"PUT {path} : {r.status_code} {r.text[:300]}")
         return r.json()
 
+    def patch(self, path: str, body: dict):
+        r = requests.patch(f"{BASE}/edits/{self.id}/{path}", headers=self.h, json=body, timeout=30)
+        if not r.ok:
+            raise RuntimeError(f"PATCH {path} : {r.status_code} {r.text[:300]}")
+        return r.json()
+
     def __exit__(self, exc_type, *_):
         if self.commit and exc_type is None:
             v = requests.post(f"{BASE}/edits/{self.id}:validate", headers=self.h, timeout=30)

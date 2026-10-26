@@ -5,6 +5,8 @@
 |---|---|---|---|
 | 2026-10-26 | Google Play | Fiche **fr-FR créée** (titre, description courte, description) ; fiche en-GB (par défaut, monde) réécrite | publiée (soumise à revue Google) |
 | 2026-10-26 | App Store | Texte promotionnel en-US de la version en ligne 1.1.3 | en ligne immédiatement |
+| 2026-10-26 | Google Play | Mise à jour du 26/10 **refusée** par Google (1 problème de règlement, motif à récupérer dans Play Console) | rien de publié |
+| 2026-10-26 | Play + App Store | **Titres d'origine rétablis** à la demande de Driss (« Fitmates » ; iOS « Fitmates – Sports Social » / « Stronger Together ») : le titre n'est jamais modifié | Play : préparé sans envoi en revue ; iOS : brouillon 1.1.16 |
 | 2026-10-26 | App Store | Version **1.1.16 en brouillon** : nom, sous-titre, mots-clés, description, promo en fr-FR et en-US | attend un build 1.1.16 + soumission |
 
 État avant changement : fiches uniquement en anglais (Play en-GB « Fitmates », iOS en-US « Fitmates – Sports Social » / « Stronger Together »), aucune fiche française. Sauvegarde des anciennes valeurs : relevé API du 2026-10-26.
@@ -13,8 +15,8 @@
 application randonnée 3 600 · application randonnée gratuite 2 400 · run club paris 1 600 · applications pour se faire des amis 1 600 · application sport 1 300 · app pour se faire des amis 1 300 · partenaire sport 720 · randonnée groupe 320 · trouver partenaire padel 110 (+ requêtes sport × lieu, voir strategie/strategie-marketing-2026.md).
 
 ## Fiche fr-FR
-- Titre Play / nom iOS (30) : Fitmates : randonnée en groupe
-- Sous-titre iOS (30) : Sorties sport, padel, running
+- Titre / nom : inchangé (règle : jamais modifié)
+- Sous-titre iOS : inchangé (Stronger Together)
 - Mots-clés iOS (100) : rando,partenaire,amis,rencontre,run,club,trail,marche,course,pied,escalade,vélo,balade,meetup,sortir
 - Texte promotionnel iOS (170) : Chaque week-end, des randos en groupe au départ de Paris, accessibles en train. Rejoins une sortie, discute avec le groupe et trouve des partenaires de ton niveau.
 - Description courte Play (80) : Randos et sorties sport en groupe : trouve des partenaires et fais-toi des amis
@@ -56,8 +58,8 @@ Plus d'infos : fitmates.net
 </details>
 
 ## Fiche anglaise (en-GB Play, en-US iOS)
-- Titre / nom : Fitmates: Group Hikes & Sports
-- Sous-titre iOS : Find sport buddies & meetups
+- Titre / nom : inchangé
+- Sous-titre iOS : inchangé (Stronger Together)
 - Mots-clés iOS : hiking,hike,partner,friends,running,run,club,trail,padel,walking,climbing,cycling,outdoor,activity
 - Promo iOS : Every weekend, group hikes from Paris you can reach by train. Join an outing, chat with the group and find sport buddies at your level, wherever you are.
 - Courte Play : Join group hikes, runs and padel games nearby. Find sport buddies, make friends.
