@@ -18,6 +18,7 @@ Le site [fitmates.net](https://www.fitmates.net) est un canal parmi d'autres : s
 | `fitmates_mkt/` | connecteurs de données (Python) : backend, Google Play, App Store Connect, Search Console, GA4, Meta, recherche stores |
 | `scripts/` | commandes : vérification des accès, relevés, fiches stores, mots-clés |
 | `data/snapshots/` | relevés datés (agrégats, aucune donnée personnelle) pour comparer avant / après |
+| `cockpit/` | **Cockpit** : application web (Vercel) qui affiche tous les indicateurs ; `cockpit/data/` est réécrit chaque jour par `python -m scripts.cockpit_export` |
 | `docs/sources-de-donnees.md` | chaque source : à quoi elle sert, variable, comment ouvrir l'accès |
 
 ## Démarrage

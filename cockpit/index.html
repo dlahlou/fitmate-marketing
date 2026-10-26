@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Cockpit Fitmates</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f57c00'/%3E%3Cpath d='M9 22l5-12 4 8 2-4 3 8' stroke='white' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-in">
+      <div class="brand"><span class="logo" aria-hidden="true"></span><span>Cockpit Fitmates</span></div>
+      <nav class="nav" aria-label="Sections">
+        <a href="#site">Site</a><a href="#google">Google</a><a href="#stores">Stores</a><a href="#offre">Offre</a><a href="#donnees">Données</a><a href="#journal">Journal</a>
+      </nav>
+      <span class="fresh" id="fresh"></span>
+    </div>
+  </header>
+
+  <main class="wrap main">
+    <section class="intro">
+      <h1>Marketing digital</h1>
+      <p class="take" id="take">Chargement des données…</p>
+    </section>
+
+    <section class="tiles" aria-label="Indicateurs clés">
+      <article class="tile" id="t-leads"><span class="lab">Leads du site</span><span class="val" data-k="leads">—</span><span class="delta" data-d="leads"></span><span class="note">Formulaires envoyés · 28 j</span></article>
+      <article class="tile" id="t-clics"><span class="lab">Clics vers les stores</span><span class="val" data-k="storeclicks">—</span><span class="delta" data-d="storeclicks"></span><span class="note">Depuis fitmates.net · 28 j</span></article>
+      <article class="tile" id="t-visites"><span class="lab">Visites du site</span><span class="val" data-k="sessions">—</span><span class="delta" data-d="sessions"></span><span class="note">Toutes sources · 28 j</span></article>
+      <article class="tile" id="t-google"><span class="lab">Apparitions dans Google</span><span class="val" data-k="impressions">—</span><span class="note"><span data-k="clics">—</span> clics · 30 j</span></article>
+      <article class="tile" id="t-sorties"><span class="lab">Sorties publiques à venir</span><span class="val" data-k="sorties">—</span><span class="note">Dans l'app, toutes zones</span></article>
+      <article class="tile" id="t-sources"><span class="lab">Sources branchées</span><span class="val" data-k="sources">—</span><span class="note">sur <span data-k="sources_total">—</span> prévues</span></article>
+    </section>
+
+    <section class="sec" id="site">
+      <div class="sec-head"><h2>Site fitmates.net</h2><p>Google Analytics 4. Une conversion = un formulaire envoyé ou un clic vers un store.</p></div>
+      <div class="grid">
+        <article class="card wide">
+          <h3>Visites par jour</h3><p class="sub">90 derniers jours · en orange, les jours avec au moins une conversion</p>
+          <div class="chart" id="ch-visites"></div>
+        </article>
+        <article class="card">
+          <h3>D'où viennent les visiteurs</h3><p class="sub">28 derniers jours, comparés aux 28 précédents</p>
+          <div class="scroll"><table class="tbl" id="tb-canaux"></table></div>
+        </article>
+        <article class="card">
+          <h3>Pages d'entrée</h3><p class="sub">28 derniers jours</p>
+          <div class="scroll"><table class="tbl" id="tb-pages"></table></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="sec" id="google">
+      <div class="sec-head"><h2>Recherche Google</h2><p>Search Console. Les données ont 2 à 3 jours de retard.</p></div>
+      <div class="grid">
+        <article class="card wide">
+          <h3>Apparitions et clics par jour</h3><p class="sub">90 derniers jours</p>
+          <div class="chart" id="ch-gsc"></div>
+        </article>
+        <article class="card">
+          <h3>Requêtes</h3><p class="sub">30 derniers jours, par apparitions</p>
+          <input class="search" id="q-req" type="search" placeholder="Filtrer les requêtes" aria-label="Filtrer les requêtes">
+          <div class="scroll"><table class="tbl" id="tb-requetes"></table></div>
+        </article>
+        <article class="card">
+          <h3>Pages dans Google</h3><p class="sub">30 derniers jours, par apparitions</p>
+          <input class="search" id="q-pages" type="search" placeholder="Filtrer les pages" aria-label="Filtrer les pages">
+          <div class="scroll"><table class="tbl" id="tb-gscpages"></table></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="sec" id="stores">
+      <div class="sec-head"><h2>Stores</h2><p>App Store Connect et Google Play. Installations et visites de fiche : accès à ouvrir (voir Données).</p></div>
+      <div class="grid">
+        <article class="card">
+          <h3>Avis</h3><p class="sub">App Store : tous les avis écrits. Google Play : l'API ne donne que les 7 derniers jours.</p>
+          <table class="tbl" id="tb-stores"></table>
+        </article>
+      </div>
+    </section>
+
+    <section class="sec" id="offre">
+      <div class="sec-head"><h2>Offre dans l'app</h2><p>Sorties publiques à venir, lues dans le flux public du backend. Une sortie payante l'est par choix de son organisateur.</p></div>
+      <div class="grid">
+        <article class="card">
+          <h3>Sorties à venir par sport et par zone</h3>
+          <table class="tbl" id="tb-sorties"></table>
+        </article>
+      </div>
+    </section>
+
+    <section class="sec" id="donnees">
+      <div class="sec-head"><h2>Données</h2><p>État de chaque source. Celles qui manquent disent quoi faire.</p></div>
+      <article class="card"><div class="scroll tall"><table class="tbl" id="tb-acces"></table></div></article>
+    </section>
+
+    <section class="sec" id="journal">
+      <div class="sec-head"><h2>Journal des actions</h2><p>Chaque changement, pour en mesurer l'effet 3 à 4 semaines plus tard.</p></div>
+      <article class="card"><div class="scroll tall"><table class="tbl" id="tb-actions"></table></div></article>
+    </section>
+  </main>
+
+  <footer class="wrap foot">Données exportées chaque jour depuis GA4, Search Console, App Store Connect, Google Play et le backend Fitmates. Aucune donnée personnelle.</footer>
+
+  <script src="vendor/d3-7.9.0.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

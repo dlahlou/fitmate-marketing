@@ -1,0 +1,9 @@
+[
+  {"date": "2026-10-26", "canal": "ASO", "action": "Fiche Google Play fr-FR créée, descriptions fr-FR / en-GB réécrites (titres inchangés)", "statut": "en revue Google"},
+  {"date": "2026-10-26", "canal": "ASO", "action": "Version iOS 1.1.16 préparée : descriptions et mots-clés fr-FR / en-US (nom et sous-titre inchangés)", "statut": "attend un build"},
+  {"date": "2026-10-26", "canal": "ASO", "action": "Texte promotionnel iOS en-US de la version en ligne", "statut": "en ligne"},
+  {"date": "2026-10-26", "canal": "Conformité", "action": "Page de suppression de compte avec formulaire (fitmates.net/data-deletion.html)", "statut": "en ligne"},
+  {"date": "2026-10-26", "canal": "Site", "action": "Adresse de contact unique contact@fitmates.net sur tout le site", "statut": "en ligne"},
+  {"date": "2026-10-26", "canal": "Mesure", "action": "GA4 et Search Console branchés, relevé de référence enregistré", "statut": "fait"},
+  {"date": "2026-10-26", "canal": "Mesure", "action": "Cockpit marketing mis en place, rafraîchi chaque jour", "statut": "fait"}
+]
