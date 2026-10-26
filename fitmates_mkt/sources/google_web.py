@@ -9,7 +9,7 @@ Accès, avec le même compte de service que les stores :
 import requests
 
 from .. import google_auth
-from ..config import env, opt
+from ..config import MissingAccess, opt
 
 GSC = "https://www.googleapis.com/auth/webmasters.readonly"
 GA = "https://www.googleapis.com/auth/analytics.readonly"
@@ -33,8 +33,21 @@ def search_analytics(start: str, end: str, dimensions=("query",), row_limit: int
             for x in r.json().get("rows", [])]
 
 
+def ga4_property_id() -> str:
+    """GA4_PROPERTY_ID s'il est défini, sinon la seule propriété à laquelle le compte de service a accès."""
+    if p := opt("GA4_PROPERTY_ID"):
+        return p
+    r = requests.get("https://analyticsadmin.googleapis.com/v1beta/accountSummaries", headers=google_auth.headers(GA), timeout=30)
+    r.raise_for_status()
+    props = [p["property"].split("/")[1] for a in r.json().get("accountSummaries", []) for p in a.get("propertySummaries", [])]
+    if len(props) == 1:
+        return props[0]
+    raise MissingAccess(f"{len(props)} propriété(s) GA4 visible(s) par le compte de service : " + (HOW_GA4 if props else
+        "ajouter claude-aso@fitmate-9bdfa.iam.gserviceaccount.com en Lecteur de la propriété GA4 du site (flux G-M9H3VR0TF7)"))
+
+
 def ga4_report(start: str, end: str, dimensions: list[str], metrics: list[str], limit: int = 10000) -> list[dict]:
-    prop = env("GA4_PROPERTY_ID", HOW_GA4)
+    prop = ga4_property_id()
     body = {"dateRanges": [{"startDate": start, "endDate": end}], "limit": limit,
             "dimensions": [{"name": d} for d in dimensions], "metrics": [{"name": m} for m in metrics]}
     r = requests.post(f"https://analyticsdata.googleapis.com/v1beta/properties/{prop}:runReport",

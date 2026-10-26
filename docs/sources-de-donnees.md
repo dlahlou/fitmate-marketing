@@ -12,7 +12,7 @@
 | App Store Connect : fiche, avis | `sources/app_store.py` | ASO iOS | `ASC_ISSUER_ID`, `ASC_KEY_ID`, `ASC_PRIVATE_KEY_B64` | OK |
 | App Store : App Analytics | `sources/app_store.py` | impressions, pages vues, téléchargements, recherche vs navigation | clé au rôle **Admin** | refusé avec la clé App Manager (§ 4) |
 | Search Console | `sources/google_web.py` | requêtes Google, positions, clics du site | `GSC_SITE` (défaut `sc-domain:fitmates.net`) | API à activer + accès (§ 5) |
-| GA4 | `sources/google_web.py` | trafic par canal, conversions | `GA4_PROPERTY_ID` | à fournir + accès (§ 5) |
+| GA4 | `sources/google_web.py` | trafic par canal, conversions | `GA4_PROPERTY_ID` (facultatif, détecté) | API activée ; accès Lecteur à donner (§ 5) |
 | Positions dans les stores | `sources/store_search.py` | rang de Fitmates sur les requêtes cibles | aucune | hôtes `itunes.apple.com`, `play.google.com` à autoriser |
 | Meta (Facebook, Instagram, Threads) | `sources/social.py` | abonnés, portée, clics | `FB_PAGE_ID`, `FB_PAGE_TOKEN`, `IG_USER_ID`, `THREADS_USER_ID`, `THREADS_TOKEN` | à fournir (§ 6) |
 | Volumes de recherche | MCP Ubersuggest (session Claude) | volumes Google par requête | aucune | OK |
@@ -80,7 +80,7 @@ Même compte de service (`claude-aso@fitmate-9bdfa.iam.gserviceaccount.com`) :
   https://console.cloud.google.com/apis/library/analyticsdata.googleapis.com?project=fitmate-9bdfa
 - Search Console → Paramètres → Utilisateurs et autorisations → ajouter l'e-mail du compte de service (accès restreint) :
   https://search.google.com/search-console/users
-- GA4 → Admin → Gestion des accès à la propriété → ajouter l'e-mail en **Lecteur** ; renseigner `GA4_PROPERTY_ID`.
+- GA4 → Admin → Gestion des accès à la propriété → ajouter l’e-mail en **Lecteur** (propriété du flux G-M9H3VR0TF7) ; l’ID de propriété est détecté automatiquement.
 
 ## 6. Meta
 
