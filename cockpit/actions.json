@@ -64,5 +64,11 @@
   "canal": "Mesure",
   "action": "Listes d'attente du site (inscrits par sport et secteur) ajoutées au cockpit",
   "statut": "fait"
+ },
+ {
+  "date": "2026-10-26",
+  "canal": "Mesure",
+  "action": "Cockpit refondu : écran d'action (à faire priorisé + canaux), détail au clic",
+  "statut": "fait"
  }
 ]

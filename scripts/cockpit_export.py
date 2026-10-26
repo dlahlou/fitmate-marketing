@@ -181,9 +181,24 @@ def actions() -> list[dict]:
     return json.loads((ROOT / "cockpit" / "actions.json").read_text())
 
 
+CANAL_ACCES = {"Google Play": "Stores", "App Store": "Stores", "Stores": "Stores", "Backend": "App", "Réseaux": "Réseaux sociaux",
+               "Site": "Site", "Google": "Google"}
+
+
+def a_faire() -> list[dict]:
+    """Actions ouvertes : la liste tenue dans cockpit/todo.json, plus un accès à ouvrir par source manquante."""
+    items = [t for t in json.loads((ROOT / "cockpit" / "todo.json").read_text()) if t.get("statut") != "fait"]
+    for r in acces():
+        if r["etat"] != "ok":
+            canal = next((v for k, v in CANAL_ACCES.items() if r["source"].startswith(k)), "Mesure")
+            items.append({"id": "acces-" + r["source"], "qui": "Driss", "canal": canal, "priorite": 2,
+                          "action": f"Ouvrir l'accès : {r['source']}", "impact": r["a_faire"], "lien": r["lien"], "statut": "à faire"})
+    return sorted(items, key=lambda t: (t["priorite"], {"Driss": 0, "Google": 1, "Claude": 2}.get(t["qui"], 3)))
+
+
 JOBS = {"ga4_jour": ga4_daily, "ga4_canaux": ga4_channels, "ga4_pages": ga4_pages, "ga4_evenements": ga4_events,
         "gsc_jour": gsc_daily, "gsc_requetes": gsc_queries, "gsc_pages": gsc_pages,
-        "stores": stores, "sorties": sorties, "listes_attente": listes_attente, "acces": acces, "actions": actions}
+        "stores": stores, "sorties": sorties, "listes_attente": listes_attente, "acces": acces, "actions": actions, "a_faire": a_faire}
 
 
 def main() -> None:
