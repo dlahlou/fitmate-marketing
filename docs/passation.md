@@ -52,7 +52,7 @@
 | Positions dans les stores | bloqué | Hôtes `itunes.apple.com` et `play.google.com` refusés par le réseau de l'environnement |
 | Backend : flux public des sorties | OK | `https://backend.fitmates.net/api/v1/events/public/events.json` |
 | Backend : agrégats (inscriptions, actifs…) | manquant | Interface à préparer par Driss (contrat proposé dans `docs/sources-de-donnees.md`) |
-| Meta (Facebook, Instagram, Threads) | manquant | Jetons à mettre en variables d'environnement |
+| Meta (Facebook, Instagram) | **réseau bloqué** | App « Fitmates Marketing » (1908428910145090). `FB_PAGE_ID`, `FB_PAGE_TOKEN` (jeton de Page sans expiration, accès aux données jusqu'à fin janvier 2027 : le régénérer s'il échoue), `IG_USER_ID` en variables le 26/10. Appels refusés : `graph.facebook.com` à autoriser dans le réseau de l'environnement. Threads abandonné pour l'instant |
 | Listes d'attente du site | OK | Compteur public `/api/waitlist`, agrégé dans le cockpit |
 | Ubersuggest | OK | Outils MCP (volumes France : locId 2250, langue fr) |
 

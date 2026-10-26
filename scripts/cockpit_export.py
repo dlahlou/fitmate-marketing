@@ -282,7 +282,7 @@ ACCESS = [
     ("Backend : inscriptions, actifs, participations", lambda: backend.metrics(d(2), d(1)),
      "Interface backend à préparer (agrégats, aucune donnée personnelle)", ""),
     ("Réseaux sociaux (Meta)", lambda: __import__("fitmates_mkt.sources.social", fromlist=["x"]).instagram_account(),
-     "Jetons Meta en variables d'environnement", "https://developers.facebook.com/tools/explorer/"),
+     "Autoriser graph.facebook.com dans le réseau de l'environnement (jetons déjà en place)", "https://code.claude.com/docs/en/cloud-environments#network-access"),
 ]
 
 
