@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>05 Chat de groupe</title>
+<link rel="stylesheet" href="social.css">
+<style>
+  .screen { background: #fff; }
+  .chathead { display: flex; align-items: center; gap: 10px; padding: 6px 14px 12px; border-bottom: 1px solid var(--line); }
+  .chathead .t { flex: 1; } .chathead b { display: block; font-size: 16.5px; } .chathead span { font-size: 12.5px; color: var(--muted); }
+  .msgs { padding: 14px 12px; display: flex; flex-direction: column; gap: 12px; }
+  .m { display: flex; gap: 8px; align-items: flex-end; max-width: 86%; }
+  .m .b { background: #f0f0f2; border-radius: 20px 20px 20px 6px; padding: 10px 14px; font-size: 15px; line-height: 1.38; }
+  .m .b small { display: block; font-size: 12px; font-weight: 700; color: #d9641a; margin-bottom: 2px; }
+  .m .b i { font-style: normal; font-size: 11px; color: #9a9aa2; margin-left: 6px; }
+  .m.me { align-self: flex-end; } .m.me .b { background: var(--app); color: #fff; border-radius: 20px 20px 6px 20px; } .m.me .b i { color: rgba(255,255,255,.8); }
+  .day { align-self: center; font-size: 12px; font-weight: 700; color: var(--muted); background: var(--bg); padding: 4px 10px; border-radius: 99px; }
+</style></head>
+<body><div class="canvas post">
+  <div class="head">
+    <div class="kicker">💬 Chat de groupe</div>
+    <h1>Un chat pour <em>chaque sortie</em></h1>
+    <p class="sub">Rendez-vous, train, covoiturage : on s'organise ensemble</p>
+  </div>
+  <div class="phone" style="top:650px"><div class="screen">
+    <div class="chathead"><div class="back" data-icon="back"></div><div class="t"><b>Rando en forêt de Fontainebleau</b><span>Randonnée · Sam. 9:30</span></div></div>
+    <div class="msgs">
+      <span class="day">Aujourd'hui</span>
+      <div class="m"><i data-av="1" data-size="30"></i><div class="b"><small>Organisateur</small>Rendez-vous 9h15 devant la gare de Bois-le-Roi 🚉<i>18:02</i></div></div>
+      <div class="m"><i data-av="3" data-size="30"></i><div class="b">Je prends le train de 8h46 à Gare de Lyon, qui vient ?<i>18:10</i></div></div>
+      <div class="m me"><div class="b">Moi ! On se retrouve en tête de train 🙌<i>18:12</i></div></div>
+      <div class="m"><i data-av="5" data-size="30"></i><div class="b">J'ai 2 places en covoiturage depuis Melun 🚗<i>18:20</i></div></div>
+    </div>
+  </div></div>
+</div>
+<script src="social.js"></script></body></html>

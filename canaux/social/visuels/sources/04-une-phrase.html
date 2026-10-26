@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>04 Créer en une phrase</title>
+<link rel="stylesheet" href="social.css">
+<style>
+  .prompt { margin: 4px 16px 12px; background: #fff; border-radius: 20px; padding: 14px; border: 2px solid transparent;
+    background-image: linear-gradient(#fff,#fff), linear-gradient(120deg, var(--orange), var(--red)); background-origin: border-box; background-clip: padding-box, border-box; }
+  .prompt small { font-size: 12.5px; font-weight: 700; color: var(--muted); }
+  .prompt p { font-size: 16.5px; line-height: 1.4; margin: 6px 0 12px; font-weight: 500; }
+  .prompt p::after { content: ''; display: inline-block; width: 2px; height: 18px; background: var(--app); vertical-align: -3px; margin-left: 2px; }
+  .prompt .btn { width: 100%; padding: 12px; font-size: 15px; background: linear-gradient(90deg, var(--orange), var(--red)); }
+  .done { margin: 0 16px 10px; display: flex; gap: 8px; align-items: center; font-size: 13.5px; font-weight: 700; color: #16803c; background: #e7f8ee; border-radius: 12px; padding: 9px 12px; }
+  .ok { color: #16a34a; display: flex; margin-left: auto; width: 18px; }
+</style></head>
+<body><div class="canvas post cream">
+  <div class="head">
+    <div class="kicker">✨ Création par IA</div>
+    <h1>Crée ta sortie <em>en une phrase</em></h1>
+    <p class="sub">Écris ton idée, l'IA remplit la fiche, tu valides</p>
+  </div>
+  <div class="phone" style="top:640px"><div class="screen">
+    <div class="topbar"><div class="back" data-icon="back"></div><h2>Nouvelle sortie</h2></div>
+    <div class="prompt"><small>Décris ta sortie</small><p>« Dimanche 10h, boucle de 15 km depuis la gare de Saint-Rémy-lès-Chevreuse, niveau moyen »</p><span class="btn"><span data-icon="spark"></span>Remplir avec l'IA</span></div>
+    <div class="done"><span data-icon="spark"></span>Fiche remplie, vérifie et publie</div>
+    <div class="field"><label>Titre</label><div class="in ai">Boucle de 15 km en vallée de Chevreuse<span class="ok" data-icon="check"></span></div></div>
+    <div class="row2"><div class="field"><label>Date</label><div class="in ai">Dim. 8 nov.</div></div><div class="field"><label>Heure</label><div class="in ai">10:00</div></div></div>
+    <div class="field"><label>Point de rendez-vous</label><div class="in ai">Gare de Saint-Rémy-lès-Chevreuse</div></div>
+  </div></div>
+</div>
+<script src="social.js"></script></body></html>
