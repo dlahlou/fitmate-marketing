@@ -38,9 +38,16 @@ Réponse : uniquement des **comptes** (aucun identifiant, nom, e-mail ni texte l
      "active_users": 140, "events_created": 9, "events_by_sport": {"randonnee": 7, "running": 2},
      "events_by_zone": {"77": 4, "75": 3, "78": 2}, "participations": 63, "paid_events": 1}
   ],
-  "totals": {"users": 1834, "organizers": 41}
+  "totals": {"users": 1834, "organizers": 41},
+  "kpis": {"active_organizers_30d": 12, "open_zones": 2, "attendance_rate_pct": 78,
+           "second_participation_30d_pct": 35, "k_factor": 0.08}
 }
 ```
+
+`kpis` (calculés à la date `to`) : organisateurs ayant publié au moins une sortie dans les 30 jours ; zones (département)
+avec au moins 3 organisateurs actifs et 30 participants ; taux de présence = check-ins / inscrits des sorties terminées
+sur la période ; part des nouveaux participants revenus sur une 2ᵉ sortie dans les 30 jours ; K-factor = nouveaux membres
+arrivés par une invitation / membres actifs. Ce sont les KPIs de la stratégie affichés dans le cockpit.
 
 `signups_by_source` suppose que l'app enregistre la source d'installation (referrer Play, attribution Apple Ads,
 UTM du site) : à ajouter côté app si ce n'est pas encore le cas.

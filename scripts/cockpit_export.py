@@ -342,7 +342,8 @@ ACCESS_STEPS = {
                    "Authorization: Bearer <jeton dédié, lecture seule>\n"
                    "Réponse : {\"generated_at\", \"series\": [{\"date\", \"signups\", \"signups_by_platform\": {\"ios\", \"android\", \"web\"}, "
                    "\"active_users\", \"events_created\", \"events_by_sport\", \"events_by_zone\", \"participations\", \"paid_events\"}], "
-                   "\"totals\": {\"users\", \"organizers\"}}\n"
+                   "\"totals\": {\"users\", \"organizers\"}, "
+                   "\"kpis\": {\"active_organizers_30d\", \"open_zones\", \"attendance_rate_pct\", \"second_participation_30d_pct\", \"k_factor\"}}\n"
                    "Détail : https://github.com/dlahlou/fitmate-marketing/blob/main/docs/sources-de-donnees.md (section 1)"},
         {"texte": "Une fois en ligne, ajoute deux variables dans l'environnement cloud (claude.ai/code → réglages de l'environnement), "
                   "sans jamais les coller dans le chat : BACKEND_METRICS_URL (l'adresse complète de l'endpoint) et BACKEND_METRICS_TOKEN.",
@@ -359,14 +360,70 @@ def a_faire() -> list[dict]:
             canal = next((v for k, v in CANAL_ACCES.items() if r["source"].startswith(k)), "Mesure")
             items.append({"id": "acces-" + r["source"], "qui": "Driss", "canal": canal, "priorite": 2,
                           "action": f"Ouvrir l'accès : {r['source']}", "impact": r["a_faire"], "lien": r["lien"], "statut": "à faire"})
+            if r["source"].startswith("Backend : inscriptions"):
+                items[-1]["priorite"] = 1
+                items[-1]["impact"] = "Débloque l'étoile polaire (participations / semaine), les organisateurs actifs, la présence et la rétention"
             if r["source"] in ACCESS_STEPS:
                 items[-1]["duree"], items[-1]["etapes"] = ACCESS_STEPS[r["source"]]
     return sorted(items, key=lambda t: (t["priorite"], {"Driss": 0, "Google": 1, "Claude": 2}.get(t["qui"], 3)))
 
 
+# ---------- Backend : agrégats (contrat : docs/sources-de-donnees.md, section 1) ----------
+
+def backend_kpis() -> dict:
+    """Comptes seulement. Participations des 7 derniers jours ; le reste vient de « kpis » du contrat."""
+    m = backend.metrics(d(8), d(1))
+    k = m.get("kpis") or {}
+    return {"participations_semaine": sum(r.get("participations") or 0 for r in m.get("series", [])[-7:]),
+            "organisateurs_actifs": k.get("active_organizers_30d"), "zones_ouvertes": k.get("open_zones"),
+            "taux_presence": k.get("attendance_rate_pct"), "retention_30j": k.get("second_participation_30d_pct"),
+            "k_factor": k.get("k_factor")}
+
+
+# ---------- KPIs (arbre de cockpit/strategie.json, valeurs tirées des jeux déjà exportés) ----------
+
+def _read(name: str):
+    f = OUT / f"{name}.json"
+    return json.loads(f.read_text()) if f.exists() else None
+
+
+def kpis() -> list[dict]:
+    """Valeur actuelle de chaque KPI de la stratégie ; None quand la source manque (le cockpit dit laquelle)."""
+    S = lambda rows, k: sum(r.get(k) or 0 for r in rows) if rows is not None else None  # noqa: E731
+    canaux = _read("ga4_canaux")
+    ev = {r["evenement"]: r for r in (_read("ga4_evenements") or [])}
+    gsc = _read("gsc_pages")
+    ios, play = _read("app_store_stats"), _read("play_stats")
+    res, pubs = _read("reseaux"), _read("publications")
+    stores_ = {r["store"]: r for r in (_read("stores") or [])}
+    back = _read("backend_kpis") or {}
+    since = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=7)).date().isoformat()
+    log_f = ROOT / "canaux" / "social" / "publications.json"
+    log = json.loads(log_f.read_text()) if log_f.exists() else []
+    v = {
+        "sessions_organiques_28j": next((r["sessions"] for r in canaux if r["canal"] == "Organic Search"), 0) if canaux else None,
+        "gsc_impressions_30j": S(gsc, "impressions"), "gsc_clics_30j": S(gsc, "clics"),
+        "pages_visibles": sum(1 for r in gsc if r["impressions"] > 0) if gsc is not None else None,
+        "clics_stores_28j": ev.get("app_download_click", {}).get("nombre"),
+        "leads_28j": ev.get("generate_lead", {}).get("nombre"),
+        "inscrits_attente": S(_read("listes_attente"), "inscrits"),
+        "sorties_a_venir": S(_read("sorties"), "sorties"),
+        "installs_28j": (S(ios, "telechargements") or 0) + (S([r for r in play if not r["source"].startswith("France")], "acquisitions") or 0)
+                        if ios is not None or play is not None else None,
+        "abonnes_reseaux": S(res, "abonnes"),
+        "portee_ig_28j": next((r["portee_28j"] for r in res if r["reseau"] == "Instagram"), None) if res else None,
+        "posts_7j": sum(1 for p in log if p["date"][:10] >= since),
+        "note_stores": stores_.get("App Store", {}).get("note_moyenne"),
+    }
+    v.update({k: back.get(k) for k in ("participations_semaine", "organisateurs_actifs", "zones_ouvertes", "taux_presence",
+                                       "retention_30j", "k_factor")})
+    strat = json.loads((ROOT / "cockpit" / "strategie.json").read_text())
+    return [{"id": k["id"], "valeur": v.get(k["id"])} for k in strat["kpis"]]
+
+
 JOBS = {"ga4_jour": ga4_daily, "ga4_canaux": ga4_channels, "ga4_pages": ga4_pages, "ga4_evenements": ga4_events,
         "gsc_jour": gsc_daily, "gsc_requetes": gsc_queries, "gsc_pages": gsc_pages,
-        "stores": stores, "app_store_stats": app_store_stats, "play_stats": play_stats, "reseaux": reseaux, "publications": publications, "sorties": sorties, "listes_attente": listes_attente, "acces": acces, "actions": actions, "a_faire": a_faire}
+        "stores": stores, "app_store_stats": app_store_stats, "play_stats": play_stats, "reseaux": reseaux, "publications": publications, "sorties": sorties, "listes_attente": listes_attente, "backend_kpis": backend_kpis, "acces": acces, "actions": actions, "a_faire": a_faire, "kpis": kpis}
 
 
 def main() -> None:

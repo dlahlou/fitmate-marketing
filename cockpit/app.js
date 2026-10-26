@@ -2,7 +2,7 @@
 // Données : data/*.json, réécrits chaque jour par scripts/cockpit_export.py.
 (function () {
   const FILES = ['meta', 'ga4_jour', 'ga4_canaux', 'ga4_pages', 'ga4_evenements', 'gsc_jour', 'gsc_requetes', 'gsc_pages',
-    'stores', 'app_store_stats', 'play_stats', 'reseaux', 'publications', 'sorties', 'listes_attente', 'acces', 'actions', 'a_faire'];
+    'stores', 'app_store_stats', 'play_stats', 'reseaux', 'publications', 'sorties', 'listes_attente', 'acces', 'actions', 'a_faire', 'kpis'];
   const nf = new Intl.NumberFormat('fr-FR');
   const nf1 = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 1 });
   const pct = new Intl.NumberFormat('fr-FR', { style: 'percent', maximumFractionDigits: 0 });
@@ -13,14 +13,95 @@
   const CHANNELS = { 'Organic Search': 'Recherche Google', Direct: 'Accès direct', 'Organic Social': 'Réseaux sociaux', Referral: 'Sites référents',
     'AI Assistant': 'Assistants IA', Unassigned: 'Non attribué', 'Paid Search': 'Recherche payante', Email: 'E-mail', 'Paid Social': 'Réseaux payants' };
   const SPORTS = { randonnee: 'Randonnée', 'course-a-pied': 'Course à pied', running: 'Running', padel: 'Padel', trail: 'Trail', velo: 'Vélo', escalade: 'Escalade' };
-  const TITLES = { google: 'Google', site: 'Site fitmates.net', leads: 'Leads', stores: 'Stores', app: "Offre dans l'app", social: 'Réseaux sociaux', actions: 'Actions, sources et journal' };
+  const TITLES = { google: 'Google', site: 'Site fitmates.net', leads: 'Leads', stores: 'Stores', app: "Offre dans l'app", social: 'Réseaux sociaux', actions: 'Actions, sources et journal', strategie: 'Stratégie et KPIs' };
   const WHO = { Driss: 'Toi', Claude: 'Claude', Google: 'En attente de Google' };
   let D = {};
 
   async function load() {
-    await Promise.all(FILES.map(async (f) => {
-      try { const r = await fetch(`data/${f}.json`, { cache: 'no-cache' }); D[f] = r.ok ? await r.json() : null; } catch { D[f] = null; }
+    await Promise.all([...FILES.map((f) => `data/${f}`), 'strategie'].map(async (f) => {
+      const k = f.replace('data/', '');
+      try { const r = await fetch(`${f}.json`, { cache: 'no-cache' }); D[k] = r.ok ? await r.json() : null; } catch { D[k] = null; }
     }));
+  }
+
+  // ---------- Stratégie et KPIs ----------
+  const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+  function kpiList() {
+    const vals = Object.fromEntries((D.kpis || []).map((r) => [r.id, r.valeur]));
+    return (D.strategie?.kpis || []).map((k) => ({ ...k, valeur: vals[k.id] ?? null }));
+  }
+  const fmtK = (k, v) => (v == null ? '—' : k.unite === '%' ? `${nf1.format(v)} %` : k.unite === '★' ? `${nf1.format(v)} ★` : k.unite === '/30' ? `${v}/30` : nf1.format(v));
+  function progress(k) {
+    const box = el('div', 'kbar');
+    if (k.valeur == null || !k.cible_3m) return box;
+    const r = Math.min(1, k.valeur / k.cible_3m);
+    const fill = el('span', r >= 1 ? 'ok' : r >= 0.5 ? 'mid' : 'low'); fill.style.width = `${Math.max(2, r * 100)}%`; box.append(fill);
+    return box;
+  }
+  function missing(k) {
+    const t = (D.a_faire || []).find((a) => a.id === k.acces);
+    if (t) { const s = el('span', 'kmiss'); s.append('à brancher : ', actionLine({ ...t, action: 'ouvrir l\'action' })); return s; }
+    return el('span', 'kmiss', k.source && k.source.includes('construire') ? 'pas encore mesuré' : 'pas encore de donnée');
+  }
+  function renderCap() {
+    const box = $('#cap-tiles'); if (!box) return; box.replaceChildren();
+    const ks = kpiList(); const byId = Object.fromEntries(ks.map((k) => [k.id, k]));
+    ['participations_semaine', 'organisateurs_actifs', 'sessions_organiques_28j', 'installs_28j', 'abonnes_reseaux', 'posts_7j'].forEach((id) => {
+      const k = byId[id]; if (!k) return;
+      const t = el('button', `kt${k.etoile ? ' star' : ''}`); t.type = 'button'; t.dataset.open = 'strategie';
+      t.append(el('span', 'kt-name', k.etoile ? `★ ${k.nom}` : k.nom), el('span', 'kt-val', fmtK(k, k.valeur)));
+      if (k.valeur == null) t.append(missing(k));
+      else t.append(el('span', 'kt-sub', k.cible_3m != null ? `cible ${D.strategie.echeances['3m']} : ${fmtK(k, k.cible_3m)}` : (k.cible_note || '')), progress(k));
+      box.append(t);
+    });
+  }
+  function renderStrategie(root) {
+    const S = D.strategie; if (!S) { root.append(el('p', 'd-note', 'strategie.json introuvable')); return; }
+    const ks = kpiList(); const byId = Object.fromEntries(ks.map((k) => [k.id, k]));
+    const card = (title, sub) => { const c = el('article', 'card'); c.append(el('h3', null, title)); if (sub) c.append(el('p', 'sub', sub)); root.append(c); return c; };
+    const p1 = card('Cap', `Mis à jour le ${S.maj} · sources : ${S.source}`);
+    p1.append(el('p', 'promesse', `« ${S.promesse} »`), el('p', 'd-note', S.positionnement));
+
+    const c2 = card('Arbre des KPIs', `Cibles : à 3 mois (${S.echeances['3m']}) et à 12 mois (${S.echeances['12m']}). Valeur actuelle tirée de l'export du jour.`);
+    const tbl = el('table', 'tbl ktree'); const th = el('thead'); const hr = el('tr');
+    ['KPI', 'Valeur', 'Cible 3 mois', 'Cible 12 mois', 'Progression', 'Source'].forEach((h, i) => hr.append(el('th', i && i < 4 ? 'n' : null, h))); th.append(hr);
+    const tb = el('tbody');
+    const row = (k, lvl) => {
+      const tr = el('tr', `lvl${lvl}`);
+      tr.append(el('td', null, `${k.etoile ? '★ ' : ''}${k.nom}`), el('td', 'n', fmtK(k, k.valeur)), el('td', 'n', k.cible_3m != null ? fmtK(k, k.cible_3m) : (k.cible_note ? 'à fixer' : '—')),
+        el('td', 'n', k.cible_12m != null ? fmtK(k, k.cible_12m) : '—'));
+      const pc = el('td'); pc.append(k.valeur == null ? missing(k) : progress(k)); tr.append(pc, el('td', 'src', k.source || ''));
+      tb.append(tr);
+    };
+    const star = ks.find((k) => k.etoile); if (star) row(star, 0);
+    const groups = [...new Set(ks.filter((k) => k.groupe).map((k) => k.groupe))];
+    groups.forEach((g) => {
+      const gr = el('tr', 'grp'); const gd = el('td', null, g); gd.colSpan = 6; gr.append(gd); tb.append(gr);
+      const inG = ks.filter((k) => k.groupe === g);
+      const children = new Set(inG.flatMap((k) => k.sous || []));
+      inG.filter((k) => !children.has(k.id)).forEach((k) => { row(k, 1); (k.sous || []).map((id) => byId[id]).filter((c) => c && c.groupe === g).forEach((c) => row(c, 2)); });
+    });
+    tbl.append(th, tb); const sc = el('div', 'scroll'); sc.append(tbl); c2.append(sc);
+
+    const c3 = card('Canaux', 'Rôle, KPIs suivis, état et prochaine étape. Les actions ouvertes sont dans « À faire ».');
+    const t3 = el('table', 'tbl'); const h3 = el('tr'); ['Canal', 'Rôle', 'KPIs', 'État', 'Prochaine étape'].forEach((h) => h3.append(el('th', null, h)));
+    const th3 = el('thead'); th3.append(h3); const tb3 = el('tbody');
+    S.canaux.forEach((c) => {
+      const tr = el('tr'); tr.append(el('td', null, c.canal), el('td', null, c.role),
+        el('td', null, c.kpis.map((id) => byId[id]).filter(Boolean).map((k) => `${k.nom} : ${fmtK(k, k.valeur)}`).join(' · ')));
+      const st = el('td'); st.append(statutPill(c.etat)); tr.append(st, el('td', null, c.prochain)); tb3.append(tr);
+    });
+    t3.append(th3, tb3); const s3 = el('div', 'scroll'); s3.append(t3); c3.append(s3);
+
+    const c4 = card('Cibles');
+    const ul = el('ul', 'plain'); S.cibles.forEach((c) => { const li = el('li'); li.append(el('strong', null, `${c.nom} : `), c.detail); ul.append(li); }); c4.append(ul);
+    const c5 = card('Décisions'); const ol = el('ol', 'plain'); S.decisions.forEach((d) => ol.append(el('li', null, d))); c5.append(ol);
+    const c6 = card('Les deux boucles à faire tourner');
+    S.boucles.forEach((b) => { const p = el('p', 'loop'); p.append(el('strong', null, `${b.nom} : `), b.etapes.join(' → ')); c6.append(p); });
+    const c7 = card('Calendrier');
+    const t7 = el('table', 'tbl'); const tb7 = el('tbody');
+    S.calendrier.forEach((c) => { const tr = el('tr'); const st = el('td'); st.append(statutPill(c.etat)); tr.append(el('td', null, c.quand), el('td', null, c.quoi), st); tb7.append(tr); });
+    t7.append(tb7); c7.append(t7);
   }
 
   const sum = (rows, k) => (rows || []).reduce((s, r) => s + Number(r[k] || 0), 0);
@@ -79,6 +160,7 @@
       $('#fresh').classList.toggle('late', Date.now() - d > 48 * 3600e3);
     }
     renderTodo('all');
+    renderCap();
   }
 
   function actionLine(t, withLink = true) {
@@ -147,7 +229,7 @@
     render();
   }
 
-  const statutPill = (s) => pill(/en ligne|fait/.test(s) ? 'ok' : /revue|attend|valider|prévu/.test(s) ? 'warn' : /refus/.test(s) ? 'bad' : 'neutral', s);
+  const statutPill = (s) => pill(/en ligne|fait|livr|en cours/.test(s) ? 'ok' : /revue|attend|valider|prévu|prêt/.test(s) ? 'warn' : /refus|pause/.test(s) ? 'bad' : 'neutral', s);
   const TABLES = {
     requetes: () => [D.gsc_requetes, [{ k: 'requete', label: 'Requête' }, { k: 'impressions', label: 'Appar.', n: true, bar: true }, { k: 'clics', label: 'Clics', n: true }, { k: 'position', label: 'Pos.', n: true, fmt: (v) => (v == null ? '—' : nf1.format(v)) }], { sort: 'impressions' }],
     gscpages: () => [D.gsc_pages, [{ k: 'page', label: 'Page' }, { k: 'impressions', label: 'Appar.', n: true, bar: true }, { k: 'clics', label: 'Clics', n: true }, { k: 'position', label: 'Pos.', n: true, fmt: (v) => (v == null ? '—' : nf1.format(v)) }], { sort: 'impressions' }],
@@ -253,6 +335,7 @@
         box.append(d);
       });
     });
+    const strat = $('#strat', body); if (strat) renderStrategie(strat);
     $$('[data-table]', body).forEach((el) => {
       const [rows, cols, opts = {}] = TABLES[el.dataset.table]();
       const search = $(`[data-search="${el.dataset.table}"]`, body);
