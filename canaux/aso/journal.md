@@ -5,7 +5,7 @@
 |---|---|---|---|
 | 2026-10-26 | Google Play | Fiche **fr-FR créée** (titre, description courte, description) ; fiche en-GB (par défaut, monde) réécrite | publiée (soumise à revue Google) |
 | 2026-10-26 | App Store | Texte promotionnel en-US de la version en ligne 1.1.3 | en ligne immédiatement |
-| 2026-10-26 | Google Play | Mise à jour du 26/10 **refusée** par Google (1 problème de règlement, motif à récupérer dans Play Console) | rien de publié |
+| 2026-10-26 | Google Play | Mise à jour du 26/10 **refusée** par Google (« Account Deletion Requirement » : le lien de suppression de compte du formulaire Sécurité des données est cassé, `/data-deletion.html` retirée du site en déc. 2025). Page rétablie sur la branche `page-suppression-compte` du site | rien de publié |
 | 2026-10-26 | Play + App Store | **Titres d'origine rétablis** à la demande de Driss (« Fitmates » ; iOS « Fitmates – Sports Social » / « Stronger Together ») : le titre n'est jamais modifié | Play : préparé sans envoi en revue ; iOS : brouillon 1.1.16 |
 | 2026-10-26 | App Store | Version **1.1.16 en brouillon** : nom, sous-titre, mots-clés, description, promo en fr-FR et en-US | attend un build 1.1.16 + soumission |
 
