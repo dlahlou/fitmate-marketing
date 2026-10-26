@@ -38,6 +38,10 @@
   `/api/etat` (outil Vercel `web_fetch_vercel_url`) puis `python -m scripts.verifier <fichier>` : preuve cherchée dans la
   source (Instagram, Search Console, App Store, flux…), résultat dans `cockpit/verifications.json`, action close si ok,
   rouverte avec la raison sinon. Ajouter une vérification = une fonction dans `CHECKS` de `scripts/verifier.py`.
+- **Protection** : Vercel Authentication sur toutes les adresses (`ssoProtection: all`, depuis le 26/10). Accès sans compte
+  Vercel, accès complet : secret « Protection Bypass for Automation » du projet (Vercel → fitmate-cockpit → Settings →
+  Deployment Protection), lien `https://fitmate-cockpit.vercel.app/?x-vercel-protection-bypass=<secret>&x-vercel-set-bypass-cookie=true`.
+  Le secret n'est jamais écrit dans le dépôt ; pour couper l'accès, le révoquer (et en régénérer un) dans Vercel.
 - `cockpit/actions.json` : journal des changements (à compléter à chaque action, pour comparer 3 à 4 semaines après).
 - Export quotidien : tâche planifiée à 6 h 47 (Paris) dans la session dédiée. Une session lancée « à neuf » par une
   tâche planifiée **ne peut pas pousser** (dépôt non attaché) : la tâche doit revenir dans une session créée avec ce
