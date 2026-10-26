@@ -94,5 +94,11 @@
   "canal": "Mesure",
   "action": "Cockpit : historique quotidien des KPIs, mini-courbes et écart sur 7 jours ; pilotage autonome (3 passages par jour) et liste de tâches de Claude",
   "statut": "fait"
+ },
+ {
+  "date": "2026-10-26",
+  "canal": "Google",
+  "action": "llms.txt : section « itinéraires en train autour de Paris » (Chevreuse, Vexin, Fontainebleau, Rambouillet) ; données TouristTrip déjà générées depuis les itinéraires",
+  "statut": "fait"
  }
 ]
