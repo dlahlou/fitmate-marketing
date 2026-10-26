@@ -75,8 +75,16 @@ def reseau_sources(_):
     return ("ok", "les sites de randonnée sont joignables") if r.ok else ("échec", f"rando.pnr-idf.fr répond {r.status_code}")
 
 
+def site_acces(_):
+    import subprocess
+    r = subprocess.run(["git", "ls-remote", "--heads", "https://github.com/dlahlou/fitmate-landing-page", "main"],
+                       capture_output=True, text=True, timeout=60)
+    return ("ok", "dépôt du site accessible depuis la session") if r.returncode == 0 and r.stdout else \
+        ("échec", "le dépôt du site n'est pas accessible depuis la session")
+
+
 CHECKS = {"ig-bio": ig_bio, "gsc-index": gsc_index, "ios-build": ios_build, "backend-prix": backend_prix,
-          "acces-Backend : inscriptions, actifs, participations": acces_backend, "reseau-sources": reseau_sources}
+          "acces-Backend : inscriptions, actifs, participations": acces_backend, "reseau-sources": reseau_sources, "site-acces": site_acces}
 
 
 def main() -> None:

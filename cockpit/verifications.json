@@ -3,5 +3,30 @@
   "date": "2026-10-26T18:40:00+00:00",
   "resultat": "ok",
   "raison": "bio, lien et photo présents"
+ },
+ "gsc-index": {
+  "date": "2026-10-26T18:38:01+00:00",
+  "resultat": "ok",
+  "raison": "/sport/randonnee : Envoyée et indexée ; /randonnee/autour-de-paris : Envoyée et indexée"
+ },
+ "visuels": {
+  "date": "2026-10-26T18:38:01+00:00",
+  "resultat": "déclaré",
+  "raison": "pas de source pour le vérifier : clos sur ta déclaration"
+ },
+ "resend-domaine": {
+  "date": "2026-10-26T18:38:01+00:00",
+  "resultat": "déclaré",
+  "raison": "pas de source pour le vérifier : clos sur ta déclaration"
+ },
+ "gsc-spam": {
+  "date": "2026-10-26T18:38:01+00:00",
+  "resultat": "déclaré",
+  "raison": "pas de source pour le vérifier : clos sur ta déclaration"
+ },
+ "site-acces": {
+  "date": "2026-10-26T18:38:01+00:00",
+  "resultat": "ok",
+  "raison": "dépôt du site accessible depuis la session"
  }
 }
