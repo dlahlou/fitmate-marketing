@@ -100,5 +100,11 @@
   "canal": "Google",
   "action": "llms.txt : section « itinéraires en train autour de Paris » (Chevreuse, Vexin, Fontainebleau, Rambouillet) ; données TouristTrip déjà générées depuis les itinéraires",
   "statut": "fait"
+ },
+ {
+  "date": "2026-10-26",
+  "canal": "Google",
+  "action": "Nouvelle page « Randonner l'hiver autour de Paris » (/randonnee-hiver-ile-de-france) : heures de jour, équipement, chasse, forêts en train, FAQ sourcée",
+  "statut": "fait"
  }
 ]
