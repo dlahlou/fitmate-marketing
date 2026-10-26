@@ -81,6 +81,7 @@
   décembre (randonner l'hiver autour de Paris), janvier (gare à gare ligne par ligne, page « randonnée en groupe »),
   février (état des sentiers de Fontainebleau), mars (relevé Search Console vs base, réécrire les pages qui progressent
   le moins). Pas de fait non sourcé.
+- **Bug à corriger dans le site (constaté le 26/10)** : un clic sur un lien interne change de page mais garde la position de défilement (accueil défilé à 3 613 px → /sports s'ouvre à 2 953 px). Correctif : un composant `ScrollToTop` monté dans le routeur (React Router) qui fait `window.scrollTo(0, 0)` à chaque changement de `pathname` quand le type de navigation n'est pas `POP` (retour arrière : laisser le navigateur restaurer), et qui défile vers l'élément visé quand l'URL a une ancre (`/#app`). En attente de l'accès au dépôt du site.
 - Signalés, non traités (décision produit / backend, à remonter à Driss) : les pages des sorties passées passent en 404
   au rebuild quotidien ; une sortie sans `price_eur` dans le flux s'affiche « gratuite ».
 
