@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Nov 09 Suivre ses partenaires</title>
+<link rel="stylesheet" href="social.css">
+<style>
+  .card2 { background: #fff; color: var(--ink); border-radius: 40px; padding: 30px 36px; box-shadow: 0 24px 60px rgba(60,0,0,.3); }
+  .card2 h3 { font-size: 26px; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; padding-bottom: 14px; border-bottom: 2px solid var(--line); }
+  .mate { display: flex; align-items: center; gap: 24px; padding: 26px 0; border-bottom: 2px solid var(--line); }
+  .mate:last-child { border-bottom: 0; padding-bottom: 6px; }
+  .mate .t { flex: 1; }
+  .mate .t b { display: block; font-size: 32px; font-weight: 700; }
+  .mate .t span { font-size: 24px; color: var(--muted); font-weight: 500; }
+  .follow { flex: none; padding: 14px 30px; border-radius: 999px; font-size: 26px; font-weight: 800; background: var(--app); color: #fff; }
+  .follow.on { background: var(--app-soft); color: #c2410c; }
+</style></head>
+<body><div class="canvas post">
+  <div class="head">
+    <div class="kicker">🤝 Après la sortie</div>
+    <h1>Bonne rando ? <em>Garde le contact</em></h1>
+    <p class="sub">Suis tes partenaires dans l'app et repars avec eux</p>
+  </div>
+  <div class="zone" style="top:680px">
+    <div class="card2">
+      <h3>Tes partenaires de dimanche</h3>
+      <div class="mate"><i data-av="1" data-size="84"></i><div class="t"><b>Partenaire de rando</b><span>Même sortie, même rythme</span></div><span class="follow on">Suivi ✓</span></div>
+      <div class="mate"><i data-av="3" data-size="84"></i><div class="t"><b>Partenaire de rando</b><span>Rencontré·e dans le chat</span></div><span class="follow">Suivre</span></div>
+      <div class="mate"><i data-av="5" data-size="84"></i><div class="t"><b>Partenaire de rando</b><span>Organise des sorties</span></div><span class="follow">Suivre</span></div>
+    </div>
+  </div>
+</div>
+<script src="social.js"></script></body></html>
