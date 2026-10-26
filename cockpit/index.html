@@ -39,7 +39,7 @@
       <button type="button" class="ch" data-open="google"><span class="ch-name">Google</span><span class="ch-val" data-k="impressions">—</span><span class="ch-sub"><span data-k="clics">—</span> clics · apparitions 30 j</span><span class="ch-flag" data-flag="Google"></span></button>
       <button type="button" class="ch" data-open="site"><span class="ch-name">Site</span><span class="ch-val" data-k="sessions">—</span><span class="ch-sub">visites 28 j <span data-d="sessions"></span></span><span class="ch-flag" data-flag="Site"></span></button>
       <button type="button" class="ch" data-open="leads"><span class="ch-name">Leads</span><span class="ch-val" data-k="leads">—</span><span class="ch-sub"><span data-k="attente">—</span> en liste d&apos;attente · clics stores : <span data-k="storeclicks">—</span></span><span class="ch-flag" data-flag="Leads"></span></button>
-      <button type="button" class="ch" data-open="stores"><span class="ch-name">Stores</span><span class="ch-val" data-k="note">—</span><span class="ch-sub"><span data-k="avis">—</span> avis · installations : accès à ouvrir</span><span class="ch-flag" data-flag="Stores"></span></button>
+      <button type="button" class="ch" data-open="stores"><span class="ch-name">Stores</span><span class="ch-val" data-k="note">—</span><span class="ch-sub"><span data-k="avis">—</span> avis · <span data-k="installs">—</span></span><span class="ch-flag" data-flag="Stores"></span></button>
       <button type="button" class="ch" data-open="app"><span class="ch-name">Offre dans l'app</span><span class="ch-val" data-k="sorties">—</span><span class="ch-sub">sorties publiques à venir</span><span class="ch-flag" data-flag="App"></span></button>
       <button type="button" class="ch" data-open="social"><span class="ch-name">Réseaux sociaux</span><span class="ch-val muted">—</span><span class="ch-sub">pas encore branché</span><span class="ch-flag" data-flag="Réseaux sociaux"></span></button>
     </section>
@@ -78,6 +78,8 @@
     <p class="d-note">App Store Connect (app 6756283890) et Google Play (com.dlahlou.fitmate).</p>
     <div class="d-actions" data-canal="Stores"></div>
     <article class="card"><h3>Avis</h3><p class="sub">Google Play : l'API ne donne que les 7 derniers jours.</p><table class="tbl" data-table="stores"></table></article>
+    <article class="card"><h3>App Store · 28 j</h3><p class="sub">Impressions, fiche vue et premiers téléchargements par source (rapports Apple App Analytics, 1 à 2 jours de décalage).</p><div class="scroll"><table class="tbl" data-table="iosstats"></table></div></article>
+    <article class="card"><h3>Google Play · 28 j</h3><p class="sub">Visiteurs de la fiche et installations par source de trafic, puis la France (rapports groupés de la Play Console).</p><div class="scroll"><table class="tbl" data-table="playstats"></table></div></article>
   </template>
   <template id="tpl-app">
     <p class="d-note">Flux public des sorties du backend. Une sortie payante l'est par choix de son organisateur.</p>

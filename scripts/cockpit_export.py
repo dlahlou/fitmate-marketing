@@ -103,6 +103,128 @@ def stores() -> list[dict]:
     return out
 
 
+# ---------- Stores : statistiques (rapports Apple App Analytics, rapports groupés Google Play) ----------
+
+class Pending(Exception):
+    """Accès ouvert, données pas encore produites : rien à faire pour Driss."""
+
+
+def _once(fn):
+    """Mémorise le résultat ou l'erreur : le jeu, acces() et a_faire() l'appellent chacun."""
+    memo: list = []
+    def wrapper():
+        if not memo:
+            try:
+                memo.append((fn(), None))
+            except Exception as e:  # noqa: BLE001
+                memo.append((None, e))
+        rows, err = memo[0]
+        if err:
+            raise err
+        return rows
+    wrapper.__wrapped__ = fn
+    return wrapper
+
+
+def _col(row: dict, *keys: str) -> str:
+    """Valeur d'une colonne dont le nom contient l'un des mots donnés (les intitulés varient selon les rapports)."""
+    exact = {(k or "").lower(): v for k, v in row.items()}
+    for w in keys:
+        if w in exact:
+            return exact[w] or ""
+    for k, v in row.items():
+        if any(w in (k or "").lower() for w in keys):
+            return v or ""
+    return ""
+
+
+def _n(v) -> float:
+    try:
+        return float(str(v).replace(",", "").replace("%", "") or 0)
+    except ValueError:
+        return 0.0
+
+
+IOS_SOURCES = {"app store search": "Recherche App Store", "app store browse": "Navigation App Store",
+               "web referrer": "Sites web", "app referrer": "Autres apps"}
+
+
+PLAY_SOURCES = {"google play search": "Recherche Google Play", "google play explore": "Navigation Google Play",
+                "third-party referrals": "Sites et apps tiers"}
+
+
+@_once
+def app_store_stats() -> list[dict]:
+    """Impressions, pages vues et premiers téléchargements par source, sur les 28 derniers jours produits par Apple."""
+    rid = app_store.ensure_analytics_request()
+    reports = {r["attributes"]["name"]: r["id"] for cat in ("APP_STORE_ENGAGEMENT", "COMMERCE")
+               for r in app_store.analytics_reports(rid, cat)}
+    eng = app_store.analytics_rows(reports["App Store Discovery and Engagement Standard"])
+    dl = app_store.analytics_rows(reports["App Downloads Standard"])
+    if not eng and not dl:
+        raise Pending("Apple n'a pas encore produit de rapport (1 à 2 jours après la demande)")
+    last = max(_col(r, "date") for r in eng + dl)
+    start = (dt.date.fromisoformat(last) - dt.timedelta(days=27)).isoformat()
+    agg: dict[str, dict] = {}
+    def row(src: str) -> dict:
+        name = IOS_SOURCES.get(src.lower(), "Autres")
+        return agg.setdefault(name, {"source": name, "impressions": 0, "pages_vues": 0, "telechargements": 0})
+    for r in eng:
+        if _col(r, "date") < start:
+            continue
+        ev = _col(r, "event").lower()
+        k = "impressions" if ev.startswith("impression") else "pages_vues" if ev.startswith("page view") else None
+        if k:
+            row(_col(r, "source type"))[k] += int(_n(_col(r, "counts")))
+    for r in dl:
+        if _col(r, "date") >= start and _col(r, "download type").lower().startswith("first"):
+            row(_col(r, "source type"))["telechargements"] += int(_n(_col(r, "counts")))
+    out = sorted(agg.values(), key=lambda r: -r["impressions"])
+    for r in out:
+        r["conversion"] = round(r["telechargements"] / r["pages_vues"], 4) if r["pages_vues"] else None
+        r["du"], r["au"] = start, last
+    return out
+
+
+@_once
+def play_stats() -> list[dict]:
+    """Visiteurs de la fiche, acquisitions et conversion, par source de trafic et pour la France, sur 28 jours."""
+    try:
+        files = google_play.bulk_report_files()
+    except RuntimeError as e:
+        # Permission donnée le 26/10 vers 14 h : Google peut mettre 24 h à l'appliquer
+        if "(403)" in str(e) and dt.datetime.now(dt.timezone.utc) < dt.datetime(2026, 10, 27, 14, tzinfo=dt.timezone.utc):
+            raise Pending("permission donnée le 26/10, Google l'applique sous 24 h") from e
+        raise
+    rows: list[tuple[str, dict]] = []
+    for kind in ("traffic_source", "country"):
+        for name in sorted(f for f in files if f.endswith(f"_{kind}.csv"))[-2:]:
+            rows += [(kind, r) for r in google_play.bulk_report(name)]
+    if not rows:
+        raise RuntimeError("aucun rapport store_performance dans le dossier des rapports groupés")
+    last = max(_col(r, "date") for _, r in rows)
+    start = (dt.date.fromisoformat(last) - dt.timedelta(days=27)).isoformat()
+    agg: dict[str, dict] = {}
+    for kind, r in rows:
+        if _col(r, "date") < start:
+            continue
+        if kind == "country":
+            if _col(r, "country").upper() not in ("FR", "FRANCE"):
+                continue
+            name = "France (toutes sources)"
+        else:
+            src = _col(r, "traffic source") or "Autre"
+            name = PLAY_SOURCES.get(src.lower(), src)
+        a = agg.setdefault(name, {"source": name, "visiteurs": 0, "acquisitions": 0})
+        a["visiteurs"] += int(_n(_col(r, "visitors")))
+        a["acquisitions"] += int(_n(_col(r, "acquisitions")))
+    out = sorted(agg.values(), key=lambda r: (r["source"].startswith("France"), -r["visiteurs"]))
+    for r in out:
+        r["conversion"] = round(r["acquisitions"] / r["visiteurs"], 4) if r["visiteurs"] else None
+        r["du"], r["au"] = start, last
+    return out
+
+
 # ---------- Backend ----------
 
 ZONES = {"75": "Paris", "77": "Seine-et-Marne", "78": "Yvelines", "91": "Essonne", "92": "Hauts-de-Seine",
@@ -149,11 +271,11 @@ ACCESS = [
     ("Site : trafic (GA4)", lambda: google_web.ga4_property_id(), "", ""),
     ("Google : recherche (Search Console)", lambda: google_web.search_analytics(d(9), d(2), ("date",), 1), "", ""),
     ("Google Play : fiche et avis", lambda: google_play.reviews(), "", ""),
-    ("Google Play : installations et visites de fiche", lambda: google_play.bulk_report_files(),
+    ("Google Play : installations et visites de fiche", lambda: play_stats(),
      "Donner au compte claude-aso la permission « Voir les informations sur l'application et télécharger les rapports groupés » au niveau du compte (effet sous 24 h)", "https://play.google.com/console/u/0/developers/7410630646260977899/users-and-permissions"),
     ("App Store : fiche et avis", lambda: app_store.app(), "", ""),
-    ("App Store : impressions et téléchargements", lambda: app_store.ensure_analytics_request(),
-     "Créer une clé API au rôle Admin", "https://appstoreconnect.apple.com/access/integrations/api"),
+    ("App Store : impressions et téléchargements", lambda: app_store_stats(),
+     "Rien à faire : Apple produit les premiers rapports 1 à 2 jours après la demande (faite le 26/10)", "https://appstoreconnect.apple.com/access/integrations/api"),
     ("Stores : positions dans la recherche", lambda: store_search.ios_rank("fitmates"),
      "Autoriser itunes.apple.com et play.google.com dans le réseau de l'environnement", "https://code.claude.com/docs/en/cloud-environments#network-access"),
     ("Backend : sorties publiques", lambda: backend.public_events(), "", ""),
@@ -164,12 +286,15 @@ ACCESS = [
 ]
 
 
+@_once
 def acces() -> list[dict]:
     out = []
     for name, fn, todo, link in ACCESS:
         try:
             fn()
             out.append({"source": name, "etat": "ok", "a_faire": "", "lien": ""})
+        except Pending as e:
+            out.append({"source": name, "etat": "en attente", "a_faire": str(e), "lien": ""})
         except MissingAccess:
             out.append({"source": name, "etat": "manquant", "a_faire": todo, "lien": link})
         except Exception:  # noqa: BLE001
@@ -189,7 +314,7 @@ def a_faire() -> list[dict]:
     """Actions ouvertes : la liste tenue dans cockpit/todo.json, plus un accès à ouvrir par source manquante."""
     items = [t for t in json.loads((ROOT / "cockpit" / "todo.json").read_text()) if t.get("statut") != "fait"]
     for r in acces():
-        if r["etat"] != "ok":
+        if r["etat"] not in ("ok", "en attente"):
             canal = next((v for k, v in CANAL_ACCES.items() if r["source"].startswith(k)), "Mesure")
             items.append({"id": "acces-" + r["source"], "qui": "Driss", "canal": canal, "priorite": 2,
                           "action": f"Ouvrir l'accès : {r['source']}", "impact": r["a_faire"], "lien": r["lien"], "statut": "à faire"})
@@ -198,7 +323,7 @@ def a_faire() -> list[dict]:
 
 JOBS = {"ga4_jour": ga4_daily, "ga4_canaux": ga4_channels, "ga4_pages": ga4_pages, "ga4_evenements": ga4_events,
         "gsc_jour": gsc_daily, "gsc_requetes": gsc_queries, "gsc_pages": gsc_pages,
-        "stores": stores, "sorties": sorties, "listes_attente": listes_attente, "acces": acces, "actions": actions, "a_faire": a_faire}
+        "stores": stores, "app_store_stats": app_store_stats, "play_stats": play_stats, "sorties": sorties, "listes_attente": listes_attente, "acces": acces, "actions": actions, "a_faire": a_faire}
 
 
 def main() -> None:

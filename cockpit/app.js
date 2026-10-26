@@ -2,7 +2,7 @@
 // Données : data/*.json, réécrits chaque jour par scripts/cockpit_export.py.
 (function () {
   const FILES = ['meta', 'ga4_jour', 'ga4_canaux', 'ga4_pages', 'ga4_evenements', 'gsc_jour', 'gsc_requetes', 'gsc_pages',
-    'stores', 'sorties', 'listes_attente', 'acces', 'actions', 'a_faire'];
+    'stores', 'app_store_stats', 'play_stats', 'sorties', 'listes_attente', 'acces', 'actions', 'a_faire'];
   const nf = new Intl.NumberFormat('fr-FR');
   const nf1 = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 1 });
   const pct = new Intl.NumberFormat('fr-FR', { style: 'percent', maximumFractionDigits: 0 });
@@ -43,6 +43,9 @@
       storeclicks: ev.app_download_click?.nombre ?? null,
       attente: D.listes_attente ? sum(D.listes_attente, 'inscrits') : null,
       note: ios?.note_moyenne != null ? `${nf1.format(ios.note_moyenne)}★` : null, avis: D.stores ? avis : null,
+      installs: D.app_store_stats || D.play_stats
+        ? `${num(sum(D.app_store_stats, 'telechargements') + sum((D.play_stats || []).filter((r) => !r.source.startsWith('France')), 'acquisitions'))} installations sur 28 j`
+        : 'installations : en attente des rapports',
       sorties: D.sorties ? sum(D.sorties, 'sorties') : null,
       sources: D.acces ? D.acces.filter((r) => r.etat === 'ok').length : null, sources_total: D.acces ? D.acces.length : null,
     };
@@ -150,9 +153,11 @@
       { k: 'nombre', label: 'Évolution', n: true, render: (td, r) => { const [t, c] = deltaText(r.nombre, r.nombre_avant); td.textContent = t || '—'; td.classList.add(c); } }]],
     attente: () => [D.listes_attente, [{ k: 'sport', label: 'Sport', fmt: (v) => SPORTS[v] || v }, { k: 'secteur', label: 'Secteur' }, { k: 'inscrits', label: 'Inscrits', n: true, bar: true }], { sort: 'inscrits' }],
     stores: () => [D.stores, [{ k: 'store', label: 'Store' }, { k: 'avis_ecrits', label: 'Avis écrits', n: true }, { k: 'note_moyenne', label: 'Note', n: true, fmt: (v) => (v == null ? '—' : `${nf1.format(v)} ★`) }, { k: 'avis_7j', label: '7 j', n: true }]],
+    iosstats: () => [D.app_store_stats, [{ k: 'source', label: 'Source' }, { k: 'impressions', label: 'Impr.', n: true, bar: true }, { k: 'pages_vues', label: 'Fiche vue', n: true }, { k: 'telechargements', label: 'Téléch.', n: true }, { k: 'conversion', label: 'Conv.', n: true, fmt: (v) => (v == null ? '—' : pct.format(v)) }], { sort: 'impressions' }],
+    playstats: () => [D.play_stats, [{ k: 'source', label: 'Source' }, { k: 'visiteurs', label: 'Visiteurs', n: true, bar: true }, { k: 'acquisitions', label: 'Installs', n: true }, { k: 'conversion', label: 'Conv.', n: true, fmt: (v) => (v == null ? '—' : pct.format(v)) }]],
     sorties: () => [D.sorties, [{ k: 'sport', label: 'Sport', fmt: (v) => SPORTS[v] || v }, { k: 'zone', label: 'Zone' }, { k: 'prix', label: 'Prix' }, { k: 'sorties', label: 'Sorties', n: true }], { sort: 'sorties' }],
     acces: () => [D.acces, [{ k: 'source', label: 'Source' },
-      { k: 'etat', label: 'État', render: (td, r) => td.append(pill({ ok: 'ok', manquant: 'warn', 'bloqué': 'bad' }[r.etat] || 'neutral', r.etat)) },
+      { k: 'etat', label: 'État', render: (td, r) => td.append(pill({ ok: 'ok', 'en attente': 'neutral', manquant: 'warn', 'bloqué': 'bad' }[r.etat] || 'neutral', r.etat)) },
       { k: 'a_faire', label: 'À faire', fmt: (v) => v || '' },
       { k: 'lien', label: 'Lien', render: (td, r) => { if (r.lien) { const a = document.createElement('a'); a.href = r.lien; a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'Ouvrir'; td.append(a); } } }]],
     afaire: () => [D.a_faire, [{ k: 'priorite', label: 'Prio.', n: true }, { k: 'qui', label: 'Qui', fmt: (v) => WHO[v] || v }, { k: 'canal', label: 'Canal' },
