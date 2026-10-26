@@ -16,6 +16,17 @@
 - Si Driss a besoin de données de l'app ou du backend : **ne pas cloner `dlahlou/fitmate`**, lui demander, il prépare
   une interface.
 
+## Pilotage autonome (depuis le 26/10)
+
+Claude avance sans attendre Driss : `docs/pilotage.md` (procédure de chaque passage, garde-fous). Tâches planifiées dans
+la session `session_01XNHWdd3Ezaz2t3MR6axpZZ` :
+
+| Tâche | Quand (Paris) | Id |
+|---|---|---|
+| Export du cockpit + vérification des actions « fait » | 6 h 47 | `trig_01LuF4oG9kifn2hdVDCV2dXK` |
+| Publication réseaux (lancement, sorties de la semaine le jeudi) + vérification | 12 h 13 | `trig_01LZA4X44UfSYM9najJCuKrv` |
+| Pilotage : prochaine tâche Claude de `cockpit/todo.json` | 9 h 37, 15 h 37, 20 h 37 | `trig_01XB3PzkiyKcjky8xh2kxztv` |
+
 ## Dépôts
 
 | Dépôt | Rôle |
