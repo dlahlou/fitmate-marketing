@@ -3,11 +3,23 @@
  "source": "strategie/strategie-marketing-2026.md et strategie/playbook-digital.md",
  "promesse": "Fais du sport avec des gens de ton niveau, près de chez toi, cette semaine.",
  "positionnement": "L'app du sport social : ni Strava (performance seule), ni Meetup (organisateur payant), ni Frimake (sorties généralistes).",
- "echeances": {"3m": "fin janvier 2027", "12m": "octobre 2027"},
+ "echeances": {
+  "3m": "fin janvier 2027",
+  "12m": "octobre 2027"
+ },
  "cibles": [
-  {"nom": "Participants 25–39 ans", "detail": "Paris et petite couronne, pratiquent seuls, cherchent régularité et compagnie. Message : régularité, sécurité, niveau affiché."},
-  {"nom": "Randonneurs 40–59 ans", "detail": "Le gros des pratiquants actuels, fidèles et bons organisateurs. Message : les plus belles sorties d'Île-de-France, en groupe, en train."},
-  {"nom": "Organisateurs", "detail": "Leaders de run clubs, groupes rando, coachs, associations. Un organisateur vaut 20 à 100 participants. Message : on remplit tes sorties, tu gardes ta communauté."}
+  {
+   "nom": "Participants 25–39 ans",
+   "detail": "Paris et petite couronne, pratiquent seuls, cherchent régularité et compagnie. Message : régularité, sécurité, niveau affiché."
+  },
+  {
+   "nom": "Randonneurs 40–59 ans",
+   "detail": "Le gros des pratiquants actuels, fidèles et bons organisateurs. Message : les plus belles sorties d'Île-de-France, en groupe, en train."
+  },
+  {
+   "nom": "Organisateurs",
+   "detail": "Leaders de run clubs, groupes rando, coachs, associations. Un organisateur vaut 20 à 100 participants. Message : on remplit tes sorties, tu gardes ta communauté."
+  }
  ],
  "decisions": [
   "Une page par sport × lieu, ordre de production = volume de recherche mesuré.",
@@ -18,50 +30,307 @@
   "Mesurer trois choses avant tout : participations réelles, organisateurs actifs, taux de présence."
  ],
  "boucles": [
-  {"nom": "Boucle participants", "etapes": ["Sortie publiée", "Page indexée + post social", "Inscriptions", "Photo et chiffres de la sortie", "Nouveau contenu", "Nouvelles inscriptions"]},
-  {"nom": "Boucle organisateurs", "etapes": ["Recherche « organiser une randonnée »", "Guide", "Formulaire", "E-mails + mise en avant 30 j", "Première sortie", "Preuve sociale pour le suivant"]}
+  {
+   "nom": "Boucle participants",
+   "etapes": [
+    "Sortie publiée",
+    "Page indexée + post social",
+    "Inscriptions",
+    "Photo et chiffres de la sortie",
+    "Nouveau contenu",
+    "Nouvelles inscriptions"
+   ]
+  },
+  {
+   "nom": "Boucle organisateurs",
+   "etapes": [
+    "Recherche « organiser une randonnée »",
+    "Guide",
+    "Formulaire",
+    "E-mails + mise en avant 30 j",
+    "Première sortie",
+    "Preuve sociale pour le suivant"
+   ]
+  }
  ],
  "kpis": [
-  {"id": "participations_semaine", "nom": "Participations réelles / semaine (IDF)", "etoile": true, "cible_3m": 200, "cible_12m": 1500, "source": "backend", "acces": "acces-Backend : inscriptions, actifs, participations",
+  {
+   "id": "participations_semaine",
+   "nom": "Participations réelles / semaine (IDF)",
+   "etoile": true,
+   "cible_3m": 200,
+   "cible_12m": 1500,
+   "source": "backend",
+   "acces": "acces-Backend : inscriptions, actifs, participations",
    "pourquoi": "La seule mesure qui compte : des gens qui font du sport ensemble.",
-   "sous": ["organisateurs_actifs", "sorties_a_venir", "taux_presence", "retention_30j"]},
-  {"id": "organisateurs_actifs", "nom": "Organisateurs actifs (≥ 1 sortie / 30 j)", "cible_3m": 30, "cible_12m": 150, "source": "backend", "acces": "acces-Backend : inscriptions, actifs, participations", "groupe": "Offre",
-   "sous": ["leads_28j", "zones_ouvertes"]},
-  {"id": "sorties_a_venir", "nom": "Sorties publiques à venir", "source": "flux public des sorties", "groupe": "Offre"},
-  {"id": "zones_ouvertes", "nom": "Zones ouvertes (3 orga / 30 participants)", "cible_3m": 5, "cible_12m": 12, "source": "backend", "acces": "acces-Backend : inscriptions, actifs, participations", "groupe": "Offre"},
-  {"id": "taux_presence", "nom": "Taux de présence (check-in / inscrits)", "unite": "%", "cible_3m": 75, "cible_12m": 85, "source": "backend", "acces": "acces-Backend : inscriptions, actifs, participations", "groupe": "Engagement"},
-  {"id": "retention_30j", "nom": "2ᵉ participation dans les 30 j", "unite": "%", "cible_3m": 40, "cible_12m": 55, "source": "backend", "acces": "acces-Backend : inscriptions, actifs, participations", "groupe": "Engagement"},
-  {"id": "k_factor", "nom": "K-factor parrainage", "cible_3m": 0.15, "cible_12m": 0.3, "source": "backend", "acces": "acces-Backend : inscriptions, actifs, participations", "groupe": "Engagement"},
-  {"id": "installs_28j", "nom": "Installations / 28 j (iOS + Android)", "source": "App Store Analytics + Google Play", "groupe": "Acquisition", "cible_note": "à fixer après le premier mois mesuré",
-   "sous": ["sessions_organiques_28j", "gsc_impressions_30j", "gsc_clics_30j", "pages_visibles", "clics_stores_28j", "abonnes_reseaux"]},
-  {"id": "sessions_organiques_28j", "nom": "Visites depuis Google / 28 j", "cible_3m": 2000, "cible_12m": 20000, "source": "GA4 (Organic Search)", "groupe": "Acquisition"},
-  {"id": "gsc_impressions_30j", "nom": "Apparitions Google / 30 j", "source": "Search Console", "groupe": "Acquisition"},
-  {"id": "gsc_clics_30j", "nom": "Clics Google / 30 j", "source": "Search Console", "groupe": "Acquisition"},
-  {"id": "pages_visibles", "nom": "Pages qui apparaissent dans Google (30 j)", "cible_3m": 50, "cible_12m": 1000, "source": "Search Console (approximation des pages indexées)", "groupe": "Acquisition"},
-  {"id": "clics_stores_28j", "nom": "Clics du site vers les stores / 28 j", "source": "GA4", "groupe": "Acquisition"},
-  {"id": "leads_28j", "nom": "Leads du site / 28 j (tous types)", "cible_3m": 20, "cible_12m": 60, "cible_note": "cible stratégie : leads organisateurs / mois", "source": "GA4 generate_lead", "groupe": "Acquisition"},
-  {"id": "inscrits_attente", "nom": "Inscrits en liste d'attente", "source": "compteur du site", "groupe": "Acquisition"},
-  {"id": "abonnes_reseaux", "nom": "Abonnés Facebook + Instagram", "source": "API Meta", "groupe": "Notoriété", "sous": ["posts_7j", "portee_ig_28j"]},
-  {"id": "posts_7j", "nom": "Posts publiés / 7 j", "cible_3m": 3, "cible_12m": 3, "source": "canaux/social/publications.json", "groupe": "Notoriété"},
-  {"id": "portee_ig_28j", "nom": "Portée Instagram / 28 j", "source": "API Meta", "groupe": "Notoriété"},
-  {"id": "mentions_ia", "nom": "Mentions de Fitmates dans 30 prompts IA", "unite": "/30", "cible_3m": 3, "cible_12m": 15, "source": "script hebdo à construire", "groupe": "Notoriété"},
-  {"id": "note_stores", "nom": "Note moyenne App Store", "unite": "★", "source": "App Store Connect", "groupe": "Notoriété"}
+   "sous": [
+    "organisateurs_actifs",
+    "sorties_a_venir",
+    "taux_presence",
+    "retention_30j"
+   ]
+  },
+  {
+   "id": "organisateurs_actifs",
+   "nom": "Organisateurs actifs (≥ 1 sortie / 30 j)",
+   "cible_3m": 30,
+   "cible_12m": 150,
+   "source": "backend",
+   "acces": "acces-Backend : inscriptions, actifs, participations",
+   "groupe": "Offre",
+   "sous": [
+    "leads_28j",
+    "zones_ouvertes"
+   ]
+  },
+  {
+   "id": "sorties_a_venir",
+   "nom": "Sorties publiques à venir",
+   "source": "flux public des sorties",
+   "groupe": "Offre"
+  },
+  {
+   "id": "zones_ouvertes",
+   "nom": "Zones ouvertes (3 orga / 30 participants)",
+   "cible_3m": 5,
+   "cible_12m": 12,
+   "source": "backend",
+   "acces": "acces-Backend : inscriptions, actifs, participations",
+   "groupe": "Offre"
+  },
+  {
+   "id": "taux_presence",
+   "nom": "Taux de présence (check-in / inscrits)",
+   "unite": "%",
+   "cible_3m": 75,
+   "cible_12m": 85,
+   "source": "backend",
+   "acces": "acces-Backend : inscriptions, actifs, participations",
+   "groupe": "Engagement"
+  },
+  {
+   "id": "retention_30j",
+   "nom": "2ᵉ participation dans les 30 j",
+   "unite": "%",
+   "cible_3m": 40,
+   "cible_12m": 55,
+   "source": "backend",
+   "acces": "acces-Backend : inscriptions, actifs, participations",
+   "groupe": "Engagement"
+  },
+  {
+   "id": "k_factor",
+   "nom": "K-factor parrainage",
+   "cible_3m": 0.15,
+   "cible_12m": 0.3,
+   "source": "backend",
+   "acces": "acces-Backend : inscriptions, actifs, participations",
+   "groupe": "Engagement"
+  },
+  {
+   "id": "installs_28j",
+   "nom": "Installations / 28 j (iOS + Android)",
+   "source": "App Store Analytics + Google Play",
+   "groupe": "Acquisition",
+   "cible_note": "à fixer après le premier mois mesuré",
+   "sous": [
+    "sessions_organiques_28j",
+    "gsc_impressions_30j",
+    "gsc_clics_30j",
+    "pages_visibles",
+    "clics_stores_28j",
+    "abonnes_reseaux"
+   ]
+  },
+  {
+   "id": "sessions_organiques_28j",
+   "nom": "Visites depuis Google / 28 j",
+   "cible_3m": 2000,
+   "cible_12m": 20000,
+   "source": "GA4 (Organic Search)",
+   "groupe": "Acquisition"
+  },
+  {
+   "id": "gsc_impressions_30j",
+   "nom": "Apparitions Google / 30 j",
+   "source": "Search Console",
+   "groupe": "Acquisition"
+  },
+  {
+   "id": "gsc_clics_30j",
+   "nom": "Clics Google / 30 j",
+   "source": "Search Console",
+   "groupe": "Acquisition"
+  },
+  {
+   "id": "pages_visibles",
+   "nom": "Pages qui apparaissent dans Google (30 j)",
+   "cible_3m": 50,
+   "cible_12m": 1000,
+   "source": "Search Console (approximation des pages indexées)",
+   "groupe": "Acquisition"
+  },
+  {
+   "id": "clics_stores_28j",
+   "nom": "Clics du site vers les stores / 28 j",
+   "source": "GA4",
+   "groupe": "Acquisition"
+  },
+  {
+   "id": "leads_28j",
+   "nom": "Leads du site / 28 j (tous types)",
+   "cible_3m": 20,
+   "cible_12m": 60,
+   "cible_note": "cible stratégie : leads organisateurs / mois",
+   "source": "GA4 generate_lead",
+   "groupe": "Acquisition"
+  },
+  {
+   "id": "inscrits_attente",
+   "nom": "Inscrits en liste d'attente",
+   "source": "compteur du site",
+   "groupe": "Acquisition"
+  },
+  {
+   "id": "abonnes_reseaux",
+   "nom": "Abonnés Facebook + Instagram",
+   "source": "API Meta",
+   "groupe": "Notoriété",
+   "sous": [
+    "posts_7j",
+    "portee_ig_28j"
+   ]
+  },
+  {
+   "id": "posts_7j",
+   "nom": "Posts publiés / 7 j",
+   "cible_3m": 3,
+   "cible_12m": 3,
+   "source": "canaux/social/publications.json",
+   "groupe": "Notoriété"
+  },
+  {
+   "id": "portee_ig_28j",
+   "nom": "Portée Instagram / 28 j",
+   "source": "API Meta",
+   "groupe": "Notoriété"
+  },
+  {
+   "id": "mentions_ia",
+   "nom": "Mentions de Fitmates dans 30 prompts IA",
+   "unite": "/30",
+   "cible_3m": 3,
+   "cible_12m": 15,
+   "source": "script hebdo à construire",
+   "groupe": "Notoriété"
+  },
+  {
+   "id": "note_stores",
+   "nom": "Note moyenne App Store",
+   "unite": "★",
+   "source": "App Store Connect",
+   "groupe": "Notoriété"
+  }
  ],
  "canaux": [
-  {"canal": "Google (SEO)", "role": "Pages sport × lieu, événements, guides organisateurs", "kpis": ["gsc_impressions_30j", "sessions_organiques_28j", "pages_visibles"], "etat": "en cours", "prochain": "Itinéraires sourcés Chevreuse, Rambouillet, Vexin (novembre)"},
-  {"canal": "Stores (ASO)", "role": "Fiches réécrites fr-FR, mots-clés, captures", "kpis": ["installs_28j", "note_stores"], "etat": "en revue", "prochain": "Build iOS 1.1.16, revue Google Play, mesure J+21"},
-  {"canal": "Réseaux sociaux", "role": "Grille de lancement, sorties de la semaine, post par sortie", "kpis": ["abonnes_reseaux", "posts_7j", "portee_ig_28j"], "etat": "prêt, en attente de validation", "prochain": "9 posts de lancement puis 3 posts / semaine"},
-  {"canal": "E-mail et parrainage", "role": "Confirmation liste d'attente, ouverture de zone, bienvenue organisateur", "kpis": ["inscrits_attente", "leads_28j", "k_factor"], "etat": "textes prêts", "prochain": "Domaine Resend vérifié, puis branchement"},
-  {"canal": "Assistants IA", "role": "HTML statique, JSON-LD, llms.txt, entité (Wikidata, annuaires)", "kpis": ["mentions_ia"], "etat": "base livrée", "prochain": "Fiches annuaires, mesure hebdo des 30 prompts"},
-  {"canal": "Publicité", "role": "Apple Search Ads, Google Ads organisateurs (600 €/mois prévus)", "kpis": ["installs_28j", "leads_28j"], "etat": "en pause", "prochain": "Décision quand l'organique est mesuré (stratégie : focus organique)"}
+  {
+   "canal": "Google (SEO)",
+   "role": "Pages sport × lieu, événements, guides organisateurs",
+   "kpis": [
+    "gsc_impressions_30j",
+    "sessions_organiques_28j",
+    "pages_visibles"
+   ],
+   "etat": "en cours",
+   "prochain": "Itinéraires Chevreuse et Vexin en ligne ; Rambouillet le 16/11 ; « randonner l'hiver » avant décembre"
+  },
+  {
+   "canal": "Stores (ASO)",
+   "role": "Fiches réécrites fr-FR, mots-clés, captures",
+   "kpis": [
+    "installs_28j",
+    "note_stores"
+   ],
+   "etat": "en revue",
+   "prochain": "Revue Google Play ; fiche App Store fr-FR avec la prochaine mise à jour de l'app ; mesure J+21"
+  },
+  {
+   "canal": "Réseaux sociaux",
+   "role": "Grille de lancement, sorties de la semaine, post par sortie",
+   "kpis": [
+    "abonnes_reseaux",
+    "posts_7j",
+    "portee_ig_28j"
+   ],
+   "etat": "en cours",
+   "prochain": "Lancement : 1 post par jour jusqu'au 01/11, sorties de la semaine le jeudi, puis lot de novembre (3 posts / semaine)"
+  },
+  {
+   "canal": "E-mail et parrainage",
+   "role": "Confirmation et lien de parrainage affichés sur le site ; e-mail d'ouverture de secteur en brouillons Gmail",
+   "kpis": [
+    "inscrits_attente",
+    "leads_28j",
+    "k_factor"
+   ],
+   "etat": "en place",
+   "prochain": "Premier secteur ouvert hors rando IDF"
+  },
+  {
+   "canal": "Assistants IA",
+   "role": "HTML statique, JSON-LD, llms.txt, entité (Wikidata, annuaires)",
+   "kpis": [
+    "mentions_ia"
+   ],
+   "etat": "base livrée",
+   "prochain": "Fiches annuaires, mesure hebdo des 30 prompts"
+  },
+  {
+   "canal": "Publicité",
+   "role": "Apple Search Ads, Google Ads organisateurs (600 €/mois prévus)",
+   "kpis": [
+    "installs_28j",
+    "leads_28j"
+   ],
+   "etat": "en pause",
+   "prochain": "Décision quand l'organique est mesuré (stratégie : focus organique)"
+  }
  ],
  "calendrier": [
-  {"quand": "oct.–déc. 2026", "quoi": "Site, flux et leads branchés ; fiches stores ; Search Console ; réseaux lancés ; e-mails ; guides organisateurs indexés", "etat": "en cours"},
-  {"quand": "janv. 2027", "quoi": "Course à pied à Paris : run clubs, pré-inscriptions", "etat": "à venir"},
-  {"quand": "févr.–mars 2027", "quoi": "Saison rando : pages prêtes avant mars, contenus « randonner l'hiver », « gare à gare »", "etat": "à venir"},
-  {"quand": "avr. 2027", "quoi": "Padel et vélo", "etat": "à venir"},
-  {"quand": "mai–juin 2027", "quoi": "Seine-Saint-Denis, Essonne, Val-d'Oise", "etat": "à venir"},
-  {"quand": "sept. 2027", "quoi": "Rentrée : universités, run clubs, padel", "etat": "à venir"},
-  {"quand": "oct. 2027", "quoi": "Lyon, pages préremplies 3 mois avant", "etat": "à venir"}
+  {
+   "quand": "oct.–déc. 2026",
+   "quoi": "Site, flux et leads branchés ; fiches stores ; Search Console ; réseaux lancés ; e-mails ; guides organisateurs indexés",
+   "etat": "en cours"
+  },
+  {
+   "quand": "janv. 2027",
+   "quoi": "Course à pied à Paris : run clubs, pré-inscriptions",
+   "etat": "à venir"
+  },
+  {
+   "quand": "févr.–mars 2027",
+   "quoi": "Saison rando : pages prêtes avant mars, contenus « randonner l'hiver », « gare à gare »",
+   "etat": "à venir"
+  },
+  {
+   "quand": "avr. 2027",
+   "quoi": "Padel et vélo",
+   "etat": "à venir"
+  },
+  {
+   "quand": "mai–juin 2027",
+   "quoi": "Seine-Saint-Denis, Essonne, Val-d'Oise",
+   "etat": "à venir"
+  },
+  {
+   "quand": "sept. 2027",
+   "quoi": "Rentrée : universités, run clubs, padel",
+   "etat": "à venir"
+  },
+  {
+   "quand": "oct. 2027",
+   "quoi": "Lyon, pages préremplies 3 mois avant",
+   "etat": "à venir"
+  }
  ]
 }

@@ -2,7 +2,7 @@
 // Données : data/*.json, réécrits chaque jour par scripts/cockpit_export.py.
 (function () {
   const FILES = ['meta', 'ga4_jour', 'ga4_canaux', 'ga4_pages', 'ga4_evenements', 'gsc_jour', 'gsc_requetes', 'gsc_pages',
-    'stores', 'app_store_stats', 'play_stats', 'reseaux', 'publications', 'sorties', 'listes_attente', 'acces', 'actions', 'a_faire', 'kpis'];
+    'stores', 'app_store_stats', 'play_stats', 'reseaux', 'publications', 'sorties', 'listes_attente', 'acces', 'actions', 'a_faire', 'kpis', 'kpis_historique'];
   const nf = new Intl.NumberFormat('fr-FR');
   const nf1 = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 1 });
   const pct = new Intl.NumberFormat('fr-FR', { style: 'percent', maximumFractionDigits: 0 });
@@ -61,7 +61,33 @@
   const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
   function kpiList() {
     const vals = Object.fromEntries((D.kpis || []).map((r) => [r.id, r.valeur]));
-    return (D.strategie?.kpis || []).map((k) => ({ ...k, valeur: vals[k.id] ?? null }));
+    const H = Object.entries(D.kpis_historique || {}).sort(([a], [b]) => a.localeCompare(b));
+    return (D.strategie?.kpis || []).map((k) => {
+      const serie = H.filter(([, v]) => v[k.id] != null).map(([d, v]) => ({ d, v: v[k.id] }));
+      const last = serie[serie.length - 1];
+      const ref = last ? [...serie].reverse().find((p) => (new Date(last.d) - new Date(p.d)) / 864e5 >= 7) : null;
+      return { ...k, valeur: vals[k.id] ?? null, serie, avant7: ref ? ref.v : null };
+    });
+  }
+  // Mini-courbe (SVG) et écart sur 7 jours
+  function spark(k) {
+    const pts = k.serie.slice(-60);
+    const box = el('span', 'spark');
+    if (pts.length < 2) { box.textContent = pts.length ? 'historique dès demain' : ''; box.classList.add('muted'); return box; }
+    const W = 90; const Hh = 22; const vs = pts.map((p) => p.v); const mn = Math.min(...vs); const mx = Math.max(...vs) || 1;
+    const sx = (i) => (i / (pts.length - 1)) * (W - 2) + 1; const sy = (v) => Hh - 2 - ((v - mn) / (mx - mn || 1)) * (Hh - 4);
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); svg.setAttribute('viewBox', `0 0 ${W} ${Hh}`); svg.setAttribute('width', W); svg.setAttribute('height', Hh);
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', pts.map((p, i) => `${i ? 'L' : 'M'}${sx(i).toFixed(1)},${sy(p.v).toFixed(1)}`).join(''));
+    path.setAttribute('fill', 'none'); path.setAttribute('stroke', 'currentColor'); path.setAttribute('stroke-width', '1.5');
+    svg.append(path); box.append(svg);
+    const t = el('title', null, `${fmtDay(new Date(pts[0].d))} → ${fmtDay(new Date(pts[pts.length - 1].d))}`); svg.append(t);
+    return box;
+  }
+  function delta7(k) {
+    if (k.valeur == null || k.avant7 == null) return null;
+    const [txt, cls] = deltaText(k.valeur, k.avant7);
+    return txt ? el('span', `kdelta ${cls}`, `${txt} en 7 j`) : null;
   }
   const fmtK = (k, v) => (v == null ? '—' : k.unite === '%' ? `${nf1.format(v)} %` : k.unite === '★' ? `${nf1.format(v)} ★` : k.unite === '/30' ? `${v}/30` : nf1.format(v));
   function progress(k) {
@@ -84,7 +110,11 @@
       const t = el('button', `kt${k.etoile ? ' star' : ''}`); t.type = 'button'; t.dataset.open = 'strategie';
       t.append(el('span', 'kt-name', k.etoile ? `★ ${k.nom}` : k.nom), el('span', 'kt-val', fmtK(k, k.valeur)));
       if (k.valeur == null) t.append(missing(k));
-      else t.append(el('span', 'kt-sub', k.cible_3m != null ? `cible ${D.strategie.echeances['3m']} : ${fmtK(k, k.cible_3m)}` : (k.cible_note || '')), progress(k));
+      else {
+        const sub = el('span', 'kt-sub', k.cible_3m != null ? `cible ${D.strategie.echeances['3m']} : ${fmtK(k, k.cible_3m)}` : (k.cible_note || ''));
+        const d = delta7(k); if (d) sub.append(sub.textContent ? ' · ' : '', d);
+        t.append(sub, progress(k));
+      }
       box.append(t);
     });
   }
@@ -97,19 +127,21 @@
 
     const c2 = card('Arbre des KPIs', `Cibles : à 3 mois (${S.echeances['3m']}) et à 12 mois (${S.echeances['12m']}). Valeur actuelle tirée de l'export du jour.`);
     const tbl = el('table', 'tbl ktree'); const th = el('thead'); const hr = el('tr');
-    ['KPI', 'Valeur', 'Cible 3 mois', 'Cible 12 mois', 'Progression', 'Source'].forEach((h, i) => hr.append(el('th', i && i < 4 ? 'n' : null, h))); th.append(hr);
+    ['KPI', 'Valeur', 'Cible 3 mois', 'Cible 12 mois', 'Progression', 'Tendance', 'Source'].forEach((h, i) => hr.append(el('th', i && i < 4 ? 'n' : null, h))); th.append(hr);
     const tb = el('tbody');
     const row = (k, lvl) => {
       const tr = el('tr', `lvl${lvl}`);
       tr.append(el('td', null, `${k.etoile ? '★ ' : ''}${k.nom}`), el('td', 'n', fmtK(k, k.valeur)), el('td', 'n', k.cible_3m != null ? fmtK(k, k.cible_3m) : (k.cible_note ? 'à fixer' : '—')),
         el('td', 'n', k.cible_12m != null ? fmtK(k, k.cible_12m) : '—'));
-      const pc = el('td'); pc.append(k.valeur == null ? missing(k) : progress(k)); tr.append(pc, el('td', 'src', k.source || ''));
+      const pc = el('td'); pc.append(k.valeur == null ? missing(k) : progress(k));
+      const tc = el('td', 'trend'); tc.append(spark(k)); const d = delta7(k); if (d) tc.append(d);
+      tr.append(pc, tc, el('td', 'src', k.source || ''));
       tb.append(tr);
     };
     const star = ks.find((k) => k.etoile); if (star) row(star, 0);
     const groups = [...new Set(ks.filter((k) => k.groupe).map((k) => k.groupe))];
     groups.forEach((g) => {
-      const gr = el('tr', 'grp'); const gd = el('td', null, g); gd.colSpan = 6; gr.append(gd); tb.append(gr);
+      const gr = el('tr', 'grp'); const gd = el('td', null, g); gd.colSpan = 7; gr.append(gd); tb.append(gr);
       const inG = ks.filter((k) => k.groupe === g);
       const children = new Set(inG.flatMap((k) => k.sous || []));
       inG.filter((k) => !children.has(k.id)).forEach((k) => { row(k, 1); (k.sous || []).map((id) => byId[id]).filter((c) => c && c.groupe === g).forEach((c) => row(c, 2)); });

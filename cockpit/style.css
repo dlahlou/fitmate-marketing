@@ -145,3 +145,8 @@ button { font: inherit; color: inherit; }
 .etat-btn:disabled { opacity: .6; cursor: wait; }
 .etat-msg { margin: 0; font-size: 13px; color: var(--muted); }
 .etat-msg.bad { color: var(--bad); }
+
+.spark { display: inline-flex; color: var(--accent-2); vertical-align: middle; }
+.spark.muted { color: var(--muted); font-size: 11px; }
+.kdelta { font-size: 11px; margin-left: 6px; white-space: nowrap; }
+.ktree .trend { white-space: nowrap; }

@@ -423,7 +423,13 @@ def kpis() -> list[dict]:
     v.update({k: back.get(k) for k in ("participations_semaine", "organisateurs_actifs", "zones_ouvertes", "taux_presence",
                                        "retention_30j", "k_factor")})
     strat = json.loads((ROOT / "cockpit" / "strategie.json").read_text())
-    return [{"id": k["id"], "valeur": v.get(k["id"])} for k in strat["kpis"]]
+    rows = [{"id": k["id"], "valeur": v.get(k["id"])} for k in strat["kpis"]]
+    # Historique : une valeur par KPI et par jour (le dernier export du jour gagne), pour les tendances du cockpit
+    hf = OUT / "kpis_historique.json"
+    hist = json.loads(hf.read_text()) if hf.exists() else {}
+    hist[TODAY.isoformat()] = {r["id"]: r["valeur"] for r in rows if r["valeur"] is not None}
+    hf.write_text(json.dumps(dict(sorted(hist.items())[-400:]), ensure_ascii=False))
+    return rows
 
 
 JOBS = {"ga4_jour": ga4_daily, "ga4_canaux": ga4_channels, "ga4_pages": ga4_pages, "ga4_evenements": ga4_events,

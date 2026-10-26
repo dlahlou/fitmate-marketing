@@ -88,5 +88,11 @@
   "canal": "Google",
   "action": "Itinéraires officiels du Parc ajoutés : vallée de Chevreuse (2 boucles RER B) et Vexin (Auvers, Chars ligne J) ; titles ramenés à 60 caractères. Référence Search Console : 249 apparitions / 13 clics en 30 j",
   "statut": "fait"
+ },
+ {
+  "date": "2026-10-26",
+  "canal": "Mesure",
+  "action": "Cockpit : historique quotidien des KPIs, mini-courbes et écart sur 7 jours ; pilotage autonome (3 passages par jour) et liste de tâches de Claude",
+  "statut": "fait"
  }
 ]
