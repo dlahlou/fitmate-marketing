@@ -8,7 +8,7 @@ import io
 import requests
 
 from .. import google_auth
-from ..config import PLAY_PACKAGE, env
+from ..config import PLAY_PACKAGE, opt
 
 PUB = "https://www.googleapis.com/auth/androidpublisher"
 REP = "https://www.googleapis.com/auth/playdeveloperreporting"
@@ -89,7 +89,8 @@ def reporting(metric_set: str = "crashRateMetricSet") -> dict:
 
 
 def _bucket() -> str:
-    return env("PLAY_REPORTS_BUCKET", HOW_BUCKET).removeprefix("gs://").split("/")[0]
+    # Adresse du dossier des rapports groupés de la Play Console (pas un secret), surchargeable par PLAY_REPORTS_BUCKET
+    return (opt("PLAY_REPORTS_BUCKET") or "gs://pubsite_prod_7410630646260977899").removeprefix("gs://").split("/")[0]
 
 
 def bulk_report_files(prefix: str = "stats/store_performance/") -> list[str]:

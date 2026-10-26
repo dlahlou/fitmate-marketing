@@ -150,7 +150,7 @@ ACCESS = [
     ("Google : recherche (Search Console)", lambda: google_web.search_analytics(d(9), d(2), ("date",), 1), "", ""),
     ("Google Play : fiche et avis", lambda: google_play.reviews(), "", ""),
     ("Google Play : installations et visites de fiche", lambda: google_play.bulk_report_files(),
-     "Copier l'URI Cloud Storage des rapports (gs://pubsite_prod_rev_…)", "https://play.google.com/console"),
+     "Donner au compte claude-aso la permission « Voir les informations sur l'application et télécharger les rapports groupés » au niveau du compte (effet sous 24 h)", "https://play.google.com/console/u/0/developers/7410630646260977899/users-and-permissions"),
     ("App Store : fiche et avis", lambda: app_store.app(), "", ""),
     ("App Store : impressions et téléchargements", lambda: app_store.ensure_analytics_request(),
      "Créer une clé API au rôle Admin", "https://appstoreconnect.apple.com/access/integrations/api"),
