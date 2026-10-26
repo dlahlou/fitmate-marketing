@@ -33,6 +33,11 @@
 - Données : `python -m scripts.cockpit_export` réécrit `cockpit/data/*.json` ; commit + push sur main = redéploiement.
 - `cockpit/todo.json` : la liste d'actions (qui, canal, priorité, lien, statut). **Toute action pour Driss a des `etapes`** (texte, `lien` + `libelle_lien`, `copier`) et une `duree` : un lien par étape, où cliquer, quoi coller. Le cockpit les affiche avec un bouton « Copier ». **Passer `statut` à `fait`** quand
   Driss dit qu'une action est faite. Les accès manquants s'y ajoutent automatiquement.
+- **« Marquer comme fait »** : Driss clique dans le panneau de l'action ; `cockpit/api/etat.js` l'enregistre dans le Blob privé
+  `fitmate-cockpit-etat` (store_GO9uxtU9MOTKzXOb, relié au projet). Les tâches de 6 h 47 et 12 h 13 lisent
+  `/api/etat` (outil Vercel `web_fetch_vercel_url`) puis `python -m scripts.verifier <fichier>` : preuve cherchée dans la
+  source (Instagram, Search Console, App Store, flux…), résultat dans `cockpit/verifications.json`, action close si ok,
+  rouverte avec la raison sinon. Ajouter une vérification = une fonction dans `CHECKS` de `scripts/verifier.py`.
 - `cockpit/actions.json` : journal des changements (à compléter à chaque action, pour comparer 3 à 4 semaines après).
 - Export quotidien : tâche planifiée à 6 h 47 (Paris) dans la session dédiée. Une session lancée « à neuf » par une
   tâche planifiée **ne peut pas pousser** (dépôt non attaché) : la tâche doit revenir dans une session créée avec ce
