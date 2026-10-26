@@ -11,7 +11,7 @@
 | Google Play : statistiques de fiche | `sources/google_play.py` | visiteurs, installations, source de trafic | `PLAY_REPORTS_BUCKET` | URI à fournir (§ 3) |
 | App Store Connect : fiche, avis | `sources/app_store.py` | ASO iOS | `ASC_ISSUER_ID`, `ASC_KEY_ID`, `ASC_PRIVATE_KEY_B64` | OK |
 | App Store : App Analytics | `sources/app_store.py` | impressions, pages vues, téléchargements, recherche vs navigation | clé au rôle **Admin** | refusé avec la clé App Manager (§ 4) |
-| Search Console | `sources/google_web.py` | requêtes Google, positions, clics du site | `GSC_SITE` (défaut `sc-domain:fitmates.net`) | API à activer + accès (§ 5) |
+| Search Console | `sources/google_web.py` | requêtes Google, positions, clics du site | `GSC_SITE` (défaut `sc-domain:fitmates.net`) | OK |
 | GA4 | `sources/google_web.py` | trafic par canal, conversions | `GA4_PROPERTY_ID` (facultatif, détecté) | OK |
 | Positions dans les stores | `sources/store_search.py` | rang de Fitmates sur les requêtes cibles | aucune | hôtes `itunes.apple.com`, `play.google.com` à autoriser |
 | Meta (Facebook, Instagram, Threads) | `sources/social.py` | abonnés, portée, clics | `FB_PAGE_ID`, `FB_PAGE_TOKEN`, `IG_USER_ID`, `THREADS_USER_ID`, `THREADS_TOKEN` | à fournir (§ 6) |

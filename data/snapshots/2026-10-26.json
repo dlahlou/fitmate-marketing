@@ -32,6 +32,479 @@
     "5": 1
    }
   },
+  "search_console_requetes": [
+   {
+    "query": "fitmates",
+    "clicks": 6,
+    "impressions": 12,
+    "ctr": 0.5,
+    "position": 1.25
+   },
+   {
+    "query": "basketball mates",
+    "clicks": 0,
+    "impressions": 9,
+    "ctr": 0,
+    "position": 7.555555555555555
+   },
+   {
+    "query": "club running paris",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 13
+   },
+   {
+    "query": "courir gare du nord",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 35
+   },
+   {
+    "query": "gr20 groupe",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 20
+   },
+   {
+    "query": "groupe de randonnée autour de moi",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 9
+   },
+   {
+    "query": "mates sport",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 7
+   },
+   {
+    "query": "plateforme sport",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 69.5
+   },
+   {
+    "query": "prix padel paris",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 8
+   },
+   {
+    "query": "randonnée hauts de seine",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 20
+   },
+   {
+    "query": "randonnée yvelines",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 26
+   },
+   {
+    "query": "reseau social sport",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 6
+   },
+   {
+    "query": "sortie velo groupe",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 26
+   },
+   {
+    "query": "sport en groupe",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 68.5
+   }
+  ],
+  "search_console_pages": [
+   {
+    "page": "https://fitmates.net/",
+    "clicks": 4,
+    "impressions": 17,
+    "ctr": 0.23529411764705882,
+    "position": 2.7058823529411766
+   },
+   {
+    "page": "https://www.fitmates.net/",
+    "clicks": 2,
+    "impressions": 13,
+    "ctr": 0.15384615384615385,
+    "position": 13.846153846153847
+   },
+   {
+    "page": "https://fitmates.net/sport/randonnee",
+    "clicks": 1,
+    "impressions": 4,
+    "ctr": 0.25,
+    "position": 4.75
+   },
+   {
+    "page": "https://www.fitmates.net/applications-sport-a-plusieurs",
+    "clicks": 1,
+    "impressions": 15,
+    "ctr": 0.06666666666666667,
+    "position": 11.2
+   },
+   {
+    "page": "https://www.fitmates.net/cs/news/xxx-%E0%A4%AA%E0%A5%8B%E0%A4%B0%E0%A5%8D%E0%A4%A8-%E0%A4%B5%E0%A4%BF%E0%A4%A1%E0%A5%8B%E0%A4%B8-c2lmz8.html?ojuz",
+    "clicks": 1,
+    "impressions": 8,
+    "ctr": 0.125,
+    "position": 2.375
+   },
+   {
+    "page": "https://www.fitmates.net/evenements",
+    "clicks": 1,
+    "impressions": 15,
+    "ctr": 0.06666666666666667,
+    "position": 4.8
+   },
+   {
+    "page": "https://www.fitmates.net/evenements/randonnee-de-20km-2026-10-25-5ec1d794",
+    "clicks": 1,
+    "impressions": 1,
+    "ctr": 1,
+    "position": 1
+   },
+   {
+    "page": "https://www.fitmates.net/randonnees-week-end-ile-de-france",
+    "clicks": 1,
+    "impressions": 4,
+    "ctr": 0.25,
+    "position": 4.25
+   },
+   {
+    "page": "https://www.fitmates.net/sport/course-a-pied/val-de-marne",
+    "clicks": 1,
+    "impressions": 6,
+    "ctr": 0.16666666666666666,
+    "position": 4.5
+   },
+   {
+    "page": "https://www.fitmates.net/sport/randonnee/essonne",
+    "clicks": 1,
+    "impressions": 4,
+    "ctr": 0.25,
+    "position": 5.75
+   },
+   {
+    "page": "https://app.fitmates.net/",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 7
+   },
+   {
+    "page": "https://www.fitmates.net/evenements/randonnee-autour-de-gif-2026-10-25-993bd143",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 3.3333333333333335
+   },
+   {
+    "page": "https://www.fitmates.net/evenements/randonnee-boucle-depart-villeneuve-le-comte-2026-10-30-493aed24",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 11
+   },
+   {
+    "page": "https://www.fitmates.net/motivation-sport",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 8
+   },
+   {
+    "page": "https://www.fitmates.net/organiser",
+    "clicks": 0,
+    "impressions": 8,
+    "ctr": 0,
+    "position": 4.5
+   },
+   {
+    "page": "https://www.fitmates.net/organiser/run-club",
+    "clicks": 0,
+    "impressions": 8,
+    "ctr": 0,
+    "position": 6.125
+   },
+   {
+    "page": "https://www.fitmates.net/padel/marseille",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 7
+   },
+   {
+    "page": "https://www.fitmates.net/privacy-policy.html",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 1
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/calanques-marseille",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 1
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/chemin-de-stevenson",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 11
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/fontainebleau",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 5.5
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/gorges-du-verdon",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 17.5
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/gr20",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 14
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/vallee-de-chevreuse",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 5
+   },
+   {
+    "page": "https://www.fitmates.net/reseau-social-sportif",
+    "clicks": 0,
+    "impressions": 14,
+    "ctr": 0,
+    "position": 4.5
+   },
+   {
+    "page": "https://www.fitmates.net/run-clubs-paris",
+    "clicks": 0,
+    "impressions": 7,
+    "ctr": 0,
+    "position": 6.428571428571429
+   },
+   {
+    "page": "https://www.fitmates.net/se-faire-des-amis-par-le-sport",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 4.5
+   },
+   {
+    "page": "https://www.fitmates.net/sport/basketball",
+    "clicks": 0,
+    "impressions": 9,
+    "ctr": 0,
+    "position": 7.555555555555555
+   },
+   {
+    "page": "https://www.fitmates.net/sport/course-a-pied",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 5.5
+   },
+   {
+    "page": "https://www.fitmates.net/sport/course-a-pied/essonne",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 11.25
+   },
+   {
+    "page": "https://www.fitmates.net/sport/course-a-pied/hauts-de-seine",
+    "clicks": 0,
+    "impressions": 5,
+    "ctr": 0,
+    "position": 4.2
+   },
+   {
+    "page": "https://www.fitmates.net/sport/course-a-pied/paris",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 17.5
+   },
+   {
+    "page": "https://www.fitmates.net/sport/course-a-pied/seine-saint-denis",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 9
+   },
+   {
+    "page": "https://www.fitmates.net/sport/escalade",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 7.25
+   },
+   {
+    "page": "https://www.fitmates.net/sport/escalade/paris",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 10
+   },
+   {
+    "page": "https://www.fitmates.net/sport/fitness",
+    "clicks": 0,
+    "impressions": 6,
+    "ctr": 0,
+    "position": 7.333333333333333
+   },
+   {
+    "page": "https://www.fitmates.net/sport/football",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 7.666666666666667
+   },
+   {
+    "page": "https://www.fitmates.net/sport/marche-nordique",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 8.75
+   },
+   {
+    "page": "https://www.fitmates.net/sport/natation",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 7.333333333333333
+   },
+   {
+    "page": "https://www.fitmates.net/sport/padel/paris",
+    "clicks": 0,
+    "impressions": 19,
+    "ctr": 0,
+    "position": 9.105263157894736
+   },
+   {
+    "page": "https://www.fitmates.net/sport/randonnee",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 3.3333333333333335
+   },
+   {
+    "page": "https://www.fitmates.net/sport/randonnee/hauts-de-seine",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 20
+   },
+   {
+    "page": "https://www.fitmates.net/sport/randonnee/paris",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 6.666666666666667
+   },
+   {
+    "page": "https://www.fitmates.net/sport/randonnee/seine-et-marne",
+    "clicks": 0,
+    "impressions": 7,
+    "ctr": 0,
+    "position": 8.428571428571429
+   },
+   {
+    "page": "https://www.fitmates.net/sport/randonnee/val-de-marne",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 2.666666666666667
+   },
+   {
+    "page": "https://www.fitmates.net/sport/randonnee/yvelines",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 26
+   },
+   {
+    "page": "https://www.fitmates.net/sport/tennis",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 10
+   },
+   {
+    "page": "https://www.fitmates.net/sport/trail/seine-et-marne",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 20
+   },
+   {
+    "page": "https://www.fitmates.net/sport/velo",
+    "clicks": 0,
+    "impressions": 6,
+    "ctr": 0,
+    "position": 13.333333333333334
+   },
+   {
+    "page": "https://www.fitmates.net/sport/velo/val-de-marne",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 8
+   },
+   {
+    "page": "https://www.fitmates.net/sport/yoga",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 5
+   },
+   {
+    "page": "https://www.fitmates.net/sports",
+    "clicks": 0,
+    "impressions": 8,
+    "ctr": 0,
+    "position": 10.625
+   },
+   {
+    "page": "https://www.fitmates.net/widget",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 9
+   }
+  ],
   "ga4_sources": [
    {
     "sessionDefaultChannelGroup": "Organic Search",
@@ -171,10 +644,8 @@
  "erreurs": {
   "play_store_performance": "variable PLAY_REPORTS_BUCKET absente : URI des rapports groupés : Play Console → Télécharger des rapports → Statistiques → « Copier l'URI Cloud Storage » (gs://pubsite_prod_rev_…), à mettre dans PLAY_REPORTS_BUCKET",
   "ios_note_publique_fr": "HTTPSConnectionPool(host='itunes.apple.com', port=443): Max retries exceeded with url: /lookup?id=6756283890&country=fr (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-  "ios_analytics": "GET /apps/6756283890/analyticsReportRequests : 403 {\n  \"errors\" : [ {\n    \"id\" : \"16fae056-fb99-483a-bf96-7ad4f67045b8\",\n    \"status\" : \"403\",\n    \"code\" : \"FORBIDDEN_ERROR\",\n    \"title\" : \"This request is forbidden for security reasons\",\n    \"detail\" : \"The API key in use does not allow this reques",
+  "ios_analytics": "GET /apps/6756283890/analyticsReportRequests : 403 {\n  \"errors\" : [ {\n    \"id\" : \"ff108b37-1f3e-4656-a055-262d73b0917b\",\n    \"status\" : \"403\",\n    \"code\" : \"FORBIDDEN_ERROR\",\n    \"title\" : \"This request is forbidden for security reasons\",\n    \"detail\" : \"The API key in use does not allow this reques",
   "positions_stores_fr": "HTTPSConnectionPool(host='itunes.apple.com', port=443): Max retries exceeded with url: /search?term=randonn%C3%A9e&country=fr&entity=software&limit=200 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-  "search_console_requetes": "Search Console : 403 {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"User does not have sufficient permission for site 'sc-domain:fitmates.net'. See also: https://support.google.com/webmasters/answer/2451999.\",\n    \"error",
-  "search_console_pages": "Search Console : 403 {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"User does not have sufficient permission for site 'sc-domain:fitmates.net'. See also: https://support.google.com/webmasters/answer/2451999.\",\n    \"error",
   "backend_agregats": "variable BACKEND_METRICS_URL absente : URL et jeton de l'endpoint d'agrégats marketing (BACKEND_METRICS_URL, BACKEND_METRICS_TOKEN), à créer côté backend : voir docs/sources-de-donnees.md"
  }
 }
