@@ -12,7 +12,7 @@ import json
 from collections import Counter
 
 from fitmates_mkt.config import ROOT
-from fitmates_mkt.sources import app_store, backend, google_play, google_web, store_search
+from fitmates_mkt.sources import app_store, backend, google_play, google_web, social, store_search
 
 
 def _play_store_performance(month: str) -> dict:
@@ -41,6 +41,9 @@ def collect(days: int) -> dict:
         "search_console_pages": lambda: google_web.search_analytics(start, end, ("page",), 200),
         "ga4_sources": lambda: google_web.ga4_report(start, end, ["sessionDefaultChannelGroup"], ["sessions", "activeUsers", "keyEvents"]),
         "ga4_pages_entree": lambda: sorted(google_web.ga4_report(start, end, ["landingPage"], ["sessions"]), key=lambda r: -r["sessions"])[:50],
+        "reseaux": lambda: {"facebook": social.page_followers(), "instagram": social.instagram_account(),
+                            "instagram_28j": social.instagram_insights(int(dt.datetime.now().timestamp()) - days * 86400,
+                                                                       int(dt.datetime.now().timestamp()))},
         "backend_sorties_publiques": lambda: Counter(e.get("sport") for e in backend.public_events()),
         "backend_agregats": lambda: backend.metrics(start, end),
     }

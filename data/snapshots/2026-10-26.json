@@ -7,7 +7,7 @@
  "donnees": {
   "play_fiche": {
    "en-GB": {
-    "title": "Fitmates: Group Hikes & Sports",
+    "title": "Fitmates",
     "shortDescription": "Join group hikes, runs and padel games nearby. Find sport buddies, make friends.",
     "images": {
      "phoneScreenshots": 6,
@@ -16,7 +16,7 @@
     }
    },
    "fr-FR": {
-    "title": "Fitmates : randonnée en groupe",
+    "title": "Fitmates",
     "shortDescription": "Randos et sorties sport en groupe : trouve des partenaires et fais-toi des amis",
     "images": {
      "phoneScreenshots": 0,
@@ -30,6 +30,71 @@
    "total": 1,
    "par_note": {
     "5": 1
+   }
+  },
+  "ios_note_publique_fr": {
+   "avg": 5,
+   "count": 3
+  },
+  "ios_analytics": [
+   "App Store Discovery and Engagement Standard",
+   "App Store Discovery and Engagement Detailed",
+   "App Store Web Preview Engagement Standard",
+   "App Store Web Preview Engagement Detailed",
+   "Retention Messaging"
+  ],
+  "positions_stores_fr": {
+   "ios": {
+    "randonnée": null,
+    "randonnée groupe": null,
+    "rando": null,
+    "application randonnée": null,
+    "sortie randonnée": null,
+    "partenaire sport": null,
+    "sport à plusieurs": null,
+    "sortie sport": null,
+    "sport entre amis": null,
+    "faire des amis": null,
+    "se faire des amis": null,
+    "rencontrer des gens": null,
+    "padel": null,
+    "partenaire padel": null,
+    "running": null,
+    "run club": null,
+    "course à pied": null,
+    "trail": null,
+    "marche": null,
+    "groupe de marche": null,
+    "escalade": null,
+    "vélo": null,
+    "meetup": null,
+    "fitmates": 1
+   },
+   "android": {
+    "randonnée": null,
+    "randonnée groupe": null,
+    "rando": null,
+    "application randonnée": null,
+    "sortie randonnée": null,
+    "partenaire sport": null,
+    "sport à plusieurs": null,
+    "sortie sport": null,
+    "sport entre amis": null,
+    "faire des amis": null,
+    "se faire des amis": null,
+    "rencontrer des gens": null,
+    "padel": null,
+    "partenaire padel": null,
+    "running": null,
+    "run club": null,
+    "course à pied": null,
+    "trail": null,
+    "marche": null,
+    "groupe de marche": null,
+    "escalade": null,
+    "vélo": null,
+    "meetup": null,
+    "fitmates": 1
    }
   },
   "search_console_requetes": [
@@ -516,7 +581,7 @@
     "sessionDefaultChannelGroup": "Direct",
     "sessions": 42.0,
     "activeUsers": 33.0,
-    "keyEvents": 0.0
+    "keyEvents": 1.0
    },
    {
     "sessionDefaultChannelGroup": "Organic Social",
@@ -538,9 +603,9 @@
    },
    {
     "sessionDefaultChannelGroup": "Unassigned",
-    "sessions": 2.0,
-    "activeUsers": 2.0,
-    "keyEvents": 1.0
+    "sessions": 1.0,
+    "activeUsers": 1.0,
+    "keyEvents": 0.0
    }
   ],
   "ga4_pages_entree": [
@@ -550,7 +615,7 @@
    },
    {
     "landingPage": "(not set)",
-    "sessions": 4.0
+    "sessions": 5.0
    },
    {
     "landingPage": "/applications-sport-a-plusieurs",
@@ -563,10 +628,6 @@
    {
     "landingPage": "/sport/course-a-pied/val-de-marne",
     "sessions": 3.0
-   },
-   {
-    "landingPage": "",
-    "sessions": 2.0
    },
    {
     "landingPage": "/evenements",
@@ -609,14 +670,6 @@
     "sessions": 1.0
    },
    {
-    "landingPage": "/padel/toulouse",
-    "sessions": 1.0
-   },
-   {
-    "landingPage": "/perdre-du-poids-en-marchant",
-    "sessions": 1.0
-   },
-   {
     "landingPage": "/randonnee/chamonix",
     "sessions": 1.0
    },
@@ -642,10 +695,24 @@
   }
  },
  "erreurs": {
-  "play_store_performance": "variable PLAY_REPORTS_BUCKET absente : URI des rapports groupés : Play Console → Télécharger des rapports → Statistiques → « Copier l'URI Cloud Storage » (gs://pubsite_prod_rev_…), à mettre dans PLAY_REPORTS_BUCKET",
-  "ios_note_publique_fr": "HTTPSConnectionPool(host='itunes.apple.com', port=443): Max retries exceeded with url: /lookup?id=6756283890&country=fr (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
-  "ios_analytics": "GET /apps/6756283890/analyticsReportRequests : 403 {\n  \"errors\" : [ {\n    \"id\" : \"ff108b37-1f3e-4656-a055-262d73b0917b\",\n    \"status\" : \"403\",\n    \"code\" : \"FORBIDDEN_ERROR\",\n    \"title\" : \"This request is forbidden for security reasons\",\n    \"detail\" : \"The API key in use does not allow this reques",
-  "positions_stores_fr": "HTTPSConnectionPool(host='itunes.apple.com', port=443): Max retries exceeded with url: /search?term=randonn%C3%A9e&country=fr&entity=software&limit=200 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+  "play_store_performance": "lecture du bucket refusée (403) : {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"claude-aso@fitmate-9bdfa.iam.gserviceaccount.com does not have storage.objects.list access to the Google Cloud Storage bucket. Permission 'storage.objec",
   "backend_agregats": "variable BACKEND_METRICS_URL absente : URL et jeton de l'endpoint d'agrégats marketing (BACKEND_METRICS_URL, BACKEND_METRICS_TOKEN), à créer côté backend : voir docs/sources-de-donnees.md"
+ },
+ "reseaux": {
+  "facebook": {
+   "followers_count": 782,
+   "fan_count": 782,
+   "id": "100422654832015"
+  },
+  "instagram": {
+   "id": "17841427421635658",
+   "followers_count": 0,
+   "media_count": 0
+  },
+  "instagram_28j": {
+   "reach": 0,
+   "profile_views": 0,
+   "website_clicks": 0
+  }
  }
 }
