@@ -9,7 +9,7 @@ import json
 from collections import Counter
 
 from fitmates_mkt.config import ROOT, MissingAccess
-from fitmates_mkt.sources import app_store, backend, google_play, google_web, store_search
+from fitmates_mkt.sources import app_store, backend, google_play, google_web, social, store_search
 
 OUT = ROOT / "cockpit" / "data"
 TODAY = dt.date.today()
@@ -225,6 +225,20 @@ def play_stats() -> list[dict]:
     return out
 
 
+
+# ---------- Réseaux sociaux (Meta) ----------
+
+def reseaux() -> list[dict]:
+    """Abonnés de la Page Facebook et du compte Instagram ; portée, vues du profil et clics vers le site sur 28 jours."""
+    now = int(dt.datetime.now(dt.timezone.utc).timestamp())
+    fb = social.page_followers()
+    ig = social.instagram_account()
+    ins = social.instagram_insights(now - 28 * 86400, now)
+    return [{"reseau": "Facebook", "abonnes": fb.get("followers_count"), "publications": None,
+             "portee_28j": None, "vues_profil_28j": None, "clics_site_28j": None},
+            {"reseau": "Instagram", "abonnes": ig.get("followers_count"), "publications": ig.get("media_count"),
+             "portee_28j": ins.get("reach"), "vues_profil_28j": ins.get("profile_views"), "clics_site_28j": ins.get("website_clicks")}]
+
 # ---------- Backend ----------
 
 ZONES = {"75": "Paris", "77": "Seine-et-Marne", "78": "Yvelines", "91": "Essonne", "92": "Hauts-de-Seine",
@@ -323,7 +337,7 @@ def a_faire() -> list[dict]:
 
 JOBS = {"ga4_jour": ga4_daily, "ga4_canaux": ga4_channels, "ga4_pages": ga4_pages, "ga4_evenements": ga4_events,
         "gsc_jour": gsc_daily, "gsc_requetes": gsc_queries, "gsc_pages": gsc_pages,
-        "stores": stores, "app_store_stats": app_store_stats, "play_stats": play_stats, "sorties": sorties, "listes_attente": listes_attente, "acces": acces, "actions": actions, "a_faire": a_faire}
+        "stores": stores, "app_store_stats": app_store_stats, "play_stats": play_stats, "reseaux": reseaux, "sorties": sorties, "listes_attente": listes_attente, "acces": acces, "actions": actions, "a_faire": a_faire}
 
 
 def main() -> None:

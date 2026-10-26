@@ -2,7 +2,7 @@
 // Données : data/*.json, réécrits chaque jour par scripts/cockpit_export.py.
 (function () {
   const FILES = ['meta', 'ga4_jour', 'ga4_canaux', 'ga4_pages', 'ga4_evenements', 'gsc_jour', 'gsc_requetes', 'gsc_pages',
-    'stores', 'app_store_stats', 'play_stats', 'sorties', 'listes_attente', 'acces', 'actions', 'a_faire'];
+    'stores', 'app_store_stats', 'play_stats', 'reseaux', 'sorties', 'listes_attente', 'acces', 'actions', 'a_faire'];
   const nf = new Intl.NumberFormat('fr-FR');
   const nf1 = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 1 });
   const pct = new Intl.NumberFormat('fr-FR', { style: 'percent', maximumFractionDigits: 0 });
@@ -46,6 +46,7 @@
       installs: D.app_store_stats || D.play_stats
         ? `${num(sum(D.app_store_stats, 'telechargements') + sum((D.play_stats || []).filter((r) => !r.source.startsWith('France')), 'acquisitions'))} installations sur 28 j`
         : 'installations : en attente des rapports',
+      abonnes: D.reseaux ? sum(D.reseaux, 'abonnes') : null,
       sorties: D.sorties ? sum(D.sorties, 'sorties') : null,
       sources: D.acces ? D.acces.filter((r) => r.etat === 'ok').length : null, sources_total: D.acces ? D.acces.length : null,
     };
@@ -155,6 +156,7 @@
     stores: () => [D.stores, [{ k: 'store', label: 'Store' }, { k: 'avis_ecrits', label: 'Avis écrits', n: true }, { k: 'note_moyenne', label: 'Note', n: true, fmt: (v) => (v == null ? '—' : `${nf1.format(v)} ★`) }, { k: 'avis_7j', label: '7 j', n: true }]],
     iosstats: () => [D.app_store_stats, [{ k: 'source', label: 'Source' }, { k: 'impressions', label: 'Impr.', n: true, bar: true }, { k: 'pages_vues', label: 'Fiche vue', n: true }, { k: 'telechargements', label: 'Téléch.', n: true }, { k: 'conversion', label: 'Conv.', n: true, fmt: (v) => (v == null ? '—' : pct.format(v)) }], { sort: 'impressions' }],
     playstats: () => [D.play_stats, [{ k: 'source', label: 'Source' }, { k: 'visiteurs', label: 'Visiteurs', n: true, bar: true }, { k: 'acquisitions', label: 'Installs', n: true }, { k: 'conversion', label: 'Conv.', n: true, fmt: (v) => (v == null ? '—' : pct.format(v)) }]],
+    reseaux: () => [D.reseaux, [{ k: 'reseau', label: 'Réseau' }, { k: 'abonnes', label: 'Abonnés', n: true }, { k: 'publications', label: 'Publications', n: true }, { k: 'portee_28j', label: 'Portée 28 j', n: true }, { k: 'vues_profil_28j', label: 'Vues profil', n: true }, { k: 'clics_site_28j', label: 'Clics site', n: true }]],
     sorties: () => [D.sorties, [{ k: 'sport', label: 'Sport', fmt: (v) => SPORTS[v] || v }, { k: 'zone', label: 'Zone' }, { k: 'prix', label: 'Prix' }, { k: 'sorties', label: 'Sorties', n: true }], { sort: 'sorties' }],
     acces: () => [D.acces, [{ k: 'source', label: 'Source' },
       { k: 'etat', label: 'État', render: (td, r) => td.append(pill({ ok: 'ok', 'en attente': 'neutral', manquant: 'warn', 'bloqué': 'bad' }[r.etat] || 'neutral', r.etat)) },

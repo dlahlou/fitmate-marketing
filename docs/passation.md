@@ -52,7 +52,7 @@
 | Positions dans les stores | bloqué | Hôtes `itunes.apple.com` et `play.google.com` refusés par le réseau de l'environnement |
 | Backend : flux public des sorties | OK | `https://backend.fitmates.net/api/v1/events/public/events.json` |
 | Backend : agrégats (inscriptions, actifs…) | manquant | Interface à préparer par Driss (contrat proposé dans `docs/sources-de-donnees.md`) |
-| Meta (Facebook, Instagram) | **réseau bloqué** | App « Fitmates Marketing » (1908428910145090). `FB_PAGE_ID`, `FB_PAGE_TOKEN` (jeton de Page sans expiration, accès aux données jusqu'à fin janvier 2027 : le régénérer s'il échoue), `IG_USER_ID` en variables le 26/10. Appels refusés : `graph.facebook.com` à autoriser dans le réseau de l'environnement. Threads abandonné pour l'instant |
+| Meta (Facebook, Instagram) | OK | App « Fitmates Marketing » (1908428910145090), `graph.facebook.com` autorisé le 26/10. Jeton de Page sans expiration, accès aux données jusqu'à fin janvier 2027 (rappel programmé le 15/01). Instagram lié : @fitmates_strongertogether (0 abonné, 0 publication au 26/10). Jeu `reseaux` dans le cockpit. Threads abandonné pour l'instant |
 | Listes d'attente du site | OK | Compteur public `/api/waitlist`, agrégé dans le cockpit |
 | Ubersuggest | OK | Outils MCP (volumes France : locId 2250, langue fr) |
 
@@ -92,7 +92,7 @@
 - Contact unique sur le site : `contact@fitmates.net`. Page `/data-deletion.html` : formulaire → `api/account-deletion.ts`.
 
 ### Réseaux sociaux
-- Workflow n8n de diffusion des sorties prêt (`canaux/social/n8n/`), non branché (jetons Meta manquants).
+- Workflow n8n de diffusion des sorties prêt (`canaux/social/n8n/`), non branché : les jetons Meta existent désormais, reste à le brancher.
 
 ## Actions ouvertes pour Driss (aussi dans le cockpit)
 
