@@ -39,7 +39,8 @@ def collect(days: int) -> dict:
         "positions_stores_fr": lambda: store_search.ranks(),
         "search_console_requetes": lambda: google_web.search_analytics(start, end, ("query",), 200),
         "search_console_pages": lambda: google_web.search_analytics(start, end, ("page",), 200),
-        "ga4_sources": lambda: google_web.ga4_report(start, end, ["sessionDefaultChannelGroup"], ["sessions", "conversions"]),
+        "ga4_sources": lambda: google_web.ga4_report(start, end, ["sessionDefaultChannelGroup"], ["sessions", "activeUsers", "keyEvents"]),
+        "ga4_pages_entree": lambda: sorted(google_web.ga4_report(start, end, ["landingPage"], ["sessions"]), key=lambda r: -r["sessions"])[:50],
         "backend_sorties_publiques": lambda: Counter(e.get("sport") for e in backend.public_events()),
         "backend_agregats": lambda: backend.metrics(start, end),
     }
