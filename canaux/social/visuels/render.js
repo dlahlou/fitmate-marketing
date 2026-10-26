@@ -2,6 +2,8 @@
 // Usage (Playwright préinstallé, depuis n'importe quel dossier) :
 //   node canaux/social/visuels/render.js                      tous les posts du lot de lancement → lancement/*.png
 //   node canaux/social/visuels/render.js 03 07                seulement les posts qui commencent par 03 et 07
+//   node canaux/social/visuels/render.js --lot novembre [03 07]
+//                                                             lot de novembre (sources/nov-NN-*.html) → novembre/NN-*.png
 //   node canaux/social/visuels/render.js --semaine data.json out.png
 //                                                             visuel « Sorties de la semaine » (appelé par scripts/social_weekly.py)
 // Contrôle à chaque rendu : un bloc qui sort du cadre ou qui chevauche le titre fait échouer le rendu.
@@ -10,7 +12,11 @@ const fs = require('fs');
 const { chromium } = require('playwright');
 
 const SRC = path.join(__dirname, 'sources');
-const OUT = path.join(__dirname, 'lancement');
+// Un lot = un préfixe de sources et un dossier de sortie (le préfixe est retiré du nom du PNG)
+const LOTS = {
+  lancement: { prefix: '', out: 'lancement' },
+  novembre: { prefix: 'nov-', out: 'novembre' },
+};
 const W = 1080, H = 1350;
 
 async function check(page) {
@@ -54,7 +60,13 @@ async function shoot(browser, file, out, data) {
 }
 
 (async () => {
-  const args = process.argv.slice(2);
+  let args = process.argv.slice(2);
+  let lot = LOTS.lancement;
+  if (args[0] === '--lot') {
+    lot = LOTS[args[1]];
+    if (!lot) throw new Error(`lot inconnu : ${args[1]} (${Object.keys(LOTS).join(', ')})`);
+    args = args.slice(2);
+  }
   const browser = await chromium.launch();
   let ok = true;
   try {
@@ -63,10 +75,11 @@ async function shoot(browser, file, out, data) {
       if (!dataFile || !out) throw new Error('usage : render.js --semaine data.json out.png');
       ok = await shoot(browser, 'semaine.html', path.resolve(out), JSON.parse(fs.readFileSync(dataFile, 'utf8')));
     } else {
-      const posts = fs.readdirSync(SRC).filter(f => /^\d\d-.*\.html$/.test(f)).sort();
+      const posts = fs.readdirSync(SRC).filter(f => f.startsWith(lot.prefix) && /^\d\d-.*\.html$/.test(f.slice(lot.prefix.length))).sort();
       for (const f of posts) {
-        if (args.length && !args.some(a => f.startsWith(a))) continue;
-        ok = (await shoot(browser, f, path.join(OUT, f.replace(/\.html$/, '.png')))) && ok;
+        const name = f.slice(lot.prefix.length);
+        if (args.length && !args.some(a => name.startsWith(a))) continue;
+        ok = (await shoot(browser, f, path.join(__dirname, lot.out, name.replace(/\.html$/, '.png')))) && ok;
       }
     }
   } finally {

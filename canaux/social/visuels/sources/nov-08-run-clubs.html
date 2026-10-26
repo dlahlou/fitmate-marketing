@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Nov 08 Course à pied à Paris</title>
+<link rel="stylesheet" href="social.css">
+<style>
+  .track { position: relative; height: 380px; }
+  .track svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .track .runner { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 150px; height: 150px; border-radius: 50%; display: grid; place-items: center; color: #fff;
+    background: linear-gradient(135deg, var(--orange), var(--red)); box-shadow: 0 0 0 14px rgba(245,124,0,.18); }
+  .track .runner svg { width: 84px; height: 84px; }
+  .wait { display: flex; align-items: center; gap: 22px; margin-top: 40px; background: var(--ink); color: #fff; border-radius: 999px; padding: 24px 36px; font-size: 32px; font-weight: 700; }
+  .wait i { display: flex; flex: none; width: 40px; height: 40px; color: var(--lime); }
+  .wait small { display: block; font-size: 24px; font-weight: 500; opacity: .8; }
+</style></head>
+<body><div class="canvas post cream">
+  <div class="head">
+    <div class="kicker">🏃 Course à pied · Paris</div>
+    <h1>Les run clubs <em>arrivent à Paris</em></h1>
+    <p class="sub">Les sorties running ouvrent secteur par secteur, dès qu'il y a assez d'inscrits</p>
+  </div>
+  <div class="zone" style="top:700px">
+    <div class="track">
+      <svg viewBox="0 0 920 380" preserveAspectRatio="none">
+        <rect x="20" y="20" width="880" height="340" rx="170" fill="#ffe2c4"/>
+        <rect x="20" y="20" width="880" height="340" rx="170" fill="none" stroke="#c2410c" stroke-width="6"/>
+        <rect x="70" y="70" width="780" height="240" rx="120" fill="none" stroke="#f3b483" stroke-width="4" stroke-dasharray="14 14"/>
+        <rect x="120" y="120" width="680" height="140" rx="70" fill="#fff4e8" stroke="#c2410c" stroke-width="6"/>
+      </svg>
+      <div class="runner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="14.5" cy="4.5" r="2"/><path d="M8 21l3-6 3 2v5M6 11l3-3 4 1 3 4 3 1M11 15l1.5-5"/></svg></div>
+    </div>
+    <div class="wait"><i data-icon="users"></i><div>Liste d'attente ouverte<small>Réserve ta place pour la course à pied</small></div></div>
+  </div>
+</div>
+<script src="social.js"></script></body></html>

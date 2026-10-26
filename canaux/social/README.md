@@ -40,6 +40,36 @@ post le plus récent (ou une page de liens qui les reprend). Convention UTM du p
 Avant publication, relevé des abonnés et de la portée (`python -m scripts.snapshot`), puis comparaison 3 à 4 semaines
 après ; noter la date de chaque publication dans le journal du canal.
 
+### Lot de novembre (`lot-novembre.json`)
+
+2ᵉ lot, à publier après le lancement : 9 posts, 3 par semaine, dans l'ordre 01 → 09. Même format que
+`lancement.json` ; visuels dans `visuels/novembre/`, sources `visuels/sources/nov-NN-*.html`.
+
+```bash
+node canaux/social/visuels/render.js --lot novembre          # régénère les 9 posts → visuels/novembre/*.png
+node canaux/social/visuels/render.js --lot novembre 03 07    # seulement certains posts
+```
+
+| Post | Thème | Fond | Page cible |
+|---|---|---|---|
+| 01-chevreuse | 2 boucles de la vallée de Chevreuse au départ du RER B | crème | `/randonnee/vallee-de-chevreuse` |
+| 02-vexin | 2 boucles du Vexin depuis Auvers-sur-Oise et Chars | orange | `/randonnee/vexin` |
+| 03-sac-novembre | Que mettre dans son sac en novembre | noir | `/randonnee/autour-de-paris` |
+| 04-jours-courts | Les jours raccourcissent : partir tôt, frontale | orange | `/evenements` |
+| 05-sortie-du-dimanche | Organise ta sortie du dimanche (création en une phrase) | noir | `/organiser` |
+| 06-debutants | Rando de groupe pour débutants : choisir son niveau | crème | `/evenements` |
+| 07-randos-week-end | Randonnées du week-end en Île-de-France | noir | `/randonnees-week-end-ile-de-france` |
+| 08-run-clubs | Teaser course à pied à Paris (liste d'attente, sans date) | crème | `/run-clubs-paris` |
+| 09-suivre-partenaires | Suivre ses partenaires après une sortie | orange | `/` |
+
+Grille : une fois les 9 posts publiés, ils forment au-dessus du lot de lancement un bloc 3 × 3 sans répétition de fond
+par ligne ni par colonne, y compris à la jonction avec la première ligne du lancement (09 orange, 08 crème, 07 noir).
+
+Chiffres : les distances, dénivelés, niveaux et gares des posts 01 et 02 sont repris tels quels des pages
+`/randonnee/vallee-de-chevreuse` et `/randonnee/vexin` (relevé du 26 octobre 2026) ; les repères de niveau du post 06
+viennent de la FAQ de `/randonnees-week-end-ile-de-france`. Si ces pages changent avant publication, revérifier.
+UTM : `utm_source=instagram&utm_medium=organic&utm_campaign=novembre-26&utm_content=<id>`.
+
 ### « Sorties de la semaine » (`scripts/social_weekly.py`)
 
 ```bash
