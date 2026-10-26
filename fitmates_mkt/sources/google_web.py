@@ -57,3 +57,12 @@ def ga4_report(start: str, end: str, dimensions: list[str], metrics: list[str], 
     return [{**{d: v["value"] for d, v in zip(dimensions, row["dimensionValues"])},
              **{m: float(v["value"]) for m, v in zip(metrics, row["metricValues"])}}
             for row in r.json().get("rows", [])]
+
+
+def url_inspection(url: str) -> dict:
+    """État d'indexation d'une URL (Search Console, inspection d'URL) : coverageState, lastCrawlTime…"""
+    r = requests.post("https://searchconsole.googleapis.com/v1/urlInspection/index:inspect", headers=google_auth.headers(GSC),
+                      json={"inspectionUrl": url, "siteUrl": gsc_site(), "languageCode": "fr-FR"}, timeout=60)
+    if not r.ok:
+        raise RuntimeError(f"Inspection d'URL : {r.status_code} {r.text[:200]}")
+    return r.json().get("inspectionResult", {}).get("indexStatusResult", {})

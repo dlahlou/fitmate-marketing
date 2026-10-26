@@ -22,6 +22,39 @@
       const k = f.replace('data/', '');
       try { const r = await fetch(`${f}.json`, { cache: 'no-cache' }); D[k] = r.ok ? await r.json() : null; } catch { D[k] = null; }
     }));
+    await loadEtat();
+  }
+
+  // ---------- « Fait » : déclaré par Driss (api/etat, stockage Vercel Blob), vérifié ensuite par Claude ----------
+  async function loadEtat() {
+    try { const r = await fetch('api/etat', { cache: 'no-store' }); D.etat = r.ok ? await r.json() : {}; } catch { D.etat = {}; }
+    (D.a_faire || []).forEach((t) => {
+      const e = D.etat[t.id]; const v = t.verification;
+      t.declare = e && e.statut === 'déclaré fait' && (!v || v.date < e.date || v.resultat === 'en attente') ? e : null;
+      t.echec = !t.declare && v && v.resultat === 'échec' && (!e || v.date > e.date) ? v : null;
+    });
+  }
+  async function setEtat(t, statut) {
+    const r = await fetch('api/etat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: t.id, statut }) });
+    if (!r.ok) throw new Error(`enregistrement refusé (${r.status})`);
+    await loadEtat(); renderTodo('all');
+  }
+  const fmtDate = (iso) => new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Paris' }).format(new Date(iso));
+  function etatBlock(t) {
+    const box = el('div', 'etat');
+    const msg = el('p', 'etat-msg');
+    if (t.declare) msg.textContent = `Marqué fait le ${fmtDate(t.declare.date)}. Claude vérifie au prochain passage (chaque jour à 6 h 47 et 12 h 13).`;
+    else if (t.echec) { msg.classList.add('bad'); msg.textContent = `Claude n'a pas pu vérifier (${fmtDate(t.echec.date)}) : ${t.echec.raison}.`; }
+    else if (t.verification?.resultat === 'en attente') msg.textContent = `En attente : ${t.verification.raison}.`;
+    const b = el('button', `etat-btn${t.declare ? ' undo' : ''}`, t.declare ? 'Annuler : ce n\'est pas fait' : '✓ Marquer comme fait');
+    b.type = 'button';
+    b.addEventListener('click', async () => {
+      b.disabled = true; b.textContent = 'Enregistrement…';
+      try { await setEtat(t, t.declare ? 'à faire' : 'déclaré fait'); openAction(t, false); } catch (e) { b.disabled = false; b.textContent = `Erreur : ${e.message}`; }
+    });
+    if (t.qui === 'Driss') box.append(b);
+    if (msg.textContent) box.append(msg);
+    return box;
   }
 
   // ---------- Stratégie et KPIs ----------
@@ -165,7 +198,7 @@
 
   function actionLine(t, withLink = true) {
     const a = document.createElement('span'); a.className = 't-action';
-    if (t.etapes?.length && withLink) {
+    if ((t.etapes?.length || t.qui === 'Driss') && withLink) {
       const b = document.createElement('a'); b.href = `#action-${t.id}`; b.textContent = t.action;
       b.addEventListener('click', (e) => { e.preventDefault(); openAction(t); }); a.append(b);
     } else if (t.lien && withLink) { const l = document.createElement('a'); l.href = t.lien; l.target = '_blank'; l.rel = 'noopener'; l.textContent = t.action; a.append(l); }
@@ -185,7 +218,9 @@
       const meta = document.createElement('div'); meta.className = 't-meta'; meta.textContent = [t.canal, t.impact].filter(Boolean).join(' · ');
       main.append(actionLine(t), meta);
       const w = document.createElement('span'); w.className = 't-who';
-      w.append(pill(t.qui === 'Driss' ? 'warn' : t.qui === 'Claude' ? 'ok' : 'neutral', `${WHO[t.qui] || t.qui}${t.statut && t.statut !== 'à faire' ? ` · ${t.statut}` : ''}`));
+      if (t.declare) w.append(pill('ok', 'fait · Claude vérifie'));
+      else if (t.echec) w.append(pill('bad', 'à reprendre'));
+      else w.append(pill(t.qui === 'Driss' ? 'warn' : t.qui === 'Claude' ? 'ok' : 'neutral', `${WHO[t.qui] || t.qui}${t.statut && t.statut !== 'à faire' ? ` · ${t.statut}` : ''}`));
       li.append(dot, main, w); list.append(li);
     });
     $('#todo-more').textContent = rows.length > MAX ? `Voir les ${rows.length} actions, les sources et le journal` : 'Sources de données et journal des changements';
@@ -353,7 +388,8 @@
     const why = document.createElement('p'); why.className = 'd-note';
     why.textContent = [t.impact && `Pourquoi : ${t.impact}.`, t.duree && `Temps : ${t.duree}.`].filter(Boolean).join(' ');
     const ol = document.createElement('ol'); ol.className = 'steps';
-    t.etapes.forEach((e) => {
+    const etapes = t.etapes?.length ? t.etapes : (t.lien ? [{ texte: t.action, lien: t.lien }] : [{ texte: t.action }]);
+    etapes.forEach((e) => {
       const li = document.createElement('li');
       const p = document.createElement('div'); p.textContent = e.texte; li.append(p);
       if (e.lien) {
@@ -372,9 +408,7 @@
       }
       ol.append(li);
     });
-    const end = document.createElement('p'); end.className = 'd-note';
-    end.textContent = "Quand c'est fait, dis-le à Claude dans la session : l'action passera en « fait ».";
-    body.append(why, ol, end);
+    body.append(why, ol, etatBlock(t));
     scrim.hidden = false; drawer.classList.add('open'); drawer.setAttribute('aria-hidden', 'false');
     requestAnimationFrame(() => drawer.focus());
     if (push) history.replaceState(null, '', `#action-${t.id}`);
@@ -394,6 +428,6 @@
   load().then(() => {
     renderBoard();
     const id = decodeURIComponent(location.hash.slice(1)); if (TITLES[id]) open(id, false);
-    const act = (D.a_faire || []).find((t) => `action-${t.id}` === id && t.etapes?.length); if (act) openAction(act, false);
+    const act = (D.a_faire || []).find((t) => `action-${t.id}` === id); if (act) openAction(act, false);
   });
 })();

@@ -355,6 +355,8 @@ ACCESS_STEPS = {
 def a_faire() -> list[dict]:
     """Actions ouvertes : la liste tenue dans cockpit/todo.json, plus un accès à ouvrir par source manquante."""
     items = [t for t in json.loads((ROOT / "cockpit" / "todo.json").read_text()) if t.get("statut") != "fait"]
+    vf = ROOT / "cockpit" / "verifications.json"
+    verifs = json.loads(vf.read_text()) if vf.exists() else {}
     for r in acces():
         if r["etat"] not in ("ok", "en attente"):
             canal = next((v for k, v in CANAL_ACCES.items() if r["source"].startswith(k)), "Mesure")
@@ -365,6 +367,9 @@ def a_faire() -> list[dict]:
                 items[-1]["impact"] = "Débloque l'étoile polaire (participations / semaine), les organisateurs actifs, la présence et la rétention"
             if r["source"] in ACCESS_STEPS:
                 items[-1]["duree"], items[-1]["etapes"] = ACCESS_STEPS[r["source"]]
+    for t in items:
+        if t["id"] in verifs:
+            t["verification"] = verifs[t["id"]]
     return sorted(items, key=lambda t: (t["priorite"], {"Driss": 0, "Google": 1, "Claude": 2}.get(t["qui"], 3)))
 
 
