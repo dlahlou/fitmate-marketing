@@ -1,0 +1,197 @@
+{
+  "name": "Fitmates – diffusion des sorties",
+  "nodes": [
+    {
+      "id": "webhook",
+      "name": "Webhook backend",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 300],
+      "webhookId": "fitmates-events",
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "fitmates-events",
+        "responseMode": "onReceived",
+        "options": { "rawBody": true }
+      }
+    },
+    {
+      "id": "verify",
+      "name": "Vérifier la signature",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [220, 300],
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// Rejette tout appel dont la signature HMAC ne correspond pas au corps brut.\nconst crypto = require('crypto');\nconst raw = await this.helpers.getBinaryDataBuffer(0, 'data');\nconst expected = 'sha256=' + crypto.createHmac('sha256', $env.FITMATES_WEBHOOK_SECRET).update(raw).digest('hex');\nconst got = $json.headers['x-fitmates-signature'] || '';\nif (got.length !== expected.length || !crypto.timingSafeEqual(Buffer.from(got), Buffer.from(expected))) {\n  throw new Error('Signature invalide');\n}\nconst body = JSON.parse(raw.toString('utf8'));\nconst e = body.event || {};\nreturn {\n  json: {\n    type: body.type,\n    event: e,\n    url: `https://www.fitmates.net/evenements/${e.slug}`,\n    caption: [e.social_caption, (e.hashtags || []).map((h) => '#' + h).join(' ')].filter(Boolean).join('\\n\\n'),\n  },\n};"
+      }
+    },
+    {
+      "id": "rebuild-filter",
+      "name": "Page à régénérer ?",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [440, 300],
+      "parameters": {
+        "jsCode": "const types = ['event.published', 'event.updated', 'event.cancelled'];\nreturn $input.all().filter((i) => types.includes(i.json.type));"
+      }
+    },
+    {
+      "id": "vercel",
+      "name": "Relancer le build Vercel",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [660, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.VERCEL_DEPLOY_HOOK_URL }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "wait-build",
+      "name": "Attendre la mise en ligne",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [880, 300],
+      "webhookId": "fitmates-wait-build",
+      "parameters": { "amount": 4, "unit": "minutes" }
+    },
+    {
+      "id": "share-filter",
+      "name": "Diffusable ?",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1100, 300],
+      "parameters": {
+        "jsCode": "// Ne publie que les nouvelles sorties dont l'organisateur a donné son accord.\nconst src = $('Vérifier la signature').all();\nreturn src.filter((i) => i.json.type === 'event.published' && i.json.event.share_consent === true && i.json.event.square_image_url);"
+      }
+    },
+    {
+      "id": "facebook",
+      "name": "Post Page Facebook",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1340, 100],
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.facebook.com/{{ $env.META_GRAPH_VERSION }}/{{ $env.FB_PAGE_ID }}/feed",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "message", "value": "={{ $json.caption }}" },
+            { "name": "link", "value": "={{ $json.url }}" },
+            { "name": "access_token", "value": "={{ $env.FB_PAGE_TOKEN }}" }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "ig-create",
+      "name": "Instagram : créer le média",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1340, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.facebook.com/{{ $env.META_GRAPH_VERSION }}/{{ $env.IG_USER_ID }}/media",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "image_url", "value": "={{ $json.event.square_image_url }}" },
+            { "name": "caption", "value": "={{ $json.caption }}\n\nLien dans la bio : fitmates.net" },
+            { "name": "access_token", "value": "={{ $env.FB_PAGE_TOKEN }}" }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "ig-publish",
+      "name": "Instagram : publier",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1560, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.facebook.com/{{ $env.META_GRAPH_VERSION }}/{{ $env.IG_USER_ID }}/media_publish",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "creation_id", "value": "={{ $json.id }}" },
+            { "name": "access_token", "value": "={{ $env.FB_PAGE_TOKEN }}" }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "th-create",
+      "name": "Threads : créer le post",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1340, 500],
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.threads.net/v1.0/{{ $env.THREADS_USER_ID }}/threads",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "media_type", "value": "IMAGE" },
+            { "name": "image_url", "value": "={{ $json.event.square_image_url }}" },
+            { "name": "text", "value": "={{ $json.caption }}\n\n{{ $json.url }}" },
+            { "name": "access_token", "value": "={{ $env.THREADS_TOKEN }}" }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "th-wait",
+      "name": "Attendre 30 s (Threads)",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [1560, 500],
+      "webhookId": "fitmates-wait-threads",
+      "parameters": { "amount": 30, "unit": "seconds" }
+    },
+    {
+      "id": "th-publish",
+      "name": "Threads : publier",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1780, 500],
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.threads.net/v1.0/{{ $env.THREADS_USER_ID }}/threads_publish",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "creation_id", "value": "={{ $json.id }}" },
+            { "name": "access_token", "value": "={{ $env.THREADS_TOKEN }}" }
+          ]
+        },
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "Webhook backend": { "main": [[{ "node": "Vérifier la signature", "type": "main", "index": 0 }]] },
+    "Vérifier la signature": { "main": [[{ "node": "Page à régénérer ?", "type": "main", "index": 0 }]] },
+    "Page à régénérer ?": { "main": [[{ "node": "Relancer le build Vercel", "type": "main", "index": 0 }]] },
+    "Relancer le build Vercel": { "main": [[{ "node": "Attendre la mise en ligne", "type": "main", "index": 0 }]] },
+    "Attendre la mise en ligne": { "main": [[{ "node": "Diffusable ?", "type": "main", "index": 0 }]] },
+    "Diffusable ?": {
+      "main": [[
+        { "node": "Post Page Facebook", "type": "main", "index": 0 },
+        { "node": "Instagram : créer le média", "type": "main", "index": 0 },
+        { "node": "Threads : créer le post", "type": "main", "index": 0 }
+      ]]
+    },
+    "Instagram : créer le média": { "main": [[{ "node": "Instagram : publier", "type": "main", "index": 0 }]] },
+    "Threads : créer le post": { "main": [[{ "node": "Attendre 30 s (Threads)", "type": "main", "index": 0 }]] },
+    "Attendre 30 s (Threads)": { "main": [[{ "node": "Threads : publier", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" }
+}

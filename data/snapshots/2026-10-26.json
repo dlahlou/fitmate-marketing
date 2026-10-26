@@ -1,0 +1,49 @@
+{
+ "date": "2026-10-26",
+ "fenetre": [
+  "2026-09-28",
+  "2026-10-25"
+ ],
+ "donnees": {
+  "play_fiche": {
+   "en-GB": {
+    "title": "Fitmates: Group Hikes & Sports",
+    "shortDescription": "Join group hikes, runs and padel games nearby. Find sport buddies, make friends.",
+    "images": {
+     "phoneScreenshots": 6,
+     "tenInchScreenshots": 0,
+     "featureGraphic": 1
+    }
+   },
+   "fr-FR": {
+    "title": "Fitmates : randonnée en groupe",
+    "shortDescription": "Randos et sorties sport en groupe : trouve des partenaires et fais-toi des amis",
+    "images": {
+     "phoneScreenshots": 0,
+     "tenInchScreenshots": 0,
+     "featureGraphic": 0
+    }
+   }
+  },
+  "play_avis_7j": {},
+  "ios_avis": {
+   "total": 1,
+   "par_note": {
+    "5": 1
+   }
+  },
+  "backend_sorties_publiques": {
+   "randonnee": 3
+  }
+ },
+ "erreurs": {
+  "play_store_performance": "variable PLAY_REPORTS_BUCKET absente : URI des rapports groupés : Play Console → Télécharger des rapports → Statistiques → « Copier l'URI Cloud Storage » (gs://pubsite_prod_rev_…), à mettre dans PLAY_REPORTS_BUCKET",
+  "ios_note_publique_fr": "HTTPSConnectionPool(host='itunes.apple.com', port=443): Max retries exceeded with url: /lookup?id=6756283890&country=fr (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+  "ios_analytics": "GET /apps/6756283890/analyticsReportRequests : 403 {\n  \"errors\" : [ {\n    \"id\" : \"422fda05-bbac-4660-aa7a-fac52890b9d4\",\n    \"status\" : \"403\",\n    \"code\" : \"FORBIDDEN_ERROR\",\n    \"title\" : \"This request is forbidden for security reasons\",\n    \"detail\" : \"The API key in use does not allow this reques",
+  "positions_stores_fr": "HTTPSConnectionPool(host='itunes.apple.com', port=443): Max retries exceeded with url: /search?term=randonn%C3%A9e&country=fr&entity=software&limit=200 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+  "search_console_requetes": "Search Console : 403 {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Google Search Console API has not been used in project 993789599796 before or it is disabled. Enable it by visiting https://console.developers.google.co",
+  "search_console_pages": "Search Console : 403 {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Google Search Console API has not been used in project 993789599796 before or it is disabled. Enable it by visiting https://console.developers.google.co",
+  "ga4_sources": "variable GA4_PROPERTY_ID absente : identifiant numérique de la propriété GA4 (Admin → Détails de la propriété), dans GA4_PROPERTY_ID",
+  "backend_agregats": "variable BACKEND_METRICS_URL absente : URL et jeton de l'endpoint d'agrégats marketing (BACKEND_METRICS_URL, BACKEND_METRICS_TOKEN), à créer côté backend : voir docs/sources-de-donnees.md"
+ }
+}

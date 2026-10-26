@@ -1,0 +1,38 @@
+name: Bilan mensuel
+
+# Relevé daté de tous les indicateurs, commité dans data/snapshots/.
+# Secrets à créer dans GitHub (Settings → Secrets and variables → Actions), mêmes noms que .env.example.
+# Planification à activer (décommenter) une fois les secrets en place.
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: "17 6 1 * *"
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python -m scripts.snapshot
+        env:
+          GOOGLE_SERVICE_ACCOUNT_B64: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_B64 }}
+          PLAY_REPORTS_BUCKET: ${{ secrets.PLAY_REPORTS_BUCKET }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_PRIVATE_KEY_B64: ${{ secrets.ASC_PRIVATE_KEY_B64 }}
+          BACKEND_METRICS_URL: ${{ secrets.BACKEND_METRICS_URL }}
+          BACKEND_METRICS_TOKEN: ${{ secrets.BACKEND_METRICS_TOKEN }}
+      - run: |
+          git config user.name "fitmates-marketing-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/snapshots
+          git commit -m "Relevé mensuel $(date +%F)" || echo "rien à commiter"
+          git push

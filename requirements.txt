@@ -1,0 +1,5 @@
+requests>=2.31
+PyJWT[crypto]>=2.8
+# optionnels
+# psycopg[binary]>=3.1   # accès SQL lecture seule au backend
+# pytrends pandas        # scripts/google_trends.py, scripts/validate_keywords.py
