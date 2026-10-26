@@ -14,7 +14,7 @@ Tu t'étais inscrit(e) sur la liste d'attente **{{sport}} · {{secteur}}** : les
 Voir toutes les sorties : https://www.fitmates.net/evenements?utm_source=email&utm_medium=email&utm_campaign=liste-attente-ouverture
 
 Télécharge l'app pour t'inscrire et rejoindre le chat du groupe :
-https://www.fitmates.net/?utm_source=email&utm_medium=email&utm_campaign=liste-attente-ouverture#telecharger
+https://www.fitmates.net/?utm_source=email&utm_medium=email&utm_campaign=liste-attente-ouverture
 
 À très vite sur une sortie,
 L'équipe Fitmates
