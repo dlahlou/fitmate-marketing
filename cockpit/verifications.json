@@ -28,5 +28,10 @@
   "date": "2026-10-26T18:38:01+00:00",
   "resultat": "ok",
   "raison": "dépôt du site accessible depuis la session"
+ },
+ "backend-prix": {
+  "date": "2026-10-26T19:38:44+00:00",
+  "resultat": "ok",
+  "raison": "price_eur présent sur les 5 sorties du flux"
  }
 }
