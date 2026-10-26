@@ -103,3 +103,11 @@ button { font: inherit; color: inherit; }
 .pill { display: inline-block; border-radius: 999px; padding: 0 8px; font-size: 12px; border: 1px solid currentColor; white-space: nowrap; }
 .pill.ok { color: var(--ok); } .pill.warn { color: var(--warn); } .pill.bad { color: var(--bad); } .pill.neutral { color: var(--muted); }
 .tbl a { color: var(--accent-2); }
+
+.steps { margin: 0; padding-left: 22px; display: grid; gap: 14px; font-size: 14px; line-height: 1.45; }
+.steps li::marker { font-weight: 600; color: var(--accent-2); }
+.step-link { display: inline-block; margin-top: 6px; padding: 4px 10px; border: 1px solid var(--accent-2); border-radius: 6px; color: var(--accent-2); text-decoration: none; font-size: 13px; }
+.step-link:hover { background: var(--accent-2); color: var(--panel); }
+.copy { margin-top: 6px; display: flex; gap: 8px; align-items: flex-start; }
+.copy pre { flex: 1; margin: 0; padding: 8px 10px; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; font-family: var(--mono); font-size: 12px; white-space: pre-wrap; word-break: break-word; max-height: 220px; overflow: auto; }
+.copy button { flex: none; padding: 4px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: inherit; cursor: pointer; font-size: 13px; }

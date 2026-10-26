@@ -334,6 +334,23 @@ CANAL_ACCES = {"Google Play": "Stores", "App Store": "Stores", "Stores": "Stores
                "Site": "Site", "Google": "Google"}
 
 
+# Étapes détaillées des accès qui reviennent à Driss (affichées dans le cockpit)
+ACCESS_STEPS = {
+    "Backend : inscriptions, actifs, participations": ("1 h côté backend", [
+        {"texte": "Transmets ce contrat à la personne qui fait le backend (comptes seulement, aucune donnée personnelle) :",
+         "copier": "GET /api/v1/marketing/metrics?from=AAAA-MM-JJ&to=AAAA-MM-JJ&granularity=day\n"
+                   "Authorization: Bearer <jeton dédié, lecture seule>\n"
+                   "Réponse : {\"generated_at\", \"series\": [{\"date\", \"signups\", \"signups_by_platform\": {\"ios\", \"android\", \"web\"}, "
+                   "\"active_users\", \"events_created\", \"events_by_sport\", \"events_by_zone\", \"participations\", \"paid_events\"}], "
+                   "\"totals\": {\"users\", \"organizers\"}}\n"
+                   "Détail : https://github.com/dlahlou/fitmate-marketing/blob/main/docs/sources-de-donnees.md (section 1)"},
+        {"texte": "Une fois en ligne, ajoute deux variables dans l'environnement cloud (claude.ai/code → réglages de l'environnement), "
+                  "sans jamais les coller dans le chat : BACKEND_METRICS_URL (l'adresse complète de l'endpoint) et BACKEND_METRICS_TOKEN.",
+         "lien": "https://claude.ai/code", "libelle_lien": "Ouvrir claude.ai/code ↗"},
+        {"texte": "Ouvre une nouvelle session : les variables ne sont lues qu'au démarrage. Le cockpit affichera inscriptions, actifs et participations."}]),
+}
+
+
 def a_faire() -> list[dict]:
     """Actions ouvertes : la liste tenue dans cockpit/todo.json, plus un accès à ouvrir par source manquante."""
     items = [t for t in json.loads((ROOT / "cockpit" / "todo.json").read_text()) if t.get("statut") != "fait"]
@@ -342,6 +359,8 @@ def a_faire() -> list[dict]:
             canal = next((v for k, v in CANAL_ACCES.items() if r["source"].startswith(k)), "Mesure")
             items.append({"id": "acces-" + r["source"], "qui": "Driss", "canal": canal, "priorite": 2,
                           "action": f"Ouvrir l'accès : {r['source']}", "impact": r["a_faire"], "lien": r["lien"], "statut": "à faire"})
+            if r["source"] in ACCESS_STEPS:
+                items[-1]["duree"], items[-1]["etapes"] = ACCESS_STEPS[r["source"]]
     return sorted(items, key=lambda t: (t["priorite"], {"Driss": 0, "Google": 1, "Claude": 2}.get(t["qui"], 3)))
 
 

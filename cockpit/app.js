@@ -83,7 +83,10 @@
 
   function actionLine(t, withLink = true) {
     const a = document.createElement('span'); a.className = 't-action';
-    if (t.lien && withLink) { const l = document.createElement('a'); l.href = t.lien; l.target = '_blank'; l.rel = 'noopener'; l.textContent = t.action; a.append(l); }
+    if (t.etapes?.length && withLink) {
+      const b = document.createElement('a'); b.href = `#action-${t.id}`; b.textContent = t.action;
+      b.addEventListener('click', (e) => { e.preventDefault(); openAction(t); }); a.append(b);
+    } else if (t.lien && withLink) { const l = document.createElement('a'); l.href = t.lien; l.target = '_blank'; l.rel = 'noopener'; l.textContent = t.action; a.append(l); }
     else a.textContent = t.action;
     return a;
   }
@@ -259,6 +262,40 @@
     requestAnimationFrame(() => { drawCharts(); drawer.focus(); });
     if (push) history.replaceState(null, '', `#${id}`);
   }
+  // Une action : étapes numérotées, un bouton par lien, un bouton « Copier » par texte à coller.
+  function openAction(t, push = true) {
+    lastFocus = document.activeElement; current = `action-${t.id}`;
+    $('#d-title').textContent = t.action;
+    const body = $('#d-body'); body.replaceChildren();
+    const why = document.createElement('p'); why.className = 'd-note';
+    why.textContent = [t.impact && `Pourquoi : ${t.impact}.`, t.duree && `Temps : ${t.duree}.`].filter(Boolean).join(' ');
+    const ol = document.createElement('ol'); ol.className = 'steps';
+    t.etapes.forEach((e) => {
+      const li = document.createElement('li');
+      const p = document.createElement('div'); p.textContent = e.texte; li.append(p);
+      if (e.lien) {
+        const a = document.createElement('a'); a.className = 'step-link'; a.href = e.lien; a.target = '_blank'; a.rel = 'noopener';
+        a.textContent = e.libelle_lien || 'Ouvrir ↗'; li.append(a);
+      }
+      if (e.copier) {
+        const box = document.createElement('div'); box.className = 'copy';
+        const pre = document.createElement('pre'); pre.textContent = e.copier;
+        const b = document.createElement('button'); b.type = 'button'; b.textContent = 'Copier';
+        b.addEventListener('click', async () => {
+          try { await navigator.clipboard.writeText(e.copier); b.textContent = 'Copié ✓'; } catch { b.textContent = 'Sélectionne le texte'; }
+          setTimeout(() => { b.textContent = 'Copier'; }, 1800);
+        });
+        box.append(pre, b); li.append(box);
+      }
+      ol.append(li);
+    });
+    const end = document.createElement('p'); end.className = 'd-note';
+    end.textContent = "Quand c'est fait, dis-le à Claude dans la session : l'action passera en « fait ».";
+    body.append(why, ol, end);
+    scrim.hidden = false; drawer.classList.add('open'); drawer.setAttribute('aria-hidden', 'false');
+    requestAnimationFrame(() => drawer.focus());
+    if (push) history.replaceState(null, '', `#action-${t.id}`);
+  }
   function close() {
     drawer.classList.remove('open'); drawer.setAttribute('aria-hidden', 'true'); scrim.hidden = true; current = null;
     history.replaceState(null, '', location.pathname);
@@ -273,6 +310,7 @@
 
   load().then(() => {
     renderBoard();
-    const id = location.hash.slice(1); if (TITLES[id]) open(id, false);
+    const id = decodeURIComponent(location.hash.slice(1)); if (TITLES[id]) open(id, false);
+    const act = (D.a_faire || []).find((t) => `action-${t.id}` === id && t.etapes?.length); if (act) openAction(act, false);
   });
 })();
