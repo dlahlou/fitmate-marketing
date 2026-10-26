@@ -171,13 +171,17 @@ def main() -> int:
 
     (out / "semaine.json").write_text(json.dumps(visuel, ensure_ascii=False, indent=2))
     (out / "legende.txt").write_text(texte + "\n")
+    # Même format que lancement.json, pour scripts.social_publish (après relecture des titres)
+    (out / "post.json").write_text(json.dumps([{"id": f"semaine-{debut:%Y-%m-%d}", "fichier": "semaine.png",
+                                                "legende": texte, "hashtags": [], "lien_utm": ""}],
+                                              ensure_ascii=False, indent=1))
     r = subprocess.run(["node", str(RENDER), "--semaine", str(out / "semaine.json"), str(out / "semaine.png")])
     if r.returncode:
         print("Rendu du visuel en échec (voir ci-dessus). Playwright doit être disponible pour node.", file=sys.stderr)
         return r.returncode
 
     print(f"\n{len(sorties)} sortie(s) retenue(s), {len(visuel['sorties'])} sur le visuel. Rien n'a été publié.")
-    print(f"Dossier : {out}\n  semaine.png\n  legende.txt\n\n--- légende ---\n{texte}")
+    print(f"Dossier : {out}\n  semaine.png\n  legende.txt\n  post.json\n\n--- légende ---\n{texte}")
     return 0
 
 

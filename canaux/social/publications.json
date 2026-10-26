@@ -1,0 +1,23 @@
+[
+ {
+  "id": "01-cest-quoi",
+  "source": "canaux/social/lancement.json",
+  "date": "2026-10-26T17:59:39+00:00",
+  "facebook_post": "100422654832015_1738153194982313",
+  "instagram_media": "18175173172454190"
+ },
+ {
+  "id": "02-randos-train",
+  "source": "canaux/social/lancement.json",
+  "date": "2026-10-26T17:59:55+00:00",
+  "facebook_post": "100422654832015_1738153398315626",
+  "instagram_media": "18574945735078274"
+ },
+ {
+  "id": "03-seul",
+  "source": "canaux/social/lancement.json",
+  "date": "2026-10-26T18:00:06+00:00",
+  "facebook_post": "100422654832015_1738153588315607",
+  "instagram_media": "17909168715585400"
+ }
+]
