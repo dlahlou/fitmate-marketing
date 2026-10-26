@@ -1,3 +1,5 @@
+> **Statut : prêts, non envoyés.** Les écrans sont reconstruits au style de l'app (aucune donnée personnelle, sorties d'exemple). Avant envoi, vérifier qu'ils correspondent à l'app réelle (Apple et Google exigent que les captures montrent l'app telle qu'elle est), ou les refaire à partir de vraies captures d'un compte de démonstration.
+
 # Captures ASO fr-FR
 
 Captures d'écran des fiches App Store et Google Play, en français. **Pas encore envoyées sur les stores** : envoi uniquement avec l'accord de Driss (et la mise à jour de la fiche Play repasse en revue Google).
