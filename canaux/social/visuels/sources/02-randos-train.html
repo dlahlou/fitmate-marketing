@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>02 Randos en train</title>
+<link rel="stylesheet" href="social.css">
+<style>
+  .map { position: absolute; left: 0; right: 0; top: 640px; height: 640px; z-index: 2; }
+  .map svg { width: 100%; height: 100%; overflow: visible; }
+  .dest { position: absolute; background: #fff; color: var(--ink); border-radius: 26px; padding: 16px 24px; box-shadow: 0 14px 36px rgba(0,0,0,.35); }
+  .dest b { display: block; font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 40px; line-height: 1; }
+  .dest span { display: flex; align-items: center; gap: 8px; font-size: 25px; font-weight: 600; color: #55555c; margin-top: 6px; }
+  .dest span i { display: flex; width: 26px; height: 26px; color: var(--app); }
+  .paris { position: absolute; left: 540px; top: 260px; transform: translate(-50%,-50%); background: linear-gradient(135deg, var(--orange), var(--red));
+    color: #fff; font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 40px; padding: 16px 30px; border-radius: 999px; box-shadow: 0 0 0 10px rgba(245,124,0,.25); }
+</style></head>
+<body><div class="canvas post ink">
+  <div class="head">
+    <div class="kicker">🚆 Randonnée · Île-de-France</div>
+    <h1>Randos en groupe, <em>au bout du train</em></h1>
+    <p class="sub">Autour de Paris, départs en gare : pas besoin de voiture</p>
+  </div>
+  <div class="map">
+    <svg viewBox="0 0 1080 640">
+      <g stroke="rgba(255,255,255,.55)" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="2 16">
+        <path d="M540 260 C470 200 380 150 270 110"/>
+        <path d="M540 260 C470 330 360 400 250 470"/>
+        <path d="M540 260 C560 350 590 430 620 520"/>
+        <path d="M540 260 C640 300 740 330 830 330"/>
+      </g>
+    </svg>
+    <!-- Lignes qui desservent chaque massif (information publique IDFM) -->
+    <div class="dest" style="left:90px;top:40px"><b>Vexin</b><span><i data-icon="train"></i>ligne J</span></div>
+    <div class="dest" style="left:700px;top:290px"><b>Fontainebleau</b><span><i data-icon="train"></i>ligne R</span></div>
+    <div class="dest" style="left:80px;top:440px"><b>Rambouillet</b><span><i data-icon="train"></i>ligne N</span></div>
+    <div class="dest" style="left:470px;top:500px"><b>Vallée de Chevreuse</b><span><i data-icon="train"></i>RER B</span></div>
+    <div class="paris">Paris</div>
+  </div>
+</div>
+<script src="social.js"></script></body></html>

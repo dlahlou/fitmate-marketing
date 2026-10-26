@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>08 Automne en forêt</title>
+<link rel="stylesheet" href="social.css">
+<style>
+  .forest { position: absolute; left: 0; right: 0; bottom: 0; height: 640px; z-index: 1; }
+  .forest svg { width: 100%; height: 100%; display: block; }
+  .chips2 { position: absolute; left: 80px; right: 80px; top: 640px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; z-index: 2; }
+  .chips2 span { background: #fff; border: 2px solid #f3d9bf; color: var(--ink); font-weight: 700; font-size: 30px; padding: 12px 26px; border-radius: 999px; }
+</style></head>
+<body><div class="canvas post cream">
+  <div class="head">
+    <div class="kicker">🍂 Saison</div>
+    <h1 class="xl">L'automne, <em>en forêt</em></h1>
+    <p class="sub">Les feuilles changent de couleur : c'est le moment de marcher en groupe</p>
+  </div>
+  <div class="chips2"><span>Fontainebleau</span><span>Rambouillet</span><span>Chevreuse</span></div>
+  <div class="forest"><svg viewBox="0 0 1080 640" preserveAspectRatio="xMidYMax slice">
+    <path d="M0 300 Q270 230 540 270 T1080 250 V640 H0z" fill="#f6c99a"/>
+    <g id="trees"></g>
+    <path d="M0 560 Q300 500 560 540 T1080 520 V640 H0z" fill="#9a5b2c"/>
+    <path d="M430 640 C470 600 520 590 560 560 S640 520 700 505" stroke="#f3e2c0" stroke-width="22" fill="none" stroke-linecap="round"/>
+    <g id="leaves"></g>
+  </svg></div>
+</div>
+<script>
+  const C = ['#d9480f', '#f59f00', '#c2410c', '#e8590c', '#b45309', '#f08c00'];
+  let t = '';
+  for (let row = 0; row < 2; row++) for (let i = 0; i < 9; i++) {
+    const x = i * 130 + (row ? 60 : -10), base = row ? 560 : 430, r = (row ? 78 : 58) + (i * 17) % 22, c = C[(i + row * 3) % C.length];
+    t += `<rect x="${x - 8}" y="${base - r}" width="16" height="${r + 40}" fill="#5b3a22"/><circle cx="${x}" cy="${base - r - 10}" r="${r}" fill="${c}"/><circle cx="${x - r * .45}" cy="${base - r * .7}" r="${r * .6}" fill="${c}"/><circle cx="${x + r * .5}" cy="${base - r * .65}" r="${r * .55}" fill="${c}"/>`;
+  }
+  document.getElementById('trees').innerHTML = t;
+  let l = '';
+  [[120, 120], [300, 60], [820, 90], [960, 170], [640, 40], [200, 230]].forEach(([x, y], i) => {
+    l += `<path transform="translate(${x} ${y}) rotate(${i * 50})" d="M0 0 C10 -16 26 -16 30 0 C26 16 10 16 0 0z" fill="${C[i % C.length]}"/>`;
+  });
+  document.getElementById('leaves').innerHTML = l;
+</script>
+<script src="social.js"></script></body></html>

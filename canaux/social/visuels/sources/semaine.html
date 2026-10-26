@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Sorties de la semaine</title>
+<link rel="stylesheet" href="social.css">
+<style>
+  .post .head h1 { font-size: 86px; }
+  .post .head .sub { font-size: 34px; margin-top: 18px; }
+  .rows { display: flex; flex-direction: column; gap: 14px; }
+  .row { display: flex; align-items: center; gap: 24px; background: #fff; color: var(--ink); border-radius: 30px; padding: 12px 24px 12px 12px; box-shadow: 0 14px 34px rgba(0,0,0,.28); }
+  .day { flex: none; width: 100px; height: 100px; border-radius: 22px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--orange), var(--red)); color: #fff; line-height: 1; }
+  .day small { font-size: 22px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; }
+  .day b { font-family: 'Bricolage Grotesque'; font-weight: 800; font-size: 44px; margin: 2px 0 1px; }
+  .day span { font-size: 19px; font-weight: 700; opacity: .92; }
+  .row .t { flex: 1; min-width: 0; }
+  .row .t b { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 30px; line-height: 1.15; font-weight: 700; }
+  .row .t .meta { display: flex; align-items: center; gap: 8px; margin-top: 6px; font-size: 24px; font-weight: 500; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .row .t .meta i { flex: none; display: flex; width: 24px; height: 24px; }
+  .row .t .meta i svg { width: 24px; height: 24px; }
+  .row .side { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+  .row .lvl { margin-top: 0; font-size: 22px; padding: 7px 16px; }
+  .row .price { font-size: 24px; font-weight: 800; color: var(--ink); }
+  .more { margin-top: 18px; }
+</style></head>
+<body><div class="canvas post ink">
+  <div class="head">
+    <div class="kicker">🗓️ Cette semaine</div>
+    <h1>Les sorties <em>de la semaine</em></h1>
+    <p class="sub" id="periode"></p>
+  </div>
+  <div class="zone" id="zone"><div class="rows" id="rows"></div><p class="note more" id="more"></p></div>
+</div>
+<script>
+  // Données injectées par render.js --semaine (voir scripts/social_weekly.py). Exemple fictif si on ouvre la page à la main.
+  const EXEMPLE = {
+    periode: 'du lundi 2 au dimanche 8 novembre',
+    sorties: [
+      { jour: 'sam.', num: '7', mois: 'nov.', heure: '9h30', titre: 'Boucle en forêt de Fontainebleau', ville: 'Bois-le-Roi', niveau: 'Intermédiaire', niveau_cls: 'l2', prix: '' },
+      { jour: 'dim.', num: '8', mois: 'nov.', heure: '10h00', titre: 'Vallée de Chevreuse par les crêtes', ville: 'Saint-Rémy-lès-Chevreuse', niveau: 'Avancé', niveau_cls: 'l3', prix: '5 €' },
+    ],
+    autres: 0,
+  };
+  function build(post) {
+    const d = window.__SEMAINE__ || EXEMPLE;
+    document.getElementById('periode').textContent = d.periode;
+    document.getElementById('rows').innerHTML = d.sorties.map(s => `
+      <div class="row">
+        <div class="day"><small>${esc(s.jour)}</small><b>${esc(s.num)}</b><span>${esc(s.mois)}</span></div>
+        <div class="t"><b>${esc(s.titre)}</b><span class="meta"><i data-icon="pin"></i>${esc(s.ville)} · ${esc(s.heure)}</span></div>
+        <div class="side">${s.niveau ? `<span class="lvl ${esc(s.niveau_cls)}">${esc(s.niveau)}</span>` : ''}${s.prix ? `<span class="price">${esc(s.prix)}</span>` : ''}</div>
+      </div>`).join('');
+    document.getElementById('more').textContent = d.autres > 0
+      ? `+ ${d.autres} autre${d.autres > 1 ? 's' : ''} sortie${d.autres > 1 ? 's' : ''} cette semaine · lien en bio`
+      : 'Toutes les sorties : lien en bio';
+    // Le bloc se place sous le titre, quelle que soit sa hauteur
+    const head = post.querySelector('.head');
+    document.getElementById('zone').style.top = (head.offsetTop + head.offsetHeight + 36) + 'px';
+  }
+</script>
+<script src="social.js"></script></body></html>
