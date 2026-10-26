@@ -76,5 +76,17 @@
   "canal": "Réseaux sociaux",
   "action": "Lancement Instagram et Facebook : 3 premiers posts publiés (01 à 03), puis 1 par jour et les sorties de la semaine chaque jeudi. Référence : Instagram 0 abonné, Facebook 782",
   "statut": "fait"
+ },
+ {
+  "date": "2026-10-26",
+  "canal": "Site",
+  "action": "Correctif : chaque lien interne ouvre la page en haut (ou à l'ancre), la position est restaurée au retour arrière",
+  "statut": "fait"
+ },
+ {
+  "date": "2026-10-26",
+  "canal": "Google",
+  "action": "Itinéraires officiels du Parc ajoutés : vallée de Chevreuse (2 boucles RER B) et Vexin (Auvers, Chars ligne J) ; titles ramenés à 60 caractères. Référence Search Console : 249 apparitions / 13 clics en 30 j",
+  "statut": "fait"
  }
 ]
