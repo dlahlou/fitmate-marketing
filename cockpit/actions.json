@@ -58,5 +58,11 @@
   "canal": "ASO",
   "action": "Captures fr-FR App Store et Google Play préparées (canaux/aso/visuels/fr-FR)",
   "statut": "à valider"
+ },
+ {
+  "date": "2026-10-26",
+  "canal": "Mesure",
+  "action": "Listes d'attente du site (inscrits par sport et secteur) ajoutées au cockpit",
+  "statut": "fait"
  }
 ]

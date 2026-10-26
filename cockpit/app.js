@@ -1,7 +1,7 @@
 // Cockpit Fitmates : lit les fichiers de data/ (produits chaque jour par scripts/cockpit_export.py) et dessine la page.
 (function () {
   const FILES = ['meta', 'ga4_jour', 'ga4_canaux', 'ga4_pages', 'ga4_evenements', 'gsc_jour', 'gsc_requetes', 'gsc_pages',
-    'stores', 'sorties', 'acces', 'actions'];
+    'stores', 'sorties', 'listes_attente', 'acces', 'actions'];
   const nf = new Intl.NumberFormat('fr-FR');
   const nf1 = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 1 });
   const pct = new Intl.NumberFormat('fr-FR', { style: 'percent', maximumFractionDigits: 0 });
@@ -107,6 +107,10 @@
       { k: 'sessions_avant', label: 'Avant', n: true },
       { k: 'conversions', label: 'Conv.', n: true },
     ], { sort: 'sessions' });
+    table($('#tb-attente'), D.listes_attente, [
+      { k: 'sport', label: 'Sport', fmt: (v) => SPORTS[v] || v }, { k: 'secteur', label: 'Secteur' },
+      { k: 'inscrits', label: 'Inscrits', n: true, bar: true },
+    ], { sort: 'inscrits' });
     table($('#tb-pages'), D.ga4_pages, [
       { k: 'page', label: 'Page' }, { k: 'sessions', label: 'Visites', n: true, bar: true }, { k: 'conversions', label: 'Conv.', n: true },
     ], { sort: 'sessions' });

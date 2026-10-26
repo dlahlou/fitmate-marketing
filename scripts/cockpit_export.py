@@ -116,6 +116,33 @@ def sorties() -> list[dict]:
     return [{"sport": s, "zone": z, "prix": p, "sorties": n} for (s, z, p), n in sorted(c.items(), key=lambda x: -x[1])]
 
 
+# ---------- Listes d'attente (site) ----------
+
+def listes_attente() -> list[dict]:
+    """Inscrits par sport et secteur, via le compteur public du site (/api/waitlist, qui ne renvoie qu'un nombre).
+    Couvre les secteurs des pages sport × zone et des pages lieu ; une ville tapée librement n'est pas comptée ici."""
+    import re
+    import requests
+    xml = requests.get("https://www.fitmates.net/sitemap-pages.xml", timeout=30).text
+    paths = [p.rstrip("/") for p in re.findall(r"<loc>https://www\.fitmates\.net(/[^<]*)</loc>", xml)]
+    sports = {p.split("/")[2] for p in paths if p.startswith("/sport/") and p.count("/") == 2}
+    pairs = set()
+    for p in paths:
+        parts = p.strip("/").split("/")
+        if len(parts) == 3 and parts[0] == "sport":
+            pairs.add((parts[1], parts[2]))
+        elif len(parts) == 2 and parts[0] in sports:
+            pairs.add((parts[0], parts[1]))
+    pairs.add(("course-a-pied", "paris"))  # page run clubs
+    out = []
+    for sport, area in sorted(pairs):
+        r = requests.get("https://www.fitmates.net/api/waitlist", params={"sport": sport, "area": area}, timeout=20)
+        n = (r.json() or {}).get("count") if r.ok else None
+        if n:
+            out.append({"sport": sport, "secteur": area, "inscrits": int(n)})
+    return sorted(out, key=lambda r: -r["inscrits"])
+
+
 # ---------- Accès ----------
 
 ACCESS = [
@@ -156,7 +183,7 @@ def actions() -> list[dict]:
 
 JOBS = {"ga4_jour": ga4_daily, "ga4_canaux": ga4_channels, "ga4_pages": ga4_pages, "ga4_evenements": ga4_events,
         "gsc_jour": gsc_daily, "gsc_requetes": gsc_queries, "gsc_pages": gsc_pages,
-        "stores": stores, "sorties": sorties, "acces": acces, "actions": actions}
+        "stores": stores, "sorties": sorties, "listes_attente": listes_attente, "acces": acces, "actions": actions}
 
 
 def main() -> None:
