@@ -148,5 +148,11 @@
   "canal": "Google",
   "action": "Nouvelle page « Randonner en train autour de Paris : les gares de départ » (/randonnee-en-train-depuis-paris), boucles officielles par gare, lignes d'après Transilien ; volumes : « randonnée accessible en train » 110/mois, « … depuis Paris » 70",
   "statut": "fait"
+ },
+ {
+  "date": "2026-10-27",
+  "canal": "Google",
+  "action": "Page de prélancement Product Hunt créée par Driss ; ajoutée aux liens officiels du site (sameAs) avec Instagram ; kit de lancement prêt",
+  "statut": "fait"
  }
 ]

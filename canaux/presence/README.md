@@ -19,7 +19,7 @@ Même phrase de définition et mêmes liens partout : c'est ce que Google et les
 | Annuaire | Lien | Champs | État |
 |---|---|---|---|
 | AlternativeTo (alternative à Meetup, Strava) | https://alternativeto.net/software/new/ | nom, phrase courte, description, catégories « Social », « Fitness », plateformes, alternatives : Meetup, Strava | à faire |
-| Product Hunt (fiche produit, sans lancement) | https://www.producthunt.com/posts/new | nom, slogan « Fais du sport à plusieurs, près de chez toi », description, captures | à faire |
+| Product Hunt | https://www.producthunt.com/products/fitmates | page de prélancement créée par Driss le 27/10 ; kit : `product-hunt.md` | fait (prélancement) |
 | Crunchbase | https://www.crunchbase.com/add-new | organisation, site, description courte | à faire |
 | Wikidata (entité Fitmates) | https://www.wikidata.org/wiki/Special:NewItem | libellé « Fitmates », description « application mobile de sport social », site officiel (P856), identifiants App Store (P3861) et Google Play (P3418) | à faire |
 | Page LinkedIn entreprise | https://www.linkedin.com/company/setup/new/ | nom, site, secteur « Services de loisirs », slogan, description | à faire |
