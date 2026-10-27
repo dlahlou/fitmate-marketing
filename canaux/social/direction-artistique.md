@@ -1,55 +1,48 @@
 # Instagram Fitmates : direction artistique, intention et stratégie
 
-Version 1, 27/10/2026. Remplace l'approche du lot de lancement (visuels « fiche produit » texte + pictos).
+Version 3, 27/10/2026, après le retour de Driss : contenu centré sur les personnes, tous sports. La charte visuelle (section 5) est conservée.
 
-## 1. Diagnostic honnête des premiers posts
+## 0. Règle
 
-- **Ils parlent de l'app, pas de la vie qu'elle permet.** Chaque post explique une fonctionnalité : c'est une publicité,
-  et une publicité ne se partage pas.
-- **Tout se ressemble.** Même gabarit, même titre centré, mêmes cartes blanches, mêmes pictos : la grille ressemble à
-  un site web découpé en carrés.
-- **Aucune émotion, aucun lieu.** Pas de forêt, pas de lumière, pas de boue sur les chaussures. On ne sent ni l'air ni
-  le groupe.
-- **Aucune raison d'enregistrer ou d'envoyer à un ami.** Or ce sont les deux gestes que l'algorithme valorise le plus
-  (enregistrements et partages en message comptent davantage qu'un like).
-- **Légendes trop longues et trop « marque ».** La première ligne, la seule visible, ne retient pas.
+Rien n'est publié sans l'accord explicite de Driss pour ce post précis (CLAUDE.md). Les sujets et les textes se
+valident **avant** toute fabrication de visuel.
 
-## 2. L'intention
+## 1. Ce qui n'allait pas (retour de Driss, 27/10)
 
-**Le compte qui te fait sortir ce week-end.** Pas le compte d'une app : le guide, ami et concret, des sorties à
-plusieurs autour de Paris (puis ailleurs). L'app arrive en dernier, comme l'outil évident pour passer à l'acte.
+Le sujet, les textes, le lien avec l'app et la cible. Les posts v1 expliquaient des fonctionnalités, les prototypes v2
+étaient des fiches d'itinéraire (le métier de Visorando ou Komoot) avec des phrases artificielles. Ni l'un ni l'autre ne
+dit ce qu'est Fitmates, à qui il sert ni pourquoi l'ouvrir.
 
-Ce qu'on veut que la personne ressente en trois secondes : « j'ai envie d'y être, et c'est faisable pour moi ».
-Ce qu'on veut qu'elle fasse : **enregistrer** (pour dimanche), **envoyer à quelqu'un** (« on y va ? »), puis
-**cliquer** (lien en bio vers la sortie ou l'itinéraire).
+## 2. Ce que le compte doit faire comprendre et ressentir
 
-**Ton** : un ami qui organise souvent. Tutoiement, phrases courtes, précis (gares, minutes, kilomètres), un peu
-d'humour, jamais de superlatif creux (« incroyable », « révolutionnaire »), jamais de chiffre non vérifié, jamais
-« toutes les sorties sont gratuites ».
+1. **Tu n'as plus à faire du sport seul·e.** Il y a un groupe à ton niveau près de chez toi, pour tous les sports.
+2. **Organiser, c'est simple.** Une phrase et ta sortie existe ; tu remplis ton groupe sans 50 messages WhatsApp.
+3. **La communauté est réelle.** De vraies sorties, de vrais membres (avec leur accord), de vrais chiffres datés.
+4. **Tu progresses et tu tiens dans la durée.** La régularité vient du groupe, pas de la volonté.
+5. **Tu rencontres des gens.** Le sport est la façon la plus simple de se faire des amis dans une ville.
 
-## 3. Les cinq piliers (sur 10 posts)
+Test de chaque post avant de le proposer : **qui** est visé, **quelle situation** vécue il reconnaît, **ce que Fitmates
+change** concrètement, **quoi faire** ensuite. Si une réponse manque, le post ne part pas.
 
-| Pilier | Part | Ce que c'est | Geste recherché |
-|---|---|---|---|
-| **Sortie à emporter** | 3 | Un itinéraire réel en carrousel : billet de train, tracé, chiffres, ce qu'on y voit, pièges. Sourcé (fiches des Parcs, ONF) | Enregistrer |
-| **On y était** | 3 | Photo(s) d'une vraie sortie Fitmates : lumière, paysage, groupe de dos ou de loin, détails (sac, thermos, chaussures). Récit en 3 lignes | Partager, commenter |
-| **Ce week-end on sort** | 2 | Le rituel du jeudi : les sorties de la semaine, au format « tableau des départs » | Cliquer, envoyer à un ami |
-| **Savoir-faire** | 1 | Erreurs de débutant, sac d'hiver, choisir son niveau, randonner en train : utile, court, mémorisable | Enregistrer |
-| **L'app en situation** | 1 | Une seule fonctionnalité, montrée dans un moment réel (le chat qui cale le train, la sortie créée en une phrase) | Cliquer |
+## 3. Pour qui
 
-## 4. Formats
+| Cible | Situation vécue | Ce que Fitmates lui apporte |
+|---|---|---|
+| Seul·e et motivé·e | « J'aimerais courir / randonner / jouer, mais pas seul·e » | Des sorties à son niveau, près de chez soi, un chat pour se présenter avant |
+| Nouveau dans une ville | « Je ne connais personne ici » | Une sortie par semaine = des têtes connues en un mois |
+| Les potes qui annulent | « On devait jouer, ils se sont désistés » | Compléter un groupe, trouver un 4ᵉ au padel |
+| Débutant ou en reprise | « J'ai peur de ralentir les autres » | Le niveau affiché sur chaque sortie |
+| Organisateur (club, coach, leader de groupe) | « Je passe ma vie sur WhatsApp à relancer » | Créer en une phrase, inscriptions, chat de la sortie, sortie gratuite ou payante |
 
-- **Carrousel 4:5 (1080×1350), 6 à 8 slides** : format principal.
-  - Slide 1 : l'accroche, 7 mots maximum, sur une photo plein cadre ou un fond signature. Une flèche ou un bord de la
-    slide 2 qui dépasse invite à glisser.
-  - Slide 2 : une deuxième accroche (Instagram re-propose les carrousels à partir de la slide 2).
-  - Slides 3 à 6 : une idée par slide, gros chiffres, peu de texte.
-  - Dernière slide : un seul appel (« Enregistre pour dimanche », « Envoie à ton binôme de rando »).
-- **Reels 7 à 12 secondes** : plans de marche en vue subjective, quai de gare, pieds sur le sentier, lumière dans les
-  arbres ; texte à l'écran dès la première seconde ; son d'ambiance ou musique tendance. Deux par mois au début.
-- **Stories** 3 fois par semaine : sondage (« Fontainebleau ou Chevreuse dimanche ? »), compte à rebours de la sortie,
-  coulisses. Elles entretiennent la relation avec les abonnés existants.
-- **Photo seule** : rarement, et seulement si l'image est forte.
+## 4. Les piliers
+
+| Pilier | Part | Exemple |
+|---|---|---|
+| **La situation qu'on reconnaît** | 3/10 | Humour et vérité : les potes qui annulent, le groupe WhatsApp à 63 messages pour 2 venus. Fait partager |
+| **Comment ça marche, en vrai** | 2/10 | Un scénario par post, avec les vrais écrans de l'app (compte de démonstration, sans nom de membre) |
+| **La communauté** | 2/10 | Une vraie sortie, un vrai membre ou organisateur et son histoire (avec accord), un chiffre réel daté |
+| **Organisateurs** | 2/10 | « Ton groupe mérite mieux qu'un fil WhatsApp » |
+| **Tous les sports** | 1/10 | Rando, course, padel, vélo… : montrer que ce n'est pas qu'une app de rando |
 
 ## 5. Charte graphique
 
@@ -101,54 +94,37 @@ rend la marque reconnaissable sans saturer la grille.
 - **Matière à collecter à chaque sortie** (10 photos suffisent) : le quai, le groupe de dos au départ, 3 paysages, 2
   détails, la pause, le retour.
 
-## 7. Banque d'accroches
+## 7. Banque d'accroches (v3, centrées sur les personnes)
 
-Règle : une accroche contient au moins un des trois ressorts **signal d'audience** (« sans voiture », « débutant »,
-« seul·e »), **tension** (une question, un écart, une erreur) ou **promesse concrète** (un lieu, une durée, un gain).
+Règle : une situation réelle, dite simplement, comme on la dirait à un ami. Pas de jeu de mots, pas de métaphore.
 
-**Sortie à emporter**
-1. « RER B, terminus. La forêt commence au bout du quai. »
-2. « 10,5 km, 213 m de dénivelé, retour en RER. Vendu ? »
-3. « Pas de voiture ? Quatre forêts à moins d'une heure de train. »
-4. « La boucle à faire avant que les feuilles tombent. »
-5. « Gare à gare : on part de l'une, on rentre par l'autre. »
-6. « Une ligne de Transilien, deux villages, zéro voiture. »
-7. « Enregistre-la pour le premier dimanche sans pluie. »
+**La situation qu'on reconnaît**
+1. « Tes potes ont encore annulé le footing de dimanche ? »
+2. « Groupe WhatsApp "Rando dimanche" : 63 messages, 2 personnes au rendez-vous. »
+3. « Il te manque un 4ᵉ pour le padel. Encore. »
+4. « Tu t'es inscrit·e à la salle en janvier. On est en octobre. »
+5. « Courir seul·e, c'est bien. Jusqu'au jour où tu n'y vas plus. »
 
-**On y était**
-8. « Personne n'est venu à plusieurs. Tout le monde est reparti à plusieurs. »
-9. « 9 h 12, quai R. On ne se connaissait pas. »
-10. « Le moment où le groupe se tait parce que la vue suffit. »
-11. « Ce qu'il reste d'un dimanche en forêt. » (photo de chaussures boueuses)
-12. « Il pleuvait. On y est allés quand même. »
+**Seul·e, nouveau, débutant**
+6. « Nouveau dans ta ville et personne avec qui faire du sport ? »
+7. « Tu viens seul·e ? Comme la moitié du groupe. »
+8. « Peur d'être le plus lent ? Le niveau est écrit sur chaque sortie. »
+9. « Le plus dur, ce n'est pas le sport. C'est de trouver avec qui. »
 
-**Ce week-end on sort**
-13. « Départs de ce week-end. Choisis ton quai. »
-14. « Samedi ou dimanche ? Il y a une place pour toi. »
-15. « Envoie ça à la personne qui dit toujours "on devrait faire une rando". »
+**Comment ça marche**
+10. « Tu cherches un groupe pour courir ce week-end. Voilà ce que tu fais, en 3 écrans. »
+11. « Une phrase, et ta sortie de dimanche existe. »
+12. « Avant la sortie, tu sais qui vient : il y a un chat pour se présenter. »
 
-**Savoir-faire**
-16. « Trois erreurs qu'on fait tous à sa première rando en groupe. »
-17. « Ton sac de novembre, en 7 objets. »
-18. « Débutant ? Lis la fiche comme ça. »
-19. « Le soleil se couche avant 17 h : voici comment on s'organise. »
-20. « Ce que tout le monde oublie de vérifier : le dernier train. »
+**Organisateurs**
+13. « Tu organises déjà des sorties ? Arrête de relancer tout le monde sur WhatsApp. »
+14. « Tu es coach : remplis tes séances sans démarcher. »
+15. « Ton club a des places libres le dimanche ? Dis-le aux gens qui cherchent. »
 
-**Accroches photo (texte court posé sur l'image)**
-21. « POV : tu as dit oui à une rando avec des inconnus. » (vue subjective sur le sentier)
-22. « Ton dimanche, version forêt. » (canapé vs forêt, en diptyque)
-23. « À 52 minutes de Châtelet. » (à vérifier avant usage ; photo de sous-bois)
-24. « Ici, pas de réseau. Juste le groupe. »
-25. « La seule file d'attente de la journée. » (groupe sur un sentier étroit)
-
-**L'app en situation**
-26. « Le chat a calé le train. La forêt a fait le reste. »
-27. « Une phrase, et ta sortie de dimanche existe. »
-28. « Tu cours seul·e ? Il y a un groupe à ton rythme. »
-
-**Interaction (dernière slide)**
-29. « Commente FORÊT et on t'envoie la carte. » (réponse automatique déjà prête)
-30. « Tag la personne qui porte toujours le pique-nique. »
+**Communauté (dès qu'on a de vraies photos et de vrais témoignages)**
+16. « Elle est venue seule à sa première sortie. Aujourd'hui, c'est elle qui organise. » (vraie histoire, avec accord)
+17. « Dimanche dernier, [N] sorties en Île-de-France. » (chiffre réel du backend)
+18. « POV : ta première sortie avec des inconnus. » (photo réelle, vue subjective)
 
 ## 8. Légendes
 
