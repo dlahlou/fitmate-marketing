@@ -118,5 +118,11 @@
   "canal": "Stores",
   "action": "Statistiques des stores branchées au cockpit : Google Play (28 j au 20/10 : 142 visiteurs de fiche, 59 installations, 42 % de conversion ; détail par source masqué par Google) et App Store (téléchargements depuis le 25/10 ; impressions en attente d'Apple). Référence avant la nouvelle fiche Play",
   "statut": "fait"
+ },
+ {
+  "date": "2026-10-27",
+  "canal": "Google",
+  "action": "Itinéraires publiés revérifiés sur les fiches officielles des Parcs (rando.pnr-idf.fr) : 3 sur 4 exacts, « Une ville à la campagne » corrigée de 8 à 8,7 km (site et post de novembre)",
+  "statut": "fait"
  }
 ]
