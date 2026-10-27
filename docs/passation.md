@@ -24,7 +24,7 @@ la session `session_01XNHWdd3Ezaz2t3MR6axpZZ` :
 | Tâche | Quand (Paris) | Id |
 |---|---|---|
 | Export du cockpit + vérification des actions « fait » | 6 h 47 | `trig_01LuF4oG9kifn2hdVDCV2dXK` |
-| Publication réseaux (lancement, sorties de la semaine le jeudi) + vérification | 12 h 13 | `trig_01LZA4X44UfSYM9najJCuKrv` |
+| ~~Publication réseaux~~ **désactivée le 27/10** : rien ne se publie sans l'accord de Driss post par post | — | `trig_01LZA4X44UfSYM9najJCuKrv` |
 | Pilotage : prochaine tâche Claude de `cockpit/todo.json` | 9 h 37, 15 h 37, 20 h 37 | `trig_01XB3PzkiyKcjky8xh2kxztv` |
 
 ## Dépôts

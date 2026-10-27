@@ -11,6 +11,11 @@ Répondre à Driss (propriétaire) en français, court, avec les liens cliquable
 - Aucune donnée personnelle dans les textes publics ni dans `data/` (ni nom d'organisateur, ni de membre, ni pseudo d'avis).
 - Stratégie 100 % digitale, focus organique ; ignorer Bing.
 
+## Réseaux sociaux
+- **Ne jamais rien publier (Instagram, Facebook, Threads, tout réseau) sans l'accord explicite de Driss pour ce post précis.**
+  Aucune publication planifiée ou automatique. Préparer, montrer à Driss, attendre son « ok » ; l'accord est noté dans
+  `canaux/social/accords.json` et `scripts/social_publish.py` refuse tout post qui n'y figure pas.
+
 ## Stores
 - Android : `com.dlahlou.fitmate`, projet Google Cloud / Firebase de production `fitmate-9bdfa`.
 - iOS : App Store id `6756283890`. **6759652749 est l'app de staging : ne jamais y toucher.**

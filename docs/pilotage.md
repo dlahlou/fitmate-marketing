@@ -28,7 +28,7 @@ liste de tâches. Driss intervient seulement pour ce qui lui revient (actions «
 
 - Stores : aucune modification de fiche ; jamais le nom, le sous-titre, l'icône, la catégorie.
 - Pas de dépense (publicité, abonnement), pas de nouveau compte à son nom, pas de message envoyé à un tiers.
-- Réseaux sociaux : publier seulement ce qui suit un format déjà validé (lot de lancement, sorties de la semaine) ;
-  un nouveau format de post se fait valider (action « Toi »).
+- Réseaux sociaux : **ne jamais publier sans l'accord explicite de Driss pour ce post précis** (règle de CLAUDE.md).
+  Préparer, puis créer une action « Toi » de validation ; publier seulement après son « ok » dans la session.
 - Aucune donnée personnelle dans le dépôt ni dans les contenus publics ; aucun secret affiché.
 - Une tâche qui échoue deux passages de suite passe en « bloqué : <raison> » avec, si besoin, une action « Toi ».

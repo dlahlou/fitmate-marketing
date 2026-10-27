@@ -3,6 +3,7 @@
     python -m scripts.social_publish canaux/social/lancement.json              # aperçu, ne publie rien
     python -m scripts.social_publish canaux/social/lancement.json --publish --max 1
 
+Ne publie que les posts que Driss a explicitement acceptés (canaux/social/accords.json).
 Le fichier source est une liste de posts {"id", "fichier", "legende", "hashtags", "lien_utm"} ; "fichier" est relatif au
 fichier source. Un post déjà noté dans publications.json n'est jamais republié. L'image passe d'abord par la Page
 Facebook (qui la publie avec le lien cliquable), puis Instagram la reprend depuis l'adresse de l'image Facebook.
@@ -16,6 +17,8 @@ from fitmates_mkt.config import ROOT
 from fitmates_mkt.sources import social
 
 LOG = ROOT / "canaux" / "social" / "publications.json"
+# Accords de Driss, post par post : {"<id>": {"date": "...", "message": "<ses mots>"}}. Sans accord, aucune publication.
+ACCORDS = ROOT / "canaux" / "social" / "accords.json"
 
 
 def captions(post: dict) -> tuple[str, str]:
@@ -41,6 +44,11 @@ def main() -> None:
     todo = [p for p in posts if p["id"] not in done and (not a.ids or p["id"] in a.ids)][: a.max]
     if not todo:
         print("Rien à publier.")
+    accords = json.loads(ACCORDS.read_text()) if ACCORDS.exists() else {}
+    if a.publish:
+        sans = [p["id"] for p in todo if p["id"] not in accords]
+        if sans:
+            raise SystemExit(f"Publication refusée : pas d'accord de Driss pour {', '.join(sans)} (canaux/social/accords.json)")
     for p in todo:
         img = (src.parent / p["fichier"]).resolve()
         fb_cap, ig_cap = captions(p)

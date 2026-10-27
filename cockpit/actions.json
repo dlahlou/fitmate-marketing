@@ -130,5 +130,11 @@
   "canal": "Réseaux sociaux",
   "action": "Direction artistique v2 d'Instagram (intention, 5 piliers, formats, charte, direction photo, 30 accroches) ; lot de novembre v1 retiré ; dossier Drive des photos créé",
   "statut": "fait"
+ },
+ {
+  "date": "2026-10-27",
+  "canal": "Réseaux sociaux",
+  "action": "Règle de Driss : aucune publication sans son accord post par post. Publication quotidienne désactivée, verrou dans scripts/social_publish.py (canaux/social/accords.json). Posts 05 à 09 du lancement suspendus",
+  "statut": "fait"
  }
 ]
