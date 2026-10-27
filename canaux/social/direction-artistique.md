@@ -16,7 +16,7 @@ dit ce qu'est Fitmates, à qui il sert ni pourquoi l'ouvrir.
 ## 2. Ce que le compte doit faire comprendre et ressentir
 
 1. **Tu n'as plus à faire du sport seul·e.** Il y a un groupe à ton niveau près de chez toi, pour tous les sports.
-2. **Organiser, c'est simple.** Une phrase et ta sortie existe ; tu remplis ton groupe sans 50 messages WhatsApp.
+2. **Ton groupe vient vraiment.** Pour un organisateur : des gens qui s'inscrivent, viennent et reviennent (l'outil qui le permet passe au second plan).
 3. **La communauté est réelle.** De vraies sorties, de vrais membres (avec leur accord), de vrais chiffres datés.
 4. **Tu progresses et tu tiens dans la durée.** La régularité vient du groupe, pas de la volonté.
 5. **Tu rencontres des gens.** Le sport est la façon la plus simple de se faire des amis dans une ville.

@@ -1,6 +1,6 @@
 # Plan Reels et carrousels Fitmates (méthode « opportunités → accroches → script → partage »)
 
-27/10/2026. À valider par Driss **avant** toute fabrication. Rien n'est publié sans son accord post par post.
+27/10/2026. Aligné sur `strategie/ame-de-fitmates.md` : chaque post part d'une situation humaine et finit sur ce qui change pour la personne ; l'outil (chat, IA) n'est jamais l'accroche. À valider par Driss **avant** toute fabrication. Rien n'est publié sans son accord post par post.
 
 Contexte : compte Instagram neuf (0 abonné, 4 posts), Page Facebook 782 abonnés. Objectif : abonnés puis
 installations. Audience : personnes qui veulent faire du sport mais pas seules (25–39 ans en ville, nouveaux arrivants,
@@ -15,7 +15,7 @@ débutants, potes qui annulent) et organisateurs (leaders de groupe, coachs, clu
 | 2 | Envie de sport mais personne avec qui | Identification, sans pathos | « Le plus dur dans le sport, ce n'est pas le sport. » | Reel 7 s texte + plans de chaussures / porte qui se ferme / départ en groupe | Le frein est social, pas physique | C'est exactement le problème que l'app règle |
 | 3 | Peur d'être le plus lent | Rassurer avec un fait | « Peur de ralentir le groupe ? » | Carrousel 5 slides : comment lire le niveau d'une sortie, ce qu'on peut demander dans le chat avant | Je peux choisir une sortie à mon niveau et poser mes questions | Niveau affiché + chat de la sortie |
 | 4 | Nouveau dans une ville | Bénéfice concret | « Nouveau à Paris ? Fais-toi des têtes connues en 4 dimanches. » | Carrousel 6 slides : un plan simple (1 sortie par semaine, toujours le même créneau, revenir) | Un plan réaliste pour se faire des amis par le sport | Sorties régulières près de chez soi |
-| 5 | Organiser, c'est épuisant | Avant / après | « Organiser une sortie : 63 messages ou une phrase. » | Reel 10 s : écran partagé, à gauche le fil WhatsApp qui déborde, à droite la création d'une sortie dans l'app (enregistrement d'écran, compte de démo) | Je peux organiser sans m'épuiser | Création en une phrase, chat, inscriptions |
+| 5 | Organiser, c'est épuisant, et le groupe ne vient pas | Avant / après | « Ton groupe mérite d'y aller, pas seulement d'en parler. » | Reel 10 s : écran partagé, à gauche le fil WhatsApp qui déborde, à droite la création d'une sortie dans l'app (enregistrement d'écran, compte de démo) | Je peux organiser sans m'épuiser | Création en une phrase, chat, inscriptions |
 | 6 | « Il me manque un 4ᵉ » (padel, foot à 5…) | Situation précise d'un autre sport que la rando | « Il vous manque un 4ᵉ pour le padel ? » | Reel 7 s : terrain à 3 joueurs (plan fixe), notification, le 4ᵉ arrive | Fitmates ne sert pas qu'à la rando | Compléter un groupe |
 | 7 | Doute sur « sortir avec des inconnus » | Transparence | « Ce qui se passe vraiment à ta première sortie » | Carrousel 6 slides : avant (chat, point de rendez-vous public), pendant, après (suivre ses partenaires) | Ça se passe simplement, et je garde la main | Chat, profil de l'organisateur, suivre ses partenaires |
 
@@ -30,7 +30,7 @@ personne. Pas d'appâts trompeurs, pas de « envoie ça à… », pas de chiffre
 
 **Les 5 meilleures**
 1. « Le plus dur dans le sport, ce n'est pas le sport. C'est de trouver avec qui. »
-2. « Organiser une sortie : 63 messages ou une phrase. »
+2. « Ton groupe mérite d'y aller, pas seulement d'en parler. » (organisateurs)
 3. « Peur de ralentir le groupe ? Regarde ce qui est écrit sur la sortie. »
 4. « Nouveau dans ta ville ? Quatre dimanches pour avoir des têtes connues. »
 5. « Tes potes ont encore annulé. Il existe des gens qui viennent. »
@@ -68,7 +68,7 @@ Légende : « Le frein, ce n'est presque jamais la motivation. C'est d'y aller s
 à ton niveau, tu discutes avec le groupe avant, et tu y vas. App gratuite ; certaines sorties sont payantes si
 l'organisateur le décide. »
 
-### Reel B : « 63 messages ou une phrase » (≈ 10 s)
+### Reel B : « Ton groupe mérite d'y aller » (≈ 10 s)
 
 | Temps | Image | Texte à l'écran |
 |---|---|---|
@@ -76,7 +76,7 @@ l'organisateur le décide. »
 | 2–4 s | Le compteur de messages monte (« 63 ») | « …63 messages » |
 | 4–7 s | À droite : on tape une phrase dans l'app, la fiche se remplit (enregistrement d'écran, compte de démo) | « …ou une phrase. » |
 | 7–9 s | La sortie est publiée, des inscriptions arrivent (démo) | « Ton groupe s'inscrit, discute, vient. » |
-| 9–10 s | Logo | « Fitmates. Lien en bio. » |
+| 9–10 s | Plan large d'un groupe qui part (vu de dos) puis logo | « Ton groupe, enfin au rendez-vous. Fitmates. » |
 
 ## 4. Cinq contenus utiles au point d'être partagés naturellement
 
