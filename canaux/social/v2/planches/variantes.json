@@ -1,0 +1,189 @@
+{
+ "id": "variantes-grille",
+ "titre": "Couvertures de simulation pour la grille du profil (non publiables telles quelles)",
+ "rubrique": "Sortie à emporter",
+ "sortie": "../sortie/variantes",
+ "slides": [
+  {
+   "fond": "papier",
+   "page": "1/7",
+   "logo": true,
+   "haut": [
+    {
+     "titre": "La boucle à faire avant que les *feuilles* tombent.",
+     "taille": "xl"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      86,
+      1060
+     ]
+    ],
+    "sortie": 1060
+   }
+  },
+  {
+   "fond": "encre",
+   "page": "1/6",
+   "logo": true,
+   "rubrique": "Savoir-faire",
+   "haut": [
+    {
+     "titre": "Trois erreurs qu'on fait tous à sa première rando en *groupe.*",
+     "taille": "l"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      86,
+      980
+     ],
+     [
+      520,
+      980
+     ],
+     [
+      700,
+      1160
+     ]
+    ],
+    "sortie": 1160
+   }
+  },
+  {
+   "fond": "foret",
+   "photo": "photos/sac-novembre.jpg",
+   "page": "1/8",
+   "logo": true,
+   "rubrique": "Savoir-faire",
+   "haut": [
+    {
+     "titre": "Ton sac de novembre, en *7 objets.*",
+     "taille": "xl"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      86,
+      900
+     ],
+     [
+      600,
+      900
+     ],
+     [
+      800,
+      700
+     ]
+    ],
+    "sortie": 700
+   }
+  },
+  {
+   "fond": "papier",
+   "page": "1/5",
+   "logo": true,
+   "rubrique": "L'app en situation",
+   "bas": [
+    {
+     "titre": "Tu cours seul·e ? Il y a un groupe à ton *rythme.*",
+     "taille": "l"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      86,
+      300
+     ],
+     [
+      640,
+      300
+     ],
+     [
+      820,
+      480
+     ]
+    ],
+    "sortie": 480
+   }
+  },
+  {
+   "fond": "foret",
+   "page": "1/6",
+   "logo": true,
+   "rubrique": "Savoir-faire",
+   "haut": [
+    {
+     "titre": "Ce que tout le monde oublie de vérifier : le dernier *train.*",
+     "taille": "l"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      86,
+      1060
+     ]
+    ],
+    "sortie": 1060
+   }
+  },
+  {
+   "fond": "papier",
+   "page": "1/5",
+   "logo": true,
+   "rubrique": "L'app en situation",
+   "haut": [
+    {
+     "titre": "Une phrase, et ta sortie de dimanche *existe.*",
+     "taille": "xl"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      86,
+      1100
+     ],
+     [
+      440,
+      1100
+     ],
+     [
+      620,
+      920
+     ]
+    ],
+    "sortie": 920
+   }
+  },
+  {
+   "fond": "encre",
+   "page": "1/3",
+   "logo": true,
+   "rubrique": "Ce week-end on sort",
+   "haut_top": 190,
+   "haut": [
+    {
+     "titre": "Samedi ou dimanche ?|~Il y a une place pour toi.~",
+     "taille": "xl"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      86,
+      128
+     ]
+    ],
+    "sortie": 128
+   }
+  }
+ ],
+ "independantes": true
+}

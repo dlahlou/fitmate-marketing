@@ -1,0 +1,339 @@
+{
+ "id": "chevreuse-entre-vallee-et-chateaux",
+ "titre": "Sortie à emporter · Entre Vallée et Châteaux",
+ "rubrique": "Sortie à emporter",
+ "donnees": "donnees/entre-vallee-et-chateaux.json",
+ "sortie": "sortie/chevreuse",
+ "sources": [
+  "https://rando.pnr-idf.fr/trek/26551-Entre-Vallee-et-Chateaux (relue le 27/10/2026) : départ et arrivée gare RER B de Saint-Rémy-lès-Chevreuse, 10,5 km, +213 m, 2h30, facile, boucle ; ferme de Coubertin, forêt départementale de Méridon, carrière de grès du Bois du Vossery, bourg de Chevreuse ; tracé et altitudes = GeoJSON de la fiche (donnees/entre-vallee-et-chateaux.json)"
+ ],
+ "slides": [
+  {
+   "fond": "foret",
+   "photo": "photos/chevreuse-quai.jpg",
+   "haut": [
+    {
+     "titre": "RER B, terminus. La *forêt* commence au bout du quai.",
+     "taille": "xl"
+    }
+   ],
+   "bas": [
+    {
+     "etiquette": "Gare de Saint-Rémy-lès-Chevreuse · boucle de 10,5 km"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      86,
+      1060
+     ],
+     [
+      560,
+      1060
+     ],
+     [
+      880,
+      740
+     ]
+    ],
+    "sortie": 740
+   }
+  },
+  {
+   "fond": "foret",
+   "haut": [
+    {
+     "titre": "10,5 km, 213 m de dénivelé, retour en RER. *Vendu ?*",
+     "taille": "l"
+    }
+   ],
+   "bas": [
+    {
+     "billet": {
+      "entete": "Billet · sortie à emporter",
+      "numero": "Fiche nº 26551",
+      "depart": {
+       "gare": "Saint-Rémy-lès-Chevreuse",
+       "detail": "Gare RER B"
+      },
+      "arrivee": {
+       "gare": "Saint-Rémy-lès-Chevreuse",
+       "detail": "Même gare : c'est une boucle"
+      },
+      "champs": [
+       [
+        "Distance",
+        "10,5 km"
+       ],
+       [
+        "Dénivelé",
+        "+213 m"
+       ],
+       [
+        "Durée",
+        "2 h 30"
+       ],
+       [
+        "Niveau",
+        "Facile"
+       ]
+      ],
+      "ligne_lab": "RER",
+      "ligne": "B",
+      "validite": "Valable le premier dimanche sans pluie"
+     }
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      380,
+      740
+     ],
+     [
+      640,
+      1000
+     ]
+    ],
+    "sortie": 1000
+   }
+  },
+  {
+   "fond": "papier",
+   "haut": [
+    {
+     "carte": {
+      "largeur": 908,
+      "hauteur": 700,
+      "gare": {
+       "nom": "Gare RER B",
+       "sous": "départ et arrivée",
+       "dx": -24,
+       "dy": -78,
+       "align": "droite"
+      },
+      "pois": [
+       {
+        "ref": "Ferme de Coubertin",
+        "nom": "Ferme de Coubertin",
+        "dx": -10,
+        "dy": -62
+       },
+       {
+        "ref": "Eglise de Chevreuse",
+        "nom": "Chevreuse",
+        "sous": "le bourg et son château",
+        "dx": 100,
+        "dy": -74
+       }
+      ]
+     }
+    }
+   ],
+   "bas": [
+    {
+     "titre": "Une boucle, une seule gare.",
+     "taille": "m"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      980,
+      1000
+     ],
+     "carte"
+    ],
+    "sortie": "auto"
+   }
+  },
+  {
+   "fond": "papier",
+   "haut": [
+    {
+     "profil": {
+      "hauteur": 270,
+      "annotations": [
+       {
+        "a": 0.19,
+        "texte": "le chemin creux"
+       },
+       {
+        "a": 0.7,
+        "texte": "le château",
+        "cote": "gauche"
+       }
+      ]
+     }
+    }
+   ],
+   "bas": [
+    {
+     "titre": "Ça monte deux fois. ~C'est tout.~",
+     "taille": "m"
+    },
+    {
+     "chiffres": [
+      {
+       "etiquette": "Distance",
+       "valeur": "10,5 km"
+      },
+      {
+       "etiquette": "Dénivelé positif",
+       "valeur": "+213 m"
+      },
+      {
+       "filet": true
+      },
+      {
+       "etiquette": "Durée",
+       "valeur": "2 h 30"
+      },
+      {
+       "etiquette": "Niveau",
+       "mot": "Facile"
+      }
+     ]
+    }
+   ],
+   "trace": {
+    "points": [
+     "profil"
+    ],
+    "sortie": "auto"
+   },
+   "haut_top": 164
+  },
+  {
+   "fond": "foret",
+   "haut": [
+    {
+     "titre": "À voir en chemin.",
+     "taille": "m"
+    },
+    {
+     "espace": 60
+    },
+    {
+     "etapes": [
+      {
+       "rang": "01",
+       "nom": "Ferme de Coubertin",
+       "texte": "Vaches et chèvres au grand air, fromages faits sur place."
+      },
+      {
+       "rang": "02",
+       "nom": "Forêt départementale de Méridon",
+       "texte": "Le plateau boisé, avec un crochet face au château."
+      },
+      {
+       "rang": "03",
+       "nom": "Carrière de grès du Bois du Vossery",
+       "texte": "Une grande dalle de grès à traverser, puis les blocs."
+      },
+      {
+       "rang": "04",
+       "nom": "Bourg de Chevreuse",
+       "texte": "Rues marchandes, église, promenade des petits ponts."
+      }
+     ]
+    }
+   ],
+   "trace": {
+    "points": [
+     "etapes",
+     [
+      106,
+      1210
+     ]
+    ],
+    "sortie": 1210
+   }
+  },
+  {
+   "fond": "encre",
+   "haut": [
+    {
+     "titre": "Le train, on le cale dans le *chat.*",
+     "taille": "m"
+    },
+    {
+     "texte": "Chaque sortie Fitmates a son chat de groupe. Tu peux venir seul·e : on se retrouve sur le quai."
+    }
+   ],
+   "trace": {
+    "points": [],
+    "sortie": 1210
+   },
+   "bas": [
+    {
+     "chat": {
+      "entete": "Chat de la sortie",
+      "bulles": [
+       {
+        "qui": "eux",
+        "texte": "On prend le même RER dimanche ?"
+       },
+       {
+        "qui": "moi",
+        "texte": "Oui, en tête de train. Je garde des places."
+       },
+       {
+        "qui": "eux",
+        "texte": "J'apporte le thermos."
+       }
+      ]
+     }
+    },
+    {
+     "note": "L'app est gratuite. Certaines sorties sont payantes, si l'organisateur le décide."
+    }
+   ],
+   "bas_bas": 168
+  },
+  {
+   "fond": "foret",
+   "haut": [
+    {
+     "titre": "Enregistre-la pour le premier dimanche *sans pluie.*",
+     "taille": "l"
+    },
+    {
+     "source": "Itinéraire, distance, dénivelé et durée : **fiche du Parc naturel régional** de la Haute Vallée de Chevreuse, rando.pnr-idf.fr"
+    }
+   ],
+   "libre": [
+    {
+     "x": 812,
+     "y": 900,
+     "etiquette": "Retour gare"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      120,
+      1210
+     ],
+     [
+      380,
+      950
+     ],
+     [
+      780,
+      950
+     ]
+    ]
+   }
+  }
+ ],
+ "legende": "RER B jusqu'au terminus, et la forêt commence au bout du quai : la boucle Entre Vallée et Châteaux.\n\n10,5 km, 213 m de dénivelé positif, environ 2 h 30, niveau facile.\nDépart et retour à la gare RER B de Saint-Rémy-lès-Chevreuse : une randonnée en Île-de-France sans voiture.\nEn chemin : la ferme de Coubertin, la forêt départementale de Méridon, la carrière de grès du Bois du Vossery, puis le bourg de Chevreuse et son château.\nÀ plusieurs, c'est plus simple : sur Fitmates, chaque sortie a son chat pour caler le train.\n\nEnregistre-la pour le premier dimanche sans pluie.\n\nSource : fiche du Parc naturel régional de la Haute Vallée de Chevreuse (rando.pnr-idf.fr).",
+ "hashtags": [
+  "#randonneeiledefrance",
+  "#valleedechevreuse",
+  "#randoentrain",
+  "#Fitmates"
+ ],
+ "lien_utm": "https://www.fitmates.net/randonnee/vallee-de-chevreuse?utm_source=instagram&utm_medium=organic&utm_campaign=sortie-a-emporter-nov26&utm_content=chevreuse-entre-vallee-et-chateaux"
+}
