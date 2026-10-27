@@ -163,6 +163,7 @@ def app_store_stats() -> list[dict]:
     dl = app_store.analytics_rows(reports["App Downloads Standard"])
     if not eng and not dl:
         raise Pending("Apple n'a pas encore produit de rapport (1 à 2 jours après la demande)")
+    # Le rapport impressions / pages vues arrive parfois après celui des téléchargements : None tant qu'il manque
     last = max(_col(r, "date") for r in eng + dl)
     start = (dt.date.fromisoformat(last) - dt.timedelta(days=27)).isoformat()
     agg: dict[str, dict] = {}
@@ -179,10 +180,14 @@ def app_store_stats() -> list[dict]:
     for r in dl:
         if _col(r, "date") >= start and _col(r, "download type").lower().startswith("first"):
             row(_col(r, "source type"))["telechargements"] += int(_n(_col(r, "counts")))
-    out = sorted(agg.values(), key=lambda r: -r["impressions"])
+    out = sorted(agg.values(), key=lambda r: (-r["impressions"], -r["telechargements"]))
     for r in out:
         r["conversion"] = round(r["telechargements"] / r["pages_vues"], 4) if r["pages_vues"] else None
-        r["du"], r["au"] = start, last
+        if not eng:
+            r["impressions"] = r["pages_vues"] = None
+    first = min(_col(r, "date") for r in eng + dl if _col(r, "date") >= start)
+    for r in out:
+        r["du"], r["au"] = first, last  # Apple ne fournit rien avant la demande de rapports (25/10/2026)
     return out
 
 
@@ -198,7 +203,8 @@ def play_stats() -> list[dict]:
         raise
     rows: list[tuple[str, dict]] = []
     for kind in ("traffic_source", "country"):
-        for name in sorted(f for f in files if f.endswith(f"_{kind}.csv"))[-2:]:
+        # store_performance_<paquet>_<AAAAMM>_<kind>.csv (les fichiers total_… sont des cumuls, pas utilisés)
+        for name in sorted(f for f in files if f.endswith(f"_{kind}.csv") and "/store_performance_" in f)[-2:]:
             rows += [(kind, r) for r in google_play.bulk_report(name)]
     if not rows:
         raise RuntimeError("aucun rapport store_performance dans le dossier des rapports groupés")
@@ -213,8 +219,9 @@ def play_stats() -> list[dict]:
                 continue
             name = "France (toutes sources)"
         else:
-            src = _col(r, "traffic source") or "Autre"
-            name = PLAY_SOURCES.get(src.lower(), src)
+            src = _col(r, "traffic source") or "Other"
+            # Sous un seuil de volume, Google regroupe toutes les sources dans « Other »
+            name = "Toutes sources (détail masqué par Google sous un seuil)" if src == "Other" else PLAY_SOURCES.get(src.lower(), src)
         a = agg.setdefault(name, {"source": name, "visiteurs": 0, "acquisitions": 0})
         a["visiteurs"] += int(_n(_col(r, "visitors")))
         a["acquisitions"] += int(_n(_col(r, "acquisitions")))
