@@ -256,14 +256,14 @@
   },
   {
    "canal": "Réseaux sociaux",
-   "role": "Grille de lancement, sorties de la semaine, post par sortie",
+   "role": "Le compte qui fait sortir ce week-end : itinéraires à emporter, on y était, ce week-end on sort (direction artistique v2)",
    "kpis": [
     "abonnes_reseaux",
     "posts_7j",
     "portee_ig_28j"
    ],
    "etat": "en cours",
-   "prochain": "Lancement : 1 post par jour jusqu'au 01/11, sorties de la semaine le jeudi, puis lot de novembre (3 posts / semaine)"
+   "prochain": "Prototypes v2 à valider ; photos réelles à collecter ; fin du lancement le 01/11"
   },
   {
    "canal": "E-mail et parrainage",
