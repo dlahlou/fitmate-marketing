@@ -9,6 +9,10 @@ liste de tâches. Driss intervient seulement pour ce qui lui revient (actions «
 2. Relire `docs/passation.md` et `CLAUDE.md` si la session a été recompactée.
 3. Lire les actions marquées faites (`/api/etat` via l'outil Vercel `web_fetch_vercel_url`) et lancer
    `python -m scripts.verifier <fichier>`.
+   Les actions marquées « pas pertinent » passent à « écarté » et leur raison s'ajoute à `cockpit/decisions.json`.
+   **Relire ce fichier** : c'est la voix de Driss sur la stratégie. Adapter le plan en conséquence (ne pas recréer
+   d'action semblable, retirer un canal ou un format refusé, le noter dans `strategie/` et `cockpit/strategie.json`
+   si la décision change un canal), et le dire en une ligne dans le compte rendu du passage.
 4. Choisir dans `cockpit/todo.json` la tâche `qui: "Claude"` non bloquée de plus haute priorité (1 avant 2 avant 3 ;
    à priorité égale, la plus ancienne). Passer son `statut` à « en cours ».
 5. La mener au bout dans ce passage : relevé avant si c'est un changement mesurable, travail (sous-agents sur une

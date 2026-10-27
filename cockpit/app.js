@@ -31,11 +31,12 @@
     (D.a_faire || []).forEach((t) => {
       const e = D.etat[t.id]; const v = t.verification;
       t.declare = e && e.statut === 'déclaré fait' && (!v || v.date < e.date || v.resultat === 'en attente') ? e : null;
+      t.ecarte = e && e.statut === 'non pertinent' ? e : null;
       t.echec = !t.declare && v && v.resultat === 'échec' && (!e || v.date > e.date) ? v : null;
     });
   }
-  async function setEtat(t, statut) {
-    const r = await fetch('api/etat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: t.id, statut }) });
+  async function setEtat(t, statut, note = '') {
+    const r = await fetch('api/etat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: t.id, statut, note }) });
     if (!r.ok) throw new Error(`enregistrement refusé (${r.status})`);
     await loadEtat(); renderTodo('all');
   }
@@ -43,7 +44,8 @@
   function etatBlock(t) {
     const box = el('div', 'etat');
     const msg = el('p', 'etat-msg');
-    if (t.declare) msg.textContent = `Marqué fait le ${fmtDate(t.declare.date)}. Claude vérifie au prochain passage (chaque jour à 6 h 47 et 12 h 13).`;
+    if (t.ecarte) msg.textContent = `Marqué « pas pertinent » le ${fmtDate(t.ecarte.date)}${t.ecarte.note ? ` : ${t.ecarte.note}` : ''}. Claude le retire et en tient compte dans la stratégie.`;
+    else if (t.declare) msg.textContent = `Marqué fait le ${fmtDate(t.declare.date)}. Claude vérifie au prochain passage (chaque jour à 6 h 47 et 12 h 13).`;
     else if (t.echec) { msg.classList.add('bad'); msg.textContent = `Claude n'a pas pu vérifier (${fmtDate(t.echec.date)}) : ${t.echec.raison}.`; }
     else if (t.verification?.resultat === 'en attente') msg.textContent = `En attente : ${t.verification.raison}.`;
     const b = el('button', `etat-btn${t.declare ? ' undo' : ''}`, t.declare ? 'Annuler : ce n\'est pas fait' : '✓ Marquer comme fait');
@@ -52,7 +54,31 @@
       b.disabled = true; b.textContent = 'Enregistrement…';
       try { await setEtat(t, t.declare ? 'à faire' : 'déclaré fait'); openAction(t, false); } catch (e) { b.disabled = false; b.textContent = `Erreur : ${e.message}`; }
     });
-    if (t.qui === 'Driss') box.append(b);
+    const row = el('div', 'etat-row');
+    if (t.ecarte) {
+      const u = el('button', 'etat-btn undo', 'Annuler : c\'est pertinent'); u.type = 'button';
+      u.addEventListener('click', async () => { u.disabled = true; try { await setEtat(t, 'à faire'); openAction(t, false); } catch (e) { u.disabled = false; u.textContent = `Erreur : ${e.message}`; } });
+      row.append(u);
+    } else {
+      if (t.qui === 'Driss') row.append(b);
+      if (!t.declare) {
+        const np = el('button', 'etat-btn undo', 'Pas pertinent pour moi'); np.type = 'button';
+        np.addEventListener('click', () => {
+          np.remove();
+          const form = el('div', 'np-form');
+          const ta = el('textarea'); ta.rows = 2; ta.maxLength = 500; ta.placeholder = 'Pourquoi ? (facultatif) Ex. : je ne veux pas de LinkedIn, pas de budget, déjà fait autrement…';
+          const ok = el('button', 'etat-btn', 'Retirer cette action'); ok.type = 'button';
+          ok.addEventListener('click', async () => {
+            ok.disabled = true; ok.textContent = 'Enregistrement…';
+            try { await setEtat(t, 'non pertinent', ta.value.trim()); openAction(t, false); } catch (e) { ok.disabled = false; ok.textContent = `Erreur : ${e.message}`; }
+          });
+          form.append(ta, ok); box.insertBefore(form, msg.parentNode ? msg : null);
+          ta.focus();
+        });
+        row.append(np);
+      }
+    }
+    box.append(row);
     if (msg.textContent) box.append(msg);
     return box;
   }
@@ -250,7 +276,8 @@
       const meta = document.createElement('div'); meta.className = 't-meta'; meta.textContent = [t.canal, t.impact].filter(Boolean).join(' · ');
       main.append(actionLine(t), meta);
       const w = document.createElement('span'); w.className = 't-who';
-      if (t.declare) w.append(pill('ok', 'fait · Claude vérifie'));
+      if (t.ecarte) w.append(pill('neutral', 'pas pertinent'));
+      else if (t.declare) w.append(pill('ok', 'fait · Claude vérifie'));
       else if (t.echec) w.append(pill('bad', 'à reprendre'));
       else w.append(pill(t.qui === 'Driss' ? 'warn' : t.qui === 'Claude' ? 'ok' : 'neutral', `${WHO[t.qui] || t.qui}${t.statut && t.statut !== 'à faire' ? ` · ${t.statut}` : ''}`));
       li.append(dot, main, w); list.append(li);

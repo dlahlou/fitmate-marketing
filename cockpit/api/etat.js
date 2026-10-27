@@ -1,9 +1,9 @@
-// État déclaré des actions : Driss marque une action « fait » dans le cockpit, Claude vérifie ensuite.
+// État déclaré des actions : Driss marque une action « fait » (Claude vérifie ensuite) ou « non pertinent » (avec sa raison).
 // Stockage : Vercel Blob privé (fitmate-cockpit-etat), un fichier par action : etat/<id>.json.
 // Le cockpit entier est derrière Vercel Authentication : seul le propriétaire peut lire ou écrire.
 import { get, list, put } from '@vercel/blob';
 
-const STATUTS = new Set(['déclaré fait', 'à faire']);
+const STATUTS = new Set(['déclaré fait', 'non pertinent', 'à faire']);
 const key = (id) => `etat/${encodeURIComponent(id)}.json`;
 
 async function readAll() {

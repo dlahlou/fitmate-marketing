@@ -20,6 +20,7 @@ from fitmates_mkt.sources import app_store, backend, google_web, social
 
 TODO = ROOT / "cockpit" / "todo.json"
 VERIF = ROOT / "cockpit" / "verifications.json"
+DECISIONS = ROOT / "cockpit" / "decisions.json"  # actions écartées par Driss, relues par le pilotage avant de créer des tâches
 
 
 def _ig_profile() -> dict:
@@ -92,7 +93,26 @@ def main() -> None:
     todo = json.loads(TODO.read_text())
     verifs = json.loads(VERIF.read_text()) if VERIF.exists() else {}
     now = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    decisions = json.loads(DECISIONS.read_text()) if DECISIONS.exists() else []
     for aid, e in etat.items():
+        if e.get("statut") == "non pertinent":
+            t = next((x for x in todo if x["id"] == aid), None)
+            if t and t.get("statut") != "écarté":
+                t["statut"] = "écarté"
+                decisions.append({"date": e["date"][:10], "id": aid, "canal": t.get("canal"), "action": t.get("action"),
+                                  "raison": e.get("note") or "(sans raison donnée)"})
+                print(f"ÉCARTÉ      {aid} : {e.get('note') or 'sans raison'}")
+            elif not t and not any(d["id"] == aid for d in decisions):
+                decisions.append({"date": e["date"][:10], "id": aid, "canal": None, "action": aid,
+                                  "raison": e.get("note") or "(sans raison donnée)"})
+                print(f"ÉCARTÉ      {aid} : {e.get('note') or 'sans raison'}")
+            continue
+        if e.get("statut") == "à faire":
+            for t in todo:  # Driss a annulé un « pas pertinent »
+                if t["id"] == aid and t.get("statut") == "écarté":
+                    t["statut"] = "à faire"
+                    decisions = [d for d in decisions if d["id"] != aid]
+            continue
         v = verifs.get(aid)
         if e.get("statut") != "déclaré fait" or (v and v["date"] > e["date"] and v["resultat"] != "en attente"):
             continue  # pas déclaré, ou déjà vérifié depuis la déclaration (on ne revérifie que ce qui est en attente)
@@ -108,6 +128,7 @@ def main() -> None:
                     t["statut"] = "fait"
         print(f"{res.upper():11} {aid} : {why}")
     VERIF.write_text(json.dumps(verifs, ensure_ascii=False, indent=1) + "\n")
+    DECISIONS.write_text(json.dumps(decisions, ensure_ascii=False, indent=1) + "\n")
     TODO.write_text("[\n" + ",\n".join(" " + json.dumps(x, ensure_ascii=False) for x in todo) + "\n]\n")
 
 

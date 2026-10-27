@@ -150,3 +150,7 @@ button { font: inherit; color: inherit; }
 .spark.muted { color: var(--muted); font-size: 11px; }
 .kdelta { font-size: 11px; margin-left: 6px; white-space: nowrap; }
 .ktree .trend { white-space: nowrap; }
+
+.etat-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.np-form { display: grid; gap: 8px; width: 100%; max-width: 560px; }
+.np-form textarea { font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--fg); resize: vertical; }
