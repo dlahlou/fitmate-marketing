@@ -1,0 +1,138 @@
+{
+ "id": "weekend-20261030",
+ "titre": "Ce week-end on sort · 30 oct. – 1er nov.",
+ "rubrique": "Ce week-end on sort",
+ "slides": [
+  {
+   "fond": "encre",
+   "haut_top": 190,
+   "haut": [
+    {
+     "titre": "Départs de ce week-end. ~Choisis ton quai.~",
+     "taille": "l"
+    }
+   ],
+   "bas": [
+    {
+     "etiquette": "5 départs · 30 oct. – 1er nov."
+    },
+    {
+     "palettes": [
+      {
+       "jour": "ven. 30",
+       "heure": "14:30",
+       "v": "Villeneuve-le-Comte"
+      },
+      {
+       "jour": "sam. 31",
+       "heure": "09:20",
+       "v": "Étréchy"
+      },
+      {
+       "jour": "sam. 31",
+       "heure": "10:00",
+       "v": "Yerres"
+      }
+     ],
+     "classe": "serre"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      86,
+      128
+     ]
+    ],
+    "sortie": 128
+   }
+  },
+  {
+   "fond": "encre",
+   "haut_top": 190,
+   "haut": [
+    {
+     "tableau": {
+      "titre": "*Départs*",
+      "date": "30 oct. – 1er nov.",
+      "lignes": [
+       {
+        "heure": "14:30",
+        "jour": "ven. 30",
+        "dest": "Randonnée boucle départ Villeneuve-le-Comte",
+        "lieu": "",
+        "niveau": "Intermédiaire",
+        "prix": ""
+       },
+       {
+        "heure": "09:20",
+        "jour": "sam. 31",
+        "dest": "Randonnée Etrechy Dourdan",
+        "lieu": "",
+        "niveau": "Intermédiaire",
+        "prix": ""
+       },
+       {
+        "heure": "10:00",
+        "jour": "sam. 31",
+        "dest": "Randonnée à Yerres",
+        "lieu": "",
+        "niveau": "Intermédiaire",
+        "prix": ""
+       },
+       {
+        "heure": "10:30",
+        "jour": "dim. 1er",
+        "dest": "Randonnée Bois de Mézerolles",
+        "lieu": "Meulan-en-Yvelines",
+        "niveau": "Avancé",
+        "prix": ""
+       },
+       {
+        "heure": "13:00",
+        "jour": "dim. 1er",
+        "dest": "Randonnée à Sucy-en-Brie",
+        "lieu": "",
+        "niveau": "Intermédiaire",
+        "prix": ""
+       }
+      ],
+      "pied": "Rendez-vous, prix et places : sur la fiche de chaque sortie.",
+      "compact": false
+     }
+    }
+   ],
+   "trace": {
+    "points": [],
+    "sortie": 128
+   }
+  },
+  {
+   "fond": "foret",
+   "haut_top": 190,
+   "haut": [
+    {
+     "titre": "Envoie ça à la personne qui dit toujours « on devrait faire une *rando* ».",
+     "taille": "l"
+    }
+   ],
+   "bas": [
+    {
+     "texte": "Les fiches des sorties : lien en bio."
+    },
+    {
+     "note": "L'app est gratuite. Certaines sorties sont payantes, si l'organisateur le décide.",
+     "classe": "serre"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      900,
+      128
+     ]
+    ]
+   }
+  }
+ ]
+}

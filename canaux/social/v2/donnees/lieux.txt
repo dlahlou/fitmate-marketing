@@ -1,0 +1,49 @@
+# Lieux reconnus dans les titres de sorties (un par ligne, accents et casse indifférents).
+# scripts/social_weekly_v2.py n'affiche le titre d'une sortie que si chaque mot à majuscule est un mot courant,
+# la ville ou le lieu de la sortie, ou un lieu de cette liste. Sinon (prénom, nom de personne, mot inconnu),
+# le titre est remplacé par « Randonnée à <ville> ». Ajouter ici un lieu après vérification qu'il ne s'agit pas
+# d'une personne. Ne jamais y mettre de nom de personne.
+Paris
+Île-de-France
+Dourdan
+Étréchy
+Mézerolles
+Fontainebleau
+Chevreuse
+Vallée de Chevreuse
+Saint-Rémy-lès-Chevreuse
+Gif-sur-Yvette
+Yvette
+Rambouillet
+Vexin
+Auvers-sur-Oise
+Chars
+Seine
+Marne
+Oise
+Loing
+Essonne
+Yvelines
+Brie
+Gâtinais
+Sénart
+Montmorency
+Saint-Germain-en-Laye
+Marly
+Meudon
+Verrières
+Bois-le-Roi
+Barbizon
+Milly-la-Forêt
+Moret-sur-Loing
+Provins
+Étampes
+Yerres
+Sucy-en-Brie
+Meulan-en-Yvelines
+Villeneuve-le-Comte
+Crécy-la-Chapelle
+Ferrières
+Trois Pignons
+GR
+RER
