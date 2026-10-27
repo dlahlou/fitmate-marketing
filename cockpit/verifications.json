@@ -33,5 +33,10 @@
   "date": "2026-10-26T19:38:44+00:00",
   "resultat": "ok",
   "raison": "price_eur présent sur les 5 sorties du flux"
+ },
+ "reseau-sources": {
+  "date": "2026-10-27T11:23:22+00:00",
+  "resultat": "ok",
+  "raison": "les sites de randonnée sont joignables"
  }
 }
