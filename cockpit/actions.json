@@ -154,5 +154,11 @@
   "canal": "Google",
   "action": "Page de prélancement Product Hunt créée par Driss ; ajoutée aux liens officiels du site (sameAs) avec Instagram ; kit de lancement prêt",
   "statut": "fait"
+ },
+ {
+  "date": "2026-10-28",
+  "canal": "Google",
+  "action": "Pages rando IDF : temps de trajet (« environ 40/50 minutes ») et validité du passe Navigo retirés, faute de source officielle lisible depuis l'environnement",
+  "statut": "fait"
  }
 ]
