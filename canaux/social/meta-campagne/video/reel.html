@@ -1,0 +1,90 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><style>
+@font-face { font-family:'Bricolage'; src:url(../../../aso/visuels/fr-FR/sources/assets/bricolage-grotesque-latin.woff2) format('woff2'); font-weight:200 800; }
+@font-face { font-family:'Inter'; src:url(../../../aso/visuels/fr-FR/sources/assets/inter-latin.woff2) format('woff2'); font-weight:100 900; }
+*{box-sizing:border-box;margin:0;padding:0} html,body{width:1080px;height:1920px;overflow:hidden}
+body{font-family:Inter,sans-serif;font-weight:500;-webkit-font-smoothing:antialiased;position:relative;background:#F4EEE3}
+.sc{position:absolute;inset:0;opacity:0}
+/* Scène 1 : conversation */
+#s1{background:#F4EEE3}
+.fil{position:absolute;top:300px;left:72px;right:72px;display:flex;flex-direction:column;gap:26px}
+.b{max-width:800px;padding:30px 40px;border-radius:44px;font-size:52px;line-height:1.2;font-weight:600;opacity:0;transform:translateY(30px) scale(.96)}
+.b.eux{background:#E3DBCD;color:#1A1714;align-self:flex-start;border-bottom-left-radius:12px}
+.b.moi{background:#24382C;color:#F4EEE3;align-self:flex-end;border-bottom-right-radius:12px}
+.heure{align-self:center;font-size:24px;color:rgba(26,23,20,.5);letter-spacing:.1em;text-transform:uppercase}
+.groupe{position:absolute;top:150px;left:0;right:0;text-align:center;font-family:Bricolage;font-weight:800;font-size:40px;color:#1A1714}
+.groupe small{display:block;font-family:Inter;font-weight:500;font-size:24px;color:rgba(26,23,20,.55)}
+/* Scène 2 : canapé */
+#s2{background:#1A1714;color:#F4EEE3}
+#s2 h1{position:absolute;left:72px;right:72px;top:620px;font-family:Bricolage;font-weight:800;font-size:132px;line-height:.95;letter-spacing:-.02em}
+#s2 h1 em{font-style:normal;color:#F57C00}
+#s2 .h{position:absolute;left:72px;top:500px;font-size:40px;color:rgba(244,238,227,.6);font-variant-numeric:tabular-nums}
+/* Scène 3 : radar */
+#s3{background:#24382C;color:#F4EEE3}
+#s3 h1{position:absolute;top:170px;left:72px;right:72px;font-family:Bricolage;font-weight:800;font-size:96px;line-height:.95;letter-spacing:-.02em}
+#s3 h1 em{font-style:normal;color:#F57C00}
+.ring{position:absolute;border:2px dashed rgba(168,184,138,.4);border-radius:50%}
+.rl{position:absolute;font-size:22px;color:rgba(168,184,138,.8);letter-spacing:.06em}
+.paris{position:absolute;width:96px;height:96px;border-radius:50%;background:#F4EEE3;color:#1A1714;display:grid;place-items:center;font-family:Bricolage;font-weight:800;font-size:26px}
+.pt{position:absolute;width:30px;height:30px;border-radius:50%;background:#F57C00;box-shadow:0 0 0 10px rgba(245,124,0,.25)}
+.lab{position:absolute;line-height:1.1;white-space:nowrap}
+.lab b{display:block;font-size:32px;font-weight:700} .lab span{font-size:24px;color:#A8B88A;font-weight:600}
+/* Scène 4 : promesse */
+#s4{background:#F4EEE3;color:#1A1714}
+#s4 h1{position:absolute;left:72px;right:72px;top:560px;font-family:Bricolage;font-weight:800;font-size:150px;line-height:.93;letter-spacing:-.02em}
+#s4 h1 em{font-style:normal;color:#F57C00}
+#s4 h1 span{display:block;opacity:0}
+/* Scène 5 : CTA */
+#s5{background:#24382C;color:#F4EEE3}
+#s5 .logo{position:absolute;left:72px;top:520px;width:140px;height:140px;border-radius:32px}
+#s5 h1{position:absolute;left:72px;right:72px;top:700px;font-family:Bricolage;font-weight:800;font-size:150px;line-height:.93;letter-spacing:-.02em}
+#s5 p{position:absolute;left:72px;top:880px;font-size:44px;color:rgba(244,238,227,.85)}
+.btns{position:absolute;left:72px;top:1010px;display:flex;gap:20px}
+.btn{background:#F4EEE3;color:#1A1714;border-radius:20px;padding:16px 34px;display:flex;flex-direction:column}
+.btn small{font-size:22px;opacity:.7} .btn b{font-family:Bricolage;font-size:46px;font-weight:800;line-height:1.05}
+#s5 .url{position:absolute;left:72px;top:1180px;font-size:36px;color:#F57C00;font-weight:700}
+/* Sous-titres */
+#st{position:absolute;left:0;right:0;bottom:400px;text-align:center}
+#st span{display:inline-block;max-width:900px;background:rgba(26,23,20,.88);color:#fff;font-family:Inter;font-weight:700;font-size:46px;line-height:1.25;padding:14px 28px;border-radius:18px}
+</style></head><body>
+<section class="sc" id="s1">
+ <div class="groupe">Rando dimanche 🥾<small>4 participants</small></div>
+ <div class="fil">
+  <div class="heure">Samedi, 21:47</div>
+  <div class="b moi">On part toujours à 9 h demain ?</div>
+  <div class="b eux">Ah mince, j'peux plus 😕</div>
+  <div class="b eux">Moi non plus, désolé…</div>
+  <div class="b eux">On remet à un autre week-end ?</div>
+ </div>
+</section>
+<section class="sc" id="s2"><div class="h">Dimanche, 15:12</div><h1>Encore un week-end <em>sur le canapé.</em></h1></section>
+<section class="sc" id="s3"><h1>Ce week-end, <em>8 groupes</em> partent randonner.</h1><div id="radar"></div></section>
+<section class="sc" id="s4"><h1><span>Tu viens seul·e.</span><span><em>Tu repars à plusieurs.</em></span></h1></section>
+<section class="sc" id="s5"><img class="logo" src="../../../aso/visuels/fr-FR/sources/assets/logo.png"><h1>Fitmates</h1><p>Le sport, c'est mieux à plusieurs.</p>
+ <div class="btns"><div class="btn"><small>Télécharger sur</small><b>App Store</b></div><div class="btn"><small>Disponible sur</small><b>Google Play</b></div></div>
+ <div class="url">App gratuite · fitmates.net/app</div></section>
+<div id="st"></div>
+<script>
+const S=7.6,cx=540,cy=1000;
+// [ville, horaire, dx km, dy km, décalage étiquette x, y, alignement]
+const P=[["Sucy-en-Brie","dim. 13h",12.4,-9.5,28,14,"l"],["Palaiseau","dim. 10h45",-8.4,-16.5,0,26,"c"],["Yerres","sam. 10h",9.6,-16.5,28,14,"l"],
+ ["Poissy","dim. 10h",-22.8,8.4,0,26,"c"],["Villeneuve-le-Comte","ven. 14h30",35.0,-4.7,0,-62,"c"],["Meulan","dim. 10h30",-32.4,16.4,0,-62,"c"],
+ ["Étréchy","sam. 9h20",-11.6,-40.1,28,0,"l"],["Rosny-sur-Seine","dim. 10h57",-58.1,15.4,-28,26,"g"]];
+let h="";for(const r of [20,40,60])h+=`<div class="ring" style="width:${2*r*S}px;height:${2*r*S}px;left:${cx-r*S}px;top:${cy-r*S}px"></div><div class="rl" style="left:${cx+8}px;top:${cy-r*S-32}px">${r} km</div>`;
+h+=`<div class="paris" style="left:${cx-48}px;top:${cy-48}px">Paris</div>`;
+P.forEach(([n,hr,dx,dy,ox,oy,a],i)=>{const x=cx+dx*S,y=cy-dy*S;
+ const tr=a=="l"?"translate(0,-50%)":a=="r"?"translate(-100%,-50%)":a=="g"?"translate(0,0)":"translate(-50%,0)";
+ const ta=a=="r"?"right":a=="c"?"center":"left";
+ h+=`<div class="pt" id="p${i}" style="left:${x-15}px;top:${y-15}px"></div><div class="lab" id="l${i}" style="left:${x+ox}px;top:${y+oy}px;transform:${tr};text-align:${ta}"><b>${n}</b></div>`;});
+document.getElementById('radar').innerHTML=h;
+const clamp=v=>Math.max(0,Math.min(1,v)), ease=v=>1-Math.pow(1-clamp(v),3);
+// window.TL = {scenes:[[id,debut,fin]], st:[[debut,fin,texte]], ev:{...}}
+window.render=function(t){const TL=window.TL;
+ for(const [id,a,b] of TL.scenes){const e=document.getElementById(id);const o=(a===0?1:clamp((t-a)/.2))*(t<b+.2?1:0);e.style.opacity=o;}
+ document.querySelectorAll('#s1 .b').forEach((e,i)=>{const k=ease((t-TL.ev.bulles[i])/.3);e.style.opacity=k;e.style.transform=`translateY(${30*(1-k)}px) scale(${.96+.04*k})`;});
+ P.forEach((_,i)=>{const k=ease((t-TL.ev.points[i])/.35);const p=document.getElementById('p'+i),l=document.getElementById('l'+i);
+  p.style.transform=`scale(${k<1?k*1.15:1})`;p.style.opacity=k;l.style.opacity=clamp((t-TL.ev.points[i]-.1)/.3);});
+ document.querySelectorAll('#s4 h1 span').forEach((e,i)=>{const k=ease((t-TL.ev.promesse[i])/.35);e.style.opacity=k;e.style.transform=`translateY(${40*(1-k)}px)`;});
+ const z=1+.04*clamp((t-TL.scenes[1][1])/(TL.scenes[1][2]-TL.scenes[1][1]));document.querySelector('#s2 h1').style.transform=`scale(${z})`;document.querySelector('#s2 h1').style.transformOrigin='left top';
+ const c=TL.st.find(([a,b])=>t>=a&&t<b);document.getElementById('st').innerHTML=c?`<span>${c[2]}</span>`:"";
+};
+</script></body></html>

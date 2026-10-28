@@ -41,3 +41,11 @@ Réglages conseillés (petite campagne de test) :
   avant le lancement.
 
 Les montants et le lancement de la campagne relèvent de Driss.
+
+## Variante vidéo (Reel 9:16) : `video/sorties-semaine-reel.mp4`
+
+Légende :
+> Tes potes ont annulé la rando de dimanche ? Ce week-end, 8 groupes partent randonner autour de Paris : Poissy, Palaiseau, Yerres, Sucy-en-Brie, Meulan, Étréchy, Rosny-sur-Seine, Villeneuve-le-Comte. Tu viens seul·e, tu repars à plusieurs.
+> App gratuite (certaines sorties sont payantes si l'organisateur le décide) : fitmates.net/app
+
+Visuels fixes alternatifs : `variante-radar.png` (carte des départs) et `variante-conversation.png` (conversation entre amis).
