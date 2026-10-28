@@ -18,3 +18,13 @@ Demandée par Driss le 28/10 : mêmes 7 premières secondes que la vidéo de ré
 sous-titres anglais d'origine floutés), voix off française, puis bascule « Ce qui fait vraiment mal, c'est de passer
 encore un week-end seul sur ton canapé » et la suite du Reel. Attention : le plan de la fourmi vient d'une vidéo
 tierce ; à vérifier avant de l'utiliser en publicité payante (droits).
+
+## Version « fourmi » animée : `sorties-semaine-reel-fourmi-video.mp4`
+
+Même montage, avec des plans vidéo à la place des fonds unis. Clips Mixkit (licence gratuite Mixkit : usage commercial
+autorisé, sans attribution ; pas de revente du clip seul), recadrés en 9:16 depuis du 720p ou 1080p :
+- canapé : https://mixkit.co/free-stock-video/young-woman-watching-her-phone-in-the-couch-32045/
+- carte des sorties : https://mixkit.co/free-stock-video/friends-walking-through-the-woods-21435/
+- « Tu viens seul·e » : https://mixkit.co/free-stock-video/young-hiker-woman-walking-through-the-forest-24999/
+- « Tu repars à plusieurs » : https://mixkit.co/free-stock-video/a-group-of-friends-hugging-and-walking-on-a-path-23567/
+- fin : https://mixkit.co/free-stock-video/slow-aerial-tour-through-a-mist-covered-forest-28342/
