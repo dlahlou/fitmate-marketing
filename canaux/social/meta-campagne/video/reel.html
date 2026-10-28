@@ -2,10 +2,10 @@
 @font-face { font-family:'Bricolage'; src:url(../../../aso/visuels/fr-FR/sources/assets/bricolage-grotesque-latin.woff2) format('woff2'); font-weight:200 800; }
 @font-face { font-family:'Inter'; src:url(../../../aso/visuels/fr-FR/sources/assets/inter-latin.woff2) format('woff2'); font-weight:100 900; }
 *{box-sizing:border-box;margin:0;padding:0} html,body{width:1080px;height:1920px;overflow:hidden}
-body{font-family:Inter,sans-serif;font-weight:500;-webkit-font-smoothing:antialiased;position:relative;background:#F4EEE3}
+body{font-family:Inter,sans-serif;font-weight:500;-webkit-font-smoothing:antialiased;position:relative;background:transparent}
 .sc{position:absolute;inset:0;opacity:0}
 /* Scène 1 : conversation */
-#s1{background:#F4EEE3}
+#s1{background:transparent}
 .fil{position:absolute;top:300px;left:72px;right:72px;display:flex;flex-direction:column;gap:26px}
 .b{max-width:800px;padding:30px 40px;border-radius:44px;font-size:52px;line-height:1.2;font-weight:600;opacity:0;transform:translateY(30px) scale(.96)}
 .b.eux{background:#E3DBCD;color:#1A1714;align-self:flex-start;border-bottom-left-radius:12px}
@@ -46,16 +46,7 @@ body{font-family:Inter,sans-serif;font-weight:500;-webkit-font-smoothing:antiali
 #st{position:absolute;left:0;right:0;bottom:400px;text-align:center}
 #st span{display:inline-block;max-width:900px;background:rgba(26,23,20,.88);color:#fff;font-family:Inter;font-weight:700;font-size:46px;line-height:1.25;padding:14px 28px;border-radius:18px}
 </style></head><body>
-<section class="sc" id="s1">
- <div class="groupe">Rando dimanche 🥾<small>4 participants</small></div>
- <div class="fil">
-  <div class="heure">Samedi, 21:47</div>
-  <div class="b moi">On part toujours à 9 h demain ?</div>
-  <div class="b eux">Ah mince, j'peux plus 😕</div>
-  <div class="b eux">Moi non plus, désolé…</div>
-  <div class="b eux">On remet à un autre week-end ?</div>
- </div>
-</section>
+<section class="sc" id="s1"></section>
 <section class="sc" id="s2"><div class="h">Dimanche, 15:12</div><h1>Encore un week-end <em>sur le canapé.</em></h1></section>
 <section class="sc" id="s3"><h1>Ce week-end, <em>8 groupes</em> partent randonner.</h1><div id="radar"></div></section>
 <section class="sc" id="s4"><h1><span>Tu viens seul·e.</span><span><em>Tu repars à plusieurs.</em></span></h1></section>
@@ -79,8 +70,8 @@ document.getElementById('radar').innerHTML=h;
 const clamp=v=>Math.max(0,Math.min(1,v)), ease=v=>1-Math.pow(1-clamp(v),3);
 // window.TL = {scenes:[[id,debut,fin]], st:[[debut,fin,texte]], ev:{...}}
 window.render=function(t){const TL=window.TL;
- for(const [id,a,b] of TL.scenes){const e=document.getElementById(id);const o=(a===0?1:clamp((t-a)/.2))*(t<b+.2?1:0);e.style.opacity=o;}
- document.querySelectorAll('#s1 .b').forEach((e,i)=>{const k=ease((t-TL.ev.bulles[i])/.3);e.style.opacity=k;e.style.transform=`translateY(${30*(1-k)}px) scale(${.96+.04*k})`;});
+ for(const [id,a,b] of TL.scenes){const e=document.getElementById(id);const o=(a===0||id==='s2'?(t>=a?1:0):clamp((t-a)/.2))*(t<b+.2?1:0);e.style.opacity=o;}
+ (TL.ev.bulles?document.querySelectorAll('#s1 .b'):[]).forEach((e,i)=>{const k=ease((t-TL.ev.bulles[i])/.3);e.style.opacity=k;e.style.transform=`translateY(${30*(1-k)}px) scale(${.96+.04*k})`;});
  P.forEach((_,i)=>{const k=ease((t-TL.ev.points[i])/.35);const p=document.getElementById('p'+i),l=document.getElementById('l'+i);
   p.style.transform=`scale(${k<1?k*1.15:1})`;p.style.opacity=k;l.style.opacity=clamp((t-TL.ev.points[i]-.1)/.3);});
  document.querySelectorAll('#s4 h1 span').forEach((e,i)=>{const k=ease((t-TL.ev.promesse[i])/.35);e.style.opacity=k;e.style.transform=`translateY(${40*(1-k)}px)`;});

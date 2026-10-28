@@ -11,3 +11,10 @@ image avec Playwright, puis ffmpeg assemble. Modèle : https://github.com/thewh1
 
 Pas de musique : en ajouter une depuis la bibliothèque d'Instagram ou de Meta au moment de publier (droits inclus).
 Non publié : accord de Driss requis (CLAUDE.md).
+
+## Version « fourmi » : `sorties-semaine-reel-fourmi.mp4` (27,4 s)
+
+Demandée par Driss le 28/10 : mêmes 7 premières secondes que la vidéo de référence qu'il a fournie (la fourmi qui mord,
+sous-titres anglais d'origine floutés), voix off française, puis bascule « Ce qui fait vraiment mal, c'est de passer
+encore un week-end seul sur ton canapé » et la suite du Reel. Attention : le plan de la fourmi vient d'une vidéo
+tierce ; à vérifier avant de l'utiliser en publicité payante (droits).
