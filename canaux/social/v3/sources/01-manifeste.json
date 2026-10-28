@@ -1,0 +1,197 @@
+{
+ "id": "01-manifeste",
+ "titre": "Post 1 · Le manifeste",
+ "rubrique": "Manifeste",
+ "sortie": "../01-manifeste",
+ "slides": [
+  {
+   "fond": "papier",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "On a tous dit | « on devrait | faire *une rando* ».",
+     "taille": "xl"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      150,
+      1000
+     ],
+     [
+      640,
+      1000
+     ],
+     [
+      640,
+      800
+     ]
+    ],
+    "sortie": 800,
+    "epaisseur": 6
+   }
+  },
+  {
+   "fond": "papier",
+   "courbes": false,
+   "bas": [
+    {
+     "titre": "On l’a | rarement | faite.",
+     "taille": "xxl"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      430,
+      800
+     ],
+     [
+      430,
+      420
+     ]
+    ],
+    "sortie": 420,
+    "epaisseur": 6
+   }
+  },
+  {
+   "fond": "encre",
+   "courbes": false,
+   "bas": [
+    {
+     "titre": "Pas par manque d’envie.",
+     "taille": "m",
+     "classe": "attenue"
+    },
+    {
+     "titre": "Parce qu’on n’avait | *personne* avec qui | y aller.",
+     "taille": "l"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      600,
+      420
+     ],
+     [
+      600,
+      660
+     ]
+    ],
+    "sortie": 660,
+    "epaisseur": 6
+   }
+  },
+  {
+   "fond": "foret",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Fitmates, c’est | l’endroit où l’on | trouve ces | gens-là.",
+     "taille": "l"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      180,
+      660
+     ],
+     [
+      180,
+      1010
+     ]
+    ],
+    "sortie": 1010,
+    "epaisseur": 6
+   }
+  },
+  {
+   "fond": "foret",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Ceux qui marchent | à ton rythme.",
+     "taille": "m"
+    },
+    {
+     "titre": "Ceux qui partent | dimanche matin.",
+     "taille": "m"
+    },
+    {
+     "titre": "Ceux qui t’attendent | sur le quai.",
+     "taille": "m"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      700,
+      1010
+     ],
+     [
+      700,
+      1120
+     ]
+    ],
+    "sortie": 1120,
+    "epaisseur": 6
+   }
+  },
+  {
+   "fond": "papier",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Tu viens seul·e.",
+     "taille": "xl",
+     "classe": "attenue"
+    },
+    {
+     "titre": "Tu repars | *à plusieurs.*",
+     "taille": "xl"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      420,
+      1120
+     ],
+     [
+      420,
+      960
+     ]
+    ],
+    "sortie": 960,
+    "epaisseur": 6
+   }
+  },
+  {
+   "fond": "foret",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Le sport, | c’est mieux | à plusieurs.",
+     "taille": "xl"
+    },
+    {
+     "etiquette": "Stronger Together",
+     "classe": "signature"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      720,
+      960
+     ]
+    ],
+    "epaisseur": 6
+   }
+  }
+ ]
+}

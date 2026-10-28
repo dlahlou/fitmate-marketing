@@ -4,6 +4,8 @@ La publication passe par n8n (canaux/social/n8n). Ici, uniquement la mesure.
 Accès : jeton de Page longue durée avec pages_read_engagement, instagram_manage_insights, threads_manage_insights
 (https://developers.facebook.com/tools/explorer/).
 """
+import json
+
 import requests
 
 from ..config import env, opt
@@ -64,22 +66,69 @@ def facebook_photo(path: str, caption: str, published: bool = True) -> dict:
     return {"id": d["id"], "post_id": d.get("post_id"), "image_url": max(img["images"], key=lambda i: i["width"])["source"]}
 
 
+def _instagram_attendre(container: str, tok: str, essais: int = 30, pause: float = 4) -> None:
+    """Attend qu'un conteneur Instagram soit prêt (status_code FINISHED) ; échoue sur ERROR ou après `essais`."""
+    import time
+    for _ in range(essais):
+        st = _check(requests.get(f"{_graph()}/{container}", timeout=30, params={"fields": "status_code", "access_token": tok}))
+        if st.get("status_code") == "FINISHED":
+            return
+        if st.get("status_code") == "ERROR":
+            raise RuntimeError(f"Instagram a refusé le média : {st}")
+        time.sleep(pause)
+    raise RuntimeError(f"Instagram : le conteneur {container} n'est pas prêt après {essais} essais")
+
+
 def instagram_photo(image_url: str, caption: str) -> str:
     """Publie une image (URL publique) sur Instagram ; renvoie l'identifiant du média publié."""
-    import time
     tok = env("FB_PAGE_TOKEN", HOW)
     ig = env("IG_USER_ID", HOW)
     c = _check(requests.post(f"{_graph()}/{ig}/media", timeout=60,
                              data={"image_url": image_url, "caption": caption, "access_token": tok}))["id"]
-    for _ in range(30):
-        st = _check(requests.get(f"{_graph()}/{c}", timeout=30, params={"fields": "status_code", "access_token": tok}))
-        if st.get("status_code") == "FINISHED":
-            break
-        if st.get("status_code") == "ERROR":
-            raise RuntimeError(f"Instagram a refusé l'image : {st}")
-        time.sleep(4)
+    _instagram_attendre(c, tok)
     return _check(requests.post(f"{_graph()}/{ig}/media_publish", timeout=60,
                                 data={"creation_id": c, "access_token": tok}))["id"]
+
+
+# ---------- Carrousels (2 à 10 images) ----------
+
+CARROUSEL_MAX = 10  # limite Instagram (et usage Facebook) par publication
+
+
+def _verifier_carrousel(n: int) -> None:
+    if not 2 <= n <= CARROUSEL_MAX:
+        raise ValueError(f"un carrousel compte de 2 à {CARROUSEL_MAX} images (ici {n})")
+
+
+def facebook_carrousel(paths: list[str], caption: str) -> dict:
+    """Publie plusieurs images en un seul post de Page : chaque photo est déposée sans publication, puis un post
+    `feed` les rattache (`attached_media`). Renvoie {"post_id", "photos": [ids], "image_urls": [urls dans l'ordre]}."""
+    _verifier_carrousel(len(paths))
+    photos = [facebook_photo(p, "", published=False) for p in paths]
+    data = {"message": caption, "access_token": env("FB_PAGE_TOKEN", HOW)}
+    for i, ph in enumerate(photos):
+        data[f"attached_media[{i}]"] = json.dumps({"media_fbid": ph["id"]})
+    d = _check(requests.post(f"{_graph()}/{env('FB_PAGE_ID', HOW)}/feed", timeout=60, data=data))
+    return {"post_id": d["id"], "photos": [ph["id"] for ph in photos], "image_urls": [ph["image_url"] for ph in photos]}
+
+
+def instagram_carrousel(image_urls: list[str], caption: str) -> str:
+    """Publie un carrousel Instagram à partir d'URL publiques : un conteneur par image (`is_carousel_item`), puis un
+    conteneur CAROUSEL avec `children`, attente du statut FINISHED, puis `media_publish`. Renvoie l'id du média."""
+    _verifier_carrousel(len(image_urls))
+    tok = env("FB_PAGE_TOKEN", HOW)
+    ig = env("IG_USER_ID", HOW)
+    enfants = []
+    for url in image_urls:
+        c = _check(requests.post(f"{_graph()}/{ig}/media", timeout=60,
+                                 data={"image_url": url, "is_carousel_item": "true", "access_token": tok}))["id"]
+        _instagram_attendre(c, tok)
+        enfants.append(c)
+    car = _check(requests.post(f"{_graph()}/{ig}/media", timeout=60, data={
+        "media_type": "CAROUSEL", "children": ",".join(enfants), "caption": caption, "access_token": tok}))["id"]
+    _instagram_attendre(car, tok)
+    return _check(requests.post(f"{_graph()}/{ig}/media_publish", timeout=60,
+                                data={"creation_id": car, "access_token": tok}))["id"]
 
 
 def instagram_media(limit: int = 25) -> list[dict]:

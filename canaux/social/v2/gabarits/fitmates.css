@@ -166,3 +166,10 @@ body { font-family: 'Inter', sans-serif; font-weight: 500; -webkit-font-smoothin
 .palette .h { font-size: 44px; font-weight: 600; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; color: var(--papier); }
 .palette .h small { display: block; font-size: 20px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--mousse); margin-bottom: 6px; }
 .palette .v { font-family: 'Bricolage'; font-weight: 800; font-size: 40px; letter-spacing: -0.01em; color: var(--papier); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* ---------- v3 : carrousels typographiques (canaux/social/v3) ---------- */
+.titre.xxl { font-size: 172px; line-height: .9; letter-spacing: -0.03em; }
+.titre.xs  { font-size: 64px; line-height: 1.04; }
+.titre.attenue { color: var(--fg2); }
+.texte.grand { font-size: 42px; line-height: 1.28; max-width: 900px; }
+.etiquette.signature { font-size: 24px; letter-spacing: .2em; color: var(--fg2); }
