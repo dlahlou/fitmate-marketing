@@ -1,0 +1,175 @@
+{
+ "id": "05-nouveau-en-ville",
+ "titre": "Post 5 · Nouveau en ville",
+ "rubrique": "Nouveau en ville",
+ "sortie": "../05-nouveau-en-ville",
+ "slides": [
+  {
+   "fond": "foret",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Nouveau | dans ta | ville ?",
+     "taille": "xxl"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      150,
+      1020
+     ],
+     [
+      640,
+      1020
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 1020
+   }
+  },
+  {
+   "fond": "papier",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Le sport, c’est | la façon la plus | simple de | *rencontrer* | des gens.",
+     "taille": "m"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      720,
+      1020
+     ],
+     [
+      720,
+      660
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 660
+   }
+  },
+  {
+   "fond": "encre",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Semaine 1 :",
+     "taille": "xl"
+    }
+   ],
+   "bas": [
+    {
+     "titre": "tu viens à une sortie. | Tu ne connais | personne.",
+     "taille": "m"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      540,
+      660
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 660,
+    "reperes": [
+     [
+      540,
+      660
+     ]
+    ]
+   }
+  },
+  {
+   "fond": "foret",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Semaine 2 :",
+     "taille": "xl"
+    }
+   ],
+   "bas": [
+    {
+     "titre": "tu reviens. | Tu reconnais | deux visages.",
+     "taille": "m"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      540,
+      660
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 660,
+    "reperes": [
+     [
+      540,
+      660
+     ]
+    ]
+   }
+  },
+  {
+   "fond": "papier",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Semaine 4 :",
+     "taille": "xl"
+    }
+   ],
+   "bas": [
+    {
+     "titre": "on t’*attend.*",
+     "taille": "xxl"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      540,
+      660
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 660,
+    "reperes": [
+     [
+      540,
+      660
+     ]
+    ]
+   }
+  },
+  {
+   "fond": "foret",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Des têtes | connues | en quelques | *dimanches.*",
+     "taille": "l"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      720,
+      660
+     ],
+     [
+      720,
+      880
+     ]
+    ],
+    "epaisseur": 6
+   }
+  }
+ ]
+}

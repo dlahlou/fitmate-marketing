@@ -1,0 +1,186 @@
+{
+ "id": "03-venir-seul",
+ "titre": "Post 3 · Venir seul·e",
+ "rubrique": "Ta première sortie",
+ "sortie": "../03-venir-seul",
+ "slides": [
+  {
+   "fond": "foret",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Tu hésites | à venir *seul·e* | à une sortie ?",
+     "taille": "xl"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      150,
+      1010
+     ],
+     [
+      520,
+      1010
+     ],
+     [
+      520,
+      860
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 860
+   }
+  },
+  {
+   "fond": "encre",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "C’est normal.",
+     "taille": "xl"
+    }
+   ],
+   "bas": [
+    {
+     "titre": "Et tu ne seras sans doute | pas le seul ou la seule.",
+     "taille": "xs"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      500,
+      860
+     ],
+     [
+      500,
+      480
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 480
+   }
+  },
+  {
+   "fond": "papier",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Avant :",
+     "taille": "xxl"
+    }
+   ],
+   "bas": [
+    {
+     "titre": "tu sais où et quand, quel niveau, et tu peux dire bonjour au groupe.",
+     "taille": "m"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      540,
+      480
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 480,
+    "reperes": [
+     [
+      540,
+      480
+     ]
+    ]
+   }
+  },
+  {
+   "fond": "papier",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Pendant :",
+     "taille": "xxl"
+    }
+   ],
+   "bas": [
+    {
+     "titre": "tu marches à côté | de quelqu’un. | Les conversations | viennent | toutes seules.",
+     "taille": "m"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      540,
+      480
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 480,
+    "reperes": [
+     [
+      540,
+      480
+     ]
+    ]
+   }
+  },
+  {
+   "fond": "papier",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Après :",
+     "taille": "xxl"
+    }
+   ],
+   "bas": [
+    {
+     "titre": "tu peux retrouver les personnes avec qui tu as aimé bouger.",
+     "taille": "m"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      540,
+      480
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 480,
+    "reperes": [
+     [
+      540,
+      480
+     ]
+    ]
+   }
+  },
+  {
+   "fond": "foret",
+   "courbes": false,
+   "bas": [
+    {
+     "titre": "La première fois, | on vient seul·e.",
+     "taille": "m",
+     "classe": "attenue"
+    },
+    {
+     "titre": "La deuxième, | on vient *retrouver | des gens.*",
+     "taille": "m"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      640,
+      480
+     ]
+    ],
+    "epaisseur": 6
+   }
+  }
+ ]
+}

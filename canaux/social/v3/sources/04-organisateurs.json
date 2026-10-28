@@ -1,0 +1,157 @@
+{
+ "id": "04-organisateurs",
+ "titre": "Post 4 · Organisateurs",
+ "rubrique": "Organisateurs",
+ "sortie": "../04-organisateurs",
+ "slides": [
+  {
+   "fond": "encre",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Tu organises | déjà des | *sorties* ?",
+     "taille": "xl"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      150,
+      1010
+     ],
+     [
+      560,
+      1010
+     ],
+     [
+      560,
+      840
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 840
+   }
+  },
+  {
+   "fond": "papier",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Tu connais :",
+     "taille": "xs",
+     "classe": "attenue"
+    },
+    {
+     "titre": "les relances, | les « peut-être », | les désistements | de dernière minute.",
+     "taille": "m"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      620,
+      840
+     ],
+     [
+      620,
+      1090
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 1090
+   }
+  },
+  {
+   "fond": "foret",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Ton groupe | mérite *d’y aller*, | pas seulement | d’en parler.",
+     "taille": "l"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      600,
+      1090
+     ],
+     [
+      600,
+      720
+     ]
+    ],
+    "sortie": 720,
+    "epaisseur": 6
+   }
+  },
+  {
+   "fond": "papier",
+   "courbes": false,
+   "trace": {
+    "points": [
+     [
+      480,
+      720
+     ]
+    ],
+    "sortie": 720,
+    "epaisseur": 6
+   },
+   "bas": [
+    {
+     "titre": "Sur Fitmates, | les gens s’inscrivent, | savent où et quand, | et se parlent avant.",
+     "taille": "m"
+    }
+   ]
+  },
+  {
+   "fond": "foret",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Et de nouvelles | personnes, | près de chez toi, | découvrent | tes sorties.",
+     "taille": "m"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      640,
+      720
+     ],
+     [
+      640,
+      1000
+     ]
+    ],
+    "sortie": 1000,
+    "epaisseur": 6
+   }
+  },
+  {
+   "fond": "encre",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Gratuite ou payante, | c’est toi qui décides.",
+     "taille": "s",
+     "classe": "attenue"
+    },
+    {
+     "titre": "Publie | ta prochaine | *sortie.*",
+     "taille": "xl"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      720,
+      1000
+     ]
+    ],
+    "epaisseur": 6
+   }
+  }
+ ]
+}

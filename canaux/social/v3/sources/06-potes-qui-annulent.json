@@ -1,0 +1,127 @@
+{
+ "id": "06-potes-qui-annulent",
+ "titre": "Post 6 · Tes potes ont encore annulé",
+ "rubrique": "Tous les sports",
+ "sortie": "../06-potes-qui-annulent",
+ "slides": [
+  {
+   "fond": "encre",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Tes potes | ont encore | annulé.",
+     "taille": "xxl"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      150,
+      1010
+     ],
+     [
+      600,
+      1010
+     ],
+     [
+      600,
+      880
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 880
+   }
+  },
+  {
+   "fond": "papier",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Le footing de dimanche, | la partie de padel, | la rando prévue | depuis un mois.",
+     "taille": "m"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      540,
+      880
+     ],
+     [
+      540,
+      720
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 720
+   }
+  },
+  {
+   "fond": "foret",
+   "courbes": false,
+   "bas": [
+    {
+     "titre": "Il existe | des gens | qui *viennent.*",
+     "taille": "xl"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      460,
+      720
+     ],
+     [
+      460,
+      420
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 420
+   }
+  },
+  {
+   "fond": "papier",
+   "courbes": false,
+   "bas": [
+    {
+     "titre": "En randonnée autour | de Paris, il y a des | sorties chaque semaine.",
+     "taille": "m"
+    },
+    {
+     "texte": "Pour les autres sports, inscris-toi : on ouvre ton secteur dès qu’il y a assez de monde.",
+     "classe": "grand fort"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      620,
+      420
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 420
+   }
+  },
+  {
+   "fond": "encre",
+   "courbes": false,
+   "bas": [
+    {
+     "titre": "Le sport, | c’est mieux | à plusieurs.",
+     "taille": "xl"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      700,
+      420
+     ]
+    ],
+    "epaisseur": 6
+   }
+  }
+ ]
+}

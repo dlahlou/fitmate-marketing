@@ -113,5 +113,15 @@ Champs utilisés : title, start_at, location.city, level, price_eur, slug ; jama
 seulement s'il est > 0. Un titre dont un mot à majuscule n'est ni courant, ni la ville, ni dans
 `donnees/lieux.txt` (prénom, nom de personne…) est remplacé par « Randonnée à <ville> ».
 
-`scripts/social_publish.py` ne publie aujourd'hui qu'une image par post (`fichier`) : la publication d'un carrousel
-(`fichiers`) n'est pas encore branchée.
+`scripts/social_publish.py` publie en carrousel tout post dont `fichiers` compte plus d'une image (2 à 10), sinon
+l'image unique `fichier` ; toujours derrière le verrou `canaux/social/accords.json`, en aperçu par défaut.
+
+## v3 : carrousels typographiques (`../v3/`)
+
+Sources dans `../v3/sources/<id>.json` (même format, tailles de titre `xxl` et `xs`, classe `attenue`), PNG dans
+`../v3/<id>/`, lot de publication `../v3/lot-v3.json`. Planche de relecture, un carrousel par ligne :
+
+```bash
+cd canaux/social/v3 && for f in sources/*.json; do node ../v2/render.js $f; done
+node ../v2/render.js --lignes apercu.png 01-manifeste 03-venir-seul 04-organisateurs 05-nouveau-en-ville 06-potes-qui-annulent
+```

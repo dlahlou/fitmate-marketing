@@ -3,6 +3,7 @@
 //   node canaux/social/v2/render.js canaux/social/v2/prototype-chevreuse.json
 //   node canaux/social/v2/render.js carrousel.json --out /tmp/sortie --apercu /tmp/apercu.png
 //   node canaux/social/v2/render.js --grille sortie.png a.png b.png … (9 PNG : simulation de la grille du profil)
+//   node canaux/social/v2/render.js --lignes apercu.png dossier1 dossier2 … (un carrousel rendu par ligne)
 //
 // Le rendu ÉCHOUE (code 1) si : un texte déborde (mot trop long, titre du tableau sur plus de lignes que prévu,
 // texte coupé), un bloc sort des marges de 72 px, les zones haut et bas se chevauchent, le tracé orange s'arrête
@@ -129,7 +130,23 @@ async function planche(browser, imgs, out, { cols, cellW, cellH, gap, crop, fond
   const browser = await chromium.launch();
   let ok = true;
   try {
-    if (args[0] === '--grille') {
+    if (args[0] === '--lignes') {
+      // Planche de relecture : chaque dossier de PNG (01.png, 02.png…) sur sa propre ligne, slides bord à bord
+      const [, out, ...dirs] = args;
+      if (!out || !dirs.length) throw new Error('usage : render.js --lignes apercu.png dossier1 dossier2 …');
+      const lignes = dirs.map(d => ({ nom: path.basename(d), imgs: fs.readdirSync(d).filter(f => /^\d+\.png$/.test(f)).sort().map(f => path.join(d, f)) }));
+      const cols = Math.max(...lignes.map(l => l.imgs.length)), cw = 324, ch = 405, pad = 48, lab = 44, gapL = 40;
+      const w = pad * 2 + cols * cw, h = pad * 2 + lignes.length * (lab + ch) + (lignes.length - 1) * gapL;
+      const page = await browser.newPage({ viewport: { width: w, height: h } });
+      const html = lignes.map((l, i) => `<div style="position:absolute;left:${pad}px;top:${pad + i * (lab + ch + gapL)}px">
+        <div style="height:${lab}px;letter-spacing:.08em;text-transform:uppercase">${l.nom} · ${l.imgs.length} slides</div>
+        <div style="display:flex">${l.imgs.map(f => `<img src="data:image/png;base64,${fs.readFileSync(f).toString('base64')}" style="width:${cw}px;height:${ch}px;display:block">`).join('')}</div></div>`).join('');
+      await page.setContent(`<body style="margin:0;background:#0f0d0b;font:600 22px/1 sans-serif;color:#8a8378">${html}</body>`);
+      await page.waitForTimeout(300);
+      await page.screenshot({ path: path.resolve(out) });
+      await page.close();
+      console.log('planche', path.resolve(out));
+    } else if (args[0] === '--grille') {
       const [, out, ...imgs] = args;
       if (!out || imgs.length !== 9) throw new Error('usage : render.js --grille sortie.png 9 × fichier.png');
       // Le profil Instagram affiche des vignettes 3:4 recadrées au centre des posts 4:5
