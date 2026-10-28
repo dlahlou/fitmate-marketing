@@ -3,11 +3,27 @@
 # Usage (venv avec faster-whisper) : python montage2.py choix.json DOSSIER_SORTIE
 #   choix.json : ["phrase0.wav", …, "phrase6.wav"] dans l'ordre de lignes.json
 import json, os, subprocess, sys
-import soundfile as sf
+import numpy as np, soundfile as sf
 from faster_whisper import WhisperModel
 
 ICI = os.path.dirname(os.path.abspath(__file__))
 L = json.load(open(os.path.join(ICI, "lignes.json"))); W = json.load(open(sys.argv[1])); OUT = sys.argv[2]
+os.makedirs(OUT, exist_ok=True)
+def serrer(i, f, garde=0.2, seuil_db=-40, trame=0.01):
+    "Ramène les pauses internes de plus de 0,25 s à 0,2 s (débit plus vif, les deux premières phrases tiennent avant 7,1 s)."
+    y, sr = sf.read(f); n = int(trame * sr); k = len(y) // n
+    rms = np.sqrt((y[:k * n].reshape(k, n) ** 2).mean(1) + 1e-12); muet = 20 * np.log10(rms / rms.max()) < seuil_db
+    morceaux, j = [], 0
+    while j < k:
+        e = j
+        while e < k and muet[e] == muet[j]: e += 1
+        a, b = j * n, (e * n if e < k else len(y))
+        if muet[j] and 0 < j and e < k and (e - j) * trame > garde + 0.05:   # pause interne trop longue : garder les bords
+            h = int(garde / 2 * sr); morceaux += [y[a:a + h], y[b - h:b]]
+        else: morceaux.append(y[a:b])
+        j = e
+    g = os.path.join(OUT, f"phrase_{i}.wav"); sf.write(g, np.concatenate(morceaux), sr); return g
+W = [serrer(i, f) for i, f in enumerate(W)]
 D = [sf.info(f).duration for f in W]
 wm = WhisperModel("large-v3", device="cpu", compute_type="int8")
 
@@ -35,7 +51,6 @@ st = [[r(S[0]), r(S[0] + c0), "Quand une fourmi te mord,"], [r(S[0] + c0), e(0),
       [r(S[6]), e(6), L[6]]]                                 # pas de sous-titre sur « Tu viens seul… », déjà écrit à l'écran
 tl = {"fin": FIN, "scenes": [["s1", 0, 7.1], ["s2", 7.1, r(f2)], ["s3", r(f2), r(f3)], ["s4", r(f3), r(f4)], ["s5", r(f4), FIN]],
       "st": st, "ev": {"points": [r(S[3] + 0.9 + 0.22 * i) for i in range(8)], "promesse": [r(x) for x in p]}}
-os.makedirs(OUT, exist_ok=True)
 json.dump(tl, open(os.path.join(ICI, "tl.json"), "w"), ensure_ascii=False)
 inp, flt = [], []
 for i, f in enumerate(W):

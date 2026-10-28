@@ -28,3 +28,31 @@ autorisé, sans attribution ; pas de revente du clip seul), recadrés en 9:16 de
 - « Tu viens seul·e » : https://mixkit.co/free-stock-video/young-hiker-woman-walking-through-the-forest-24999/
 - « Tu repars à plusieurs » : https://mixkit.co/free-stock-video/a-group-of-friends-hugging-and-walking-on-a-path-23567/
 - fin : https://mixkit.co/free-stock-video/slow-aerial-tour-through-a-mist-covered-forest-28342/
+
+## Voix 2 : `sorties-semaine-reel-fourmi-voix2.mp4` (28,8 s)
+
+Mêmes images que la version animée. Seule la voix change : Driss trouvait la voix Kokoro mécanique.
+- **Modèle** : Chatterbox Multilingual de Resemble AI (https://huggingface.co/ResembleAI/chatterbox), **licence MIT**,
+  `language_id="fr"`, CPU. Le modèle ajoute un filigrane audio inaudible (Perth).
+- **Voix** : clonée sur 11 s de lecture d'un locuteur de Multilingual LibriSpeech, français, locuteur 9804
+  (`facebook/multilingual_librispeech`, fichier `french/1_hours`, extrait `9804_9061_000344`).
+  - Licence **CC BY 4.0**, usage commercial permis avec attribution ; enregistrements LibriVox du domaine public.
+  - Extrait de référence : `fabrication/ref-voix-mls-9804.wav`.
+  - Attribution à mettre si besoin : « Voix : Multilingual LibriSpeech (Pratap et al., 2020), CC BY 4.0 ».
+- **Choix de la voix** : la voix par défaut de Chatterbox a été écartée, accent anglais (une phrase transcrite en anglais
+  par Whisper). 6 voix MLS testées, 9804 retenue : les 7 phrases reconnues sur la majorité des tirages.
+- **Prises retenues** : pour chaque phrase, le meilleur des 3 à 4 tirages d'après la transcription Whisper et la durée.
+  - Réglages `exaggeration` 0,5 et `cfg_weight` 0,5, `temperature` 0,8 ;
+  - phrase 5 (les villes) en `exaggeration` 0,65 ;
+  - « Fitmates » écrit « Fitt-mèïtse » pour le modèle.
+- **Débit** : `montage2.py` ramène les pauses internes de plus de 0,25 s à 0,2 s, pour que les deux premières phrases
+  finissent avant la coupure de la fourmi (6,74 s).
+- **Vérification Whisper** (faster-whisper large-v3) sur la piste finale :
+  - langue détectée : français, probabilité 1,00 ;
+  - les 7 phrases sont reconnues ; « Palaiso », « Yer » et « Sucy-en-Brie » sont transcrits comme ils se prononcent ;
+  - aucune liaison parasite à « repars à » ;
+  - non écouté par un humain : à écouter avant publication.
+
+Refaire : `chatterbox_gen.py SORTIE --ref ref-voix-mls-9804.wav --seeds 2,3,4`, puis `whisper_check.py`, puis
+`montage2.py choix.json SORTIE`. `montage2.py` écrit `tl.json` et `voix.wav`, et affiche D1…D5 et FIN. Ensuite
+`frames.js` et `assembler.sh`, dont les valeurs par défaut sont celles de cette version.

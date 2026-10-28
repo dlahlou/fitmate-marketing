@@ -6,7 +6,7 @@ import torch, torchaudio as ta
 from chatterbox.mtl_tts import ChatterboxMultilingualTTS
 
 # Orthographe « phonétique » donnée au modèle (le texte des sous-titres reste celui de lignes.json)
-DIT = {"Fitmates": "Fitt-mèïtse", "Sucy-en-Brie": "Sucy-en-Brie", "L'appli": "L'appli"}
+DIT = {"Fitmates": "Fitt-mèïtse"}
 
 def dire(l):
     for a, b in DIT.items(): l = l.replace(a, b)
