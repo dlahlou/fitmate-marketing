@@ -1,39 +1,745 @@
 [
- {"id": "ame-fitmates", "qui": "Driss", "canal": "Site", "priorite": 1, "action": "Relire « L'âme de Fitmates » et écrire l'histoire d'origine (pourquoi tu as créé Fitmates)", "impact": "Le socle de tous les messages : impact d'abord, outil en dernier. L'histoire d'origine est la pièce la plus forte, toi seul peux l'écrire", "lien": "", "statut": "à faire", "duree": "20 min", "etapes": [{"texte": "Lis le document (raison d'être, croyances, impact, ce qu'on n'est pas, phrase de marque, manifeste).", "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/strategie/ame-de-fitmates.md", "libelle_lien": "Lire l'âme de Fitmates ↗"}, {"texte": "Envoie à Claude tes corrections, puis ton histoire en quelques lignes : le moment où tu t'es dit que ça devait exister, ce qui te frustrait, ce que tu veux que Fitmates change.", "lien": "https://claude.ai/code/session_01XNHWdd3Ezaz2t3MR6axpZZ", "libelle_lien": "Ouvrir la session ↗"}, {"texte": "Si tu as 2 ou 3 histoires de membres ou d'organisateurs (avec leur accord), ajoute-les : elles remplaceront les exemples."}]},
- {"id": "ig-plan-v3", "qui": "Driss", "canal": "Réseaux sociaux", "priorite": 1, "action": "Valider ou corriger le plan de contenu Instagram v3 (7 idées, 20 accroches, 2 scripts de Reels), avant toute fabrication", "impact": "Contenu centré sur les gens et tous les sports, avec Fitmates comme réponse ; rien n'est fabriqué ni publié sans ton accord", "lien": "", "statut": "fait", "duree": "10 min", "etapes": [{"texte": "Lis le plan (méthode : opportunités, accroches classées, scripts scène par scène, contenus utiles).", "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/social/plan-reels.md", "libelle_lien": "Lire le plan ↗"}, {"texte": "Réponds à Claude dans la session avec ce que tu gardes, retires ou changes, par exemple :", "copier": "Plan v3 : je garde les idées 1, 2, 5 ; je retire 6 ; change l'accroche 3 en « … ». Fabrique les visuels pour que je les valide."}, {"texte": "Pour les Reels 5 et l'idée « lire une sortie », il faut des enregistrements d'écran d'un compte de démonstration sans vrais membres : dépose-les dans le dossier Drive.", "lien": "https://drive.google.com/drive/folders/1ajbjtu_NOt2LlgGHt-3pSZ-gwNfcPidd", "libelle_lien": "Dossier Drive ↗"}]},
- {"id": "ig-photos", "qui": "Driss", "canal": "Réseaux sociaux", "priorite": 1, "action": "Déposer 15 à 30 photos de vraies sorties dans le dossier Drive « Fitmates – photos Instagram »", "impact": "La nouvelle direction artistique repose sur des photos réelles : sans elles, les piliers « On y était » et les accroches photo restent vides", "lien": "https://drive.google.com/drive/folders/1ajbjtu_NOt2LlgGHt-3pSZ-gwNfcPidd", "statut": "à faire", "duree": "15 min, puis au fil des sorties", "etapes": [{"texte": "Ouvre le dossier (privé, toi seul y as accès ; Claude le lit avec le connecteur Drive).", "lien": "https://drive.google.com/drive/folders/1ajbjtu_NOt2LlgGHt-3pSZ-gwNfcPidd", "libelle_lien": "Ouvrir le dossier ↗"}, {"texte": "Dépose tes photos de sorties : quai de gare au départ, groupe de dos ou de loin dans le paysage, sentier en vue subjective, détails (sac, thermos, chaussures boueuses, billet), pause, belles lumières. Le plus grand format possible, sans filtre."}, {"texte": "Visages reconnaissables : seulement avec l'accord écrit de la personne. Message à lui envoyer :", "copier": "Salut ! Est-ce que tu es d'accord pour que Fitmates publie sur Instagram et Facebook la photo de la sortie où on te voit ? Tu peux changer d'avis à tout moment, on la retirera."}, {"texte": "Nomme chaque photo avec le lieu et la date si possible (ex. « chevreuse-2026-10-12-quai.jpg »). Quand des personnes ont donné leur accord, ajoute « -accord » au nom du fichier."}, {"texte": "Pour les organisateurs : tu peux leur partager ce même dossier en dépôt seul (clic droit → Partager → rôle « Contributeur ») pour qu'ils y ajoutent leurs photos."}]},
- {"id": "ig-novembre", "qui": "Driss", "canal": "Réseaux sociaux", "priorite": 1, "action": "Valider le lot de novembre (9 posts) pour qu'il prenne la suite du lancement le 2 novembre", "impact": "Le lancement se termine le 01/11 : sans ce feu vert, le compte s'arrête (3 posts / semaine prévus)", "lien": "", "statut": "écarté", "duree": "5 min", "etapes": [{"texte": "Regarde l'aperçu des 9 visuels : itinéraires Chevreuse et Vexin, sac de novembre, jours courts, sortie du dimanche, niveaux, week-end, course à pied, suivre ses partenaires.", "lien": "https://github.com/dlahlou/fitmate-marketing/raw/main/canaux/social/visuels/novembre/apercu-grille.png", "libelle_lien": "Voir l'aperçu ↗"}, {"texte": "Lis les légendes (champ « legende »).", "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/social/lot-novembre.json", "libelle_lien": "Lire les légendes ↗"}, {"texte": "Ouvre la session Claude.", "lien": "https://claude.ai/code/session_01XNHWdd3Ezaz2t3MR6axpZZ", "libelle_lien": "Ouvrir la session ↗"}, {"texte": "Envoie ce message (en retirant ou corrigeant des posts si besoin) :", "copier": "Je valide le lot de novembre : publie-le après le lancement, les lundis, mercredis et samedis à 12 h 13."}]},
- {"id": "gsc-spam", "qui": "Driss", "canal": "Google", "priorite": 1, "action": "Retirer l'URL de spam de Google (préfixe https://www.fitmates.net/cs/)", "impact": "Nettoie les résultats sur la recherche « fitmates »", "lien": "https://search.google.com/search-console/removals?resource_id=sc-domain%3Afitmates.net", "statut": "fait", "duree": "2 min", "etapes": [{"texte": "Ouvre l'outil Suppressions de la Search Console (propriété fitmates.net).", "lien": "https://search.google.com/search-console/removals?resource_id=sc-domain%3Afitmates.net", "libelle_lien": "Ouvrir Suppressions ↗"}, {"texte": "Clique sur le bouton rouge « Nouvelle demande ». Reste sur l'onglet « Supprimer temporairement l'URL »."}, {"texte": "Colle ce préfixe dans le champ « Saisir l'URL » :", "copier": "https://www.fitmates.net/cs/"}, {"texte": "Coche « Supprimer toutes les URL avec ce préfixe », clique sur « Suivant », puis sur « Envoyer la demande »."}, {"texte": "C'est tout : la demande apparaît dans la liste avec l'état « Traitement de la demande ». Ces pages renvoient une erreur 404, donc Google les oubliera définitivement avant la fin des 6 mois de masquage."}]},
- {"id": "gsc-index", "qui": "Driss", "canal": "Google", "priorite": 1, "action": "Demander l'indexation de /sport/randonnee et /randonnee/autour-de-paris", "impact": "Accélère la prise en compte des nouvelles pages rando", "lien": "https://search.google.com/search-console/inspect?resource_id=sc-domain%3Afitmates.net", "statut": "fait", "duree": "3 min", "etapes": [{"texte": "Page 1 : ouvre l'inspection de /sport/randonnee (le lien remplit déjà l'URL).", "lien": "https://search.google.com/search-console/inspect?resource_id=sc-domain%3Afitmates.net&id=https%3A%2F%2Fwww.fitmates.net%2Fsport%2Frandonnee", "libelle_lien": "Inspecter /sport/randonnee ↗"}, {"texte": "Si le lien ne remplit pas l'URL, colle-la dans la barre de recherche tout en haut de la Search Console, puis Entrée :", "copier": "https://www.fitmates.net/sport/randonnee"}, {"texte": "Attends le résultat (10 à 30 s), puis clique sur « Demander une indexation » (à droite du titre « L'URL n'est pas sur Google » ou « L'URL est sur Google »). Attends la fenêtre « Indexation demandée » (environ 1 min), puis « OK »."}, {"texte": "Page 2 : même chose pour /randonnee/autour-de-paris.", "lien": "https://search.google.com/search-console/inspect?resource_id=sc-domain%3Afitmates.net&id=https%3A%2F%2Fwww.fitmates.net%2Frandonnee%2Fautour-de-paris", "libelle_lien": "Inspecter /randonnee/autour-de-paris ↗", "copier": "https://www.fitmates.net/randonnee/autour-de-paris"}, {"texte": "Clique sur « Demander une indexation », attends la confirmation, puis « OK ». Google limite à une dizaine de demandes par jour : inutile de recommencer."}]},
- {"id": "ios-build", "qui": "Driss", "canal": "Stores", "priorite": 3, "action": "Fiche App Store en français : elle partira avec ta prochaine mise à jour de l'app", "impact": "Apple ne permet de changer description, mots-clés et langues qu'avec une nouvelle version ; seul le texte promotionnel change à tout moment (déjà fait en anglais)", "lien": "https://appstoreconnect.apple.com/apps/6756283890/distribution", "statut": "avec la prochaine version", "duree": "0 min maintenant", "etapes": [{"texte": "Rien à faire maintenant. La version en ligne (1.1.3) n'a que l'anglais, et Apple n'accepte pas d'ajouter le français ni de changer la description sans soumettre une version."}, {"texte": "Le jour où tu publies une mise à jour de l'app pour une autre raison, utilise la version 1.1.16 déjà préparée (textes fr-FR et en-US, mots-clés) : il suffit d'y attacher ton build. Si ton build porte un autre numéro, dis-le à Claude : il recopie les textes sur la bonne version.", "lien": "https://appstoreconnect.apple.com/apps/6756283890/distribution", "libelle_lien": "Voir la version préparée ↗"}, {"texte": "Ne touche ni au nom, ni au sous-titre, ni à l'icône."}]},
- {"id": "visuels", "qui": "Driss", "canal": "Stores", "priorite": 2, "action": "Valider les captures fr-FR contre l'app réelle (ou fournir des captures d'un compte de démo)", "impact": "Captures en français sur les deux stores", "lien": "https://github.com/dlahlou/fitmate-marketing/tree/main/canaux/aso/visuels/fr-FR", "statut": "fait", "duree": "10 min", "etapes": [{"texte": "Ouvre les 6 captures fr-FR préparées (format App Store).", "lien": "https://github.com/dlahlou/fitmate-marketing/tree/main/canaux/aso/visuels/fr-FR/app-store-6.9", "libelle_lien": "Voir les captures ↗"}, {"texte": "Compare chaque capture à l'app réelle : écrans, boutons, libellés. Ce sont des écrans reconstruits, sans données personnelles."}, {"texte": "Réponds à Claude en une ligne, par exemple :", "copier": "Captures : 01 OK, 02 OK, 03 à corriger (le bouton s'appelle …), 04 OK, 05 OK, 06 OK"}]},
- {"id": "backend-prix", "qui": "Driss", "canal": "App", "priorite": 2, "action": "Vérifier que le flux public des sorties transmet le prix des sorties payantes", "impact": "Le site n'affiche pas « gratuite » pour une sortie payante", "lien": "", "statut": "fait", "duree": "5 min", "etapes": [{"texte": "Ouvre le flux public des sorties.", "lien": "https://backend.fitmates.net/api/v1/events/public/events.json", "libelle_lien": "Ouvrir le flux ↗"}, {"texte": "Cherche (Ctrl+F) une sortie que tu sais payante, et vérifie que le champ « price_eur » contient bien son prix (et pas 0 ni null)."}, {"texte": "Si le prix manque, transmets ceci à la personne qui fait le backend :", "copier": "Flux public /api/v1/events/public/events.json : pour chaque sortie payante, renseigner price_eur (nombre, en euros, ex. 15). Aujourd'hui une sortie payante sans price_eur s'affiche « gratuite » sur le site."}]},
- {"id": "play-revue", "qui": "Google", "canal": "Stores", "priorite": 2, "action": "Revue de la fiche Google Play (fiche fr-FR, nouvelles descriptions)", "impact": "Fiche Play en français", "lien": "https://play.google.com/console", "statut": "en attente"},
- {"id": "aso-j21", "qui": "Claude", "canal": "Stores", "priorite": 3, "action": "Mesurer l'effet des nouvelles fiches 3 semaines après publication", "impact": "Décider de la suite de l'ASO", "lien": "", "statut": "prévu 16/11"},
- {"id": "contenu-novembre", "qui": "Claude", "canal": "Google", "priorite": 3, "action": "Contenus rando de novembre : itinéraires sourcés Chevreuse, Rambouillet, Vexin", "impact": "Positions sur les requêtes rando IDF avant la saison", "lien": "https://github.com/dlahlou/fitmate-marketing/tree/main/canaux/seo/brouillons/novembre-2026", "statut": "brouillons prêts, sources à vérifier"},
- {"id": "confirmation-attente", "qui": "Claude", "canal": "Leads", "priorite": 3, "action": "E-mail d'ouverture aux inscrits d'un secteur : brouillons Gmail préparés par Claude, envoyés par Driss", "impact": "Sans domaine vérifié, Resend n'écrit qu'à toi ; la confirmation et le lien de parrainage sont déjà affichés sur le site après l'inscription", "lien": "", "statut": "quand un secteur ouvre"},
- {"id": "site-acces", "qui": "Driss", "canal": "Site", "priorite": 1, "action": "Écrire à Claude dans la session : « ajoute le dépôt fitmate-landing-page avec accès push »", "impact": "Débloque la correction du défilement entre les pages (bug constaté), les contenus SEO de novembre et les e-mails de liste d'attente", "lien": "", "statut": "fait", "duree": "1 min", "etapes": [{"texte": "Ouvre la session Claude du marketing.", "lien": "https://claude.ai/code/session_01XNHWdd3Ezaz2t3MR6axpZZ", "libelle_lien": "Ouvrir la session ↗"}, {"texte": "Envoie exactement ce message :", "copier": "Ajoute le dépôt dlahlou/fitmate-landing-page avec accès push : corrige le défilement entre les pages, intègre les contenus SEO de novembre et les e-mails de liste d'attente."}]},
- {"id": "ig-bio", "qui": "Driss", "canal": "Réseaux sociaux", "priorite": 1, "action": "Mettre la photo, la bio et le lien du profil Instagram (prêts)", "impact": "3 posts sont en ligne et renvoient au lien en bio : sans lui, aucun clic", "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/social/profil.md", "statut": "fait", "duree": "4 min", "etapes": [{"texte": "Ouvre la modification du profil Instagram (connecté avec @fitmates_strongertogether).", "lien": "https://www.instagram.com/accounts/edit/", "libelle_lien": "Modifier le profil ↗"}, {"texte": "Photo de profil : télécharge l'image (logo Fitmates, 640×640, déjà cadré pour le rond), puis « Modifier la photo » → « Importer une photo ». L'API Instagram ne permet pas de le faire à ta place.", "lien": "https://github.com/dlahlou/fitmate-marketing/raw/main/canaux/social/profil/photo-profil-640.png", "libelle_lien": "Télécharger la photo ↗"}, {"texte": "Champ « Bio » : colle ce texte.", "copier": "Fais du sport à plusieurs, près de chez toi 🥾🏃\nRandos en groupe autour de Paris, chat par sortie\nApp gratuite · iOS, Android, web\nStronger Together"}, {"texte": "« Liens » → « Ajouter un lien externe » : colle l'URL ci-dessous, et le titre « Site Fitmates ».", "copier": "https://www.fitmates.net/?utm_source=instagram&utm_medium=organic&utm_campaign=bio"}, {"texte": "Champ « Nom » (dans l'app : Modifier le profil → Nom). C'est le nom affiché sur Instagram, pas celui des stores :", "copier": "Fitmates · sport à plusieurs"}, {"texte": "Clique sur « Envoyer » ou « Terminé »."}]},
- {"id": "ig-dm", "qui": "Driss", "canal": "Réseaux sociaux", "priorite": 2, "action": "Créer les réponses automatiques aux messages dans Meta Business Suite (textes prêts)", "impact": "Chaque message « organiser », « run club », « rando » reçoit le bon lien", "lien": "https://business.facebook.com/latest/inbox/automations", "statut": "à faire", "duree": "10 min", "etapes": [{"texte": "Ouvre Meta Business Suite → Boîte de réception → Automatisations (compte Fitmate).", "lien": "https://business.facebook.com/latest/inbox/automations", "libelle_lien": "Ouvrir les automatisations ↗"}, {"texte": "« Réponse instantanée » : active-la pour Messenger et Instagram, et colle ce message :", "copier": "Salut 👋 Merci pour ton message ! On te répond vite. En attendant, les prochaines sorties sont ici : https://www.fitmates.net/evenements"}, {"texte": "« Mots-clés personnalisés » → « Créer une automatisation ». Mots-clés (un par un) : organiser, organisateur, créer une sortie. Réponse :", "copier": "Super ! Tout est expliqué ici, avec le guide pas à pas : https://www.fitmates.net/organiser?utm_source=instagram&utm_medium=organic&utm_campaign=dm (et tu peux créer ta première sortie en une phrase dans l'app)."}, {"texte": "Deuxième automatisation. Mots-clés : run club, running, courir. Réponse :", "copier": "Les run clubs ont leur page : https://www.fitmates.net/run-clubs-paris?utm_source=instagram&utm_medium=organic&utm_campaign=dm et pour lancer le tien : https://www.fitmates.net/organiser/run-club"}, {"texte": "Troisième automatisation. Mots-clés : rando, randonnée. Réponse :", "copier": "Les sorties rando autour de Paris : https://www.fitmates.net/randonnee/autour-de-paris?utm_source=instagram&utm_medium=organic&utm_campaign=dm"}, {"texte": "Quatrième automatisation. Mot-clé : coach. Réponse :", "copier": "Coachs, c'est par ici : https://www.fitmates.net/organiser/coach-sportif?utm_source=instagram&utm_medium=organic&utm_campaign=dm"}]},
- {"id": "presence", "qui": "Driss", "canal": "Google", "priorite": 3, "action": "Créer les fiches AlternativeTo, Crunchbase, Wikidata, LinkedIn, Pinterest (textes prêts ; Product Hunt fait)", "impact": "Liens entrants et cohérence de l'entité Fitmates pour Google et les IA", "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/presence/README.md", "statut": "à faire", "duree": "45 min en tout, en plusieurs fois", "etapes": [{"texte": "Textes communs. Phrase courte (champ « tagline » ou « short description ») :", "copier": "Fitmates est une application gratuite pour faire du sport à plusieurs : sorties de groupe près de chez soi, chat par sortie, et création d'une sortie en une phrase grâce à l'IA."}, {"texte": "Description longue :", "copier": "Fitmates aide les sportifs à trouver avec qui pratiquer. On rejoint une sortie (randonnée, course à pied, padel, vélo…) adaptée à son niveau, on échange dans le chat de groupe de la sortie, on suit ses partenaires. Les organisateurs créent une sortie en une phrase : l'IA remplit le lieu, l'horaire et le niveau. L'application est gratuite ; certaines sorties sont payantes si leur organisateur le décide. Disponible sur iOS, Android et le web."}, {"texte": "Liens (site, app web, App Store, Google Play) :", "copier": "https://www.fitmates.net\nhttps://app.fitmates.net\nhttps://apps.apple.com/app/id6756283890\nhttps://play.google.com/store/apps/details?id=com.dlahlou.fitmate"}, {"texte": "AlternativeTo : « Add application ». Catégories Social et Sports ; plateformes iPhone, Android, Web ; puis, sur la fiche, « Add alternative » pour Meetup et Strava.", "lien": "https://alternativeto.net/software/new/", "libelle_lien": "AlternativeTo ↗"}, {"texte": "Product Hunt : crée la fiche produit (pas besoin d'un lancement). Slogan :", "lien": "https://www.producthunt.com/posts/new", "libelle_lien": "Product Hunt ↗", "copier": "Fais du sport à plusieurs, près de chez toi"}, {"texte": "LinkedIn : crée la page entreprise. Secteur : Services de loisirs. Slogan identique.", "lien": "https://www.linkedin.com/company/setup/new/", "libelle_lien": "LinkedIn ↗"}, {"texte": "Crunchbase : « Add Organization », avec le site et la phrase courte.", "lien": "https://www.crunchbase.com/add-new", "libelle_lien": "Crunchbase ↗"}, {"texte": "Pinterest : crée un compte Business « Fitmates » et revendique le site www.fitmates.net.", "lien": "https://www.pinterest.fr/business/create/", "libelle_lien": "Pinterest ↗"}, {"texte": "Wikidata : crée l'élément. Libellé « Fitmates », description ci-dessous, puis ajoute les déclarations « site officiel » (www.fitmates.net), « identifiant App Store » (6756283890) et « identifiant Google Play » (com.dlahlou.fitmate).", "lien": "https://www.wikidata.org/wiki/Special:NewItem", "libelle_lien": "Wikidata ↗", "copier": "application mobile de sport social"}, {"texte": "Envoie à Claude la liste des fiches créées : il les ajoutera aux liens du site."}]},
- {"id": "reseau-sources", "qui": "Driss", "canal": "Google", "priorite": 2, "action": "Autoriser les sites de randonnée dans le réseau de l'environnement", "impact": "Claude peut vérifier chaque chiffre des itinéraires sur la source avant publication (aujourd'hui seuls les extraits de recherche passent)", "lien": "", "statut": "fait", "duree": "3 min", "etapes": [{"texte": "Dans la session Claude, ouvre le menu de l'environnement cloud (barre de titre), puis « Edit » → « Network access ».", "lien": "https://code.claude.com/docs/en/cloud-environments#network-access", "libelle_lien": "Doc accès réseau ↗"}, {"texte": "Dans « Allowed domains », ajoute ces domaines (un par ligne), en laissant cochée « Allow package managers » :", "copier": "rando.pnr-idf.fr\nwww.parc-naturel-chevreuse.fr\nwww.pnr-vexin-francais.fr\nwww.rambouillet-tourisme.fr\nwww.visorando.com\nwww.ffrandonnee.fr\nwww.transilien.com\nwww.iledefrance-mobilites.fr\nwww.onf.fr\nwww.yvelines.gouv.fr"}, {"texte": "Enregistre. La prochaine session pourra lire ces pages ; dis à Claude de revérifier les brouillons de novembre."}]},
- {"id": "seo-ctr", "qui": "Claude", "canal": "Google", "priorite": 2, "action": "Relevé Search Console : pages et requêtes avec des apparitions mais peu de clics → réécrire title, description et réponse en tête de page (dépôt du site)", "impact": "Relevé du 26/10 : 249 apparitions / 30 j, surtout sur « fitmates » (la marque, position 1 à 4) ; pages rando indexées le 26/10. À refaire quand les pages rando auront 3 semaines de données", "lien": "", "statut": "prévu 16/11"},
- {"id": "social-lot2", "qui": "Claude", "canal": "Réseaux sociaux", "priorite": 1, "action": "Préparer le 2ᵉ lot de posts (novembre : 9 visuels + légendes) pour enchaîner après le lancement, à 3 posts par semaine", "impact": "Le lancement se termine le 01/11 : sans lot suivant, le compte s'arrête", "lien": "", "statut": "fait"},
- {"id": "seo-hiver", "qui": "Claude", "canal": "Google", "priorite": 2, "action": "Page « Randonner l'hiver autour de Paris » (sourcée : équipement, durée du jour, sentiers praticables, gares), en ligne avant décembre", "impact": "Calendrier éditorial : capter les recherches d'hiver avant la saison", "lien": "", "statut": "fait"},
- {"id": "seo-gares", "qui": "Claude", "canal": "Google", "priorite": 2, "action": "Guide « Randonner en RER et Transilien : les gares de départ » relié aux pages zone (sources SNCF / IDFM / Parcs)", "impact": "Requêtes « randonnée en train » + maillage interne des pages rando", "lien": "", "statut": "fait"},
- {"id": "run-clubs-janvier", "qui": "Claude", "canal": "Google", "priorite": 2, "action": "Préparer le lancement course à pied de janvier : enrichir /run-clubs-paris, guide « courir en groupe à Paris », posts dédiés", "impact": "Stratégie : course à pied à Paris en janvier", "lien": "", "statut": "à faire"},
- {"id": "llms-maj", "qui": "Claude", "canal": "Google", "priorite": 2, "action": "Mettre à jour llms.txt et les données structurées avec les nouveaux itinéraires (TouristTrip, sources)", "impact": "Visibilité dans les assistants IA", "lien": "", "statut": "fait"},
- {"id": "cockpit-tendances", "qui": "Claude", "canal": "Mesure", "priorite": 2, "action": "Cockpit : courbes semaine par semaine des KPIs (relevés data/snapshots), comparaison avant/après chaque changement du journal", "impact": "Mesurer l'effet de chaque action à 3–4 semaines", "lien": "", "statut": "fait"},
- {"id": "ia-mentions", "qui": "Claude", "canal": "Mesure", "priorite": 3, "action": "Script de mesure des 30 prompts IA (mentions de Fitmates), prêt à tourner dès que les clés API sont fournies", "impact": "KPI « mentions IA » aujourd'hui non mesuré", "lien": "", "statut": "bloqué : clés API (OpenAI, Perplexity…) à fournir par Driss"},
- {"id": "verif-sources", "qui": "Claude", "canal": "Google", "priorite": 1, "action": "Revérifier sur les pages sources tous les chiffres des itinéraires publiés et des brouillons", "impact": "Aucun fait non vérifié en ligne", "lien": "", "statut": "fait"},
- {"id": "snapshot-hebdo", "qui": "Claude", "canal": "Mesure", "priorite": 3, "action": "Relevé hebdomadaire (scripts.snapshot) chaque lundi, commité dans data/snapshots", "impact": "Base des comparaisons avant/après", "lien": "", "statut": "à faire"},
- {"id": "maillage-hiver", "qui": "Claude", "canal": "Google", "priorite": 2, "action": "Lier la page « Randonner l'hiver » depuis /randonnee/autour-de-paris, les 4 pages forêts et les pages zone IDF ; refaire les volumes Ubersuggest (quota épuisé le 26/10) et ajuster le slug/title si besoin", "impact": "Une page neuve sans liens internes se positionne lentement", "lien": "", "statut": "fait"},
- {"id": "social-decembre", "qui": "Claude", "canal": "Réseaux sociaux", "priorite": 2, "action": "Lot de décembre selon la direction artistique v2 (canaux/social/direction-artistique.md)", "impact": "Pas de trou de publication après le lot de novembre", "lien": "", "statut": "bloqué : validation du plan Instagram v3 par Driss"},
- {"id": "ig-premiers-chiffres", "qui": "Claude", "canal": "Réseaux sociaux", "priorite": 3, "action": "Bilan à J+7 des posts de lancement (portée, abonnés, clics vers le site en GA4) et ajustement des formats", "impact": "Savoir quels sujets prennent avant de produire décembre", "lien": "", "statut": "à faire"},
- {"id": "backend-etrechy", "qui": "Driss", "canal": "App", "priorite": 2, "action": "Corriger le lieu de la sortie « Randonnée Etrechy Dourdan » (code postal 51130 et coordonnées dans la Marne au lieu de l'Essonne)", "impact": "La sortie s'affiche au mauvais endroit sur le site et dans les posts du week-end", "lien": "", "statut": "à faire", "duree": "2 min", "etapes": [{"texte": "Dans l'app, ouvre la sortie « Randonnée Etrechy Dourdan » du 31 octobre (ou demande à son organisateur de le faire) et corrige le lieu : Étréchy, Essonne (91580).", "lien": "https://app.fitmates.net", "libelle_lien": "Ouvrir l'app web ↗"}, {"texte": "Si le lieu est juste dans l'app mais faux dans le flux public, transmets ceci à la personne du backend :", "copier": "Flux public events.json : la sortie randonnee-etrechy-dourdan-2026-10-31 a postal_code 51130 et des coordonnées dans la Marne ; Étréchy est en Essonne (91580). Vérifier le géocodage des lieux."}]},
- {"id": "ig-v2-validation", "qui": "Driss", "canal": "Réseaux sociaux", "priorite": 1, "action": "Valider la nouvelle direction artistique Instagram sur les 2 prototypes (sortie à emporter, ce week-end on sort)", "impact": "Dès ton feu vert, les posts suivent la nouvelle charte (3 par semaine)", "lien": "", "statut": "écarté", "duree": "10 min", "etapes": [{"texte": "Lis la direction artistique (intention, piliers, charte, accroches).", "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/social/direction-artistique.md", "libelle_lien": "Direction artistique ↗"}, {"texte": "Regarde le prototype « Sortie à emporter » (7 slides bord à bord).", "lien": "https://github.com/dlahlou/fitmate-marketing/raw/main/canaux/social/v2/apercu.png", "libelle_lien": "Voir le prototype ↗"}, {"texte": "Regarde la simulation de la grille du profil.", "lien": "https://github.com/dlahlou/fitmate-marketing/raw/main/canaux/social/v2/grille-profil.png", "libelle_lien": "Voir la grille ↗"}, {"texte": "Réponds à Claude dans la session (corrige ce que tu veux) :", "copier": "Je valide la direction artistique v2 : publie les carrousels selon cette charte, 3 par semaine (mardi sortie à emporter, jeudi ce week-end on sort, samedi on y était ou savoir-faire)."}]},
- {"id": "sources-trajets", "qui": "Claude", "canal": "Google", "priorite": 2, "action": "Sourcer ou retirer les temps de trajet affichés sur les pages rando (« environ 50 min » RER B, « environ 40 min » ligne R) et la mention du passe Navigo, faute de source officielle lue", "impact": "Aucun fait non vérifié en ligne", "lien": "", "statut": "fait"},
- {"id": "audit-ame", "qui": "Claude", "canal": "Site", "priorite": 2, "action": "Relire tous les textes publics (site, fiches stores, e-mails, bio) avec la règle « impact avant outil » et préparer les versions corrigées, sans les mettre en ligne avant la validation de l'âme de Fitmates par Driss", "impact": "Un message cohérent partout : ne plus faire de sport seul, rencontrer, tenir", "lien": "", "statut": "à faire"},
- {"id": "ph-lancement", "qui": "Driss", "canal": "Google", "priorite": 3, "action": "Choisir le jour du lancement Product Hunt (kit prêt : accroche, description, commentaire du fondateur, visuels)", "impact": "Visibilité internationale, liens entrants et premiers avis ; à lancer quand les vraies photos et les écrans de démo sont prêts", "lien": "", "statut": "à faire", "duree": "10 min pour décider", "etapes": [{"texte": "Lis le kit (accroche recommandée : « Never work out alone again »).", "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/presence/product-hunt.md", "libelle_lien": "Lire le kit ↗"}, {"texte": "Ajoute ton histoire en 2 ou 3 phrases dans le commentaire du fondateur (seul toi peux l'écrire)."}, {"texte": "Dis à Claude le jour choisi (mardi, mercredi ou jeudi) : il prépare les visuels de la galerie et le relevé de la veille.", "lien": "https://claude.ai/code/session_01XNHWdd3Ezaz2t3MR6axpZZ", "libelle_lien": "Ouvrir la session ↗"}]},
- {"id": "onf-fontainebleau", "qui": "Claude", "canal": "Google", "priorite": 2, "action": "Mettre à jour les pages Fontainebleau (randonnée, escalade, trail) avec l'état actuel des secteurs ouverts publié par l'ONF, et programmer une revérification mensuelle", "impact": "Pages justes après les incendies de 2026 : un randonneur ne doit pas être envoyé dans un secteur fermé", "lien": "", "statut": "à faire"}
+ {
+  "id": "ame-fitmates",
+  "qui": "Driss",
+  "canal": "Site",
+  "priorite": 1,
+  "action": "Relire « L'âme de Fitmates » et écrire l'histoire d'origine (pourquoi tu as créé Fitmates)",
+  "impact": "Le socle de tous les messages : impact d'abord, outil en dernier. L'histoire d'origine est la pièce la plus forte, toi seul peux l'écrire",
+  "lien": "",
+  "statut": "à faire",
+  "duree": "20 min",
+  "etapes": [
+   {
+    "texte": "Lis le document (raison d'être, croyances, impact, ce qu'on n'est pas, phrase de marque, manifeste).",
+    "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/strategie/ame-de-fitmates.md",
+    "libelle_lien": "Lire l'âme de Fitmates ↗"
+   },
+   {
+    "texte": "Envoie à Claude tes corrections, puis ton histoire en quelques lignes : le moment où tu t'es dit que ça devait exister, ce qui te frustrait, ce que tu veux que Fitmates change.",
+    "lien": "https://claude.ai/code/session_01XNHWdd3Ezaz2t3MR6axpZZ",
+    "libelle_lien": "Ouvrir la session ↗"
+   },
+   {
+    "texte": "Si tu as 2 ou 3 histoires de membres ou d'organisateurs (avec leur accord), ajoute-les : elles remplaceront les exemples."
+   }
+  ]
+ },
+ {
+  "id": "ig-plan-v3",
+  "qui": "Driss",
+  "canal": "Réseaux sociaux",
+  "priorite": 1,
+  "action": "Valider ou corriger le plan de contenu Instagram v3 (7 idées, 20 accroches, 2 scripts de Reels), avant toute fabrication",
+  "impact": "Contenu centré sur les gens et tous les sports, avec Fitmates comme réponse ; rien n'est fabriqué ni publié sans ton accord",
+  "lien": "",
+  "statut": "fait",
+  "duree": "10 min",
+  "etapes": [
+   {
+    "texte": "Lis le plan (méthode : opportunités, accroches classées, scripts scène par scène, contenus utiles).",
+    "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/social/plan-reels.md",
+    "libelle_lien": "Lire le plan ↗"
+   },
+   {
+    "texte": "Réponds à Claude dans la session avec ce que tu gardes, retires ou changes, par exemple :",
+    "copier": "Plan v3 : je garde les idées 1, 2, 5 ; je retire 6 ; change l'accroche 3 en « … ». Fabrique les visuels pour que je les valide."
+   },
+   {
+    "texte": "Pour les Reels 5 et l'idée « lire une sortie », il faut des enregistrements d'écran d'un compte de démonstration sans vrais membres : dépose-les dans le dossier Drive.",
+    "lien": "https://drive.google.com/drive/folders/1ajbjtu_NOt2LlgGHt-3pSZ-gwNfcPidd",
+    "libelle_lien": "Dossier Drive ↗"
+   }
+  ]
+ },
+ {
+  "id": "ig-photos",
+  "qui": "Driss",
+  "canal": "Réseaux sociaux",
+  "priorite": 1,
+  "action": "Déposer 15 à 30 photos de vraies sorties dans le dossier Drive « Fitmates – photos Instagram »",
+  "impact": "La nouvelle direction artistique repose sur des photos réelles : sans elles, les piliers « On y était » et les accroches photo restent vides",
+  "lien": "https://drive.google.com/drive/folders/1ajbjtu_NOt2LlgGHt-3pSZ-gwNfcPidd",
+  "statut": "à faire",
+  "duree": "15 min, puis au fil des sorties",
+  "etapes": [
+   {
+    "texte": "Ouvre le dossier (privé, toi seul y as accès ; Claude le lit avec le connecteur Drive).",
+    "lien": "https://drive.google.com/drive/folders/1ajbjtu_NOt2LlgGHt-3pSZ-gwNfcPidd",
+    "libelle_lien": "Ouvrir le dossier ↗"
+   },
+   {
+    "texte": "Dépose tes photos de sorties : quai de gare au départ, groupe de dos ou de loin dans le paysage, sentier en vue subjective, détails (sac, thermos, chaussures boueuses, billet), pause, belles lumières. Le plus grand format possible, sans filtre."
+   },
+   {
+    "texte": "Visages reconnaissables : seulement avec l'accord écrit de la personne. Message à lui envoyer :",
+    "copier": "Salut ! Est-ce que tu es d'accord pour que Fitmates publie sur Instagram et Facebook la photo de la sortie où on te voit ? Tu peux changer d'avis à tout moment, on la retirera."
+   },
+   {
+    "texte": "Nomme chaque photo avec le lieu et la date si possible (ex. « chevreuse-2026-10-12-quai.jpg »). Quand des personnes ont donné leur accord, ajoute « -accord » au nom du fichier."
+   },
+   {
+    "texte": "Pour les organisateurs : tu peux leur partager ce même dossier en dépôt seul (clic droit → Partager → rôle « Contributeur ») pour qu'ils y ajoutent leurs photos."
+   }
+  ]
+ },
+ {
+  "id": "ig-novembre",
+  "qui": "Driss",
+  "canal": "Réseaux sociaux",
+  "priorite": 1,
+  "action": "Valider le lot de novembre (9 posts) pour qu'il prenne la suite du lancement le 2 novembre",
+  "impact": "Le lancement se termine le 01/11 : sans ce feu vert, le compte s'arrête (3 posts / semaine prévus)",
+  "lien": "",
+  "statut": "écarté",
+  "duree": "5 min",
+  "etapes": [
+   {
+    "texte": "Regarde l'aperçu des 9 visuels : itinéraires Chevreuse et Vexin, sac de novembre, jours courts, sortie du dimanche, niveaux, week-end, course à pied, suivre ses partenaires.",
+    "lien": "https://github.com/dlahlou/fitmate-marketing/raw/main/canaux/social/visuels/novembre/apercu-grille.png",
+    "libelle_lien": "Voir l'aperçu ↗"
+   },
+   {
+    "texte": "Lis les légendes (champ « legende »).",
+    "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/social/lot-novembre.json",
+    "libelle_lien": "Lire les légendes ↗"
+   },
+   {
+    "texte": "Ouvre la session Claude.",
+    "lien": "https://claude.ai/code/session_01XNHWdd3Ezaz2t3MR6axpZZ",
+    "libelle_lien": "Ouvrir la session ↗"
+   },
+   {
+    "texte": "Envoie ce message (en retirant ou corrigeant des posts si besoin) :",
+    "copier": "Je valide le lot de novembre : publie-le après le lancement, les lundis, mercredis et samedis à 12 h 13."
+   }
+  ]
+ },
+ {
+  "id": "gsc-spam",
+  "qui": "Driss",
+  "canal": "Google",
+  "priorite": 1,
+  "action": "Retirer l'URL de spam de Google (préfixe https://www.fitmates.net/cs/)",
+  "impact": "Nettoie les résultats sur la recherche « fitmates »",
+  "lien": "https://search.google.com/search-console/removals?resource_id=sc-domain%3Afitmates.net",
+  "statut": "fait",
+  "duree": "2 min",
+  "etapes": [
+   {
+    "texte": "Ouvre l'outil Suppressions de la Search Console (propriété fitmates.net).",
+    "lien": "https://search.google.com/search-console/removals?resource_id=sc-domain%3Afitmates.net",
+    "libelle_lien": "Ouvrir Suppressions ↗"
+   },
+   {
+    "texte": "Clique sur le bouton rouge « Nouvelle demande ». Reste sur l'onglet « Supprimer temporairement l'URL »."
+   },
+   {
+    "texte": "Colle ce préfixe dans le champ « Saisir l'URL » :",
+    "copier": "https://www.fitmates.net/cs/"
+   },
+   {
+    "texte": "Coche « Supprimer toutes les URL avec ce préfixe », clique sur « Suivant », puis sur « Envoyer la demande »."
+   },
+   {
+    "texte": "C'est tout : la demande apparaît dans la liste avec l'état « Traitement de la demande ». Ces pages renvoient une erreur 404, donc Google les oubliera définitivement avant la fin des 6 mois de masquage."
+   }
+  ]
+ },
+ {
+  "id": "gsc-index",
+  "qui": "Driss",
+  "canal": "Google",
+  "priorite": 1,
+  "action": "Demander l'indexation de /sport/randonnee et /randonnee/autour-de-paris",
+  "impact": "Accélère la prise en compte des nouvelles pages rando",
+  "lien": "https://search.google.com/search-console/inspect?resource_id=sc-domain%3Afitmates.net",
+  "statut": "fait",
+  "duree": "3 min",
+  "etapes": [
+   {
+    "texte": "Page 1 : ouvre l'inspection de /sport/randonnee (le lien remplit déjà l'URL).",
+    "lien": "https://search.google.com/search-console/inspect?resource_id=sc-domain%3Afitmates.net&id=https%3A%2F%2Fwww.fitmates.net%2Fsport%2Frandonnee",
+    "libelle_lien": "Inspecter /sport/randonnee ↗"
+   },
+   {
+    "texte": "Si le lien ne remplit pas l'URL, colle-la dans la barre de recherche tout en haut de la Search Console, puis Entrée :",
+    "copier": "https://www.fitmates.net/sport/randonnee"
+   },
+   {
+    "texte": "Attends le résultat (10 à 30 s), puis clique sur « Demander une indexation » (à droite du titre « L'URL n'est pas sur Google » ou « L'URL est sur Google »). Attends la fenêtre « Indexation demandée » (environ 1 min), puis « OK »."
+   },
+   {
+    "texte": "Page 2 : même chose pour /randonnee/autour-de-paris.",
+    "lien": "https://search.google.com/search-console/inspect?resource_id=sc-domain%3Afitmates.net&id=https%3A%2F%2Fwww.fitmates.net%2Frandonnee%2Fautour-de-paris",
+    "libelle_lien": "Inspecter /randonnee/autour-de-paris ↗",
+    "copier": "https://www.fitmates.net/randonnee/autour-de-paris"
+   },
+   {
+    "texte": "Clique sur « Demander une indexation », attends la confirmation, puis « OK ». Google limite à une dizaine de demandes par jour : inutile de recommencer."
+   }
+  ]
+ },
+ {
+  "id": "ios-build",
+  "qui": "Driss",
+  "canal": "Stores",
+  "priorite": 3,
+  "action": "Fiche App Store en français : elle partira avec ta prochaine mise à jour de l'app",
+  "impact": "Apple ne permet de changer description, mots-clés et langues qu'avec une nouvelle version ; seul le texte promotionnel change à tout moment (déjà fait en anglais)",
+  "lien": "https://appstoreconnect.apple.com/apps/6756283890/distribution",
+  "statut": "avec la prochaine version",
+  "duree": "0 min maintenant",
+  "etapes": [
+   {
+    "texte": "Rien à faire maintenant. La version en ligne (1.1.3) n'a que l'anglais, et Apple n'accepte pas d'ajouter le français ni de changer la description sans soumettre une version."
+   },
+   {
+    "texte": "Le jour où tu publies une mise à jour de l'app pour une autre raison, utilise la version 1.1.16 déjà préparée (textes fr-FR et en-US, mots-clés) : il suffit d'y attacher ton build. Si ton build porte un autre numéro, dis-le à Claude : il recopie les textes sur la bonne version.",
+    "lien": "https://appstoreconnect.apple.com/apps/6756283890/distribution",
+    "libelle_lien": "Voir la version préparée ↗"
+   },
+   {
+    "texte": "Ne touche ni au nom, ni au sous-titre, ni à l'icône."
+   }
+  ]
+ },
+ {
+  "id": "visuels",
+  "qui": "Driss",
+  "canal": "Stores",
+  "priorite": 2,
+  "action": "Valider les captures fr-FR contre l'app réelle (ou fournir des captures d'un compte de démo)",
+  "impact": "Captures en français sur les deux stores",
+  "lien": "https://github.com/dlahlou/fitmate-marketing/tree/main/canaux/aso/visuels/fr-FR",
+  "statut": "fait",
+  "duree": "10 min",
+  "etapes": [
+   {
+    "texte": "Ouvre les 6 captures fr-FR préparées (format App Store).",
+    "lien": "https://github.com/dlahlou/fitmate-marketing/tree/main/canaux/aso/visuels/fr-FR/app-store-6.9",
+    "libelle_lien": "Voir les captures ↗"
+   },
+   {
+    "texte": "Compare chaque capture à l'app réelle : écrans, boutons, libellés. Ce sont des écrans reconstruits, sans données personnelles."
+   },
+   {
+    "texte": "Réponds à Claude en une ligne, par exemple :",
+    "copier": "Captures : 01 OK, 02 OK, 03 à corriger (le bouton s'appelle …), 04 OK, 05 OK, 06 OK"
+   }
+  ]
+ },
+ {
+  "id": "backend-prix",
+  "qui": "Driss",
+  "canal": "App",
+  "priorite": 2,
+  "action": "Vérifier que le flux public des sorties transmet le prix des sorties payantes",
+  "impact": "Le site n'affiche pas « gratuite » pour une sortie payante",
+  "lien": "",
+  "statut": "fait",
+  "duree": "5 min",
+  "etapes": [
+   {
+    "texte": "Ouvre le flux public des sorties.",
+    "lien": "https://backend.fitmates.net/api/v1/events/public/events.json",
+    "libelle_lien": "Ouvrir le flux ↗"
+   },
+   {
+    "texte": "Cherche (Ctrl+F) une sortie que tu sais payante, et vérifie que le champ « price_eur » contient bien son prix (et pas 0 ni null)."
+   },
+   {
+    "texte": "Si le prix manque, transmets ceci à la personne qui fait le backend :",
+    "copier": "Flux public /api/v1/events/public/events.json : pour chaque sortie payante, renseigner price_eur (nombre, en euros, ex. 15). Aujourd'hui une sortie payante sans price_eur s'affiche « gratuite » sur le site."
+   }
+  ]
+ },
+ {
+  "id": "play-revue",
+  "qui": "Google",
+  "canal": "Stores",
+  "priorite": 2,
+  "action": "Revue de la fiche Google Play (fiche fr-FR, nouvelles descriptions)",
+  "impact": "Fiche Play en français",
+  "lien": "https://play.google.com/console",
+  "statut": "en attente"
+ },
+ {
+  "id": "aso-j21",
+  "qui": "Claude",
+  "canal": "Stores",
+  "priorite": 3,
+  "action": "Mesurer l'effet des nouvelles fiches 3 semaines après publication",
+  "impact": "Décider de la suite de l'ASO",
+  "lien": "",
+  "statut": "prévu 16/11"
+ },
+ {
+  "id": "contenu-novembre",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 3,
+  "action": "Contenus rando de novembre : itinéraires sourcés Chevreuse, Rambouillet, Vexin",
+  "impact": "Positions sur les requêtes rando IDF avant la saison",
+  "lien": "https://github.com/dlahlou/fitmate-marketing/tree/main/canaux/seo/brouillons/novembre-2026",
+  "statut": "brouillons prêts, sources à vérifier"
+ },
+ {
+  "id": "confirmation-attente",
+  "qui": "Claude",
+  "canal": "Leads",
+  "priorite": 3,
+  "action": "E-mail d'ouverture aux inscrits d'un secteur : brouillons Gmail préparés par Claude, envoyés par Driss",
+  "impact": "Sans domaine vérifié, Resend n'écrit qu'à toi ; la confirmation et le lien de parrainage sont déjà affichés sur le site après l'inscription",
+  "lien": "",
+  "statut": "quand un secteur ouvre"
+ },
+ {
+  "id": "site-acces",
+  "qui": "Driss",
+  "canal": "Site",
+  "priorite": 1,
+  "action": "Écrire à Claude dans la session : « ajoute le dépôt fitmate-landing-page avec accès push »",
+  "impact": "Débloque la correction du défilement entre les pages (bug constaté), les contenus SEO de novembre et les e-mails de liste d'attente",
+  "lien": "",
+  "statut": "fait",
+  "duree": "1 min",
+  "etapes": [
+   {
+    "texte": "Ouvre la session Claude du marketing.",
+    "lien": "https://claude.ai/code/session_01XNHWdd3Ezaz2t3MR6axpZZ",
+    "libelle_lien": "Ouvrir la session ↗"
+   },
+   {
+    "texte": "Envoie exactement ce message :",
+    "copier": "Ajoute le dépôt dlahlou/fitmate-landing-page avec accès push : corrige le défilement entre les pages, intègre les contenus SEO de novembre et les e-mails de liste d'attente."
+   }
+  ]
+ },
+ {
+  "id": "ig-bio",
+  "qui": "Driss",
+  "canal": "Réseaux sociaux",
+  "priorite": 1,
+  "action": "Mettre la photo, la bio et le lien du profil Instagram (prêts)",
+  "impact": "3 posts sont en ligne et renvoient au lien en bio : sans lui, aucun clic",
+  "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/social/profil.md",
+  "statut": "fait",
+  "duree": "4 min",
+  "etapes": [
+   {
+    "texte": "Ouvre la modification du profil Instagram (connecté avec @fitmates_strongertogether).",
+    "lien": "https://www.instagram.com/accounts/edit/",
+    "libelle_lien": "Modifier le profil ↗"
+   },
+   {
+    "texte": "Photo de profil : télécharge l'image (logo Fitmates, 640×640, déjà cadré pour le rond), puis « Modifier la photo » → « Importer une photo ». L'API Instagram ne permet pas de le faire à ta place.",
+    "lien": "https://github.com/dlahlou/fitmate-marketing/raw/main/canaux/social/profil/photo-profil-640.png",
+    "libelle_lien": "Télécharger la photo ↗"
+   },
+   {
+    "texte": "Champ « Bio » : colle ce texte.",
+    "copier": "Fais du sport à plusieurs, près de chez toi 🥾🏃\nRandos en groupe autour de Paris, chat par sortie\nApp gratuite · iOS, Android, web\nStronger Together"
+   },
+   {
+    "texte": "« Liens » → « Ajouter un lien externe » : colle l'URL ci-dessous, et le titre « Site Fitmates ».",
+    "copier": "https://www.fitmates.net/?utm_source=instagram&utm_medium=organic&utm_campaign=bio"
+   },
+   {
+    "texte": "Champ « Nom » (dans l'app : Modifier le profil → Nom). C'est le nom affiché sur Instagram, pas celui des stores :",
+    "copier": "Fitmates · sport à plusieurs"
+   },
+   {
+    "texte": "Clique sur « Envoyer » ou « Terminé »."
+   }
+  ]
+ },
+ {
+  "id": "ig-dm",
+  "qui": "Driss",
+  "canal": "Réseaux sociaux",
+  "priorite": 2,
+  "action": "Créer les réponses automatiques aux messages dans Meta Business Suite (textes prêts)",
+  "impact": "Chaque message « organiser », « run club », « rando » reçoit le bon lien",
+  "lien": "https://business.facebook.com/latest/inbox/automations",
+  "statut": "écarté",
+  "duree": "10 min",
+  "etapes": [
+   {
+    "texte": "Ouvre Meta Business Suite → Boîte de réception → Automatisations (compte Fitmate).",
+    "lien": "https://business.facebook.com/latest/inbox/automations",
+    "libelle_lien": "Ouvrir les automatisations ↗"
+   },
+   {
+    "texte": "« Réponse instantanée » : active-la pour Messenger et Instagram, et colle ce message :",
+    "copier": "Salut 👋 Merci pour ton message ! On te répond vite. En attendant, les prochaines sorties sont ici : https://www.fitmates.net/evenements"
+   },
+   {
+    "texte": "« Mots-clés personnalisés » → « Créer une automatisation ». Mots-clés (un par un) : organiser, organisateur, créer une sortie. Réponse :",
+    "copier": "Super ! Tout est expliqué ici, avec le guide pas à pas : https://www.fitmates.net/organiser?utm_source=instagram&utm_medium=organic&utm_campaign=dm (et tu peux créer ta première sortie en une phrase dans l'app)."
+   },
+   {
+    "texte": "Deuxième automatisation. Mots-clés : run club, running, courir. Réponse :",
+    "copier": "Les run clubs ont leur page : https://www.fitmates.net/run-clubs-paris?utm_source=instagram&utm_medium=organic&utm_campaign=dm et pour lancer le tien : https://www.fitmates.net/organiser/run-club"
+   },
+   {
+    "texte": "Troisième automatisation. Mots-clés : rando, randonnée. Réponse :",
+    "copier": "Les sorties rando autour de Paris : https://www.fitmates.net/randonnee/autour-de-paris?utm_source=instagram&utm_medium=organic&utm_campaign=dm"
+   },
+   {
+    "texte": "Quatrième automatisation. Mot-clé : coach. Réponse :",
+    "copier": "Coachs, c'est par ici : https://www.fitmates.net/organiser/coach-sportif?utm_source=instagram&utm_medium=organic&utm_campaign=dm"
+   }
+  ]
+ },
+ {
+  "id": "presence",
+  "qui": "Driss",
+  "canal": "Google",
+  "priorite": 3,
+  "action": "Créer les fiches AlternativeTo, Crunchbase, Wikidata, LinkedIn, Pinterest (textes prêts ; Product Hunt fait)",
+  "impact": "Liens entrants et cohérence de l'entité Fitmates pour Google et les IA",
+  "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/presence/README.md",
+  "statut": "à faire",
+  "duree": "45 min en tout, en plusieurs fois",
+  "etapes": [
+   {
+    "texte": "Textes communs. Phrase courte (champ « tagline » ou « short description ») :",
+    "copier": "Fitmates est une application gratuite pour faire du sport à plusieurs : sorties de groupe près de chez soi, chat par sortie, et création d'une sortie en une phrase grâce à l'IA."
+   },
+   {
+    "texte": "Description longue :",
+    "copier": "Fitmates aide les sportifs à trouver avec qui pratiquer. On rejoint une sortie (randonnée, course à pied, padel, vélo…) adaptée à son niveau, on échange dans le chat de groupe de la sortie, on suit ses partenaires. Les organisateurs créent une sortie en une phrase : l'IA remplit le lieu, l'horaire et le niveau. L'application est gratuite ; certaines sorties sont payantes si leur organisateur le décide. Disponible sur iOS, Android et le web."
+   },
+   {
+    "texte": "Liens (site, app web, App Store, Google Play) :",
+    "copier": "https://www.fitmates.net\nhttps://app.fitmates.net\nhttps://apps.apple.com/app/id6756283890\nhttps://play.google.com/store/apps/details?id=com.dlahlou.fitmate"
+   },
+   {
+    "texte": "AlternativeTo : « Add application ». Catégories Social et Sports ; plateformes iPhone, Android, Web ; puis, sur la fiche, « Add alternative » pour Meetup et Strava.",
+    "lien": "https://alternativeto.net/software/new/",
+    "libelle_lien": "AlternativeTo ↗"
+   },
+   {
+    "texte": "Product Hunt : crée la fiche produit (pas besoin d'un lancement). Slogan :",
+    "lien": "https://www.producthunt.com/posts/new",
+    "libelle_lien": "Product Hunt ↗",
+    "copier": "Fais du sport à plusieurs, près de chez toi"
+   },
+   {
+    "texte": "LinkedIn : crée la page entreprise. Secteur : Services de loisirs. Slogan identique.",
+    "lien": "https://www.linkedin.com/company/setup/new/",
+    "libelle_lien": "LinkedIn ↗"
+   },
+   {
+    "texte": "Crunchbase : « Add Organization », avec le site et la phrase courte.",
+    "lien": "https://www.crunchbase.com/add-new",
+    "libelle_lien": "Crunchbase ↗"
+   },
+   {
+    "texte": "Pinterest : crée un compte Business « Fitmates » et revendique le site www.fitmates.net.",
+    "lien": "https://www.pinterest.fr/business/create/",
+    "libelle_lien": "Pinterest ↗"
+   },
+   {
+    "texte": "Wikidata : crée l'élément. Libellé « Fitmates », description ci-dessous, puis ajoute les déclarations « site officiel » (www.fitmates.net), « identifiant App Store » (6756283890) et « identifiant Google Play » (com.dlahlou.fitmate).",
+    "lien": "https://www.wikidata.org/wiki/Special:NewItem",
+    "libelle_lien": "Wikidata ↗",
+    "copier": "application mobile de sport social"
+   },
+   {
+    "texte": "Envoie à Claude la liste des fiches créées : il les ajoutera aux liens du site."
+   }
+  ]
+ },
+ {
+  "id": "reseau-sources",
+  "qui": "Driss",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Autoriser les sites de randonnée dans le réseau de l'environnement",
+  "impact": "Claude peut vérifier chaque chiffre des itinéraires sur la source avant publication (aujourd'hui seuls les extraits de recherche passent)",
+  "lien": "",
+  "statut": "fait",
+  "duree": "3 min",
+  "etapes": [
+   {
+    "texte": "Dans la session Claude, ouvre le menu de l'environnement cloud (barre de titre), puis « Edit » → « Network access ».",
+    "lien": "https://code.claude.com/docs/en/cloud-environments#network-access",
+    "libelle_lien": "Doc accès réseau ↗"
+   },
+   {
+    "texte": "Dans « Allowed domains », ajoute ces domaines (un par ligne), en laissant cochée « Allow package managers » :",
+    "copier": "rando.pnr-idf.fr\nwww.parc-naturel-chevreuse.fr\nwww.pnr-vexin-francais.fr\nwww.rambouillet-tourisme.fr\nwww.visorando.com\nwww.ffrandonnee.fr\nwww.transilien.com\nwww.iledefrance-mobilites.fr\nwww.onf.fr\nwww.yvelines.gouv.fr"
+   },
+   {
+    "texte": "Enregistre. La prochaine session pourra lire ces pages ; dis à Claude de revérifier les brouillons de novembre."
+   }
+  ]
+ },
+ {
+  "id": "seo-ctr",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Relevé Search Console : pages et requêtes avec des apparitions mais peu de clics → réécrire title, description et réponse en tête de page (dépôt du site)",
+  "impact": "Relevé du 26/10 : 249 apparitions / 30 j, surtout sur « fitmates » (la marque, position 1 à 4) ; pages rando indexées le 26/10. À refaire quand les pages rando auront 3 semaines de données",
+  "lien": "",
+  "statut": "prévu 16/11"
+ },
+ {
+  "id": "social-lot2",
+  "qui": "Claude",
+  "canal": "Réseaux sociaux",
+  "priorite": 1,
+  "action": "Préparer le 2ᵉ lot de posts (novembre : 9 visuels + légendes) pour enchaîner après le lancement, à 3 posts par semaine",
+  "impact": "Le lancement se termine le 01/11 : sans lot suivant, le compte s'arrête",
+  "lien": "",
+  "statut": "fait"
+ },
+ {
+  "id": "seo-hiver",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Page « Randonner l'hiver autour de Paris » (sourcée : équipement, durée du jour, sentiers praticables, gares), en ligne avant décembre",
+  "impact": "Calendrier éditorial : capter les recherches d'hiver avant la saison",
+  "lien": "",
+  "statut": "fait"
+ },
+ {
+  "id": "seo-gares",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Guide « Randonner en RER et Transilien : les gares de départ » relié aux pages zone (sources SNCF / IDFM / Parcs)",
+  "impact": "Requêtes « randonnée en train » + maillage interne des pages rando",
+  "lien": "",
+  "statut": "fait"
+ },
+ {
+  "id": "run-clubs-janvier",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Préparer le lancement course à pied de janvier : enrichir /run-clubs-paris, guide « courir en groupe à Paris », posts dédiés",
+  "impact": "Stratégie : course à pied à Paris en janvier",
+  "lien": "",
+  "statut": "en cours"
+ },
+ {
+  "id": "llms-maj",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Mettre à jour llms.txt et les données structurées avec les nouveaux itinéraires (TouristTrip, sources)",
+  "impact": "Visibilité dans les assistants IA",
+  "lien": "",
+  "statut": "fait"
+ },
+ {
+  "id": "cockpit-tendances",
+  "qui": "Claude",
+  "canal": "Mesure",
+  "priorite": 2,
+  "action": "Cockpit : courbes semaine par semaine des KPIs (relevés data/snapshots), comparaison avant/après chaque changement du journal",
+  "impact": "Mesurer l'effet de chaque action à 3–4 semaines",
+  "lien": "",
+  "statut": "fait"
+ },
+ {
+  "id": "ia-mentions",
+  "qui": "Claude",
+  "canal": "Mesure",
+  "priorite": 3,
+  "action": "Script de mesure des 30 prompts IA (mentions de Fitmates), prêt à tourner dès que les clés API sont fournies",
+  "impact": "KPI « mentions IA » aujourd'hui non mesuré",
+  "lien": "",
+  "statut": "bloqué : clés API (OpenAI, Perplexity…) à fournir par Driss"
+ },
+ {
+  "id": "verif-sources",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 1,
+  "action": "Revérifier sur les pages sources tous les chiffres des itinéraires publiés et des brouillons",
+  "impact": "Aucun fait non vérifié en ligne",
+  "lien": "",
+  "statut": "fait"
+ },
+ {
+  "id": "snapshot-hebdo",
+  "qui": "Claude",
+  "canal": "Mesure",
+  "priorite": 3,
+  "action": "Relevé hebdomadaire (scripts.snapshot) chaque lundi, commité dans data/snapshots",
+  "impact": "Base des comparaisons avant/après",
+  "lien": "",
+  "statut": "à faire"
+ },
+ {
+  "id": "maillage-hiver",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Lier la page « Randonner l'hiver » depuis /randonnee/autour-de-paris, les 4 pages forêts et les pages zone IDF ; refaire les volumes Ubersuggest (quota épuisé le 26/10) et ajuster le slug/title si besoin",
+  "impact": "Une page neuve sans liens internes se positionne lentement",
+  "lien": "",
+  "statut": "fait"
+ },
+ {
+  "id": "social-decembre",
+  "qui": "Claude",
+  "canal": "Réseaux sociaux",
+  "priorite": 2,
+  "action": "Lot de décembre selon la direction artistique v2 (canaux/social/direction-artistique.md)",
+  "impact": "Pas de trou de publication après le lot de novembre",
+  "lien": "",
+  "statut": "bloqué : validation du plan Instagram v3 par Driss"
+ },
+ {
+  "id": "ig-premiers-chiffres",
+  "qui": "Claude",
+  "canal": "Réseaux sociaux",
+  "priorite": 3,
+  "action": "Bilan à J+7 des posts de lancement (portée, abonnés, clics vers le site en GA4) et ajustement des formats",
+  "impact": "Savoir quels sujets prennent avant de produire décembre",
+  "lien": "",
+  "statut": "à faire"
+ },
+ {
+  "id": "backend-etrechy",
+  "qui": "Driss",
+  "canal": "App",
+  "priorite": 2,
+  "action": "Corriger le lieu de la sortie « Randonnée Etrechy Dourdan » (code postal 51130 et coordonnées dans la Marne au lieu de l'Essonne)",
+  "impact": "La sortie s'affiche au mauvais endroit sur le site et dans les posts du week-end",
+  "lien": "",
+  "statut": "à faire",
+  "duree": "2 min",
+  "etapes": [
+   {
+    "texte": "Dans l'app, ouvre la sortie « Randonnée Etrechy Dourdan » du 31 octobre (ou demande à son organisateur de le faire) et corrige le lieu : Étréchy, Essonne (91580).",
+    "lien": "https://app.fitmates.net",
+    "libelle_lien": "Ouvrir l'app web ↗"
+   },
+   {
+    "texte": "Si le lieu est juste dans l'app mais faux dans le flux public, transmets ceci à la personne du backend :",
+    "copier": "Flux public events.json : la sortie randonnee-etrechy-dourdan-2026-10-31 a postal_code 51130 et des coordonnées dans la Marne ; Étréchy est en Essonne (91580). Vérifier le géocodage des lieux."
+   }
+  ]
+ },
+ {
+  "id": "ig-v2-validation",
+  "qui": "Driss",
+  "canal": "Réseaux sociaux",
+  "priorite": 1,
+  "action": "Valider la nouvelle direction artistique Instagram sur les 2 prototypes (sortie à emporter, ce week-end on sort)",
+  "impact": "Dès ton feu vert, les posts suivent la nouvelle charte (3 par semaine)",
+  "lien": "",
+  "statut": "écarté",
+  "duree": "10 min",
+  "etapes": [
+   {
+    "texte": "Lis la direction artistique (intention, piliers, charte, accroches).",
+    "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/social/direction-artistique.md",
+    "libelle_lien": "Direction artistique ↗"
+   },
+   {
+    "texte": "Regarde le prototype « Sortie à emporter » (7 slides bord à bord).",
+    "lien": "https://github.com/dlahlou/fitmate-marketing/raw/main/canaux/social/v2/apercu.png",
+    "libelle_lien": "Voir le prototype ↗"
+   },
+   {
+    "texte": "Regarde la simulation de la grille du profil.",
+    "lien": "https://github.com/dlahlou/fitmate-marketing/raw/main/canaux/social/v2/grille-profil.png",
+    "libelle_lien": "Voir la grille ↗"
+   },
+   {
+    "texte": "Réponds à Claude dans la session (corrige ce que tu veux) :",
+    "copier": "Je valide la direction artistique v2 : publie les carrousels selon cette charte, 3 par semaine (mardi sortie à emporter, jeudi ce week-end on sort, samedi on y était ou savoir-faire)."
+   }
+  ]
+ },
+ {
+  "id": "sources-trajets",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Sourcer ou retirer les temps de trajet affichés sur les pages rando (« environ 50 min » RER B, « environ 40 min » ligne R) et la mention du passe Navigo, faute de source officielle lue",
+  "impact": "Aucun fait non vérifié en ligne",
+  "lien": "",
+  "statut": "fait"
+ },
+ {
+  "id": "audit-ame",
+  "qui": "Claude",
+  "canal": "Site",
+  "priorite": 2,
+  "action": "Relire tous les textes publics (site, fiches stores, e-mails, bio) avec la règle « impact avant outil » et préparer les versions corrigées, sans les mettre en ligne avant la validation de l'âme de Fitmates par Driss",
+  "impact": "Un message cohérent partout : ne plus faire de sport seul, rencontrer, tenir",
+  "lien": "",
+  "statut": "à faire"
+ },
+ {
+  "id": "ph-lancement",
+  "qui": "Driss",
+  "canal": "Google",
+  "priorite": 3,
+  "action": "Choisir le jour du lancement Product Hunt (kit prêt : accroche, description, commentaire du fondateur, visuels)",
+  "impact": "Visibilité internationale, liens entrants et premiers avis ; à lancer quand les vraies photos et les écrans de démo sont prêts",
+  "lien": "",
+  "statut": "à faire",
+  "duree": "10 min pour décider",
+  "etapes": [
+   {
+    "texte": "Lis le kit (accroche recommandée : « Never work out alone again »).",
+    "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/presence/product-hunt.md",
+    "libelle_lien": "Lire le kit ↗"
+   },
+   {
+    "texte": "Ajoute ton histoire en 2 ou 3 phrases dans le commentaire du fondateur (seul toi peux l'écrire)."
+   },
+   {
+    "texte": "Dis à Claude le jour choisi (mardi, mercredi ou jeudi) : il prépare les visuels de la galerie et le relevé de la veille.",
+    "lien": "https://claude.ai/code/session_01XNHWdd3Ezaz2t3MR6axpZZ",
+    "libelle_lien": "Ouvrir la session ↗"
+   }
+  ]
+ },
+ {
+  "id": "onf-fontainebleau",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Mettre à jour les pages Fontainebleau (randonnée, escalade, trail) avec l'état actuel des secteurs ouverts publié par l'ONF, et programmer une revérification mensuelle",
+  "impact": "Pages justes après les incendies de 2026 : un randonneur ne doit pas être envoyé dans un secteur fermé",
+  "lien": "",
+  "statut": "à faire"
+ },
+ {
+  "id": "comptes-evenements",
+  "qui": "Driss",
+  "canal": "Présence",
+  "priorite": 2,
+  "action": "Créer les comptes OpenAgenda et AllEvents pour publier les sorties gratuitement avec le lien vers l'app",
+  "impact": "Visibilité des sorties sur les agendas d'Île-de-France (plusieurs agendas alimentés par OpenAgenda) ; voir canaux/presence/plateformes-evenements.md",
+  "duree": "10 min",
+  "statut": "à faire",
+  "etapes": [
+   {
+    "texte": "Créer un compte OpenAgenda avec l'adresse de Fitmates, puis un agenda « Fitmates – sorties sportives »",
+    "lien": "https://doc.openagenda.com/fr/article/creer-un-compte-et-ajouter-un-evenement-sur-openagenda-qfzrcu/",
+    "libelle_lien": "Guide OpenAgenda"
+   },
+   {
+    "texte": "Créer un compte organisateur AllEvents (page « Publish events »)",
+    "lien": "https://allevents.in/pages/publish-events",
+    "libelle_lien": "AllEvents – publier"
+   },
+   {
+    "texte": "Marquer l'action comme faite : je prépare une fiche type par sortie et, avec ton accord, la publication automatique sur OpenAgenda"
+   }
+  ]
+ }
 ]
