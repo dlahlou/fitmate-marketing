@@ -525,7 +525,7 @@
   "action": "Préparer le lancement course à pied de janvier : enrichir /run-clubs-paris, guide « courir en groupe à Paris », posts dédiés",
   "impact": "Stratégie : course à pied à Paris en janvier",
   "lien": "",
-  "statut": "en cours"
+  "statut": "fait"
  },
  {
   "id": "llms-maj",
@@ -741,5 +741,15 @@
     "texte": "Marquer l'action comme faite : je prépare une fiche type par sortie et, avec ton accord, la publication automatique sur OpenAgenda"
    }
   ]
+ },
+ {
+  "id": "sport-course-distances",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Page /sport/course-a-pied/paris : retirer ou sourcer les distances affichées (« 10 km », « boucle de 2 km », données de src/data/zones.ts)",
+  "impact": "Aucune affirmation non sourcée sur le site",
+  "lien": "https://www.fitmates.net/sport/course-a-pied/paris",
+  "statut": "à faire"
  }
 ]
