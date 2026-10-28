@@ -56,3 +56,18 @@ Mêmes images que la version animée. Seule la voix change : Driss trouvait la v
 Refaire : `chatterbox_gen.py SORTIE --ref ref-voix-mls-9804.wav --seeds 2,3,4`, puis `whisper_check.py`, puis
 `montage2.py choix.json SORTIE`. `montage2.py` écrit `tl.json` et `voix.wav`, et affiche D1…D5 et FIN. Ensuite
 `frames.js` et `assembler.sh`, dont les valeurs par défaut sont celles de cette version.
+
+## Voix 2 avec musique : `sorties-semaine-reel-fourmi-voix2-musique.mp4` (28,8 s)
+
+Même vidéo que la voix 2, avec une musique de fond. La version sans musique reste disponible, si on préfère prendre un
+morceau de la bibliothèque Instagram au moment de publier.
+- **Morceau** : « Just Keep Walking », Michael Ramir C., indie pop. Fichier : https://assets.mixkit.co/music/963/963.mp3
+- **Licence** : Mixkit Stock Music Free License, mentionnée dans la fiche du morceau. Mixkit indique qu'elle couvre
+  l'usage commercial, les réseaux sociaux et la publicité en ligne, sans attribution. Ne pas déposer le morceau dans
+  Content ID ni le revendre seul.
+- **Mixage** (`fabrication/musique.sh`) :
+  - musique à environ 10 dB sous la voix, abaissée automatiquement quand la voix parle ;
+  - fondu d'entrée de 0,8 s, fondu de sortie de 2 s ;
+  - ensemble à -15 LUFS intégrés (cible -14).
+- **Vérification Whisper** : les 7 phrases sont reconnues. Whisper hésite entre « Poissy » et « Voici », avec ou sans
+  musique : la consonne de « Poissy » est un peu douce. À écouter.
