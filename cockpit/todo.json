@@ -747,9 +747,9 @@
   "qui": "Claude",
   "canal": "Google",
   "priorite": 2,
-  "action": "Page /sport/course-a-pied/paris : retirer ou sourcer les distances affichées (« 10 km », « boucle de 2 km », données de src/data/zones.ts)",
+  "action": "Pages sport par zone (src/data/zones.ts) : retirer les distances et superlatifs non sourcés",
   "impact": "Aucune affirmation non sourcée sur le site",
   "lien": "https://www.fitmates.net/sport/course-a-pied/paris",
-  "statut": "à faire"
+  "statut": "fait"
  }
 ]
