@@ -184,5 +184,11 @@
   "canal": "Google",
   "action": "Pages sport par zone (Paris et 7 départements) : 44 distances et superlatifs non sourcés retirés (« boucle de 2 km », « la rando la plus demandée », « plus grand parc… »), plus 9 intros corrigées (temps de trajet, « numéro un », activité de la communauté non mesurée). Textes qualitatifs conservés",
   "statut": "fait"
+ },
+ {
+  "date": "2026-10-29",
+  "canal": "Site",
+  "action": "Audit « impact avant outil » de tous les textes publics (site, stores FR/EN, e-mails, bios) : strategie/audit-ame-2026-10-29.md, avec textes corrigés aux limites des stores. Rien mis en ligne : validation de Driss demandée ; stores après le relevé ASO du 16/11",
+  "statut": "fait"
  }
 ]

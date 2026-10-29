@@ -679,7 +679,7 @@
   "action": "Relire tous les textes publics (site, fiches stores, e-mails, bio) avec la règle « impact avant outil » et préparer les versions corrigées, sans les mettre en ligne avant la validation de l'âme de Fitmates par Driss",
   "impact": "Un message cohérent partout : ne plus faire de sport seul, rencontrer, tenir",
   "lien": "",
-  "statut": "à faire"
+  "statut": "fait"
  },
  {
   "id": "ph-lancement",
@@ -751,5 +751,40 @@
   "impact": "Aucune affirmation non sourcée sur le site",
   "lien": "https://www.fitmates.net/sport/course-a-pied/paris",
   "statut": "fait"
+ },
+ {
+  "id": "chiffres-pitch",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Retirer ou sourcer les chiffres non sourcés de /pitch et des guides organisateur (« de 50 % à 85 % », « 1 sur 3 revient », « la majorité pratique seule ») relevés par l'audit âme",
+  "impact": "Aucune affirmation non sourcée sur le site",
+  "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/strategie/audit-ame-2026-10-29.md",
+  "statut": "à faire"
+ },
+ {
+  "id": "valider-audit-ame",
+  "qui": "Driss",
+  "canal": "Site",
+  "priorite": 1,
+  "action": "Valider les textes corrigés de l'audit « impact avant outil » (site, stores, e-mails, bios)",
+  "impact": "Tous les textes publics alignés sur l'âme de Fitmates : l'impact d'abord, l'outil en dernier",
+  "duree": "20 min",
+  "statut": "à faire",
+  "etapes": [
+   {
+    "texte": "Lis la synthèse en fin de document : les 5 changements au plus fort impact.",
+    "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/strategie/audit-ame-2026-10-29.md",
+    "libelle_lien": "Lire l'audit ↗"
+   },
+   {
+    "texte": "Dis à Claude dans la session ce que tu valides, corriges ou refuses. Les stores seront modifiés après le relevé ASO du 16/11, pour ne pas fausser la mesure.",
+    "lien": "https://claude.ai/code/session_01XNHWdd3Ezaz2t3MR6axpZZ",
+    "libelle_lien": "Ouvrir la session ↗"
+   },
+   {
+    "texte": "Envoie le texte actuel de l'intro de la Page Facebook (il n'est pas dans le dépôt), ou valide la proposition."
+   }
+  ]
  }
 ]
