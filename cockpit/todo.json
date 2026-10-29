@@ -796,5 +796,25 @@
   "impact": "Pages Fontainebleau exactes (forte saisonnalité de recherche)",
   "lien": "https://www.onf.fr/vivre-la-foret/+/2d9a::foret-de-fontainebleau-carte-des-sentiers-et-routes-forestieres-accessibles.html",
   "statut": "prévu 29/11"
+ },
+ {
+  "id": "post-sorties-hebdo",
+  "qui": "Claude",
+  "canal": "Réseaux sociaux",
+  "priorite": 2,
+  "action": "Chaque jeudi : préparer le post « sorties du week-end » (visuel carte des départs + légende, données du flux public) et le présenter à Driss pour accord ; aucune publication sans son « ok »",
+  "impact": "Rendez-vous hebdomadaire qui montre une communauté réelle et renvoie vers l'app",
+  "lien": "",
+  "statut": "à faire"
+ },
+ {
+  "id": "modele-openagenda",
+  "qui": "Claude",
+  "canal": "Présence",
+  "priorite": 3,
+  "action": "Préparer le modèle de fiche OpenAgenda / AllEvents d'une sortie (titre, description impact d'abord, lieu, niveau, prix si payant, lien vers la sortie dans l'app) et le script qui le remplit depuis le flux public, prêt dès que Driss a créé les comptes",
+  "impact": "Publication gratuite des sorties sur les agendas d'Île-de-France",
+  "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/presence/plateformes-evenements.md",
+  "statut": "à faire"
  }
 ]
