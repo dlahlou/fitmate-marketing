@@ -220,5 +220,11 @@
   "canal": "Google",
   "action": "Guides organisateur : 5 affirmations chiffrées non sourcées retirées (run clubs « × 6,5 », « 30 millions de randonneurs », « 20 000 à 35 000 coachs », « 7 sur 10 hors club », indexation Facebook)",
   "statut": "fait"
+ },
+ {
+  "date": "2026-10-30",
+  "canal": "Réseaux sociaux",
+  "action": "Carrousel « Organiser ta première rando » (7 slides, charte v3) tiré du guide pratique, renvoie vers fitmates.net/organiser ; ajouté au lot v3, en attente de l'accord de Driss",
+  "statut": "fait"
  }
 ]

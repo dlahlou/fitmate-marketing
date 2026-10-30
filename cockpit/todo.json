@@ -835,6 +835,28 @@
   "action": "Préparer un carrousel « Organiser ta première rando en 9 étapes » tiré du guide pratique, qui renvoie vers /organiser/guide-pratique-randonnee, à soumettre à Driss",
   "impact": "Recruter des organisateurs : le guide montre que c'est accessible",
   "lien": "https://www.fitmates.net/organiser/guide-pratique-randonnee",
-  "statut": "à faire"
+  "statut": "fait"
+ },
+ {
+  "id": "valider-post-07",
+  "qui": "Driss",
+  "canal": "Réseaux sociaux",
+  "priorite": 2,
+  "action": "Valider le carrousel « Organiser ta première rando » (post 7, 7 slides) avant publication",
+  "impact": "Recruter des organisateurs vers le guide pratique",
+  "duree": "3 min",
+  "statut": "à faire",
+  "etapes": [
+   {
+    "texte": "Regarde les 7 slides et la légende.",
+    "lien": "https://github.com/dlahlou/fitmate-marketing/tree/main/canaux/social/v3/07-guide-organiser",
+    "libelle_lien": "Voir les slides ↗"
+   },
+   {
+    "texte": "Réponds « ok post 7 » à Claude dans la session (ou tes corrections). Rien n'est publié sans ton accord.",
+    "lien": "https://claude.ai/code/session_01XNHWdd3Ezaz2t3MR6axpZZ",
+    "libelle_lien": "Ouvrir la session ↗"
+   }
+  ]
  }
 ]

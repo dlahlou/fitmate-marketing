@@ -1,0 +1,213 @@
+{
+ "id": "07-guide-organiser",
+ "titre": "Post 7 · Organiser ta première rando",
+ "rubrique": "Organisateurs",
+ "sortie": "../07-guide-organiser",
+ "slides": [
+  {
+   "fond": "foret",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Envie d’emmener | d’autres marcher | *avec toi* ?",
+     "taille": "xl"
+    }
+   ],
+   "bas": [
+    {
+     "titre": "La méthode d’une organisatrice de la communauté, en 9 étapes.",
+     "taille": "xs"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      150,
+      1010
+     ],
+     [
+      560,
+      1010
+     ],
+     [
+      560,
+      800
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 800
+   }
+  },
+  {
+   "fond": "papier",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Un lieu qui | donne *envie*.",
+     "taille": "xl"
+    }
+   ],
+   "bas": [
+    {
+     "titre": "Forêt, château, étang, village… Puis un itinéraire au départ d’une gare, en boucle, au niveau annoncé.",
+     "taille": "m"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      540,
+      800
+     ],
+     [
+      540,
+      600
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 600
+   }
+  },
+  {
+   "fond": "encre",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Train à 10h10 ?",
+     "taille": "xl"
+    }
+   ],
+   "bas": [
+    {
+     "titre": "Alors pas de départ à 10h00. Laisse à chacun le temps de rejoindre le rendez-vous.",
+     "taille": "m"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      460,
+      600
+     ],
+     [
+      460,
+      560
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 560
+   }
+  },
+  {
+   "fond": "papier",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Météo, visites, | *chasse*.",
+     "taille": "xl"
+    }
+   ],
+   "bas": [
+    {
+     "titre": "Vérifie avant de publier. La pluie n’annule rien, l’orage si : la sécurité du groupe passe avant tout.",
+     "taille": "m"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      600,
+      560
+     ],
+     [
+      600,
+      480
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 480
+   }
+  },
+  {
+   "fond": "foret",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Une annonce | *claire*.",
+     "taille": "xl"
+    }
+   ],
+   "bas": [
+    {
+     "titre": "Lieu, gare, heure, distance, dénivelé, durée, rythme, points d’intérêt et règles du groupe.",
+     "taille": "m"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      480,
+      480
+     ],
+     [
+      480,
+      420
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 420
+   }
+  },
+  {
+   "fond": "papier",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "Crée la sortie, | partage le *lien*.",
+     "taille": "xl"
+    }
+   ],
+   "bas": [
+    {
+     "titre": "Sur Fitmates : gratuite ou payante, inscription automatique ou validée, places limitées. Puis le lien dans ton groupe.",
+     "taille": "m"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      620,
+      420
+     ]
+    ],
+    "epaisseur": 6,
+    "sortie": 420
+   }
+  },
+  {
+   "fond": "encre",
+   "courbes": false,
+   "haut": [
+    {
+     "titre": "N’attends pas | d’être *expert*.",
+     "taille": "xl"
+    }
+   ],
+   "bas": [
+    {
+     "titre": "Le guide complet : fitmates.net/organiser",
+     "taille": "xs"
+    }
+   ],
+   "trace": {
+    "points": [
+     [
+      700,
+      420
+     ]
+    ],
+    "epaisseur": 6
+   }
+  }
+ ]
+}
