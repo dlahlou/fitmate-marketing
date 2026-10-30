@@ -208,5 +208,17 @@
   "canal": "Présence",
   "action": "Fiches agenda prêtes (scripts/fiches_agenda.py) : depuis le flux public, une fiche par sortie d'Île-de-France des 10 prochains jours (titre, descriptions impact d'abord, lieu, prix, lien vers la sortie avec utm_source=openagenda), en Markdown et CSV d'import. 8 fiches générées pour le week-end du 31/10, non publiées",
   "statut": "fait"
+ },
+ {
+  "date": "2026-10-30",
+  "canal": "Google",
+  "action": "Guide pratique « Organiser une randonnée de groupe : le guide en 9 étapes » en ligne (/organiser/guide-pratique-randonnee), méthode d'une organisatrice de la communauté, sans nom ; HowTo JSON-LD, sitemap, liens depuis /organiser, le guide groupe-randonnee et le pied de page",
+  "statut": "fait"
+ },
+ {
+  "date": "2026-10-30",
+  "canal": "Google",
+  "action": "Guides organisateur : 5 affirmations chiffrées non sourcées retirées (run clubs « × 6,5 », « 30 millions de randonneurs », « 20 000 à 35 000 coachs », « 7 sur 10 hors club », indexation Facebook)",
+  "statut": "fait"
  }
 ]

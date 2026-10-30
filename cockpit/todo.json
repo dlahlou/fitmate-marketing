@@ -279,10 +279,10 @@
   "qui": "Claude",
   "canal": "Google",
   "priorite": 3,
-  "action": "Contenus rando de novembre : itinéraires sourcés Chevreuse, Rambouillet, Vexin",
+  "action": "Contenus rando de novembre : Chevreuse et Vexin intégrés et vérifiés (27/10) ; reste Rambouillet après la fin de l'interdiction autour des étangs de Hollande (vérifier la préfecture le 16/11)",
   "impact": "Positions sur les requêtes rando IDF avant la saison",
   "lien": "https://github.com/dlahlou/fitmate-marketing/tree/main/canaux/seo/brouillons/novembre-2026",
-  "statut": "brouillons prêts, sources à vérifier"
+  "statut": "prévu 16/11"
  },
  {
   "id": "confirmation-attente",
@@ -826,5 +826,15 @@
   "impact": "Visibilité des sorties sur les agendas d'Île-de-France",
   "lien": "",
   "statut": "bloqué : comptes OpenAgenda et AllEvents à créer par Driss"
+ },
+ {
+  "id": "guide-rando-diffusion",
+  "qui": "Claude",
+  "canal": "Réseaux sociaux",
+  "priorite": 2,
+  "action": "Préparer un carrousel « Organiser ta première rando en 9 étapes » tiré du guide pratique, qui renvoie vers /organiser/guide-pratique-randonnee, à soumettre à Driss",
+  "impact": "Recruter des organisateurs : le guide montre que c'est accessible",
+  "lien": "https://www.fitmates.net/organiser/guide-pratique-randonnee",
+  "statut": "à faire"
  }
 ]
