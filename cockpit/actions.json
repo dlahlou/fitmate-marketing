@@ -202,5 +202,11 @@
   "canal": "Google",
   "action": "Chiffres non sourcés retirés du site : « présence de 50 % à 85 % » et « un participant sur trois revient » (guides organisateur), « la majorité des participants viennent seuls » (FAQ), « la majorité pratique seule » et « majorité de l'activité physique » (/pitch). Chiffres sourcés conservés (INJEP, Fondation de France)",
   "statut": "fait"
+ },
+ {
+  "date": "2026-10-30",
+  "canal": "Présence",
+  "action": "Fiches agenda prêtes (scripts/fiches_agenda.py) : depuis le flux public, une fiche par sortie d'Île-de-France des 10 prochains jours (titre, descriptions impact d'abord, lieu, prix, lien vers la sortie avec utm_source=openagenda), en Markdown et CSV d'import. 8 fiches générées pour le week-end du 31/10, non publiées",
+  "statut": "fait"
  }
 ]

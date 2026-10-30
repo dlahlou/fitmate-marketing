@@ -815,6 +815,16 @@
   "action": "Préparer le modèle de fiche OpenAgenda / AllEvents d'une sortie (titre, description impact d'abord, lieu, niveau, prix si payant, lien vers la sortie dans l'app) et le script qui le remplit depuis le flux public, prêt dès que Driss a créé les comptes",
   "impact": "Publication gratuite des sorties sur les agendas d'Île-de-France",
   "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/presence/plateformes-evenements.md",
-  "statut": "à faire"
+  "statut": "fait"
+ },
+ {
+  "id": "agenda-publication",
+  "qui": "Claude",
+  "canal": "Présence",
+  "priorite": 2,
+  "action": "Publier chaque semaine les sorties sur OpenAgenda / AllEvents à partir de scripts.fiches_agenda (après accord de Driss sur la première fournée)",
+  "impact": "Visibilité des sorties sur les agendas d'Île-de-France",
+  "lien": "",
+  "statut": "bloqué : comptes OpenAgenda et AllEvents à créer par Driss"
  }
 ]
