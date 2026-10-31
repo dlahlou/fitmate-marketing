@@ -238,5 +238,17 @@
   "canal": "Google",
   "action": "Pages des sports en attente, suite (32 pages) : H1 et titles « … en groupe à {zone} : liste d'attente », bloc « Comment ça va se passer » à la place de « Comment rejoindre une sortie », « lieux classiques » au lieu des « spots des groupes Fitmates », FAQ (course, vélo, escalade, padel) sans service actif, textes football/basket/padel au futur ; JSON-LD FAQ aligné. Pages rando IDF inchangées",
   "statut": "fait"
+ },
+ {
+  "date": "2026-10-31",
+  "canal": "Google",
+  "action": "Derniers textes des sports en attente corrigés : hero « {Sport} en groupe : bientôt près de chez toi », title /sports, padel Paris « clubs, prix et liste d'attente » ; affirmations non sourcées retirées (run clubs « premier lieu de rencontre », pilates « plus forte croissance », fitness « explosent »)",
+  "statut": "fait"
+ },
+ {
+  "date": "2026-10-31",
+  "canal": "Cockpit",
+  "action": "Stockage Vercel Blob du cockpit suspendu (quota gratuit dépassé) : l'API d'état lit désormais un seul fichier etat.json au lieu d'un list() + un fichier par action ; migration automatique de l'ancien format au retour du quota",
+  "statut": "fait"
  }
 ]

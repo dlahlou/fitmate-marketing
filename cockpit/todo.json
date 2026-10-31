@@ -877,6 +877,28 @@
   "action": "Derniers textes des sports en attente : H1 padel Paris « clubs, prix et partenaires », title/H1 de /sports « Trouver un groupe », hero SportPage « en groupe, près de chez toi » ; et retirer les affirmations non sourcées des textes « why » (run clubs « premier lieu de rencontre », pilates « plus forte croissance », fitness « explosent »)",
   "impact": "Exactitude du site",
   "lien": "",
-  "statut": "à faire"
+  "statut": "fait"
+ },
+ {
+  "id": "blob-quota",
+  "qui": "Driss",
+  "canal": "Cockpit",
+  "priorite": 1,
+  "action": "Le stockage du cockpit (Vercel Blob « fitmate-cockpit-etat ») est suspendu : quota du plan gratuit dépassé. Tes « fait » / « pas pertinent » ne s'enregistrent plus jusqu'à la remise à zéro du quota",
+  "impact": "Sans lui, je ne vois plus ce que tu marques dans le cockpit",
+  "duree": "3 min",
+  "statut": "à faire",
+  "etapes": [
+   {
+    "texte": "Ouvre la page Usage de Vercel et regarde la date de remise à zéro du quota Blob (début du prochain cycle). Rien à faire si elle est proche : j'ai déjà réduit la consommation à une lecture par ouverture du cockpit.",
+    "lien": "https://vercel.com/dashboard",
+    "libelle_lien": "Vercel ↗"
+   },
+   {
+    "texte": "Si tu ne veux pas attendre : passer au plan Pro est une dépense, c'est ta décision. Sinon, en attendant, dis-moi directement dans la session ce que tu as fait ou écarté.",
+    "lien": "https://claude.ai/code/session_01XNHWdd3Ezaz2t3MR6axpZZ",
+    "libelle_lien": "Ouvrir la session ↗"
+   }
+  ]
  }
 ]
