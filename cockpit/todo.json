@@ -867,6 +867,16 @@
   "action": "Pages sport en liste d'attente, suite : H1 et title « groupes et partenaires », blocs « Comment rejoindre une sortie » et « spots utilisés par les groupes Fitmates », FAQ course (« sorties récurrentes »), textes « why » football/basket/padel, description /sports et encadré « L'essentiel » : n'afficher que ce qui est vrai pour un secteur fermé",
   "impact": "Aucune page ne fait croire à des groupes qui n'existent pas encore",
   "lien": "",
+  "statut": "fait"
+ },
+ {
+  "id": "attente-fin",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 3,
+  "action": "Derniers textes des sports en attente : H1 padel Paris « clubs, prix et partenaires », title/H1 de /sports « Trouver un groupe », hero SportPage « en groupe, près de chez toi » ; et retirer les affirmations non sourcées des textes « why » (run clubs « premier lieu de rencontre », pilates « plus forte croissance », fitness « explosent »)",
+  "impact": "Exactitude du site",
+  "lien": "",
   "statut": "à faire"
  }
 ]

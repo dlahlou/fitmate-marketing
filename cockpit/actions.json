@@ -232,5 +232,11 @@
   "canal": "Google",
   "action": "Exactitude des pages des sports en liste d'attente (33 pages : 13 sports, 18 sport × zone, /sports, guide run club) : titles « liste d'attente », accroches « Bientôt des sorties… », plus de « chaque semaine », « rejoins un run club » ni « parties à venir » hors rando Île-de-France. Pages rando IDF inchangées",
   "statut": "fait"
+ },
+ {
+  "date": "2026-10-31",
+  "canal": "Google",
+  "action": "Pages des sports en attente, suite (32 pages) : H1 et titles « … en groupe à {zone} : liste d'attente », bloc « Comment ça va se passer » à la place de « Comment rejoindre une sortie », « lieux classiques » au lieu des « spots des groupes Fitmates », FAQ (course, vélo, escalade, padel) sans service actif, textes football/basket/padel au futur ; JSON-LD FAQ aligné. Pages rando IDF inchangées",
+  "statut": "fait"
  }
 ]
