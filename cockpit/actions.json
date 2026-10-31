@@ -226,5 +226,11 @@
   "canal": "Réseaux sociaux",
   "action": "Carrousel « Organiser ta première rando » (7 slides, charte v3) tiré du guide pratique, renvoie vers fitmates.net/organiser ; ajouté au lot v3, en attente de l'accord de Driss",
   "statut": "fait"
+ },
+ {
+  "date": "2026-10-31",
+  "canal": "Google",
+  "action": "Exactitude des pages des sports en liste d'attente (33 pages : 13 sports, 18 sport × zone, /sports, guide run club) : titles « liste d'attente », accroches « Bientôt des sorties… », plus de « chaque semaine », « rejoins un run club » ni « parties à venir » hors rando Île-de-France. Pages rando IDF inchangées",
+  "statut": "fait"
  }
 ]

@@ -858,5 +858,15 @@
     "libelle_lien": "Ouvrir la session ↗"
    }
   ]
+ },
+ {
+  "id": "attente-suite",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Pages sport en liste d'attente, suite : H1 et title « groupes et partenaires », blocs « Comment rejoindre une sortie » et « spots utilisés par les groupes Fitmates », FAQ course (« sorties récurrentes »), textes « why » football/basket/padel, description /sports et encadré « L'essentiel » : n'afficher que ce qui est vrai pour un secteur fermé",
+  "impact": "Aucune page ne fait croire à des groupes qui n'existent pas encore",
+  "lien": "",
+  "statut": "à faire"
  }
 ]
