@@ -1,48 +1,41 @@
 // État déclaré des actions : Driss marque une action « fait » (Claude vérifie ensuite) ou « non pertinent » (avec sa raison).
-// Stockage : Vercel Blob privé (fitmate-cockpit-etat), un seul fichier etat.json { id: état }.
-// Un seul fichier = une opération de lecture par chargement du cockpit (l'ancien format, un fichier par action plus
-// un list() à chaque lecture, a épuisé le quota du plan gratuit le 31/10/2026). L'ancien format est relu une fois puis migré.
+// Stockage : Edge Config « fitmate-cockpit-etat » (un seul élément « etat » = { id: état }). Remplace Vercel Blob, dont le
+// quota du plan gratuit a été épuisé le 31/10/2026. Lecture : connexion EDGE_CONFIG (ajoutée en reliant le stockage au
+// projet). Écriture : API Vercel avec le jeton VERCEL_API_TOKEN (variable du projet, jamais dans le code).
 // Le cockpit entier est derrière Vercel Authentication : seul le propriétaire peut lire ou écrire.
-import { get, list, put } from '@vercel/blob';
+import { get } from '@vercel/edge-config';
 
+const STORE = 'ecfg_prcoe8irbvyxbsbe5ue2ahximr9v';
+const TEAM = 'team_GuHZIYsuWwAvM3DLTs6foS7y';
 const STATUTS = new Set(['déclaré fait', 'non pertinent', 'à faire']);
-const FICHIER = 'etat.json';
 
-async function lire(pathname) {
-  const r = await get(pathname, { access: 'private' });
-  return r?.statusCode === 200 ? JSON.parse(await new Response(r.stream).text()) : null;
+async function lire() {
+  if (!process.env.EDGE_CONFIG) throw new Error('stockage non relié au projet (variable EDGE_CONFIG absente)');
+  return (await get('etat')) || {};
 }
 
 async function ecrire(etat) {
-  await put(FICHIER, JSON.stringify(etat), { access: 'private', contentType: 'application/json', addRandomSuffix: false, allowOverwrite: true });
-}
-
-async function readAll() {
-  const etat = await lire(FICHIER).catch(() => null);
-  if (etat) return etat;
-  // Migration depuis l'ancien format (etat/<id>.json)
-  const out = {};
-  const { blobs } = await list({ prefix: 'etat/' });
-  for (const b of blobs) {
-    const d = await lire(b.pathname);
-    if (d?.id) out[d.id] = d;
-  }
-  await ecrire(out);
-  return out;
+  const tok = process.env.VERCEL_API_TOKEN;
+  if (!tok) throw new Error('jeton VERCEL_API_TOKEN absent : impossible d’enregistrer');
+  const r = await fetch(`https://api.vercel.com/v1/edge-config/${STORE}/items?teamId=${TEAM}`, {
+    method: 'PATCH',
+    headers: { Authorization: `Bearer ${tok}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ items: [{ operation: 'upsert', key: 'etat', value: etat }] }),
+  });
+  if (!r.ok) throw new Error(`écriture refusée par Vercel (${r.status})`);
 }
 
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
   try {
-    if (req.method === 'GET') return res.status(200).json(await readAll());
+    if (req.method === 'GET') return res.status(200).json(await lire());
     if (req.method === 'POST') {
       const { id, statut, note } = req.body || {};
       if (typeof id !== 'string' || !id || id.length > 120 || !STATUTS.has(statut)) {
         return res.status(400).json({ erreur: 'id ou statut invalide' });
       }
       const d = { id, statut, note: typeof note === 'string' ? note.slice(0, 500) : '', date: new Date().toISOString() };
-      const etat = await readAll();
-      etat[id] = d;
+      const etat = { ...(await lire()), [id]: d };
       await ecrire(etat);
       return res.status(200).json(d);
     }

@@ -3,6 +3,6 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@vercel/blob": "2.8.1"
+    "@vercel/edge-config": "1.5.1"
   }
 }
