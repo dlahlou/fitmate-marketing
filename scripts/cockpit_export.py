@@ -46,11 +46,28 @@ def ga4_pages() -> list[dict]:
 
 
 def ga4_events() -> list[dict]:
-    wanted = {"generate_lead": "Formulaire envoyé (lead)", "app_download_click": "Clic vers un store",
+    wanted = {"generate_lead": "Formulaire envoyé (lead)", "join_waitlist": "Inscription en liste d'attente", "app_download_click": "Clic vers un store",
               "page_view": "Pages vues", "session_start": "Sessions"}
     cur = {r["eventName"]: r["eventCount"] for r in google_web.ga4_report(d(28), d(1), ["eventName"], ["eventCount"])}
     prev = {r["eventName"]: r["eventCount"] for r in google_web.ga4_report(d(56), d(29), ["eventName"], ["eventCount"])}
     return [{"evenement": k, "libelle": v, "nombre": int(cur.get(k, 0)), "nombre_avant": int(prev.get(k, 0))} for k, v in wanted.items()]
+
+
+def ga4_audience() -> list[dict]:
+    """Sessions et conversions par appareil et par région (28 j) : où le site convertit vraiment."""
+    out = []
+    for dim, nom in (("deviceCategory", "appareil"), ("region", "region")):
+        for r in google_web.ga4_report(d(28), d(1), [dim], ["sessions", "keyEvents"]):
+            out.append({"type": nom, "valeur": r[dim] or "(inconnu)", "sessions": int(r["sessions"]), "conversions": int(r["keyEvents"])})
+    return sorted(out, key=lambda r: (r["type"], -r["sessions"]))
+
+
+def ga4_campagnes() -> list[dict]:
+    """Source / support / campagne (28 j) : effet des posts (utm), des assistants IA et du référencement."""
+    rows = google_web.ga4_report(d(28), d(1), ["sessionSource", "sessionMedium", "sessionCampaignName"], ["sessions", "keyEvents"])
+    rows = [{"source": r["sessionSource"], "support": r["sessionMedium"], "campagne": r["sessionCampaignName"],
+             "sessions": int(r["sessions"]), "conversions": int(r["keyEvents"])} for r in rows]
+    return sorted(rows, key=lambda r: -r["sessions"])[:30]
 
 
 # ---------- Google (Search Console) ----------
@@ -441,7 +458,7 @@ def kpis() -> list[dict]:
     return rows
 
 
-JOBS = {"ga4_jour": ga4_daily, "ga4_canaux": ga4_channels, "ga4_pages": ga4_pages, "ga4_evenements": ga4_events,
+JOBS = {"ga4_jour": ga4_daily, "ga4_audience": ga4_audience, "ga4_campagnes": ga4_campagnes, "ga4_canaux": ga4_channels, "ga4_pages": ga4_pages, "ga4_evenements": ga4_events,
         "gsc_jour": gsc_daily, "gsc_requetes": gsc_queries, "gsc_pages": gsc_pages,
         "stores": stores, "app_store_stats": app_store_stats, "play_stats": play_stats, "reseaux": reseaux, "publications": publications, "sorties": sorties, "listes_attente": listes_attente, "backend_kpis": backend_kpis, "acces": acces, "actions": actions, "a_faire": a_faire, "kpis": kpis}
 

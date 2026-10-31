@@ -1,7 +1,7 @@
 // Cockpit Fitmates : écran d'action (à faire + canaux) et panneaux de détail au clic.
 // Données : data/*.json, réécrits chaque jour par scripts/cockpit_export.py.
 (function () {
-  const FILES = ['meta', 'ga4_jour', 'ga4_canaux', 'ga4_pages', 'ga4_evenements', 'gsc_jour', 'gsc_requetes', 'gsc_pages',
+  const FILES = ['meta', 'ga4_jour', 'ga4_canaux', 'ga4_pages', 'ga4_evenements', 'ga4_audience', 'ga4_campagnes', 'gsc_jour', 'gsc_requetes', 'gsc_pages',
     'stores', 'app_store_stats', 'play_stats', 'reseaux', 'publications', 'sorties', 'listes_attente', 'acces', 'actions', 'a_faire', 'kpis', 'kpis_historique'];
   const nf = new Intl.NumberFormat('fr-FR');
   const nf1 = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 1 });
@@ -328,6 +328,8 @@
     requetes: () => [D.gsc_requetes, [{ k: 'requete', label: 'Requête' }, { k: 'impressions', label: 'Appar.', n: true, bar: true }, { k: 'clics', label: 'Clics', n: true }, { k: 'position', label: 'Pos.', n: true, fmt: (v) => (v == null ? '—' : nf1.format(v)) }], { sort: 'impressions' }],
     gscpages: () => [D.gsc_pages, [{ k: 'page', label: 'Page' }, { k: 'impressions', label: 'Appar.', n: true, bar: true }, { k: 'clics', label: 'Clics', n: true }, { k: 'position', label: 'Pos.', n: true, fmt: (v) => (v == null ? '—' : nf1.format(v)) }], { sort: 'impressions' }],
     canaux: () => [D.ga4_canaux, [{ k: 'canal', label: 'Canal', fmt: (v) => CHANNELS[v] || v }, { k: 'sessions', label: 'Visites', n: true, bar: true }, { k: 'sessions_avant', label: 'Avant', n: true }, { k: 'conversions', label: 'Conv.', n: true }], { sort: 'sessions' }],
+    campagnes: () => [D.ga4_campagnes, [{ k: 'source', label: 'Source' }, { k: 'campagne', label: 'Campagne' }, { k: 'sessions', label: 'Visites', n: true, bar: true }, { k: 'conversions', label: 'Conv.', n: true }], { sort: 'sessions' }],
+    audience: () => [D.ga4_audience, [{ k: 'type', label: 'Type' }, { k: 'valeur', label: 'Valeur' }, { k: 'sessions', label: 'Visites', n: true, bar: true }, { k: 'conversions', label: 'Conv.', n: true }], { sort: 'sessions' }],
     pages: () => [D.ga4_pages, [{ k: 'page', label: 'Page' }, { k: 'sessions', label: 'Visites', n: true, bar: true }, { k: 'conversions', label: 'Conv.', n: true }], { sort: 'sessions' }],
     evenements: () => [D.ga4_evenements, [{ k: 'libelle', label: 'Événement' }, { k: 'nombre', label: '28 j', n: true }, { k: 'nombre_avant', label: 'Avant', n: true },
       { k: 'nombre', label: 'Évolution', n: true, render: (td, r) => { const [t, c] = deltaText(r.nombre, r.nombre_avant); td.textContent = t || '—'; td.classList.add(c); } }]],

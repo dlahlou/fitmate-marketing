@@ -13,6 +13,10 @@ liste de tâches. Driss intervient seulement pour ce qui lui revient (actions «
    **Relire ce fichier** : c'est la voix de Driss sur la stratégie. Adapter le plan en conséquence (ne pas recréer
    d'action semblable, retirer un canal ou un format refusé, le noter dans `strategie/` et `cockpit/strategie.json`
    si la décision change un canal), et le dire en une ligne dans le compte rendu du passage.
+3 bis. **Lire les données avant de choisir** : `cockpit/data/ga4_campagnes.json`, `ga4_audience.json`, `ga4_pages.json`,
+   `ga4_evenements.json`, `gsc_requetes.json` et `gsc_pages.json`. Repérer ce qui convertit (source, page, appareil, région)
+   et les requêtes Google avec des apparitions mais peu de clics ; en tirer au plus une tâche nouvelle, avec le chiffre de
+   référence, s'il n'en existe pas déjà une. Ne rien conclure d'un volume de quelques visites.
 4. Choisir dans `cockpit/todo.json` la tâche `qui: "Claude"` non bloquée de plus haute priorité (1 avant 2 avant 3 ;
    à priorité égale, la plus ancienne). Passer son `statut` à « en cours ».
 5. La mener au bout dans ce passage : relevé avant si c'est un changement mesurable, travail (sous-agents sur une
