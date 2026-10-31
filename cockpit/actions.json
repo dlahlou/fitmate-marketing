@@ -250,5 +250,11 @@
   "canal": "Cockpit",
   "action": "Stockage Vercel Blob du cockpit suspendu (quota gratuit dépassé) : l'API d'état lit désormais un seul fichier etat.json au lieu d'un list() + un fichier par action ; migration automatique de l'ancien format au retour du quota",
   "statut": "fait"
+ },
+ {
+  "date": "2026-10-31",
+  "canal": "Google",
+  "action": "Pages qui reçoivent déjà des requêtes Google, retravaillées pour les leads : rando IDF par département (« association de randonnée autour de moi » : section associations FFRandonnée + sortie sans adhésion), /run-clubs-paris (« gratuit », CTA liste d'attente remonté), /reseau-social-sportif, /sport/basketball (« trouver des joueurs »), /escalade/fontainebleau (« bloc Bleau 77 », circuits par couleur). CTA visible sans défiler à 390 px. Référence 22-29/10 : bloc bleau 77 57 impr. pos. 42,6 ; basketball mates 18 impr. CTR 0 % pos. 7,1 ; reseau social sport 7 impr. pos. 4,7 ; run-clubs-paris 10 impr. 1 clic ; association/groupe autour de moi 6 impr. 1 clic. Comparaison le 21/11",
+  "statut": "fait"
  }
 ]

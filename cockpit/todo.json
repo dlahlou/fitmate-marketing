@@ -900,5 +900,25 @@
     "libelle_lien": "Ouvrir la session ↗"
    }
   ]
+ },
+ {
+  "id": "mesure-seo-leads",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Mesurer les pages retravaillées le 31/10 (rando IDF associations, run-clubs-paris, reseau-social-sportif, basketball, escalade Fontainebleau) contre la référence du 22-29/10 : impressions, position, CTR (Search Console) et join_waitlist / generate_lead par source (GA4)",
+  "impact": "Savoir si le travail SEO apporte des leads",
+  "lien": "",
+  "statut": "prévu 21/11"
+ },
+ {
+  "id": "padel-accroche",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 3,
+  "action": "Pages padel en liste d'attente : l'accroche promet encore « des joueurs de ton niveau » ; la mettre au futur / liste d'attente",
+  "impact": "Exactitude du site",
+  "lien": "",
+  "statut": "à faire"
  }
 ]
