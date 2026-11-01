@@ -1,8 +1,9 @@
 # Instagram v2 : gabarits de la nouvelle charte
 
-Applique `../direction-artistique.md` (§ 5) : grands titres Bricolage alignés à gauche, Inter pour le texte,
-chiffres en `tabular-nums`, fonds Encre / Papier / Forêt, orange réservé au tracé et à un mot (≤ 10 % de la surface,
-mesuré à chaque rendu). Rien ici ne publie.
+Applique `../direction-artistique.md` (§ 5), c'est-à-dire la charte du site www.fitmates.net : grands titres Bricolage
+alignés à gauche, Inter pour le texte, chiffres en `tabular-nums`, fonds `ink` (halo orange) / `cream` / `brand` (une
+slide au plus par carrousel), orange ≤ 10 % de la surface des slides `ink` et `cream` (mesuré à chaque rendu). Rien ici
+ne publie.
 
 ```
 gabarits/fitmates.css      variables de la charte et styles des composants
@@ -26,7 +27,8 @@ python -m scripts.social_weekly_v2 --out /tmp/weekend      # prototype B, flux r
 ```
 
 Le rendu échoue (code 1, message en français) si un texte déborde ou est coupé, si un bloc sort des marges de 72 px,
-si les zones haut et bas se chevauchent, si des étiquettes de carte se superposent, si l'orange dépasse 10 %, ou si
+si les zones haut et bas se chevauchent, si des étiquettes de carte se superposent, si l'orange dépasse 10 % (hors slide
+`brand`), si plus d'une slide est sur fond `brand`, ou si
 le tracé ne repart pas à la même hauteur sur la slide suivante (contrôle sur le JSON et sur les pixels rendus).
 Ouvrir ensuite les PNG et `--apercu` pour la relecture visuelle.
 
@@ -42,7 +44,8 @@ Ouvrir ensuite les PNG et `--apercu` pour la relecture visuelle.
 }
 ```
 
-Slide : `fond` = `foret` | `papier` | `encre` ; `photo` (voir plus bas) ; `haut` (pile en haut, sous la pagination),
+Slide : `fond` = `ink` | `ink-800` | `cream` | `brand` (anciens noms acceptés : `foret` → `ink`, `encre` → `ink-800`,
+`papier` → `cream`) ; `photo` (voir plus bas) ; `haut` (pile en haut, sous la pagination),
 `bas` (pile en bas, au-dessus du logo sur la 1re et la dernière slide) ; `libre` (blocs posés en `x`, `y`) ;
 options `haut_top`, `bas_bas` (px), `courbes: false`, `courbes_opacite`, `rubrique`, `page` et `logo` (forcer).
 La pagination « 2/7 » et le logo (1re et dernière slide seulement) sont automatiques.
@@ -51,7 +54,7 @@ Blocs (un objet = un bloc) :
 
 | Bloc | Exemple |
 |---|---|
-| titre | `{"titre": "La *forêt* commence ici.", "taille": "xl|l|m|s"}` : `*mot*` orange, `~mot~` Mousse, `\|` retour à la ligne |
+| titre | `{"titre": "La *forêt* commence ici.", "taille": "xl|l|m|s"}` : `*mot*` accent (orange ; ink sur fond brand), `~mot~` atténué, `\|` retour à la ligne |
 | texte, note, source, etiquette | `{"texte": "…"}` ; `**gras**` dans `source` |
 | billet | `{"billet": {"depart": {"gare", "detail"}, "arrivee": {…}, "champs": [["Distance", "10,5 km"], …], "ligne": "B", "ligne_lab": "RER", "validite": "…", "numero": "…"}}` |
 | chiffres | `{"chiffres": [{"etiquette": "Distance", "valeur": "10,5 km"}, {"filet": true}, {"etiquette": "Niveau", "mot": "Facile"}]}` |
@@ -76,7 +79,7 @@ Pour des couvertures indépendantes (pas un carrousel), mettre `"independantes":
 ### Les courbes de niveau
 
 Générées à chaque rendu (champ pseudo-aléatoire déterministe, graine = `id`), continues d'une slide à l'autre,
-en Mousse : 22 % sur Forêt, 50 % sur Papier (le Mousse sur Papier a peu de contraste), 14 % sur Encre. Ce sont une
+ton sur ton : blanc à 8-9 % sur `ink`, `ink` à 10 % sur `cream` et 14 % sur `brand`. Ce sont une
 texture, pas une carte : les vrais reliefs sont dans le profil d'altitude.
 
 ### Un nouvel itinéraire « à emporter »
@@ -96,8 +99,8 @@ texture, pas une carte : les vrais reliefs sont dans le profil d'altitude.
 
 Mettre le fichier dans `canaux/social/v2/photos/` (JPEG ou PNG, au moins 1080×1350, cadrage vertical) et le
 référencer dans la slide : `"photo": "photos/chevreuse-quai.jpg"` (chemin relatif au JSON). La photo est posée plein
-cadre (`object-fit: cover`) avec un dégradé Encre 0 → 70 % sous la zone qui porte du texte (haut et/ou bas) ; pas
-de courbes de niveau sur une photo. Tant que le fichier n'existe pas, la slide garde l'aplat Forêt avec courbes de
+cadre (`object-fit: cover`) avec un dégradé `ink` 0 → 72 % sous la zone qui porte du texte (haut et/ou bas) ; pas
+de courbes de niveau sur une photo. Tant que le fichier n'existe pas, la slide garde le fond `ink` avec courbes de
 niveau (render.js le signale) : on peut donc préparer le carrousel avant d'avoir la photo.
 
 Règles (charte § 6) : vraies sorties uniquement, pas de banque d'images, aucun visage reconnaissable sans accord écrit

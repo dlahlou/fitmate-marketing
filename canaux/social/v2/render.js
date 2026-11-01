@@ -7,13 +7,18 @@
 //
 // Le rendu ÉCHOUE (code 1) si : un texte déborde (mot trop long, titre du tableau sur plus de lignes que prévu,
 // texte coupé), un bloc sort des marges de 72 px, les zones haut et bas se chevauchent, le tracé orange s'arrête
-// au bord d'une slide sans repartir sur la suivante, ou l'orange dépasse 10 % de la surface (charte § 5).
+// au bord d'une slide sans repartir sur la suivante, l'orange dépasse ORANGE_MAX de la surface d'une slide ink ou
+// cream (charte § 5), ou plus d'une slide est sur fond brand (orange plein). La slide brand n'est pas soumise à la
+// limite (son fond est l'orange) ; elle compte pour « la slide forte » du carrousel.
 const path = require('path');
 const fs = require('fs');
 const { chromium } = require('playwright');
 
 const W = 1080, H = 1350, M = 72;
 const GABARIT = path.join(__dirname, 'gabarits', 'slide.html');
+// Charte du site (www.fitmates.net) : l'orange y sert aux mots en accent, aux boutons et à de rares aplats. Sur les
+// slides ink et cream, la limite reste 10 % (les carrousels v3 mesurent 3 % au plus) ; l'aplat orange passe par le
+// fond brand, exempté de la mesure mais limité à une slide par carrousel (contrôle dans fitmates.js).
 const ORANGE_MAX = 0.10;
 
 async function verifier(page) {
@@ -45,19 +50,22 @@ async function verifier(page) {
   }, { W, H, M });
 }
 
-async function partOrange(browser, png) {
+async function partOrange(browser, png, traceSombre) {
   const page = await browser.newPage();
-  const r = await page.evaluate(async (src) => {
+  const r = await page.evaluate(async ({ src, traceSombre }) => {
     const img = new Image(); img.src = src; await img.decode();
     const c = document.createElement('canvas'); c.width = img.width; c.height = img.height;
     const g = c.getContext('2d'); g.drawImage(img, 0, 0);
     const d = g.getImageData(0, 0, c.width, c.height).data; let n = 0;
     const est = i => { const R = d[i], G = d[i + 1], B = d[i + 2]; return R > 200 && G > 80 && G < 170 && B < 90 && R - G > 70; };
     for (let i = 0; i < d.length; i += 4) if (est(i)) n++;
-    // Où le tracé touche les bords gauche et droit (milieu des pixels orange de la colonne)
-    const bord = x => { const ys = []; for (let y = 0; y < c.height; y++) if (est((y * c.width + x) * 4)) ys.push(y); return ys.length ? (ys[0] + ys[ys.length - 1]) / 2 : null; };
+    // Sur fond brand, le tracé est en ink : on cherche alors les pixels sombres
+    const sombre = i => d[i] < 70 && d[i + 1] < 70 && d[i + 2] < 70;
+    const trace = traceSombre ? sombre : est;
+    // Où le tracé touche les bords gauche et droit (milieu des pixels du tracé dans la colonne)
+    const bord = x => { const ys = []; for (let y = 0; y < c.height; y++) if (trace((y * c.width + x) * 4)) ys.push(y); return ys.length ? (ys[0] + ys[ys.length - 1]) / 2 : null; };
     return { part: n / (c.width * c.height), gauche: bord(0), droite: bord(c.width - 1) };
-  }, 'data:image/png;base64,' + png.toString('base64'));
+  }, { src: 'data:image/png;base64,' + png.toString('base64'), traceSombre });
   await page.close();
   return r;
 }
@@ -88,11 +96,12 @@ async function rendre(browser, cfgPath, outDir) {
     const file = path.join(out, String(k + 1).padStart(2, '0') + '.png');
     const png = await page.screenshot({ path: file, clip: { x: 0, y: 0, width: W, height: H } });
     await page.close();
-    const po = await partOrange(browser, png), o = po.part;
+    const brand = traces[k].fond === 'brand';
+    const po = await partOrange(browser, png, brand), o = po.part;
     bords.push(po);
-    if (o > ORANGE_MAX) errs.push(`orange sur ${(o * 100).toFixed(1)} % de la surface (max ${ORANGE_MAX * 100} %)`);
+    if (!brand && o > ORANGE_MAX) errs.push(`orange sur ${(o * 100).toFixed(1)} % de la surface (max ${ORANGE_MAX * 100} %)`);
     if (errs.length) { ok = false; console.error(`ERREUR ${C.id} slide ${k + 1}\n  ` + errs.join('\n  ')); }
-    else console.log(`ok ${file}  (orange ${(o * 100).toFixed(1)} %)`);
+    else console.log(`ok ${file}  (${brand ? 'fond brand, slide forte' : `orange ${(o * 100).toFixed(1)} %`})`);
     fichiers.push(file);
   }
   // Continuité du tracé : ce qui sort par la droite d'une slide rentre par la gauche de la suivante, au même niveau
@@ -141,7 +150,7 @@ async function planche(browser, imgs, out, { cols, cellW, cellH, gap, crop, fond
       const html = lignes.map((l, i) => `<div style="position:absolute;left:${pad}px;top:${pad + i * (lab + ch + gapL)}px">
         <div style="height:${lab}px;letter-spacing:.08em;text-transform:uppercase">${l.nom} · ${l.imgs.length} slides</div>
         <div style="display:flex">${l.imgs.map(f => `<img src="data:image/png;base64,${fs.readFileSync(f).toString('base64')}" style="width:${cw}px;height:${ch}px;display:block">`).join('')}</div></div>`).join('');
-      await page.setContent(`<body style="margin:0;background:#0f0d0b;font:600 22px/1 sans-serif;color:#8a8378">${html}</body>`);
+      await page.setContent(`<body style="margin:0;background:#2A2A33;font:600 22px/1 sans-serif;color:#B9B9C2">${html}</body>`);
       await page.waitForTimeout(300);
       await page.screenshot({ path: path.resolve(out) });
       await page.close();
@@ -157,7 +166,7 @@ async function planche(browser, imgs, out, { cols, cellW, cellH, gap, crop, fond
       const opt = k => { const i = args.indexOf(k); return i > 0 ? args[i + 1] : null; };
       const r = await rendre(browser, cfg, opt('--out'));
       ok = r.ok;
-      if (opt('--apercu')) await planche(browser, r.fichiers, path.resolve(opt('--apercu')), { cols: r.fichiers.length, cellW: 432, cellH: 540, gap: 0, fond: '#0f0d0b', legende: `${r.C.titre || r.C.id} · ${r.fichiers.length} slides bord à bord (continuité du tracé)` });
+      if (opt('--apercu')) await planche(browser, r.fichiers, path.resolve(opt('--apercu')), { cols: r.fichiers.length, cellW: 432, cellH: 540, gap: 0, fond: '#2A2A33', legende: `${r.C.titre || r.C.id} · ${r.fichiers.length} slides bord à bord (continuité du tracé)` });
     }
   } finally {
     await browser.close();

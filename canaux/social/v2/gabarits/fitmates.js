@@ -2,13 +2,18 @@
 // render.js injecte window.__CFG__ = { carrousel, index, donnees, photo } avant le chargement.
 (function () {
   const W = 1080, H = 1350, M = 72;
-  const ORANGE = '#F57C00', PAPIER = '#F4EEE3', ENCRE = '#1A1714', FORET = '#24382C', MOUSSE = '#A8B88A';
+  // Palette du site www.fitmates.net (tailwind.config.js) : la référence unique de la charte
+  const INK = '#0B0B0D', INK800 = '#141418', CREAM = '#F6F3EE', BRAND = '#FF5A1F', BLANC = '#FFFFFF';
+  const ORANGE = BRAND, ENCRE = INK;
+  // Fonds : noms de la charte du site + anciens noms des sources v2/v3 (foret → ink, encre → ink 800, papier → cream)
+  const FONDS = { ink: 'ink', 'ink-800': 'ink-800', cream: 'cream', brand: 'brand', foret: 'ink', encre: 'ink-800', papier: 'cream' };
+  const FOND_HEX = { ink: INK, 'ink-800': INK800, cream: CREAM, brand: BRAND, photo: INK };
   const LOGO = 'logo.png';  // logo de l'app détouré (fond blanc retiré)
 
   // Typographie française : espace insécable avant ? ! : ; » et après « (jamais de « ? » seul en début de ligne)
   const nbsp = s => String(s ?? '').replace(/ ([?!:;»])/g, '\u00a0$1').replace(/« /g, '«\u00a0');
   const esc = s => nbsp(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-  // Mise en forme minimale : **mot** = gras, *mot* = accent orange, ~mot~ = Mousse, | = retour à la ligne voulu
+  // Mise en forme minimale : **mot** = gras, *mot* = accent (orange ; ink sur fond orange), ~mot~ = atténué, | = retour à la ligne voulu
   const md = s => esc(s).replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>').replace(/\*([^*]+)\*/g, '<em>$1</em>').replace(/~([^~]+)~/g, '<span class="doux">$1</span>').replace(/\s*\|\s*/g, '<br>');
   // "10,5 km" → <span class=n>10,5</span><span class=u>km</span>
   const nombre = s => String(s).split(/\s+/).map(t => /^[+\-−]?\d/.test(t) ? `<span class="n">${esc(t)}</span>` : `<span class="u">${esc(t)}</span>`).join('');
@@ -188,8 +193,11 @@
   function build(cfg) {
     const C = cfg.carrousel, k = cfg.index, S = C.slides[k], n = C.slides.length, D = cfg.donnees || {};
     const derniere = k === n - 1;
-    const photo = cfg.photo;            // URL résolue par render.js, ou null (fichier absent → aplat Forêt)
-    const fond = photo ? 'photo' : (S.fond || 'foret');
+    const photo = cfg.photo;            // URL résolue par render.js, ou null (fichier absent → fond ink)
+    const fond = photo ? 'photo' : FONDS[S.fond || 'ink'];
+    if (!fond) throw new Error(`fond inconnu : ${S.fond} (ink, ink-800, cream, brand ; anciens noms foret, encre, papier)`);
+    const nBrand = C.slides.filter(x => FONDS[x.fond] === 'brand').length;
+    if (nBrand > 1) throw new Error(`${nBrand} slides sur fond brand : une seule au plus par carrousel (charte § 5)`);
     const haut = S.haut || [], bas = S.bas || [];
     const logo = S.logo ?? ((k === 0 || derniere) && C.logo !== false);
     const root = document.createElement('div');
@@ -198,7 +206,7 @@
       ${photo ? `<img class="photo-img" src="${esc(photo)}">${bas.length ? '<div class="degrade bas"></div>' : ''}${haut.length ? '<div class="degrade haut"></div>' : ''}` : ''}
       <svg class="couche courbes" viewBox="0 0 ${W} ${H}"></svg>
       <svg class="couche trace" viewBox="0 0 ${W} ${H}"></svg>
-      <div class="bandeau"><span>${esc(S.rubrique ?? C.rubrique ?? '')}</span><span class="page">${S.page ? esc(S.page).replace(/^(\d+)/, '<b>$1</b>') : `<b>${k + 1}</b>/${n}`}</span></div>
+      <div class="bandeau">${(S.rubrique ?? C.rubrique) ? `<span class="rub">${esc(S.rubrique ?? C.rubrique)}</span>` : '<span></span>'}<span class="page">${S.page ? esc(S.page).replace(/^(\d+)/, '<b>$1</b>') : `<b>${k + 1}</b>/${n}`}</span></div>
       ${haut.length ? `<div class="zone haut" style="${S.haut_top ? `top:${S.haut_top}px` : ''}">${haut.map(b => bloc(b, D)).join('')}</div>` : ''}
       ${bas.length ? `<div class="zone bas ${logo ? 'avec-logo' : ''}" style="${S.bas_bas ? `bottom:${S.bas_bas}px` : ''}">${bas.map(b => bloc(b, D)).join('')}</div>` : ''}
       ${(S.libre || []).map(b => `<div class="libre" style="left:${+b.x}px;top:${+b.y}px;${b.largeur ? `width:${+b.largeur}px` : ''}">${bloc(b, D)}</div>`).join('')}
@@ -215,11 +223,13 @@
       // Courbes de niveau (pas sur une vraie photo)
       if (!photo && S.courbes !== false) {
         const f = champ(hash(C.id || 'fitmates'), n);
-        const op = S.courbes_opacite ?? { foret: .22, papier: .5, encre: .14 }[fond] ?? .2;
+        // Texture discrète, ton sur ton (plus de Mousse : la palette du site n'a pas de vert)
+        const op = S.courbes_opacite ?? { ink: .09, 'ink-800': .08, cream: .10, brand: .14 }[fond] ?? .08;
+        const coul = fond === 'cream' || fond === 'brand' ? INK : BLANC;
         const lv = []; for (let l = -2.4; l <= 2.4; l += .12) lv.push(+l.toFixed(2));
-        root.querySelector('.courbes').innerHTML = `<path d="${courbes(f, k * W, 9, lv)}" fill="none" stroke="${MOUSSE}" stroke-opacity="${op}" stroke-width="1.6" stroke-linecap="round"/>`;
+        root.querySelector('.courbes').innerHTML = `<path d="${courbes(f, k * W, 9, lv)}" fill="none" stroke="${coul}" stroke-opacity="${op}" stroke-width="1.6" stroke-linecap="round"/>`;
       }
-      // Tracé orange
+      // Tracé : orange brand ; en ink sur le fond orange (même règle que les mots en accent)
       const prev = k > 0 && !C.independantes ? C.slides[k - 1].trace : null;
       const T = S.trace;
       const info = { entree: null, sortie: null };
@@ -232,15 +242,17 @@
         const entree = cfg.entree != null ? cfg.entree : (prev && typeof prev.sortie === 'number' ? prev.sortie : null);
         if (entree != null) { const e = Math.min(100, pts.length ? pts[0][0] : 100); pts.unshift([-240, entree], [e, entree, e]); info.entree = entree; }
         if (T.sortie != null) { const last = pts[pts.length - 1] || [980, 0]; const y = T.sortie === 'auto' ? last[1] : T.sortie; const x = Math.min(1060, Math.max(980, last[0])); pts.push([x, y, W - x], [W + 240, y]); info.sortie = Math.round(y * 10) / 10; }
-        let svg = `<path d="${arrondi(pts, R)}" fill="none" stroke="${ORANGE}" stroke-width="${T.epaisseur || 7}" stroke-linecap="round" stroke-linejoin="round"/>`;
-        const bg = { foret: FORET, papier: PAPIER, encre: ENCRE, photo: ENCRE }[fond];
-        const rond = ([x, y], r = 13) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${bg}" stroke="${ORANGE}" stroke-width="6"/>`;
+        const tc = fond === 'brand' ? INK : BRAND; info.couleur = tc;
+        let svg = `<path d="${arrondi(pts, R)}" fill="none" stroke="${tc}" stroke-width="${T.epaisseur || 7}" stroke-linecap="round" stroke-linejoin="round"/>`;
+        const bg = FOND_HEX[fond];
+        const rond = ([x, y], r = 13) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${bg}" stroke="${tc}" stroke-width="6"/>`;
         if (entree == null && pts.length) svg += rond(pts[0], 15);
         if (T.sortie == null && pts.length) svg += rond(pts[pts.length - 1], 15);
         for (const g of gares) svg += rond(g);
         for (const p of T.reperes || []) svg += rond(p);
         root.querySelector('.trace').innerHTML = svg;
       }
+      info.fond = fond;
       window.__TRACE__ = info;
       document.body.dataset.ready = '1';
     }).catch(e => { window.__ERREUR__ = String(e && e.stack || e); document.body.dataset.ready = '1'; });

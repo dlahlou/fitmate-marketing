@@ -1,6 +1,10 @@
 # Instagram Fitmates : direction artistique, intention et stratégie
 
-Version 3, 27/10/2026, après le retour de Driss : contenu centré sur les personnes, tous sports. La charte visuelle (section 5) est conservée.
+Version 3, 27/10/2026, après le retour de Driss : contenu centré sur les personnes, tous sports.
+
+Journal :
+- 01/11/2026 : charte (section 5) remplacée par celle du site www.fitmates.net, référence unique (ink, cream, brand, lime ; Bricolage + Inter ; arrondis, halo orange). Carrousels v3 et visuels Meta refaits.
+- 27/10/2026 : version 3, contenu centré sur les personnes ; charte Forêt / Papier / Mousse conservée (abandonnée le 01/11).
 
 ## 0. Règle
 
@@ -46,40 +50,62 @@ change** concrètement, **quoi faire** ensuite. Si une réponse manque, le post 
 
 ## 5. Charte graphique
 
+**La référence unique est le site www.fitmates.net** (`fitmate-landing-page/tailwind.config.js` et `src/index.css`).
+Instagram, Facebook et les publicités Meta reprennent sa palette, sa typographie et ses formes ; en cas de doute, on
+ouvre une page `/sport/...` du site et on s'aligne dessus. L'ancienne charte « Forêt / Papier / Mousse » est abandonnée
+(01/11/2026).
+
 ### Couleurs
 
-| Nom | Hex | Usage |
+| Nom (site) | Hex | Usage |
 |---|---|---|
-| Encre | `#1A1714` | textes, fonds sombres |
-| Papier | `#F4EEE3` | fond clair principal (chaud, pas blanc) |
-| Forêt | `#24382C` | fond signature des itinéraires, nature |
-| Fitmates | `#F57C00` | **accent seulement** (≤ 10 % de la surface) : un mot, une flèche, un tracé |
-| Mousse | `#A8B88A` | tracés secondaires, courbes de niveau |
+| `ink` | `#0B0B0D` | fond sombre principal (comme les héros du site), textes sur fond clair |
+| `ink 800` | `#141418` | fond sombre secondaire, pour varier deux slides sombres qui se suivent |
+| `ink 700` / `ink 600` | `#1E1E24` / `#2A2A33` | cartes et blocs posés sur un fond `ink` (liste des sorties, bulles de chat), filets |
+| `cream` | `#F6F3EE` | fond clair (chaud, pas blanc) ; le blanc `#FFFFFF` sert aux cartes posées sur `cream` |
+| `brand` | `#FF5A1F` | accent : mots clés des titres, tracé, pastilles, bouton principal ; **fond plein rare** |
+| `brand 400` / `brand 600` | `#FF7A45` / `#E8460D` | reflet du fond `brand` ; étiquettes orange sur fond `cream` (meilleur contraste) |
+| `lime` | `#D4FF4F` | accent ponctuel sur fond sombre seulement : point des pastilles, étiquettes (jours, rubriques) |
 
-L'orange n'est plus un fond : il devient la couleur du **tracé** (le sentier, le trajet, le mot clé). C'est ce qui
-rend la marque reconnaissable sans saturer la grille.
+Usages :
+
+- **Fonds** : `ink` avec un **halo orange discret** (dégradé radial `brand` à 20-30 % d'opacité, comme la classe
+  `.glow` du site), `cream`, et `brand` en aplat **au plus une slide forte par carrousel** (la phrase qui porte le
+  message). Les gabarits refusent un carrousel qui en a deux.
+- **Accent** : les mots en `*accent*` passent en `brand` sur `ink` et `cream`, en `ink` sur `brand`. Le texte est blanc
+  sur `ink` et sur `brand`, `ink` sur `cream`.
+- **Orange** : sur les slides `ink` et `cream`, l'orange (mots, tracé, pastilles) reste sous 10 % de la surface ;
+  `render.js` le mesure à chaque rendu (les carrousels v3 sont à 3 % au plus). La slide `brand` est exemptée.
+- **Lime** : jamais en fond, jamais pour un titre ; seulement de petits éléments sur fond sombre.
+- Correspondance des anciens noms de fonds dans les JSON : `foret` → `ink`, `encre` → `ink 800`, `papier` → `cream`.
 
 ### Typographie
 
-- **Titres** : Bricolage Grotesque ExtraBold, serrée (interlettrage −2 %), très grande (90 à 140 px sur 1080), en
-  minuscules avec majuscule initiale. Jamais centrée par défaut : **alignée à gauche**, en haut ou en bas.
-- **Texte** : Inter Medium 30 à 36 px, 1 à 3 lignes par slide.
-- **Données** (km, D+, minutes, gares) : Inter en chasse fixe (`tabular-nums`), gros chiffre + petite unité.
+- **Titres** : Bricolage Grotesque ExtraBold (800), serrée (interlettrage −2 %), très grande (76 à 172 px sur 1080), en
+  minuscules avec majuscule initiale, deux tons (blanc ou `ink` + quelques mots en accent), comme les titres du site.
+  **Alignée à gauche**, en haut ou en bas.
+- **Texte** : Inter Medium 30 à 42 px, 1 à 3 lignes par slide, en blanc atténué (66 %) sur fond sombre.
+- **Étiquettes** : Inter SemiBold 20-22 px, capitales espacées (+12 %), en `lime` sur fond sombre, `brand 600` sur `cream`.
+- **Données** (heures, km) : Inter en chasse fixe (`tabular-nums`).
 
-### Mise en page
+### Formes et mise en page
 
-- Marges 72 px ; zone de texte dans le tiers haut ou bas, jamais au milieu d'une photo.
-- Pagination discrète « 2/7 » en haut à droite ; logo seulement sur la première et la dernière slide, petit, en bas.
-- Sur photo : dégradé Encre 0 → 70 % sur le tiers où se trouve le texte, pas de cadre ni de carte blanche.
+- **Arrondis généreux** : cartes 32 px, boutons et pastilles en pilule (999 px), bulles de chat 30-38 px.
+- **Pastille de rubrique** en haut à gauche (contour fin, point `lime` sur fond sombre, `brand` sur `cream`), comme le
+  badge « Nouvelles sorties chaque semaine » du site ; pagination « 2/7 » en haut à droite.
+- Marges 72 px ; zone de texte dans le tiers haut ou bas.
+- Logo (`v2/gabarits/logo.png`, détouré) seulement sur la première et la dernière slide, petit, en bas à gauche ; sur
+  fond `brand`, il est posé sur une pastille `cream` arrondie.
+- Boutons des stores (visuels Meta) : App Store en pilule blanche, Google Play en pilule à contour, comme sur le site.
+- Sur photo : dégradé `ink` 0 → 72 % sur le tiers où se trouve le texte.
 
-### Signatures visuelles (ce qui fait reconnaître le compte)
+### Signatures visuelles
 
-1. **Le billet** : chaque sortie en train commence par un billet stylisé (départ, arrivée, ligne, durée). C'est l'objet
-   que les gens associeront à Fitmates.
-2. **Le tracé orange** : une ligne orange continue qui traverse les slides d'un carrousel, comme un sentier ; elle relie
-   la slide 1 à la dernière.
-3. **Les courbes de niveau** : texture discrète (Mousse à 20 %) sur les fonds Forêt et Papier.
-4. **Le tableau des départs** : le rituel du jeudi reprend l'affichage d'une gare (heures, destinations, quai).
+1. **Le tracé** : une ligne continue (6 px, coins arrondis) qui traverse les slides d'un carrousel ; `brand` sur `ink`
+   et `cream`, `ink` sur la slide `brand`. Elle part et finit sur un rond.
+2. **Le halo orange** des fonds sombres, repris du site.
+3. **Les courbes de niveau** (optionnelles, désactivées en v3) : texture ton sur ton à 8-10 %, sans couleur propre.
+4. **Le billet** et **le tableau des départs** (gabarits v2) gardent leur forme, aux couleurs du site.
 
 ## 6. Direction photo
 

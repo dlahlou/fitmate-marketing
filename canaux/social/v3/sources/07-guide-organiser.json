@@ -185,7 +185,7 @@
    }
   },
   {
-   "fond": "encre",
+   "fond": "brand",
    "courbes": false,
    "haut": [
     {
@@ -202,8 +202,16 @@
    "trace": {
     "points": [
      [
-      700,
+      240,
       420
+     ],
+     [
+      240,
+      560
+     ],
+     [
+      700,
+      560
      ]
     ],
     "epaisseur": 6
