@@ -937,5 +937,15 @@
   "impact": "Leads hors Île-de-France (listes d'attente Nice, Normandie)",
   "lien": "",
   "statut": "fait"
+ },
+ {
+  "id": "reel-charte",
+  "qui": "Claude",
+  "canal": "Réseaux sociaux",
+  "priorite": 3,
+  "action": "Re-rendre le Reel « fourmi » (meta-campagne/video/reel.html) dans la charte du site, si Driss compte l'utiliser",
+  "impact": "Cohérence de marque de la campagne Meta",
+  "lien": "",
+  "statut": "à faire"
  }
 ]
