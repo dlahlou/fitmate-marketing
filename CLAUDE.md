@@ -13,6 +13,13 @@ Répondre à Driss (propriétaire) en français, court, avec les liens cliquable
 - **Parler de l'impact avant l'outil** (`strategie/ame-de-fitmates.md`) : ne plus faire de sport seul, rencontrer, tenir
   dans la durée. Le chat, la création en une phrase, l'IA sont des preuves en fin de message, jamais l'accroche.
 
+## Charte graphique
+- **Une seule charte : celle du site** (`fitmate-landing-page/tailwind.config.js`, `src/index.css`) : ink #0B0B0D, cream #F6F3EE,
+  orange brand #FF5A1F, lime #D4FF4F en accent ponctuel, Bricolage Grotesque (titres) et Inter (texte), arrondis généreux,
+  hero sombre à halo orange. Toute page, tout visuel social ou publicitaire et tout e-mail la suit ; aucune palette parallèle
+  (le vert forêt et le papier des carrousels v2/v3 sont abandonnés le 01/11/2026). Pages du site : réutiliser ses composants.
+- Sur téléphone, une page longue commence par une vue d'ensemble (étapes ou points clés en une ligne), le détail ensuite.
+
 ## Réseaux sociaux
 - **Ne jamais rien publier (Instagram, Facebook, Threads, tout réseau) sans l'accord explicite de Driss pour ce post précis.**
   Aucune publication planifiée ou automatique. Préparer, montrer à Driss, attendre son « ok » ; l'accord est noté dans
