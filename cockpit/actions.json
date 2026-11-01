@@ -262,5 +262,11 @@
   "canal": "Cockpit",
   "action": "État du cockpit migré de Vercel Blob (quota épuisé) vers Edge Config « fitmate-cockpit-etat » : stockage créé, les 8 états existants recopiés, API réécrite (lecture EDGE_CONFIG, écriture par l'API Vercel). Reste à Driss : relier le stockage au projet et ajouter VERCEL_API_TOKEN",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-01",
+  "canal": "Google",
+  "action": "Pages lieu padel en liste d'attente : l'accroche ne promet plus « des joueurs de ton niveau », elle dit « bientôt »",
+  "statut": "fait"
  }
 ]

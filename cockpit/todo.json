@@ -926,6 +926,16 @@
   "action": "Pages padel en liste d'attente : l'accroche promet encore « des joueurs de ton niveau » ; la mettre au futur / liste d'attente",
   "impact": "Exactitude du site",
   "lien": "",
+  "statut": "fait"
+ },
+ {
+  "id": "nice-etretat",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Requêtes avec apparitions sans clic : « nice randonnée prochaine sortie » (25 impr., pos. 9) et « randonnée etretat » (19 impr., pos. 17,6). Vérifier quelle page se positionne, ajuster title / H1 / réponse en tête à l'intention (prochaine sortie à Nice : liste d'attente honnête + où trouver des sorties existantes ; Étretat : itinéraire sourcé) et CTA liste d'attente visible",
+  "impact": "Leads hors Île-de-France (listes d'attente Nice, Normandie)",
+  "lien": "",
   "statut": "à faire"
  }
 ]
