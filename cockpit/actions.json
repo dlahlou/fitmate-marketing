@@ -268,5 +268,11 @@
   "canal": "Google",
   "action": "Pages lieu padel en liste d'attente : l'accroche ne promet plus « des joueurs de ton niveau », elle dit « bientôt »",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-01",
+  "canal": "Google",
+  "action": "/randonnee/nice : title « trouver une sortie », réponse en tête sur la prochaine sortie en groupe (clubs FFRandonnée ; Fitmates en liste d'attente à Nice) ; /randonnee/etretat : title « boucles des falaises, GR21 ». Référence 28 j : nice 32 impr. pos. 13,1 (« nice randonnée prochaine sortie » 25 impr. pos. 9) ; etretat 48 impr. 1 clic pos. 16,6. À remesurer le 21/11",
+  "statut": "fait"
  }
 ]
