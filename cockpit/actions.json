@@ -286,5 +286,17 @@
   "canal": "Réseaux sociaux",
   "action": "Gabarits sociaux passés à la charte du site ; 6 carrousels v3 (dont le 7) et visuels de la campagne Meta re-rendus ; direction-artistique § 5 réécrite (référence unique : le site). Rien publié",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-02",
+  "canal": "Réseaux sociaux",
+  "action": "Bilan J+7 du lancement : Instagram 0 → 23 abonnés, 5 à 8 « J'aime » par post, portée 7 j 56 comptes, 2 clics vers le site ; Facebook 782 abonnés, 14 visites du site sur 28 j ; 0 conversion venue des réseaux (mesure/bilan-reseaux-j7-2026-11-02.md)",
+  "statut": "fait"
+ },
+ {
+  "date": "2026-11-02",
+  "canal": "Mesure",
+  "action": "Relevé hebdomadaire data/snapshots/2026-11-02.json (agrégats backend toujours absents)",
+  "statut": "fait"
  }
 ]

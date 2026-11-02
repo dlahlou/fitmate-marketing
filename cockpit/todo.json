@@ -572,7 +572,7 @@
   "qui": "Claude",
   "canal": "Mesure",
   "priorite": 3,
-  "action": "Relevé hebdomadaire (scripts.snapshot) chaque lundi, commité dans data/snapshots",
+  "action": "Relevé hebdomadaire (scripts.snapshot) chaque lundi, commité dans data/snapshots (dernier : 02/11)",
   "impact": "Base des comparaisons avant/après",
   "lien": "",
   "statut": "à faire"
@@ -605,7 +605,7 @@
   "action": "Bilan à J+7 des posts de lancement (portée, abonnés, clics vers le site en GA4) et ajustement des formats",
   "impact": "Savoir quels sujets prennent avant de produire décembre",
   "lien": "",
-  "statut": "à faire"
+  "statut": "fait"
  },
  {
   "id": "backend-etrechy",
@@ -947,5 +947,15 @@
   "impact": "Cohérence de marque de la campagne Meta",
   "lien": "",
   "statut": "à faire"
+ },
+ {
+  "id": "bilan-v3",
+  "qui": "Claude",
+  "canal": "Réseaux sociaux",
+  "priorite": 3,
+  "action": "Bilan réseaux 2 semaines après la première publication v3 : portée, abonnés, visites par post (utm v3-<id>), conversions GA4",
+  "impact": "Choisir les formats qui amènent des visites et des inscriptions",
+  "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/mesure/bilan-reseaux-j7-2026-11-02.md",
+  "statut": "bloqué : publications v3 en attente de l'accord de Driss"
  }
 ]

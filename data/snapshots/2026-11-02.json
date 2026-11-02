@@ -1,0 +1,2489 @@
+{
+ "date": "2026-11-02",
+ "fenetre": [
+  "2026-10-05",
+  "2026-11-01"
+ ],
+ "donnees": {
+  "play_fiche": {
+   "en-GB": {
+    "title": "Fitmates",
+    "shortDescription": "Join group hikes, runs and padel games nearby. Find sport buddies, make friends.",
+    "images": {
+     "phoneScreenshots": 6,
+     "tenInchScreenshots": 0,
+     "featureGraphic": 1
+    }
+   },
+   "fr-FR": {
+    "title": "Fitmates",
+    "shortDescription": "Randos et sorties sport en groupe : trouve des partenaires et fais-toi des amis",
+    "images": {
+     "phoneScreenshots": 0,
+     "tenInchScreenshots": 0,
+     "featureGraphic": 0
+    }
+   }
+  },
+  "play_avis_7j": {},
+  "play_store_performance": {},
+  "ios_avis": {
+   "total": 1,
+   "par_note": {
+    "5": 1
+   }
+  },
+  "ios_note_publique_fr": {
+   "avg": 5,
+   "count": 3
+  },
+  "ios_analytics": [
+   "App Store Discovery and Engagement Standard",
+   "App Store Discovery and Engagement Detailed",
+   "App Store Web Preview Engagement Standard",
+   "App Store Web Preview Engagement Detailed",
+   "Retention Messaging"
+  ],
+  "search_console_requetes": [
+   {
+    "query": "fitmates",
+    "clicks": 14,
+    "impressions": 31,
+    "ctr": 0.45161290322580644,
+    "position": 1.4838709677419355
+   },
+   {
+    "query": "association de randonnée autour de moi",
+    "clicks": 1,
+    "impressions": 1,
+    "ctr": 1,
+    "position": 8
+   },
+   {
+    "query": "club running paris gratuit",
+    "clicks": 1,
+    "impressions": 3,
+    "ctr": 0.3333333333333333,
+    "position": 1.3333333333333333
+   },
+   {
+    "query": "reseau social sport",
+    "clicks": 1,
+    "impressions": 7,
+    "ctr": 0.14285714285714285,
+    "position": 4.714285714285714
+   },
+   {
+    "query": "340 rue des pyrénées",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 36
+   },
+   {
+    "query": "340 rue des pyrénées 75020 paris",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 13
+   },
+   {
+    "query": "4padel bordeaux",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 57
+   },
+   {
+    "query": "4padel paris 20",
+    "clicks": 0,
+    "impressions": 5,
+    "ctr": 0,
+    "position": 10
+   },
+   {
+    "query": "activite padel rhone alpes",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 73
+   },
+   {
+    "query": "application sport multi ecrans simultanes",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 41
+   },
+   {
+    "query": "association marche à pied autour de moi",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 9
+   },
+   {
+    "query": "association running autour de moi",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 1
+   },
+   {
+    "query": "basketball mates",
+    "clicks": 0,
+    "impressions": 20,
+    "ctr": 0,
+    "position": 7
+   },
+   {
+    "query": "bloc bleau 77",
+    "clicks": 0,
+    "impressions": 88,
+    "ctr": 0,
+    "position": 42.94318181818182
+   },
+   {
+    "query": "calanque escalade",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 42
+   },
+   {
+    "query": "calanques escalade",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 40
+   },
+   {
+    "query": "calories marche",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 85.5
+   },
+   {
+    "query": "chemin de randonnée au mont veyrier",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 56
+   },
+   {
+    "query": "chemin de stevenson distance totale",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 31
+   },
+   {
+    "query": "club de course à pied autour de moi",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 12
+   },
+   {
+    "query": "club de randonnée autour de moi",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 10.5
+   },
+   {
+    "query": "club de randonnée facile nice",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 38
+   },
+   {
+    "query": "club de running paris",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 30.75
+   },
+   {
+    "query": "club padel lyon",
+    "clicks": 0,
+    "impressions": 17,
+    "ctr": 0,
+    "position": 72.11764705882354
+   },
+   {
+    "query": "club randonnée autour de moi",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 9.5
+   },
+   {
+    "query": "club running autour de moi",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 11
+   },
+   {
+    "query": "club running paris",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 13
+   },
+   {
+    "query": "combien de temps de marche pour maigrir",
+    "clicks": 0,
+    "impressions": 11,
+    "ctr": 0,
+    "position": 15.545454545454545
+   },
+   {
+    "query": "combien de temps faut il marcher pour perdre du poids",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 12
+   },
+   {
+    "query": "combien de temps marcher pour perdre du poids",
+    "clicks": 0,
+    "impressions": 6,
+    "ctr": 0,
+    "position": 9.833333333333334
+   },
+   {
+    "query": "combien de temps pour perdre 20 kg en marchant",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 7
+   },
+   {
+    "query": "comment avoir des amis",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 52
+   },
+   {
+    "query": "comment maigrir en marchant ?",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 25
+   },
+   {
+    "query": "comment organiser une randonnée pédestre",
+    "clicks": 0,
+    "impressions": 6,
+    "ctr": 0,
+    "position": 32.66666666666667
+   },
+   {
+    "query": "comment rencontrer des gens",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 70
+   },
+   {
+    "query": "comment rester motivé sport",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 12
+   },
+   {
+    "query": "comment se faire des amie",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 51
+   },
+   {
+    "query": "comment se faire des amis",
+    "clicks": 0,
+    "impressions": 8,
+    "ctr": 0,
+    "position": 28.5
+   },
+   {
+    "query": "comment se faire des amis adulte",
+    "clicks": 0,
+    "impressions": 5,
+    "ctr": 0,
+    "position": 39.8
+   },
+   {
+    "query": "comment se faire des amis quand on est timide",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 10
+   },
+   {
+    "query": "courir gare du nord",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 35
+   },
+   {
+    "query": "cours padel toulouse adulte",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 46
+   },
+   {
+    "query": "course en groupe",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 42
+   },
+   {
+    "query": "course essonne",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 25
+   },
+   {
+    "query": "courts padel paris",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 40.5
+   },
+   {
+    "query": "depart gr20",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 11.333333333333334
+   },
+   {
+    "query": "distance gr34",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 99
+   },
+   {
+    "query": "escalade calanque",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 34
+   },
+   {
+    "query": "escalade calanques",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 46.333333333333336
+   },
+   {
+    "query": "escalade seine et marne",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 19
+   },
+   {
+    "query": "faire des amis",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 77
+   },
+   {
+    "query": "faire le gr20 en groupe",
+    "clicks": 0,
+    "impressions": 7,
+    "ctr": 0,
+    "position": 15.285714285714286
+   },
+   {
+    "query": "free running club",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 11
+   },
+   {
+    "query": "gr 20 en 6 jours",
+    "clicks": 0,
+    "impressions": 6,
+    "ctr": 0,
+    "position": 41.666666666666664
+   },
+   {
+    "query": "gr 34",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 82.66666666666667
+   },
+   {
+    "query": "gr 34 bretagne",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 60
+   },
+   {
+    "query": "gr 34 carte",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 65
+   },
+   {
+    "query": "gr 34 combien de temps",
+    "clicks": 0,
+    "impressions": 6,
+    "ctr": 0,
+    "position": 71.5
+   },
+   {
+    "query": "gr 34 morbihan carte",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 46
+   },
+   {
+    "query": "gr cote bretonne",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 44
+   },
+   {
+    "query": "gr etretat",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 31
+   },
+   {
+    "query": "gr20 1 semaine",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 44
+   },
+   {
+    "query": "gr20 avec portage",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 41.25
+   },
+   {
+    "query": "gr20 en groupe",
+    "clicks": 0,
+    "impressions": 13,
+    "ctr": 0,
+    "position": 16.307692307692307
+   },
+   {
+    "query": "gr20 groupe",
+    "clicks": 0,
+    "impressions": 8,
+    "ctr": 0,
+    "position": 19
+   },
+   {
+    "query": "gr20 organisé",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 30.5
+   },
+   {
+    "query": "gr20 randonnée organisée",
+    "clicks": 0,
+    "impressions": 5,
+    "ctr": 0,
+    "position": 36.4
+   },
+   {
+    "query": "gr34",
+    "clicks": 0,
+    "impressions": 6,
+    "ctr": 0,
+    "position": 53.666666666666664
+   },
+   {
+    "query": "gr34 crozon 6 jours",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 37
+   },
+   {
+    "query": "gr34 durée",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 83.5
+   },
+   {
+    "query": "gr34 longueur",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 56
+   },
+   {
+    "query": "gr34 morbihan étapes",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 32
+   },
+   {
+    "query": "gr34 randonnée",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 28
+   },
+   {
+    "query": "gr70 étapes",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 36
+   },
+   {
+    "query": "grande randonnee 20",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 9.5
+   },
+   {
+    "query": "grande randonnée 20",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 18.5
+   },
+   {
+    "query": "grande randonnée 34",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 48
+   },
+   {
+    "query": "grande randonnée bretagne",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 37
+   },
+   {
+    "query": "greenpoint nice",
+    "clicks": 0,
+    "impressions": 5,
+    "ctr": 0,
+    "position": 10.6
+   },
+   {
+    "query": "groupe de randonnée autour de moi",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 9
+   },
+   {
+    "query": "grp20",
+    "clicks": 0,
+    "impressions": 10,
+    "ctr": 0,
+    "position": 70.8
+   },
+   {
+    "query": "gîte d'étape gr70",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 90
+   },
+   {
+    "query": "je me sens seule",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 23
+   },
+   {
+    "query": "je me sens si seule",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 26
+   },
+   {
+    "query": "je me sent seul",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 33
+   },
+   {
+    "query": "jouer au padel rhone alpes",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 34
+   },
+   {
+    "query": "la malle postale gr34",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 45
+   },
+   {
+    "query": "lac blanc chamonix automne",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 11
+   },
+   {
+    "query": "les randonneurs toulousains",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 100
+   },
+   {
+    "query": "longueur gr 34",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 10
+   },
+   {
+    "query": "lyon padel",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 62
+   },
+   {
+    "query": "magasin padel nantes",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 6
+   },
+   {
+    "query": "marche pour maigrir",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 3
+   },
+   {
+    "query": "mates sport",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 7
+   },
+   {
+    "query": "navette blanc martel",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 54
+   },
+   {
+    "query": "navette blanc-martel",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 35
+   },
+   {
+    "query": "navette parc du verdon",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 23
+   },
+   {
+    "query": "nice randonnée prochaine sortie",
+    "clicks": 0,
+    "impressions": 25,
+    "ctr": 0,
+    "position": 8.96
+   },
+   {
+    "query": "nissa padel",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 29
+   },
+   {
+    "query": "ou jouer au padel",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 1
+   },
+   {
+    "query": "ou jouer au padel autour de moi",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 7
+   },
+   {
+    "query": "ou jouer au padel lyon",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 97
+   },
+   {
+    "query": "ou jouer au padel rhone alpes",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 37.5
+   },
+   {
+    "query": "paddel autour de moi",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 10
+   },
+   {
+    "query": "paddle lyon",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 33
+   },
+   {
+    "query": "padel",
+    "clicks": 0,
+    "impressions": 24,
+    "ctr": 0,
+    "position": 10.75
+   },
+   {
+    "query": "padel autour de moi",
+    "clicks": 0,
+    "impressions": 5,
+    "ctr": 0,
+    "position": 17.6
+   },
+   {
+    "query": "padel balard",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 11
+   },
+   {
+    "query": "padel bignon",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 69
+   },
+   {
+    "query": "padel bordeaux",
+    "clicks": 0,
+    "impressions": 13,
+    "ctr": 0,
+    "position": 29
+   },
+   {
+    "query": "padel castelnau",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 26
+   },
+   {
+    "query": "padel castelnau le lez",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 22.666666666666668
+   },
+   {
+    "query": "padel couvert",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 13
+   },
+   {
+    "query": "padel couvert autour de moi",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 13
+   },
+   {
+    "query": "padel la valentine",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 29
+   },
+   {
+    "query": "padel lyon",
+    "clicks": 0,
+    "impressions": 13,
+    "ctr": 0,
+    "position": 79.61538461538461
+   },
+   {
+    "query": "padel lyon indoor",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 73.25
+   },
+   {
+    "query": "padel mairie de paris",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 13
+   },
+   {
+    "query": "padel malakoff",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 10
+   },
+   {
+    "query": "padel montpellier",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 18
+   },
+   {
+    "query": "padel nantes",
+    "clicks": 0,
+    "impressions": 5,
+    "ctr": 0,
+    "position": 75.4
+   },
+   {
+    "query": "padel paris 12",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 87
+   },
+   {
+    "query": "padel paris 16",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 28
+   },
+   {
+    "query": "padel paris 20",
+    "clicks": 0,
+    "impressions": 6,
+    "ctr": 0,
+    "position": 27.166666666666668
+   },
+   {
+    "query": "padel paris prix",
+    "clicks": 0,
+    "impressions": 9,
+    "ctr": 0,
+    "position": 8.222222222222221
+   },
+   {
+    "query": "padel paris tour eiffel",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 47
+   },
+   {
+    "query": "padel paris tour eiffel prix",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 10
+   },
+   {
+    "query": "padel ronchin",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 40.5
+   },
+   {
+    "query": "padel seclin",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 43.666666666666664
+   },
+   {
+    "query": "padel tennis lyon",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 73.75
+   },
+   {
+    "query": "padel terrain",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 10
+   },
+   {
+    "query": "padel toulouse",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 68
+   },
+   {
+    "query": "padel tour eiffel",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 44
+   },
+   {
+    "query": "padel tour eiffel prix",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 9
+   },
+   {
+    "query": "paris padel 20",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 38
+   },
+   {
+    "query": "partenaire d'entraînement",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 6
+   },
+   {
+    "query": "perdre du poids en marchant",
+    "clicks": 0,
+    "impressions": 5,
+    "ctr": 0,
+    "position": 37.4
+   },
+   {
+    "query": "piste de padel",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 8
+   },
+   {
+    "query": "piste padel",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 7
+   },
+   {
+    "query": "pistes de padel",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 7
+   },
+   {
+    "query": "plateforme sport",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 69.5
+   },
+   {
+    "query": "plus long",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 3
+   },
+   {
+    "query": "pour rencontrer du monde",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 5
+   },
+   {
+    "query": "prix padel paris",
+    "clicks": 0,
+    "impressions": 5,
+    "ctr": 0,
+    "position": 8.2
+   },
+   {
+    "query": "quand on se sent seule",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 34
+   },
+   {
+    "query": "rando 92",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 37
+   },
+   {
+    "query": "rando essonne",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 35
+   },
+   {
+    "query": "rando etretat",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 48
+   },
+   {
+    "query": "randonnee bauges",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 3
+   },
+   {
+    "query": "randonnée 91",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 28
+   },
+   {
+    "query": "randonnée essonne",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 17
+   },
+   {
+    "query": "randonnée etretat",
+    "clicks": 0,
+    "impressions": 25,
+    "ctr": 0,
+    "position": 16.36
+   },
+   {
+    "query": "randonnée falaise etretat",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 22
+   },
+   {
+    "query": "randonnée falaises étretat",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 47.333333333333336
+   },
+   {
+    "query": "randonnée gr20 organisé",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 24
+   },
+   {
+    "query": "randonnée gr34",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 46.5
+   },
+   {
+    "query": "randonnée grand balcon sud chamonix",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 29.5
+   },
+   {
+    "query": "randonnée hauts de seine",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 16.5
+   },
+   {
+    "query": "randonnée le havre etretat",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 43
+   },
+   {
+    "query": "randonnée nice",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 35
+   },
+   {
+    "query": "randonnée seine et marne",
+    "clicks": 0,
+    "impressions": 5,
+    "ctr": 0,
+    "position": 20.6
+   },
+   {
+    "query": "randonnée seine saint denis",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 14
+   },
+   {
+    "query": "randonnée stevenson",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 34
+   },
+   {
+    "query": "randonnée yvelines",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 26
+   },
+   {
+    "query": "randonnées calanques marseille",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 65
+   },
+   {
+    "query": "randonnées nice",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 35.666666666666664
+   },
+   {
+    "query": "rencontrer du monde",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 8.333333333333332
+   },
+   {
+    "query": "run club",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 10
+   },
+   {
+    "query": "run clubs",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 1
+   },
+   {
+    "query": "running club autour de moi",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 10
+   },
+   {
+    "query": "running club paris",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 35
+   },
+   {
+    "query": "réseau social sportif",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 4.5
+   },
+   {
+    "query": "réseau sportif",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 15
+   },
+   {
+    "query": "réservation padel lyon",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 11.5
+   },
+   {
+    "query": "se faire de vrais amis",
+    "clicks": 0,
+    "impressions": 6,
+    "ctr": 0,
+    "position": 63
+   },
+   {
+    "query": "se faire des amies",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 35
+   },
+   {
+    "query": "se faire des amis",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 21
+   },
+   {
+    "query": "se faire des amis adulte",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 46
+   },
+   {
+    "query": "se retrouver seul",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 26
+   },
+   {
+    "query": "se sent seul",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 23.5
+   },
+   {
+    "query": "se sent seule",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 26
+   },
+   {
+    "query": "se sentir seul",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 37
+   },
+   {
+    "query": "se sentir seule",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 30
+   },
+   {
+    "query": "sentier blanc martel",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 77
+   },
+   {
+    "query": "sentier blanc martel sans navette",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 12
+   },
+   {
+    "query": "sentier blanc-martel fermé",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 10
+   },
+   {
+    "query": "sentier martel",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 76
+   },
+   {
+    "query": "sortie randonnée groupe",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 11
+   },
+   {
+    "query": "sortie sportive",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 9
+   },
+   {
+    "query": "sortie velo groupe",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 28
+   },
+   {
+    "query": "sortie vélo en groupe",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 37
+   },
+   {
+    "query": "sortie vélo paris groupe",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 10
+   },
+   {
+    "query": "sortir de la solitude",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 13
+   },
+   {
+    "query": "sport en groupe",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 64.66666666666666
+   },
+   {
+    "query": "sportfield lyon",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 42
+   },
+   {
+    "query": "straava",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 8
+   },
+   {
+    "query": "strava",
+    "clicks": 0,
+    "impressions": 22,
+    "ctr": 0,
+    "position": 11.454545454545455
+   },
+   {
+    "query": "strava gratuit",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 30
+   },
+   {
+    "query": "strava étudiant",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 10
+   },
+   {
+    "query": "strave",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 8
+   }
+  ],
+  "search_console_pages": [
+   {
+    "page": "https://www.fitmates.net/",
+    "clicks": 11,
+    "impressions": 57,
+    "ctr": 0.19298245614035087,
+    "position": 4.719298245614035
+   },
+   {
+    "page": "https://www.fitmates.net/run-clubs-paris",
+    "clicks": 10,
+    "impressions": 111,
+    "ctr": 0.09009009009009009,
+    "position": 5.954954954954955
+   },
+   {
+    "page": "https://www.fitmates.net/applications-sport-a-plusieurs",
+    "clicks": 7,
+    "impressions": 61,
+    "ctr": 0.11475409836065574,
+    "position": 6.852459016393443
+   },
+   {
+    "page": "https://www.fitmates.net/randonnees-week-end-ile-de-france",
+    "clicks": 7,
+    "impressions": 27,
+    "ctr": 0.25925925925925924,
+    "position": 4.62962962962963
+   },
+   {
+    "page": "https://www.fitmates.net/reseau-social-sportif",
+    "clicks": 7,
+    "impressions": 97,
+    "ctr": 0.07216494845360824,
+    "position": 4.927835051546392
+   },
+   {
+    "page": "https://fitmates.net/",
+    "clicks": 5,
+    "impressions": 27,
+    "ctr": 0.18518518518518517,
+    "position": 3.4074074074074074
+   },
+   {
+    "page": "https://www.fitmates.net/escalade/fontainebleau",
+    "clicks": 4,
+    "impressions": 148,
+    "ctr": 0.02702702702702703,
+    "position": 27.97972972972973
+   },
+   {
+    "page": "https://www.fitmates.net/evenements",
+    "clicks": 4,
+    "impressions": 38,
+    "ctr": 0.10526315789473684,
+    "position": 4.789473684210526
+   },
+   {
+    "page": "https://www.fitmates.net/escalade/calanques",
+    "clicks": 3,
+    "impressions": 52,
+    "ctr": 0.057692307692307696,
+    "position": 12.384615384615385
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/chamonix",
+    "clicks": 2,
+    "impressions": 34,
+    "ctr": 0.058823529411764705,
+    "position": 9.705882352941176
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/cote-d-opale",
+    "clicks": 2,
+    "impressions": 17,
+    "ctr": 0.11764705882352941,
+    "position": 8.647058823529413
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/grenoble",
+    "clicks": 2,
+    "impressions": 9,
+    "ctr": 0.2222222222222222,
+    "position": 7.888888888888889
+   },
+   {
+    "page": "https://www.fitmates.net/sport/course-a-pied/val-de-marne",
+    "clicks": 2,
+    "impressions": 10,
+    "ctr": 0.2,
+    "position": 5.6
+   },
+   {
+    "page": "https://www.fitmates.net/sport/randonnee/val-de-marne",
+    "clicks": 2,
+    "impressions": 17,
+    "ctr": 0.11764705882352941,
+    "position": 5.529411764705882
+   },
+   {
+    "page": "https://fitmates.net/sport/randonnee",
+    "clicks": 1,
+    "impressions": 8,
+    "ctr": 0.125,
+    "position": 4.25
+   },
+   {
+    "page": "https://www.fitmates.net/activites-pour-rencontrer-du-monde",
+    "clicks": 1,
+    "impressions": 41,
+    "ctr": 0.024390243902439025,
+    "position": 6.463414634146342
+   },
+   {
+    "page": "https://www.fitmates.net/cs/news/xxx-%E0%A4%AA%E0%A5%8B%E0%A4%B0%E0%A5%8D%E0%A4%A8-%E0%A4%B5%E0%A4%BF%E0%A4%A1%E0%A5%8B%E0%A4%B8-c2lmz8.html?ojuz",
+    "clicks": 1,
+    "impressions": 18,
+    "ctr": 0.05555555555555555,
+    "position": 4.722222222222222
+   },
+   {
+    "page": "https://www.fitmates.net/evenements/randonnee-a-sucy-en-brie-2026-11-01-cb6ac0cf",
+    "clicks": 1,
+    "impressions": 4,
+    "ctr": 0.25,
+    "position": 4.5
+   },
+   {
+    "page": "https://www.fitmates.net/evenements/randonnee-de-20km-2026-10-25-5ec1d794",
+    "clicks": 1,
+    "impressions": 2,
+    "ctr": 0.5,
+    "position": 2.5
+   },
+   {
+    "page": "https://www.fitmates.net/evenements/randonnee-etrechy-dourdan-2026-10-31-2f03d5a4",
+    "clicks": 1,
+    "impressions": 5,
+    "ctr": 0.2,
+    "position": 4.8
+   },
+   {
+    "page": "https://www.fitmates.net/organiser",
+    "clicks": 1,
+    "impressions": 23,
+    "ctr": 0.043478260869565216,
+    "position": 5.956521739130435
+   },
+   {
+    "page": "https://www.fitmates.net/organiser/run-club",
+    "clicks": 1,
+    "impressions": 13,
+    "ctr": 0.07692307692307693,
+    "position": 5.153846153846154
+   },
+   {
+    "page": "https://www.fitmates.net/padel/bordeaux",
+    "clicks": 1,
+    "impressions": 36,
+    "ctr": 0.027777777777777776,
+    "position": 17.083333333333332
+   },
+   {
+    "page": "https://www.fitmates.net/privacy-policy.html",
+    "clicks": 1,
+    "impressions": 3,
+    "ctr": 0.3333333333333333,
+    "position": 1.3333333333333333
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/calanques-marseille",
+    "clicks": 1,
+    "impressions": 12,
+    "ctr": 0.08333333333333333,
+    "position": 12.75
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/etretat",
+    "clicks": 1,
+    "impressions": 56,
+    "ctr": 0.017857142857142856,
+    "position": 16.57142857142857
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/foret-de-rambouillet",
+    "clicks": 1,
+    "impressions": 9,
+    "ctr": 0.1111111111111111,
+    "position": 8.444444444444445
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/toulouse",
+    "clicks": 1,
+    "impressions": 7,
+    "ctr": 0.14285714285714285,
+    "position": 17.857142857142858
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/vercors",
+    "clicks": 1,
+    "impressions": 5,
+    "ctr": 0.2,
+    "position": 6.4
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/vexin",
+    "clicks": 1,
+    "impressions": 3,
+    "ctr": 0.3333333333333333,
+    "position": 9.666666666666666
+   },
+   {
+    "page": "https://www.fitmates.net/sport/course-a-pied/hauts-de-seine",
+    "clicks": 1,
+    "impressions": 7,
+    "ctr": 0.14285714285714285,
+    "position": 5
+   },
+   {
+    "page": "https://www.fitmates.net/sport/escalade/paris",
+    "clicks": 1,
+    "impressions": 6,
+    "ctr": 0.16666666666666666,
+    "position": 7.5
+   },
+   {
+    "page": "https://www.fitmates.net/sport/padel/paris",
+    "clicks": 1,
+    "impressions": 117,
+    "ctr": 0.008547008547008548,
+    "position": 9.623931623931623
+   },
+   {
+    "page": "https://www.fitmates.net/sport/randonnee/essonne",
+    "clicks": 1,
+    "impressions": 11,
+    "ctr": 0.09090909090909091,
+    "position": 11.272727272727273
+   },
+   {
+    "page": "https://app.fitmates.net/",
+    "clicks": 0,
+    "impressions": 12,
+    "ctr": 0,
+    "position": 7.166666666666667
+   },
+   {
+    "page": "https://www.fitmates.net/aboutus.html",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 3
+   },
+   {
+    "page": "https://www.fitmates.net/club-de-randonnee",
+    "clicks": 0,
+    "impressions": 5,
+    "ctr": 0,
+    "position": 8.6
+   },
+   {
+    "page": "https://www.fitmates.net/comment-se-faire-des-amis",
+    "clicks": 0,
+    "impressions": 43,
+    "ctr": 0,
+    "position": 30.302325581395348
+   },
+   {
+    "page": "https://www.fitmates.net/courir-en-groupe-paris",
+    "clicks": 0,
+    "impressions": 7,
+    "ctr": 0,
+    "position": 19
+   },
+   {
+    "page": "https://www.fitmates.net/evenements/rando-caillebotte-2026-10-31-f6847c1c",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 2
+   },
+   {
+    "page": "https://www.fitmates.net/evenements/rando-culturelle-2026-11-01-d5ec62dd",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 8
+   },
+   {
+    "page": "https://www.fitmates.net/evenements/randonnee-2-etapes-de-22km-ou-18-2026-11-01-f288e298",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 6
+   },
+   {
+    "page": "https://www.fitmates.net/evenements/randonnee-a-l-isle-adam-2026-10-31-9b633837",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 7
+   },
+   {
+    "page": "https://www.fitmates.net/evenements/randonnee-autour-de-gif-2026-10-25-993bd143",
+    "clicks": 0,
+    "impressions": 11,
+    "ctr": 0,
+    "position": 4
+   },
+   {
+    "page": "https://www.fitmates.net/evenements/randonnee-bois-de-mezerolles-2026-11-01-cda3f2e8",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 7
+   },
+   {
+    "page": "https://www.fitmates.net/evenements/randonnee-boucle-depart-villeneuve-le-comte-2026-10-30-493aed24",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 11
+   },
+   {
+    "page": "https://www.fitmates.net/evenements/randonnee-de-23km-2026-10-31-e55af77f",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 18
+   },
+   {
+    "page": "https://www.fitmates.net/motivation-sport",
+    "clicks": 0,
+    "impressions": 14,
+    "ctr": 0,
+    "position": 8.785714285714285
+   },
+   {
+    "page": "https://www.fitmates.net/organiser/club-association",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 7
+   },
+   {
+    "page": "https://www.fitmates.net/organiser/groupe-randonnee",
+    "clicks": 0,
+    "impressions": 29,
+    "ctr": 0,
+    "position": 21.517241379310345
+   },
+   {
+    "page": "https://www.fitmates.net/padel/lille",
+    "clicks": 0,
+    "impressions": 12,
+    "ctr": 0,
+    "position": 27
+   },
+   {
+    "page": "https://www.fitmates.net/padel/lyon",
+    "clicks": 0,
+    "impressions": 99,
+    "ctr": 0,
+    "position": 46.61616161616162
+   },
+   {
+    "page": "https://www.fitmates.net/padel/marseille",
+    "clicks": 0,
+    "impressions": 16,
+    "ctr": 0,
+    "position": 8.6875
+   },
+   {
+    "page": "https://www.fitmates.net/padel/montpellier",
+    "clicks": 0,
+    "impressions": 12,
+    "ctr": 0,
+    "position": 14.083333333333334
+   },
+   {
+    "page": "https://www.fitmates.net/padel/nantes",
+    "clicks": 0,
+    "impressions": 24,
+    "ctr": 0,
+    "position": 25.541666666666668
+   },
+   {
+    "page": "https://www.fitmates.net/padel/nice",
+    "clicks": 0,
+    "impressions": 14,
+    "ctr": 0,
+    "position": 12.5
+   },
+   {
+    "page": "https://www.fitmates.net/padel/paris-15",
+    "clicks": 0,
+    "impressions": 7,
+    "ctr": 0,
+    "position": 9.714285714285714
+   },
+   {
+    "page": "https://www.fitmates.net/padel/paris-16",
+    "clicks": 0,
+    "impressions": 13,
+    "ctr": 0,
+    "position": 27.46153846153846
+   },
+   {
+    "page": "https://www.fitmates.net/padel/paris-20",
+    "clicks": 0,
+    "impressions": 15,
+    "ctr": 0,
+    "position": 20.8
+   },
+   {
+    "page": "https://www.fitmates.net/padel/toulouse",
+    "clicks": 0,
+    "impressions": 25,
+    "ctr": 0,
+    "position": 18.76
+   },
+   {
+    "page": "https://www.fitmates.net/perdre-du-poids-en-marchant",
+    "clicks": 0,
+    "impressions": 48,
+    "ctr": 0,
+    "position": 16.104166666666664
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee-en-train-depuis-paris",
+    "clicks": 0,
+    "impressions": 6,
+    "ctr": 0,
+    "position": 8.666666666666668
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee-hiver-ile-de-france",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 1
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/annecy",
+    "clicks": 0,
+    "impressions": 6,
+    "ctr": 0,
+    "position": 15.5
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/ardeche",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 1
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/autour-de-paris",
+    "clicks": 0,
+    "impressions": 6,
+    "ctr": 0,
+    "position": 7.833333333333333
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/auvergne",
+    "clicks": 0,
+    "impressions": 7,
+    "ctr": 0,
+    "position": 7.428571428571429
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/bauges",
+    "clicks": 0,
+    "impressions": 9,
+    "ctr": 0,
+    "position": 7.666666666666667
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/chartreuse",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 6.5
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/chemin-de-stevenson",
+    "clicks": 0,
+    "impressions": 16,
+    "ctr": 0,
+    "position": 20.4375
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/fontainebleau",
+    "clicks": 0,
+    "impressions": 24,
+    "ctr": 0,
+    "position": 5
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/gorges-du-verdon",
+    "clicks": 0,
+    "impressions": 21,
+    "ctr": 0,
+    "position": 23.047619047619047
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/gr20",
+    "clicks": 0,
+    "impressions": 77,
+    "ctr": 0,
+    "position": 28.31168831168831
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/gr34",
+    "clicks": 0,
+    "impressions": 46,
+    "ctr": 0,
+    "position": 47.08695652173913
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/jura",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 3
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/la-reunion",
+    "clicks": 0,
+    "impressions": 5,
+    "ctr": 0,
+    "position": 6.2
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/lyon",
+    "clicks": 0,
+    "impressions": 6,
+    "ctr": 0,
+    "position": 10
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/nice",
+    "clicks": 0,
+    "impressions": 33,
+    "ctr": 0,
+    "position": 13.757575757575758
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/pays-basque",
+    "clicks": 0,
+    "impressions": 12,
+    "ctr": 0,
+    "position": 6.416666666666667
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/pyrenees",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 2
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/vallee-de-chevreuse",
+    "clicks": 0,
+    "impressions": 10,
+    "ctr": 0,
+    "position": 7.6
+   },
+   {
+    "page": "https://www.fitmates.net/randonnee/vosges",
+    "clicks": 0,
+    "impressions": 8,
+    "ctr": 0,
+    "position": 7.625
+   },
+   {
+    "page": "https://www.fitmates.net/se-faire-des-amis-par-le-sport",
+    "clicks": 0,
+    "impressions": 7,
+    "ctr": 0,
+    "position": 6.428571428571429
+   },
+   {
+    "page": "https://www.fitmates.net/se-sentir-seul",
+    "clicks": 0,
+    "impressions": 29,
+    "ctr": 0,
+    "position": 16.689655172413794
+   },
+   {
+    "page": "https://www.fitmates.net/sport/basketball",
+    "clicks": 0,
+    "impressions": 20,
+    "ctr": 0,
+    "position": 7
+   },
+   {
+    "page": "https://www.fitmates.net/sport/course-a-pied",
+    "clicks": 0,
+    "impressions": 9,
+    "ctr": 0,
+    "position": 10.11111111111111
+   },
+   {
+    "page": "https://www.fitmates.net/sport/course-a-pied/essonne",
+    "clicks": 0,
+    "impressions": 12,
+    "ctr": 0,
+    "position": 10.25
+   },
+   {
+    "page": "https://www.fitmates.net/sport/course-a-pied/paris",
+    "clicks": 0,
+    "impressions": 6,
+    "ctr": 0,
+    "position": 14.666666666666666
+   },
+   {
+    "page": "https://www.fitmates.net/sport/course-a-pied/seine-saint-denis",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 9
+   },
+   {
+    "page": "https://www.fitmates.net/sport/escalade",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 7.25
+   },
+   {
+    "page": "https://www.fitmates.net/sport/escalade/seine-et-marne",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 19
+   },
+   {
+    "page": "https://www.fitmates.net/sport/fitness",
+    "clicks": 0,
+    "impressions": 13,
+    "ctr": 0,
+    "position": 7.538461538461538
+   },
+   {
+    "page": "https://www.fitmates.net/sport/football",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 7.75
+   },
+   {
+    "page": "https://www.fitmates.net/sport/marche-nordique",
+    "clicks": 0,
+    "impressions": 12,
+    "ctr": 0,
+    "position": 6.75
+   },
+   {
+    "page": "https://www.fitmates.net/sport/natation",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 5.75
+   },
+   {
+    "page": "https://www.fitmates.net/sport/padel",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 7
+   },
+   {
+    "page": "https://www.fitmates.net/sport/randonnee",
+    "clicks": 0,
+    "impressions": 10,
+    "ctr": 0,
+    "position": 4.7
+   },
+   {
+    "page": "https://www.fitmates.net/sport/randonnee/hauts-de-seine",
+    "clicks": 0,
+    "impressions": 10,
+    "ctr": 0,
+    "position": 17.1
+   },
+   {
+    "page": "https://www.fitmates.net/sport/randonnee/paris",
+    "clicks": 0,
+    "impressions": 13,
+    "ctr": 0,
+    "position": 7
+   },
+   {
+    "page": "https://www.fitmates.net/sport/randonnee/seine-et-marne",
+    "clicks": 0,
+    "impressions": 21,
+    "ctr": 0,
+    "position": 12.095238095238095
+   },
+   {
+    "page": "https://www.fitmates.net/sport/randonnee/seine-saint-denis",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 14
+   },
+   {
+    "page": "https://www.fitmates.net/sport/randonnee/yvelines",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 19.5
+   },
+   {
+    "page": "https://www.fitmates.net/sport/tennis",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 9.333333333333334
+   },
+   {
+    "page": "https://www.fitmates.net/sport/trail",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 5
+   },
+   {
+    "page": "https://www.fitmates.net/sport/trail/seine-et-marne",
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0,
+    "position": 20
+   },
+   {
+    "page": "https://www.fitmates.net/sport/velo",
+    "clicks": 0,
+    "impressions": 19,
+    "ctr": 0,
+    "position": 13.736842105263158
+   },
+   {
+    "page": "https://www.fitmates.net/sport/velo/paris",
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0,
+    "position": 10.5
+   },
+   {
+    "page": "https://www.fitmates.net/sport/velo/val-de-marne",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 5.666666666666667
+   },
+   {
+    "page": "https://www.fitmates.net/sport/yoga",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 5
+   },
+   {
+    "page": "https://www.fitmates.net/sports",
+    "clicks": 0,
+    "impressions": 26,
+    "ctr": 0,
+    "position": 8.884615384615385
+   },
+   {
+    "page": "https://www.fitmates.net/strava-ou-fitmates",
+    "clicks": 0,
+    "impressions": 39,
+    "ctr": 0,
+    "position": 12.307692307692308
+   },
+   {
+    "page": "https://www.fitmates.net/terms.html",
+    "clicks": 0,
+    "impressions": 3,
+    "ctr": 0,
+    "position": 4.333333333333334
+   },
+   {
+    "page": "https://www.fitmates.net/tom/mad/video-xxx-porn-vidos-dox-kim-06.html?edu",
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0,
+    "position": 7
+   },
+   {
+    "page": "https://www.fitmates.net/trail/fontainebleau",
+    "clicks": 0,
+    "impressions": 12,
+    "ctr": 0,
+    "position": 7.916666666666667
+   },
+   {
+    "page": "https://www.fitmates.net/velo/loire-a-velo",
+    "clicks": 0,
+    "impressions": 6,
+    "ctr": 0,
+    "position": 22.333333333333332
+   },
+   {
+    "page": "https://www.fitmates.net/widget",
+    "clicks": 0,
+    "impressions": 5,
+    "ctr": 0,
+    "position": 7.6
+   }
+  ],
+  "ga4_pages_entree": [
+   {
+    "landingPage": "/",
+    "sessions": 109.0
+   },
+   {
+    "landingPage": "/run-clubs-paris",
+    "sessions": 17.0
+   },
+   {
+    "landingPage": "(not set)",
+    "sessions": 16.0
+   },
+   {
+    "landingPage": "/reseau-social-sportif",
+    "sessions": 13.0
+   },
+   {
+    "landingPage": "/applications-sport-a-plusieurs",
+    "sessions": 11.0
+   },
+   {
+    "landingPage": "/escalade/fontainebleau",
+    "sessions": 9.0
+   },
+   {
+    "landingPage": "/randonnees-week-end-ile-de-france",
+    "sessions": 8.0
+   },
+   {
+    "landingPage": "/evenements",
+    "sessions": 5.0
+   },
+   {
+    "landingPage": "/organiser/guide-pratique-randonnee",
+    "sessions": 5.0
+   },
+   {
+    "landingPage": "/randonnee/autour-de-paris",
+    "sessions": 5.0
+   },
+   {
+    "landingPage": "/randonnee/fontainebleau",
+    "sessions": 5.0
+   },
+   {
+    "landingPage": "/randonnee/vallee-de-chevreuse",
+    "sessions": 5.0
+   },
+   {
+    "landingPage": "/escalade/calanques",
+    "sessions": 4.0
+   },
+   {
+    "landingPage": "/randonnee/calanques-marseille",
+    "sessions": 4.0
+   },
+   {
+    "landingPage": "/randonnee/chamonix",
+    "sessions": 4.0
+   },
+   {
+    "landingPage": "/sport/course-a-pied/hauts-de-seine",
+    "sessions": 4.0
+   },
+   {
+    "landingPage": "",
+    "sessions": 3.0
+   },
+   {
+    "landingPage": "/activites-pour-rencontrer-du-monde",
+    "sessions": 3.0
+   },
+   {
+    "landingPage": "/organiser",
+    "sessions": 3.0
+   },
+   {
+    "landingPage": "/perdre-du-poids-en-marchant",
+    "sessions": 3.0
+   },
+   {
+    "landingPage": "/randonnee/cote-d-opale",
+    "sessions": 3.0
+   },
+   {
+    "landingPage": "/sport/course-a-pied/val-de-marne",
+    "sessions": 3.0
+   },
+   {
+    "landingPage": "/sport/randonnee",
+    "sessions": 3.0
+   },
+   {
+    "landingPage": "/comment-se-faire-des-amis",
+    "sessions": 2.0
+   },
+   {
+    "landingPage": "/randonnee-en-train-depuis-paris",
+    "sessions": 2.0
+   },
+   {
+    "landingPage": "/randonnee-hiver-ile-de-france",
+    "sessions": 2.0
+   },
+   {
+    "landingPage": "/randonnee/toulouse",
+    "sessions": 2.0
+   },
+   {
+    "landingPage": "/randonnee/vexin",
+    "sessions": 2.0
+   },
+   {
+    "landingPage": "/trail/fontainebleau",
+    "sessions": 2.0
+   },
+   {
+    "landingPage": "/club-de-randonnee",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/courir-en-groupe-paris",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/cs/news/xxx-पोर्न-विडोस-c2lmz8.html",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/data-deletion.html",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/data-deletion.html.",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/evenements/rando-culturelle-2026-11-01-d5ec62dd",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/evenements/randonnee-a-sucy-en-brie-2026-11-01-cb6ac0cf",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/evenements/randonnee-bois-de-mezerolles-2026-11-01-cda3f2e8",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/evenements/randonnee-boucle-depart-villeneuve-le-comte-2026-10-30-493aed24",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/evenements/randonnee-de-20km-2026-10-25-5ec1d794",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/evenements/randonnee-etrechy-dourdan-2026-10-31-2f03d5a4",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/motivation-sport",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/organiser/club-association",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/organiser/groupe-randonnee",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/organiser/run-club",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/randonnee/etretat",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/randonnee/foret-de-rambouillet",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/randonnee/gr34",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/randonnee/grenoble",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/randonnee/pays-basque",
+    "sessions": 1.0
+   },
+   {
+    "landingPage": "/randonnee/vercors",
+    "sessions": 1.0
+   }
+  ],
+  "reseaux": {
+   "facebook": {
+    "followers_count": 782,
+    "fan_count": 782,
+    "id": "100422654832015"
+   },
+   "instagram": {
+    "id": "17841427421635658",
+    "followers_count": 23,
+    "media_count": 4
+   },
+   "instagram_28j": {
+    "reach": 56,
+    "profile_views": 56,
+    "website_clicks": 2
+   }
+  },
+  "backend_sorties_publiques": {}
+ },
+ "erreurs": {
+  "positions_stores_fr": "403 Client Error: Forbidden for url: https://itunes.apple.com/search?term=randonn%C3%A9e&country=fr&entity=software&limit=200",
+  "ga4_sources": "503 Server Error: Service Unavailable for url: https://analyticsadmin.googleapis.com/v1beta/accountSummaries",
+  "backend_agregats": "variable BACKEND_METRICS_URL absente : URL et jeton de l'endpoint d'agrégats marketing (BACKEND_METRICS_URL, BACKEND_METRICS_TOKEN), à créer côté backend : voir docs/sources-de-donnees.md"
+ }
+}
