@@ -957,5 +957,32 @@
   "impact": "Choisir les formats qui amènent des visites et des inscriptions",
   "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/mesure/bilan-reseaux-j7-2026-11-02.md",
   "statut": "bloqué : publications v3 en attente de l'accord de Driss"
+ },
+ {
+  "id": "bing-webmaster",
+  "qui": "Driss",
+  "canal": "Google",
+  "priorite": 1,
+  "action": "Inscrire fitmates.net à Bing Webmaster Tools (import depuis Search Console) : la recherche web de ChatGPT s'appuie sur l'index Bing",
+  "impact": "Que ChatGPT et Copilot puissent trouver et citer Fitmates",
+  "duree": "5 min",
+  "statut": "à faire",
+  "etapes": [
+   {
+    "texte": "Ouvre Bing Webmaster Tools et connecte-toi avec ton compte Google (celui de Search Console).",
+    "lien": "https://www.bing.com/webmasters",
+    "libelle_lien": "Bing Webmaster Tools ↗"
+   },
+   {
+    "texte": "Choisis « Importer depuis Google Search Console », autorise l'accès, coche www.fitmates.net et valide : le site et le sitemap sont importés, sans vérification supplémentaire."
+   },
+   {
+    "texte": "Vérifie que le sitemap est bien listé (Sitemaps) ; sinon ajoute-le.",
+    "copier": "https://www.fitmates.net/sitemap.xml"
+   },
+   {
+    "texte": "Marque l'action « fait ». Côté site, IndexNow signale déjà chaque mise en ligne à Bing."
+   }
+  ]
  }
 ]

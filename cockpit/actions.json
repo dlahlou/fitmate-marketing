@@ -304,5 +304,11 @@
   "canal": "Mesure",
   "action": "Vercel Web Analytics installé sur fitmates.net (@vercel/analytics 2.0.1, inject au démarrage, sans cookie), en complément de GA4 ; script /_vercel/insights vérifié en ligne",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-02",
+  "canal": "Google",
+  "action": "Règle « ignorer Bing » levée par Driss : CLAUDE.md mis à jour ; IndexNow branché sur le site (clé publique, envoi des URL à chaque build de production) ; action Bing Webmaster Tools pour Driss. Constat de départ : ChatGPT cite 11 applications concurrentes et jamais Fitmates sur « réseau social sport » / « partenaires de sport »",
+  "statut": "fait"
  }
 ]

@@ -9,7 +9,8 @@ Répondre à Driss (propriétaire) en français, court, avec les liens cliquable
 - Communauté la plus active aujourd'hui : randonnée en Île-de-France. Hors rando Île-de-France, le site est en mode liste d'attente.
 - L'app est gratuite, mais certaines sorties sont payantes si l'organisateur le décide : ne jamais écrire que toutes les sorties sont gratuites.
 - Aucune donnée personnelle dans les textes publics ni dans `data/` (ni nom d'organisateur, ni de membre, ni pseudo d'avis).
-- Stratégie 100 % digitale, focus organique ; ignorer Bing.
+- Stratégie 100 % digitale, focus organique. Bing compte (décision du 02/11/2026) : la recherche web de ChatGPT et d'autres
+  assistants s'appuie sur son index ; site inscrit à Bing Webmaster Tools et IndexNow à chaque mise en ligne.
 - **Parler de l'impact avant l'outil** (`strategie/ame-de-fitmates.md`) : ne plus faire de sport seul, rencontrer, tenir
   dans la durée. Le chat, la création en une phrase, l'IA sont des preuves en fin de message, jamais l'accroche.
 
