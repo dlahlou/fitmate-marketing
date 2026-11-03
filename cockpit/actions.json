@@ -310,5 +310,17 @@
   "canal": "Google",
   "action": "Règle « ignorer Bing » levée par Driss : CLAUDE.md mis à jour ; IndexNow branché sur le site (clé publique, envoi des URL à chaque build de production) ; action Bing Webmaster Tools pour Driss. Constat de départ : ChatGPT cite 11 applications concurrentes et jamais Fitmates sur « réseau social sport » / « partenaires de sport »",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-03",
+  "canal": "Google",
+  "action": "/randonnee/gr20 réécrite pour l'intention « GR20 en groupe » ; FAQ de 33 pages en liste d'attente corrigées (elles promettaient des sorties qui n'existent pas), 3 descriptions aussi. Relevé avant : gr20 77 apparitions, 0 clic, position 28,3 (28 j). Mesure le 01/12",
+  "statut": "fait"
+ },
+ {
+  "date": "2026-11-03",
+  "canal": "Google",
+  "action": "Incident corrigé : depuis l'ajout d'IndexNow (02/11, 23 h), tous les builds de production du site échouaient (variable hors de portée, invisible en build local). Corrigé et vérifié : déploiement prêt, page GR20 en ligne, premier envoi IndexNow accepté (109 URL, réponse 202). Le site en ligne datait du 02/11 à 13 h 34 pendant l'incident",
+  "statut": "fait"
  }
 ]

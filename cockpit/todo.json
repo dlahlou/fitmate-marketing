@@ -984,5 +984,35 @@
     "texte": "Marque l'action « fait ». Côté site, IndexNow signale déjà chaque mise en ligne à Bing."
    }
   ]
+ },
+ {
+  "id": "seo-gr20",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Page /randonnee/gr20 tournée vers « GR20 en groupe » (title, description, réponse, FAQ) ; 33 FAQ de pages en liste d'attente rendues honnêtes (plus de « sorties listées sur cette page »)",
+  "impact": "Relevé avant (Search Console, 28 j au 03/11) : /randonnee/gr20 77 apparitions, 0 clic, position 28,3 ; requêtes « gr20 en groupe » 13 apparitions (pos. 16,3), « faire le gr20 en groupe » 7 (pos. 15,3)",
+  "lien": "https://www.fitmates.net/randonnee/gr20",
+  "statut": "fait"
+ },
+ {
+  "id": "mesure-gr20",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Comparer /randonnee/gr20 et les requêtes « gr20 en groupe » au relevé du 03/11 (77 apparitions, 0 clic, position 28,3)",
+  "impact": "Dire si la réécriture « en groupe » a fait bouger la page",
+  "lien": "",
+  "statut": "prévu 01/12"
+ },
+ {
+  "id": "seo-padel-paris",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Page /sport/padel/paris : réécrire title, description et réponse en tête pour les requêtes « padel », « padel paris prix », « padel autour de moi » (liste d'attente, rester honnête)",
+  "impact": "Relevé du 03/11 (28 j) : 117 apparitions, 1 clic, position 9,6 : déjà en première page, le clic manque",
+  "lien": "https://www.fitmates.net/sport/padel/paris",
+  "statut": "à faire"
  }
 ]
