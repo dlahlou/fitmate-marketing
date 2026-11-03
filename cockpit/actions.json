@@ -322,5 +322,11 @@
   "canal": "Google",
   "action": "Incident corrigé : depuis l'ajout d'IndexNow (02/11, 23 h), tous les builds de production du site échouaient (variable hors de portée, invisible en build local). Corrigé et vérifié : déploiement prêt, page GR20 en ligne, premier envoi IndexNow accepté (109 URL, réponse 202). Le site en ligne datait du 02/11 à 13 h 34 pendant l'incident",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-03",
+  "canal": "Google",
+  "action": "/sport/padel/paris : le prix en tête (title, description, réponse) pour les requêtes « padel paris prix / tarif », FAQ tour Eiffel. Relevé avant : 117 apparitions, 1 clic, position 9,6 (28 j). Mesure le 01/12",
+  "statut": "fait"
  }
 ]

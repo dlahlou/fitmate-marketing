@@ -1010,9 +1010,29 @@
   "qui": "Claude",
   "canal": "Google",
   "priorite": 2,
-  "action": "Page /sport/padel/paris : réécrire title, description et réponse en tête pour les requêtes « padel », « padel paris prix », « padel autour de moi » (liste d'attente, rester honnête)",
+  "action": "Page /sport/padel/paris : title, description et réponse en tête menés par le prix ; FAQ « padel près de la tour Eiffel » ajoutée",
   "impact": "Relevé du 03/11 (28 j) : 117 apparitions, 1 clic, position 9,6 : déjà en première page, le clic manque",
   "lien": "https://www.fitmates.net/sport/padel/paris",
+  "statut": "fait"
+ },
+ {
+  "id": "mesure-padel-paris",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Comparer /sport/padel/paris et les requêtes de prix au relevé du 03/11 (117 apparitions, 1 clic, position 9,6 ; « padel paris prix » 9 apparitions pos. 8,2)",
+  "impact": "Dire si mener par le prix fait cliquer",
+  "lien": "",
+  "statut": "prévu 01/12"
+ },
+ {
+  "id": "seo-marcher-maigrir",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 3,
+  "action": "Page /perdre-du-poids-en-marchant : réponse sourcée en tête pour « combien de temps de marche pour maigrir » / « combien de temps marcher pour perdre du poids », title et description à l'avenant ; garder l'angle « marcher à plusieurs pour tenir »",
+  "impact": "Relevé du 03/11 (28 j) : 48 apparitions, 0 clic, position 16,1 ; les deux requêtes : 17 apparitions, position 10 à 15",
+  "lien": "https://www.fitmates.net/perdre-du-poids-en-marchant",
   "statut": "à faire"
  }
 ]
