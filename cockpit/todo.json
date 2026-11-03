@@ -1033,6 +1033,26 @@
   "action": "Page /perdre-du-poids-en-marchant : réponse sourcée en tête pour « combien de temps de marche pour maigrir » / « combien de temps marcher pour perdre du poids », title et description à l'avenant ; garder l'angle « marcher à plusieurs pour tenir »",
   "impact": "Relevé du 03/11 (28 j) : 48 apparitions, 0 clic, position 16,1 ; les deux requêtes : 17 apparitions, position 10 à 15",
   "lien": "https://www.fitmates.net/perdre-du-poids-en-marchant",
+  "statut": "fait"
+ },
+ {
+  "id": "mesure-marcher-maigrir",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 3,
+  "action": "Comparer /perdre-du-poids-en-marchant au relevé du 03/11 (48 apparitions, 0 clic, position 16,1)",
+  "impact": "Dire si la réponse directe fait cliquer",
+  "lien": "",
+  "statut": "prévu 01/12"
+ },
+ {
+  "id": "seo-strava-ou-fitmates",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 3,
+  "action": "Page /strava-ou-fitmates : title, description et réponse en tête pour qui cherche « strava » et veut des partenaires (deux familles : mesurer ses performances / faire ensemble), cohérent avec le comparatif en attente",
+  "impact": "Relevé du 03/11 (28 j) : 39 apparitions, 0 clic, position 12,3 ; « strava » 22 apparitions, position 11,5",
+  "lien": "https://www.fitmates.net/strava-ou-fitmates",
   "statut": "à faire"
  }
 ]
