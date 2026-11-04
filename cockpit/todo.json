@@ -1104,5 +1104,25 @@
   "impact": "Dire si les liens internes amènent des visiteurs qui convertissent",
   "lien": "",
   "statut": "prévu 02/12"
+ },
+ {
+  "id": "seo-bloc-bleau",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Page /escalade/fontainebleau : capter « bloc bleau 77 » (title, réponse en tête, section secteurs de bloc et accès), en restant honnête (escalade en liste d'attente) et en citant les sources (ONF, Bleau.info)",
+  "impact": "Relevé du 03/11 (28 j) : page 148 apparitions, 4 clics, position 28 ; « bloc bleau 77 » 88 apparitions, 0 clic, position 42,9 : la plus grosse requête hors marque",
+  "lien": "https://www.fitmates.net/escalade/fontainebleau",
+  "statut": "à faire"
+ },
+ {
+  "id": "seo-padel-lyon",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 3,
+  "action": "Page /padel/lyon : title et réponse en tête sur « padel lyon », « club padel lyon », « terrain padel lyon » (clubs, prix d'un terrain, sources), liste d'attente honnête",
+  "impact": "Relevé du 03/11 (28 j) : 99 apparitions, 0 clic, position 46,6 ; « club padel lyon » 17 apparitions pos. 72",
+  "lien": "https://www.fitmates.net/padel/lyon",
+  "statut": "à faire"
  }
 ]
