@@ -1053,6 +1053,26 @@
   "action": "Page /strava-ou-fitmates : title, description et réponse en tête pour qui cherche « strava » et veut des partenaires (deux familles : mesurer ses performances / faire ensemble), cohérent avec le comparatif en attente",
   "impact": "Relevé du 03/11 (28 j) : 39 apparitions, 0 clic, position 12,3 ; « strava » 22 apparitions, position 11,5",
   "lien": "https://www.fitmates.net/strava-ou-fitmates",
+  "statut": "fait"
+ },
+ {
+  "id": "mesure-strava-ou-fitmates",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 3,
+  "action": "Comparer /strava-ou-fitmates au relevé du 03/11 (39 apparitions, 0 clic, position 12,3)",
+  "impact": "Dire si le title en question fait cliquer",
+  "lien": "",
+  "statut": "prévu 02/12"
+ },
+ {
+  "id": "seo-se-faire-des-amis",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 3,
+  "action": "Page /comment-se-faire-des-amis : la remonter de la position 30 (réponse directe en tête, section « adulte, après 30 ans, en arrivant dans une ville », sources) ; c'est le cœur de l'impact Fitmates (rencontrer, ne plus faire de sport seul)",
+  "impact": "Relevé du 03/11 (28 j) : 43 apparitions, 0 clic, position 30,3 ; « comment se faire des amis » 8 apparitions pos. 28,5, « … adulte » 5 pos. 39,8",
+  "lien": "https://www.fitmates.net/comment-se-faire-des-amis",
   "statut": "à faire"
  }
 ]
