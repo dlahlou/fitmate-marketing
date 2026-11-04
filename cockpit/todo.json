@@ -1073,6 +1073,26 @@
   "action": "Page /comment-se-faire-des-amis : la remonter de la position 30 (réponse directe en tête, section « adulte, après 30 ans, en arrivant dans une ville », sources) ; c'est le cœur de l'impact Fitmates (rencontrer, ne plus faire de sport seul)",
   "impact": "Relevé du 03/11 (28 j) : 43 apparitions, 0 clic, position 30,3 ; « comment se faire des amis » 8 apparitions pos. 28,5, « … adulte » 5 pos. 39,8",
   "lien": "https://www.fitmates.net/comment-se-faire-des-amis",
+  "statut": "fait"
+ },
+ {
+  "id": "mesure-se-faire-des-amis",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 3,
+  "action": "Comparer /comment-se-faire-des-amis au relevé du 03/11 (43 apparitions, 0 clic, position 30,3)",
+  "impact": "Dire si la section « nouvelle ville » fait remonter la page",
+  "lien": "",
+  "statut": "prévu 02/12"
+ },
+ {
+  "id": "maillage-rando-idf",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Ajouter des liens internes vers /randonnees-week-end-ile-de-france (la page qui convertit le mieux) depuis les pages d'intention (amis, rencontrer du monde, se sentir seul, marcher pour maigrir) ; vérifier que le composant IntentPage permet un lien en fin de section",
+  "impact": "GA4 au 03/11 (28 j) : /randonnees-week-end-ile-de-france 8 sessions, 5 conversions ; pages d'intention : 0 à 1 conversion",
+  "lien": "",
   "statut": "à faire"
  }
 ]
