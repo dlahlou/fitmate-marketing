@@ -1093,6 +1093,16 @@
   "action": "Ajouter des liens internes vers /randonnees-week-end-ile-de-france (la page qui convertit le mieux) depuis les pages d'intention (amis, rencontrer du monde, se sentir seul, marcher pour maigrir) ; vérifier que le composant IntentPage permet un lien en fin de section",
   "impact": "GA4 au 03/11 (28 j) : /randonnees-week-end-ile-de-france 8 sessions, 5 conversions ; pages d'intention : 0 à 1 conversion",
   "lien": "",
-  "statut": "à faire"
+  "statut": "fait"
+ },
+ {
+  "id": "mesure-maillage-rando-idf",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "GA4 : comparer les conversions de /randonnees-week-end-ile-de-france et des 4 pages d'intention au relevé du 03/11 (8 sessions / 5 conversions ; pages d'intention 0 conversion)",
+  "impact": "Dire si les liens internes amènent des visiteurs qui convertissent",
+  "lien": "",
+  "statut": "prévu 02/12"
  }
 ]
