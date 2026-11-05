@@ -1111,9 +1111,9 @@
   "canal": "Google",
   "priorite": 2,
   "action": "Page /escalade/fontainebleau : capter « bloc bleau 77 » (title, réponse en tête, section secteurs de bloc et accès), en restant honnête (escalade en liste d'attente) et en citant les sources (ONF, Bleau.info)",
-  "impact": "Relevé du 03/11 (28 j) : page 148 apparitions, 4 clics, position 28 ; « bloc bleau 77 » 88 apparitions, 0 clic, position 42,9 : la plus grosse requête hors marque",
+  "impact": "Relevé du 03/11 (28 j) : page 148 apparitions, 4 clics, position 28 ; « bloc bleau 77 » 88 apparitions, 0 clic, position 42,9 : la plus grosse requête hors marque · 05/11 : pas de réécriture. La page vise déjà « bloc à Bleau (77) » (title, h1, réponse) et progresse : 8 clics, 180 apparitions, position 27,1 au 05/11 (contre 4 / 148 / 28). Sur « bloc bleau 77 », les résultats sont des topos (bleau.info, 27crags, Mountain Project) : la position 43 tient à l'autorité, pas au texte. Carte de l'ONF inchangée (mise à jour du 1er septembre 2026), revérification le 29/11",
   "lien": "https://www.fitmates.net/escalade/fontainebleau",
-  "statut": "à faire"
+  "statut": "fait"
  },
  {
   "id": "seo-padel-lyon",
@@ -1152,5 +1152,15 @@
     "libelle_lien": "Répondre à Claude ↗"
    }
   ]
+ },
+ {
+  "id": "seo-organiser-rando",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 3,
+  "action": "Page /organiser/groupe-randonnee : réponse en tête pour « comment organiser une randonnée pédestre », lien vers le guide pratique /organiser/guide-pratique-randonnee, title à l'avenant",
+  "impact": "Relevé du 03/11 (28 j) : 29 apparitions, 0 clic, position 21,5 ; « comment organiser une randonnée pédestre » 6 apparitions, position 32,7",
+  "lien": "https://www.fitmates.net/organiser/groupe-randonnee",
+  "statut": "à faire"
  }
 ]

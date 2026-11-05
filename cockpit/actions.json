@@ -358,5 +358,11 @@
   "canal": "Réseaux sociaux",
   "action": "Post « Sorties de la semaine » du 05/11 préparé (2 randonnées le 08/11, doublon de la même sortie retiré, légende sans liens non cliquables) ; visuel recentré quand il y a peu de sorties. Non publié : en attente de l'accord de Driss",
   "statut": "en attente de Driss"
+ },
+ {
+  "date": "2026-11-05",
+  "canal": "Google",
+  "action": "/escalade/fontainebleau examinée pour « bloc bleau 77 » : aucune réécriture (page déjà ciblée et en progression, 8 clics / 180 apparitions / position 27,1 ; requête dominée par les topos). Carte de l'ONF inchangée depuis le 1er septembre",
+  "statut": "fait"
  }
 ]
