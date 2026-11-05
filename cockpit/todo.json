@@ -1121,9 +1121,9 @@
   "canal": "Google",
   "priorite": 3,
   "action": "Page /padel/lyon : title et réponse en tête sur « padel lyon », « club padel lyon », « terrain padel lyon » (clubs, prix d'un terrain, sources), liste d'attente honnête",
-  "impact": "Relevé du 03/11 (28 j) : 99 apparitions, 0 clic, position 46,6 ; « club padel lyon » 17 apparitions pos. 72",
+  "impact": "Relevé du 03/11 (28 j) : 99 apparitions, 0 clic, position 46,6 ; « club padel lyon » 17 apparitions pos. 72 · 05/11 : pas de réécriture. La page vise déjà ces requêtes (title « Padel Lyon : 7 clubs, pistes, prix »), mais elle est en position 47 à 79 : l'écart tient à la concurrence locale (clubs, Google Maps), pas au texte. Le padel est en liste d'attente, donc peu de valeur à court terme",
   "lien": "https://www.fitmates.net/padel/lyon",
-  "statut": "à faire"
+  "statut": "fait"
  },
  {
   "id": "valider-sorties-semaine-2026-11-05",
@@ -1161,6 +1161,26 @@
   "action": "Page /organiser/groupe-randonnee : réponse en tête pour « comment organiser une randonnée pédestre », lien vers le guide pratique /organiser/guide-pratique-randonnee, title à l'avenant",
   "impact": "Relevé du 03/11 (28 j) : 29 apparitions, 0 clic, position 21,5 ; « comment organiser une randonnée pédestre » 6 apparitions, position 32,7",
   "lien": "https://www.fitmates.net/organiser/groupe-randonnee",
+  "statut": "fait"
+ },
+ {
+  "id": "mesure-organiser-rando",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 3,
+  "action": "Comparer /organiser/groupe-randonnee au relevé du 03/11 (29 apparitions, 0 clic, position 21,5)",
+  "impact": "Dire si la réponse directe fait cliquer des organisateurs",
+  "lien": "",
+  "statut": "prévu 03/12"
+ },
+ {
+  "id": "chiffre-club-association",
+  "qui": "Claude",
+  "canal": "Site",
+  "priorite": 2,
+  "action": "Page /organiser/club-association : sourcer ou retirer « 7 sportifs réguliers sur 10 pratiquent hors club » et « clubs saturés par l'effet des Jeux » (règle : aucun chiffre non sourcé)",
+  "impact": "Honnêteté des textes publics",
+  "lien": "https://www.fitmates.net/organiser/club-association",
   "statut": "à faire"
  }
 ]
