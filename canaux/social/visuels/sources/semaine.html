@@ -51,9 +51,12 @@
     document.getElementById('more').textContent = d.autres > 0
       ? `+ ${d.autres} autre${d.autres > 1 ? 's' : ''} sortie${d.autres > 1 ? 's' : ''} cette semaine · lien en bio`
       : 'Toutes les sorties : lien en bio';
-    // Le bloc se place sous le titre, quelle que soit sa hauteur
+    // Le bloc se place sous le titre, centré dans la place restante quand il y a peu de sorties
     const head = post.querySelector('.head');
-    document.getElementById('zone').style.top = (head.offsetTop + head.offsetHeight + 36) + 'px';
+    const zone = document.getElementById('zone');
+    const haut = head.offsetTop + head.offsetHeight + 36;
+    const libre = post.offsetHeight - 110 - haut - zone.offsetHeight;
+    zone.style.top = (haut + Math.max(0, libre / 2)) + 'px';
   }
 </script>
 <script src="social.js"></script></body></html>

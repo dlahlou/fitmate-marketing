@@ -352,5 +352,11 @@
   "canal": "Google",
   "action": "Liens internes vers /randonnees-week-end-ile-de-france (et /randonnee/autour-de-paris) ajoutés sur 4 pages d'intention : amis, rencontrer du monde, se sentir seul, marcher pour maigrir. Relevé avant (GA4, 28 j) : page rando 8 sessions, 5 conversions ; pages d'intention 0 conversion. Mesure le 02/12",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-05",
+  "canal": "Réseaux sociaux",
+  "action": "Post « Sorties de la semaine » du 05/11 préparé (2 randonnées le 08/11, doublon de la même sortie retiré, légende sans liens non cliquables) ; visuel recentré quand il y a peu de sorties. Non publié : en attente de l'accord de Driss",
+  "statut": "en attente de Driss"
  }
 ]

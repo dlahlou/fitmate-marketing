@@ -1,0 +1,28 @@
+{
+ "periode": "du jeudi 5 au mercredi 11 novembre",
+ "sorties": [
+  {
+   "jour": "dim.",
+   "num": "8",
+   "mois": "nov.",
+   "heure": "11h30",
+   "titre": "Randonnée de 18 km",
+   "ville": "Souppes-sur-Loing",
+   "niveau": "Avancé",
+   "niveau_cls": "l3",
+   "prix": ""
+  },
+  {
+   "jour": "dim.",
+   "num": "8",
+   "mois": "nov.",
+   "heure": "13h30",
+   "titre": "Randonnée Arboretum Versailles",
+   "ville": "Le Chesnay-Rocquencourt",
+   "niveau": "Intermédiaire",
+   "niveau_cls": "l2",
+   "prix": "8 €"
+  }
+ ],
+ "autres": 0
+}

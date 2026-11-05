@@ -803,7 +803,7 @@
   "canal": "Réseaux sociaux",
   "priorite": 2,
   "action": "Chaque jeudi : préparer le post « sorties du week-end » (visuel carte des départs + légende, données du flux public) et le présenter à Driss pour accord ; aucune publication sans son « ok »",
-  "impact": "Rendez-vous hebdomadaire qui montre une communauté réelle et renvoie vers l'app",
+  "impact": "Rendez-vous hebdomadaire qui montre une communauté réelle et renvoie vers l'app · dernier préparé : 05/11 (2 sorties, en attente de l'accord de Driss)",
   "lien": "",
   "statut": "à faire"
  },
@@ -1124,5 +1124,33 @@
   "impact": "Relevé du 03/11 (28 j) : 99 apparitions, 0 clic, position 46,6 ; « club padel lyon » 17 apparitions pos. 72",
   "lien": "https://www.fitmates.net/padel/lyon",
   "statut": "à faire"
+ },
+ {
+  "id": "valider-sorties-semaine-2026-11-05",
+  "qui": "Driss",
+  "canal": "Réseaux sociaux",
+  "priorite": 2,
+  "action": "Valider (ou non) le post Instagram « Sorties de la semaine » du 05/11 : 2 randonnées dimanche 8 novembre",
+  "impact": "Rendez-vous hebdomadaire qui montre une communauté réelle ; rien n'est publié sans ton « ok »",
+  "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/social/hebdo/2026-11-05/semaine.png",
+  "statut": "à faire",
+  "duree": "2 min",
+  "etapes": [
+   {
+    "texte": "Regarde le visuel.",
+    "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/social/hebdo/2026-11-05/semaine.png",
+    "libelle_lien": "Voir le visuel ↗"
+   },
+   {
+    "texte": "Lis la légende.",
+    "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/social/hebdo/2026-11-05/legende.txt",
+    "libelle_lien": "Lire la légende ↗"
+   },
+   {
+    "texte": "Réponds à Claude « ok sorties semaine » pour qu'il le publie, ou dis ce qu'il faut changer. Sans réponse samedi, le post est périmé et n'est pas publié.",
+    "lien": "https://claude.ai/code",
+    "libelle_lien": "Répondre à Claude ↗"
+   }
+  ]
  }
 ]
