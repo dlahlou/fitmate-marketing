@@ -1181,6 +1181,26 @@
   "action": "Page /organiser/club-association : sourcer ou retirer « 7 sportifs réguliers sur 10 pratiquent hors club » et « clubs saturés par l'effet des Jeux » (règle : aucun chiffre non sourcé)",
   "impact": "Honnêteté des textes publics",
   "lien": "https://www.fitmates.net/organiser/club-association",
+  "statut": "fait"
+ },
+ {
+  "id": "seo-rencontrer-du-monde",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Page /activites-pour-rencontrer-du-monde : déjà en position 6,5 mais 1 clic sur 41 apparitions → title et description plus concrets (liste d'activités, angle « se revoir »)",
+  "impact": "Relevé du 03/11 (28 j) : 41 apparitions, 1 clic, position 6,5",
+  "lien": "https://www.fitmates.net/activites-pour-rencontrer-du-monde",
+  "statut": "à faire"
+ },
+ {
+  "id": "audit-chiffres-site",
+  "qui": "Claude",
+  "canal": "Site",
+  "priorite": 2,
+  "action": "Passer tous les textes publics du site (src/data, pages, llms.txt) à la recherche de chiffres sans source citée ; sourcer ou retirer",
+  "impact": "Honnêteté : la page clubs et associations en contenait encore un au 05/11",
+  "lien": "",
   "statut": "à faire"
  }
 ]
