@@ -1191,7 +1191,7 @@
   "action": "Page /activites-pour-rencontrer-du-monde : déjà en position 6,5 mais 1 clic sur 41 apparitions → title et description plus concrets (liste d'activités, angle « se revoir »)",
   "impact": "Relevé du 03/11 (28 j) : 41 apparitions, 1 clic, position 6,5",
   "lien": "https://www.fitmates.net/activites-pour-rencontrer-du-monde",
-  "statut": "à faire"
+  "statut": "fait"
  },
  {
   "id": "audit-chiffres-site",
@@ -1202,5 +1202,15 @@
   "impact": "Honnêteté : la page clubs et associations en contenait encore un au 05/11",
   "lien": "",
   "statut": "à faire"
+ },
+ {
+  "id": "mesure-rencontrer-du-monde",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 3,
+  "action": "Comparer /activites-pour-rencontrer-du-monde au relevé du 03/11 (41 apparitions, 1 clic, position 6,5)",
+  "impact": "Dire si le title concret fait cliquer",
+  "lien": "",
+  "statut": "prévu 04/12"
  }
 ]
