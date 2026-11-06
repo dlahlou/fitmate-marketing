@@ -382,5 +382,11 @@
   "canal": "Google",
   "action": "/activites-pour-rencontrer-du-monde : title « Activités pour rencontrer du monde adulte : 4 pistes comparées » et description concrète. Relevé avant : 41 apparitions, 1 clic, position 6,5 (28 j). Mesure le 04/12",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-06",
+  "canal": "Site",
+  "action": "Audit des chiffres du site : « la plupart des sorties sont gratuites » retiré de 6 textes et de llms.txt (le flux compte 2 sorties payantes sur 4) ; « beaucoup de sportifs pratiquent seuls » retiré (Paris). Chiffres du pitch sourcés, sauf la rétention 84/63/42 % à vérifier",
+  "statut": "fait"
  }
 ]

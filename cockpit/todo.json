@@ -1201,7 +1201,7 @@
   "action": "Passer tous les textes publics du site (src/data, pages, llms.txt) à la recherche de chiffres sans source citée ; sourcer ou retirer",
   "impact": "Honnêteté : la page clubs et associations en contenait encore un au 05/11",
   "lien": "",
-  "statut": "à faire"
+  "statut": "fait"
  },
  {
   "id": "mesure-rencontrer-du-monde",
@@ -1212,5 +1212,15 @@
   "impact": "Dire si le title concret fait cliquer",
   "lien": "",
   "statut": "prévu 04/12"
+ },
+ {
+  "id": "source-retention-pitch",
+  "qui": "Claude",
+  "canal": "Site",
+  "priorite": 2,
+  "action": "Page /pitch : vérifier que la source citée (PubMed 12473421) dit bien « 84 % de rétention en groupe, 63 % en solo, 42 % d'abandon en salle à 6 mois » ; sinon reformuler ou retirer",
+  "impact": "Honnêteté : chiffre très repris, attribution à confirmer",
+  "lien": "https://www.fitmates.net/pitch",
+  "statut": "à faire"
  }
 ]
