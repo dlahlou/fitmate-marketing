@@ -1232,5 +1232,35 @@
   "impact": "Le rendez-vous hebdo ne sert que s'il est validé à temps",
   "lien": "",
   "statut": "fait"
+ },
+ {
+  "id": "seo-rando-departements",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Pages /sport/randonnee/<département> d'Île-de-France : title « itinéraires, groupes et sorties », description par lieux ouverts, prépositions corrigées",
+  "impact": "Relevé avant (28 j au 07/11) : seine-et-marne 36 apparitions, 1 clic, position 15,1 ; « randonnée seine et marne » 16 apparitions, pos. 22,2",
+  "lien": "https://www.fitmates.net/sport/randonnee/seine-et-marne",
+  "statut": "fait"
+ },
+ {
+  "id": "mesure-rando-departements",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Comparer les 8 pages /sport/randonnee/<département> au relevé du 07/11 (seine-et-marne : 36 apparitions, 1 clic, position 15,1)",
+  "impact": "Zone ouverte : chaque clic peut devenir une inscription",
+  "lien": "",
+  "statut": "prévu 05/12"
+ },
+ {
+  "id": "seo-calanques-escalade",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 3,
+  "action": "Page /escalade/calanques : 76 apparitions, 3 clics, position 13,7 → regarder les requêtes et rapprocher title / réponse de l'intention (liste d'attente honnête)",
+  "impact": "Relevé du 07/11 (28 j)",
+  "lien": "https://www.fitmates.net/escalade/calanques",
+  "statut": "à faire"
  }
 ]

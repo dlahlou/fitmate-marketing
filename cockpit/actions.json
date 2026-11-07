@@ -400,5 +400,11 @@
   "canal": "Réseaux sociaux",
   "action": "scripts/social_weekly.py : dédoublonnage des sorties publiées deux fois, unités espacées, légende sans URL et menée par l'impact (corrections faites à la main le 05/11). Post hebdo désormais préparé le mercredi soir",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-07",
+  "canal": "Google",
+  "action": "Pages randonnée par département d'Île-de-France : title « itinéraires, groupes et sorties », description qui nomme les lieux ouverts, « dans les Yvelines / le Val-d'Oise ». Relevé avant : seine-et-marne 36 apparitions, 1 clic, position 15,1. Mesure le 05/12",
+  "statut": "fait"
  }
 ]
