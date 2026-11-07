@@ -394,5 +394,11 @@
   "canal": "Site",
   "action": "/pitch : chiffre de rétention corrigé. L'étude citée (Cox et al., 2003, essai SWEAT, 126 femmes de 40 à 65 ans) compare l'exercice encadré en centre (84 % d'assiduité à 6 mois) et à domicile (63 %) ; « 42 % d'abandon en salle » retiré. Post « Sorties de la semaine » du 05/11 périmé sans accord, non publié",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-07",
+  "canal": "Réseaux sociaux",
+  "action": "scripts/social_weekly.py : dédoublonnage des sorties publiées deux fois, unités espacées, légende sans URL et menée par l'impact (corrections faites à la main le 05/11). Post hebdo désormais préparé le mercredi soir",
+  "statut": "fait"
  }
 ]

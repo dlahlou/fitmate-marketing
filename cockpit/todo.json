@@ -802,7 +802,7 @@
   "qui": "Claude",
   "canal": "Réseaux sociaux",
   "priorite": 2,
-  "action": "Chaque jeudi : préparer le post « sorties du week-end » (visuel carte des départs + légende, données du flux public) et le présenter à Driss pour accord ; aucune publication sans son « ok »",
+  "action": "Chaque mercredi soir (pour une validation avant jeudi) : préparer le post « sorties de la semaine » (python -m scripts.social_weekly --dry-run) et le présenter à Driss pour accord ; aucune publication sans son « ok »",
   "impact": "Rendez-vous hebdomadaire qui montre une communauté réelle et renvoie vers l'app · dernier préparé : 05/11 (2 sorties, en attente de l'accord de Driss)",
   "lien": "",
   "statut": "à faire"
@@ -1228,9 +1228,9 @@
   "qui": "Claude",
   "canal": "Réseaux sociaux",
   "priorite": 3,
-  "action": "Noter le post « Sorties de la semaine » du 05/11 comme périmé (pas d'accord de Driss) et préparer celui du jeudi 12/11 plus tôt (mercredi soir) pour laisser le temps de valider",
+  "action": "Script du post hebdo : doublons retirés automatiquement, « 18km » → « 18 km », légende sans URL (non cliquables sur Instagram) et ouverte sur l'impact ; préparer le post du 12/11 dès le mercredi 11 au soir",
   "impact": "Le rendez-vous hebdo ne sert que s'il est validé à temps",
   "lien": "",
-  "statut": "à faire"
+  "statut": "fait"
  }
 ]

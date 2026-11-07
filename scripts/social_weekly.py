@@ -69,7 +69,19 @@ def _prix(p) -> str:
 
 
 def _propre(s) -> str:
-    return re.sub(r"\s+", " ", str(s or "")).strip()
+    s = re.sub(r"\s+", " ", str(s or "")).strip()
+    return re.sub(r"(\d)(km|m)\b", r"\1 \2", s)  # « 18km » → « 18 km »
+
+
+def _sans_doublons(sorties: list[dict]) -> list[dict]:
+    """Une même sortie publiée deux fois (même heure, même ville, titre identique hors parenthèses) n'apparaît qu'une fois."""
+    vus, out = set(), []
+    for s in sorted(sorties, key=lambda s: (s["date"], len(s["titre"]))):
+        cle = (s["date"], s["ville"].lower(), re.sub(r"\s*\(.*?\)", "", s["titre"]).strip().lower())
+        if cle not in vus:
+            vus.add(cle)
+            out.append(s)
+    return out
 
 
 def utm(url: str, campagne: str, contenu: str) -> str:
@@ -96,7 +108,7 @@ def selection(events: list[dict], debut: datetime) -> list[dict]:
                 "ville": _propre(loc.get("city") or loc.get("name")), "cp": _propre(loc.get("postal_code")),
                 "niveau": niveau, "niveau_cls": cls, "prix": _prix(e.get("price_eur")),
             })
-    return sorted(out, key=lambda s: s["date"])
+    return sorted(_sans_doublons(out), key=lambda s: s["date"])
 
 
 def periode(debut: datetime) -> str:
@@ -118,17 +130,15 @@ def donnees_visuel(sorties: list[dict], debut: datetime) -> dict:
 
 
 def legende(sorties: list[dict], debut: datetime) -> str:
-    campagne = f"sorties-semaine-{MOIS_UTM[debut.month - 1]}{debut:%y}"
-    contenu = f"semaine-{debut:%Y%m%d}"
-    lignes = [f"Les sorties de la semaine, {periode(debut)} 👇", ""]
+    # Pas d'URL : les liens d'une légende Instagram ne sont pas cliquables, on renvoie au lien en bio.
+    # L'impact d'abord (ne plus faire de sport seul), l'outil (le chat) en preuve à la fin.
+    lignes = ["Cette semaine, on ne sort pas seul 👇", f"Les sorties {periode(debut)} :", ""]
     for s in sorties:
         d = s["date"]
-        info = " · ".join(x for x in (s["ville"], s["niveau"], s["prix"]) if x)
-        lignes.append(f"▸ {JOURS[d.weekday()].capitalize()} {_num(d)} {MOIS[d.month - 1]}, {_heure(d)} : {s['titre']} ({info})")
-        lien = utm(SITE + "/evenements/" + quote(s["slug"]), campagne, contenu)
-        lignes.append(f"   {lien}")
-    lignes += ["", "Tu viens seul(e) ? C'est fait pour ça : chaque sortie a son chat de groupe pour s'organiser "
-               "avant le départ. Le niveau est indiqué sur chaque fiche.",
+        info = " · ".join(x for x in (s["ville"], s["niveau"] and f"niveau {s['niveau'].lower()}", s["prix"]) if x)
+        lignes.append(f"▸ {JOURS[d.weekday()].capitalize()} {_num(d)} {MOIS[d.month - 1]}, {_heure(d)} · {s['titre']} · {info}")
+    lignes += ["", "Tu viens seul(e) ? C'est fait pour ça : tu rejoins le groupe, et le chat de la sortie sert à "
+               "s'organiser avant le départ.",
                "", "Toutes les sorties et l'app : lien en bio."]
     tags = list(HASHTAGS)
     for s in sorties:
