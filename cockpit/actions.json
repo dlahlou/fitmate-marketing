@@ -388,5 +388,11 @@
   "canal": "Site",
   "action": "Audit des chiffres du site : « la plupart des sorties sont gratuites » retiré de 6 textes et de llms.txt (le flux compte 2 sorties payantes sur 4) ; « beaucoup de sportifs pratiquent seuls » retiré (Paris). Chiffres du pitch sourcés, sauf la rétention 84/63/42 % à vérifier",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-07",
+  "canal": "Site",
+  "action": "/pitch : chiffre de rétention corrigé. L'étude citée (Cox et al., 2003, essai SWEAT, 126 femmes de 40 à 65 ans) compare l'exercice encadré en centre (84 % d'assiduité à 6 mois) et à domicile (63 %) ; « 42 % d'abandon en salle » retiré. Post « Sorties de la semaine » du 05/11 périmé sans accord, non publié",
+  "statut": "fait"
  }
 ]
