@@ -406,5 +406,11 @@
   "canal": "Google",
   "action": "Pages randonnée par département d'Île-de-France : title « itinéraires, groupes et sorties », description qui nomme les lieux ouverts, « dans les Yvelines / le Val-d'Oise ». Relevé avant : seine-et-marne 36 apparitions, 1 clic, position 15,1. Mesure le 05/12",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-08",
+  "canal": "Site",
+  "action": "/escalade/calanques examinée sans réécriture (requêtes de 9 apparitions au plus, positions 33 à 48). /se-sentir-seul : bouton « Voir les sorties près de chez moi » → « Voir les prochaines sorties » (sorties ouvertes seulement en Île-de-France)",
+  "statut": "fait"
  }
 ]

@@ -1259,8 +1259,18 @@
   "canal": "Google",
   "priorite": 3,
   "action": "Page /escalade/calanques : 76 apparitions, 3 clics, position 13,7 → regarder les requêtes et rapprocher title / réponse de l'intention (liste d'attente honnête)",
-  "impact": "Relevé du 07/11 (28 j)",
+  "impact": "Relevé du 07/11 (28 j) · 08/11 : pas de réécriture. La page vise déjà « escalade Calanques » (title, réponse sourcée) ; les requêtes sont à 9 apparitions au plus, en position 33 à 48 (topos et sites spécialisés devant) : rien à gagner sur le texte",
   "lien": "https://www.fitmates.net/escalade/calanques",
-  "statut": "à faire"
+  "statut": "fait"
+ },
+ {
+  "id": "bilan-seo-hebdo",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Lundi 16/11 : premier point d'étape sur les pages réécrites du 03 au 07/11 (GR20, padel Paris, marcher pour maigrir, Strava, amis, rencontrer du monde, organiser, départements rando) : apparitions, clics, position, sans conclure avant 3 semaines",
+  "impact": "Repérer tôt une page qui chute après réécriture",
+  "lien": "",
+  "statut": "prévu 16/11"
  }
 ]
