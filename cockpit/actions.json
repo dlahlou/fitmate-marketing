@@ -424,5 +424,11 @@
   "canal": "Google",
   "action": "Inspection d'indexation (API Search Console) des 110 URL du sitemap : 108 « envoyées et indexées », 2 « détectées, non indexées » (/sport/randonnee/val-d-oise, /sport/pilates). Le rapport « pages non indexées » de Driss concerne surtout des URL hors sitemap (redirections http et barre oblique, /app en noindex volontaire, page 404)",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-09",
+  "canal": "Site",
+  "action": "Politique de confidentialité : ligne « Services de paiement : informations de transaction » retirée de la partie 1.3 (demande de Driss). La mention 3.2 « Services de paiement : pour traiter les transactions » reste, en attente de sa décision",
+  "statut": "fait"
  }
 ]
