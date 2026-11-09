@@ -418,5 +418,11 @@
   "canal": "Mesure",
   "action": "Relevé hebdomadaire du 09/11 (fenêtre 28 j) : Search Console 147 clics et 3 689 apparitions (contre 88 et 2 116 au 02/11) ; GA4 recherche organique 188 sessions, 42 conversions ; assistants IA 23 sessions, 6 conversions ; Instagram 25 abonnés (23), Facebook 782. Échecs : positions App Store (403 Apple), agrégats du back (variables absentes)",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-09",
+  "canal": "Google",
+  "action": "Inspection d'indexation (API Search Console) des 110 URL du sitemap : 108 « envoyées et indexées », 2 « détectées, non indexées » (/sport/randonnee/val-d-oise, /sport/pilates). Le rapport « pages non indexées » de Driss concerne surtout des URL hors sitemap (redirections http et barre oblique, /app en noindex volontaire, page 404)",
+  "statut": "fait"
  }
 ]
