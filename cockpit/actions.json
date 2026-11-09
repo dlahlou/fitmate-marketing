@@ -412,5 +412,11 @@
   "canal": "Site",
   "action": "/escalade/calanques examinée sans réécriture (requêtes de 9 apparitions au plus, positions 33 à 48). /se-sentir-seul : bouton « Voir les sorties près de chez moi » → « Voir les prochaines sorties » (sorties ouvertes seulement en Île-de-France)",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-09",
+  "canal": "Mesure",
+  "action": "Relevé hebdomadaire du 09/11 (fenêtre 28 j) : Search Console 147 clics et 3 689 apparitions (contre 88 et 2 116 au 02/11) ; GA4 recherche organique 188 sessions, 42 conversions ; assistants IA 23 sessions, 6 conversions ; Instagram 25 abonnés (23), Facebook 782. Échecs : positions App Store (403 Apple), agrégats du back (variables absentes)",
+  "statut": "fait"
  }
 ]

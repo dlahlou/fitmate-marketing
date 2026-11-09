@@ -572,7 +572,7 @@
   "qui": "Claude",
   "canal": "Mesure",
   "priorite": 3,
-  "action": "Relevé hebdomadaire (scripts.snapshot) chaque lundi, commité dans data/snapshots (dernier : 02/11)",
+  "action": "Relevé hebdomadaire (scripts.snapshot) chaque lundi, commité dans data/snapshots (dernier : 09/11)",
   "impact": "Base des comparaisons avant/après",
   "lien": "",
   "statut": "à faire"
