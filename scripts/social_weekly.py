@@ -73,6 +73,27 @@ def _propre(s) -> str:
     return re.sub(r"(\d)(km|m)\b", r"\1 \2", s)  # « 18km » → « 18 km »
 
 
+PETITS_MOTS = {"à", "a", "de", "du", "des", "la", "le", "les", "en", "et", "sur", "au", "aux", "d", "l", "par", "pour"}
+SIGLES = {"SNCF", "RER", "GR", "IDF", "RATP", "VTT"}
+
+
+def _casse(s: str) -> str:
+    """Un titre ou un lieu saisi TOUT EN MAJUSCULES passe en casse de titre (« Gare SNCF Fontainebleau Avon »)."""
+    lettres = [c for c in s if c.isalpha()]
+    if len(lettres) < 4 or sum(c.isupper() for c in lettres) / len(lettres) < 0.8:
+        return s
+    mots = []
+    for i, m in enumerate(s.split(" ")):
+        brut = m.strip(".,;:!?()")
+        if brut.upper() in SIGLES:
+            mots.append(m.upper())
+        elif i and m.lower() in PETITS_MOTS:
+            mots.append(m.lower())
+        else:
+            mots.append("-".join(x[:1].upper() + x[1:].lower() for x in m.split("-")))
+    return " ".join(mots)
+
+
 def _sans_doublons(sorties: list[dict]) -> list[dict]:
     """Une même sortie publiée deux fois (même heure, même ville, titre identique hors parenthèses) n'apparaît qu'une fois."""
     vus, out = set(), []
@@ -102,10 +123,10 @@ def selection(events: list[dict], debut: datetime) -> list[dict]:
             niveau, cls = NIVEAUX.get(str(e.get("level") or "").lower(), ("", ""))
             # Liste blanche : rien d'autre ne sort du flux (pas d'image_url, pas de nom)
             out.append({
-                "date": d, "titre": _propre(e["title"]), "slug": str(e["slug"]),
+                "date": d, "titre": _casse(_propre(e["title"])), "slug": str(e["slug"]),
                 "sport_id": str(e.get("sport") or ""),
                 "sport": SPORTS.get(str(e.get("sport") or ""), _propre(e.get("sport")).capitalize()),
-                "ville": _propre(loc.get("city") or loc.get("name")), "cp": _propre(loc.get("postal_code")),
+                "ville": _casse(_propre(loc.get("city") or loc.get("name"))), "cp": _propre(loc.get("postal_code")),
                 "niveau": niveau, "niveau_cls": cls, "prix": _prix(e.get("price_eur")),
             })
     return sorted(_sans_doublons(out), key=lambda s: s["date"])

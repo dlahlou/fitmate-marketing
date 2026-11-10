@@ -1272,5 +1272,33 @@
   "impact": "Repérer tôt une page qui chute après réécriture",
   "lien": "",
   "statut": "prévu 16/11"
+ },
+ {
+  "id": "valider-sorties-semaine-2026-11-12",
+  "qui": "Driss",
+  "canal": "Réseaux sociaux",
+  "priorite": 2,
+  "action": "Valider (ou non) le post Instagram « Sorties de la semaine » du 12/11 : 3 randonnées les 14 et 15 novembre",
+  "impact": "Rendez-vous hebdomadaire qui montre une communauté réelle ; rien n'est publié sans ton « ok »",
+  "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/social/hebdo/2026-11-12/semaine.png",
+  "statut": "à faire",
+  "duree": "2 min",
+  "etapes": [
+   {
+    "texte": "Regarde le visuel.",
+    "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/social/hebdo/2026-11-12/semaine.png",
+    "libelle_lien": "Voir le visuel ↗"
+   },
+   {
+    "texte": "Lis la légende.",
+    "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/social/hebdo/2026-11-12/legende.txt",
+    "libelle_lien": "Lire la légende ↗"
+   },
+   {
+    "texte": "Réponds à Claude « ok sorties semaine » pour qu'il le publie jeudi, ou dis ce qu'il faut changer. Sans réponse vendredi soir, le post est périmé.",
+    "lien": "https://claude.ai/code",
+    "libelle_lien": "Répondre à Claude ↗"
+   }
+  ]
  }
 ]

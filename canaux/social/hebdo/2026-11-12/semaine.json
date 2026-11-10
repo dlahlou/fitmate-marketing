@@ -1,0 +1,39 @@
+{
+  "periode": "du jeudi 12 au mercredi 18 novembre",
+  "sorties": [
+    {
+      "jour": "sam.",
+      "num": "14",
+      "mois": "nov.",
+      "heure": "10h30",
+      "titre": "Randonnée Saint-Chéron",
+      "ville": "Saint-Chéron",
+      "niveau": "Débutant",
+      "niveau_cls": "l1",
+      "prix": ""
+    },
+    {
+      "jour": "sam.",
+      "num": "14",
+      "mois": "nov.",
+      "heure": "11h00",
+      "titre": "Un Automne à Fontainebleau",
+      "ville": "Gare SNCF Fontainebleau Avon",
+      "niveau": "Débutant",
+      "niveau_cls": "l1",
+      "prix": ""
+    },
+    {
+      "jour": "dim.",
+      "num": "15",
+      "mois": "nov.",
+      "heure": "13h35",
+      "titre": "Randonnée en Forêt",
+      "ville": "Nerville-la-Forêt",
+      "niveau": "Intermédiaire",
+      "niveau_cls": "l2",
+      "prix": ""
+    }
+  ],
+  "autres": 0
+}
