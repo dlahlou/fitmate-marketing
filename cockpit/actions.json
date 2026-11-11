@@ -442,5 +442,11 @@
   "canal": "Google",
   "action": "Décision de Driss : arrêt des posts, focus recherche organique Google et Bing. Tâches réseaux écartées ; lecture de Bing Webmaster Tools ajoutée au cockpit (en attente de la clé d'API et de l'accès réseau à ssl.bing.com)",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-11",
+  "canal": "Google",
+  "action": "Deux URL de spam (« /cs/news/xxx… », « /tom/mad/video-xxx… ») encore indexées par Google, l'une visible sur la requête « fitmates » : le site répond désormais 410 avec noindex sur /cs/ et /tom/ ; retrait manuel demandé à Driss",
+  "statut": "fait"
  }
 ]

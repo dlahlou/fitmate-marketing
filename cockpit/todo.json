@@ -1307,8 +1307,41 @@
   "canal": "Google",
   "priorite": 1,
   "action": "À chaque passage : lire Search Console, GA4 et Bing (cockpit/data), choisir la page qui a le plus d'apparitions avec un clic faible ou une position 5 à 20, la réécrire (title, description, réponse en tête, maillage), mettre en ligne, noter le relevé avant et la date de mesure",
-  "impact": "Décision de Driss du 11/11 : améliorer en continu le classement Google et Bing (base de ChatGPT) d'après les chiffres",
+  "impact": "Décision de Driss du 11/11 : améliorer en continu le classement Google et Bing (base de ChatGPT) d'après les chiffres · 11/11 : pages /organiser, /sports, /evenements examinées : elles n'apparaissent que sur la requête « fitmates » (liens annexes), rien à réécrire",
   "lien": "",
   "statut": "à faire"
+ },
+ {
+  "id": "retirer-spam-google",
+  "qui": "Driss",
+  "canal": "Google",
+  "priorite": 1,
+  "action": "Demander à Google de retirer deux adresses de spam indexées sous fitmates.net (l'une s'affiche sur la recherche « fitmates »)",
+  "impact": "Image de marque : une page « xxx … » apparaît sur la requête de la marque (35 apparitions en 90 jours). Le site répond déjà 410 ; le retrait manuel évite d'attendre le prochain passage de Google",
+  "lien": "https://search.google.com/search-console/removals",
+  "statut": "à faire",
+  "duree": "3 min",
+  "etapes": [
+   {
+    "texte": "Search Console → Suppressions → Nouvelle demande → « Supprimer toutes les URL commençant par ce préfixe » : https://www.fitmates.net/cs/",
+    "lien": "https://search.google.com/search-console/removals",
+    "libelle_lien": "Ouvrir Suppressions ↗"
+   },
+   {
+    "texte": "Recommencer avec le préfixe https://www.fitmates.net/tom/",
+    "lien": "https://search.google.com/search-console/removals",
+    "libelle_lien": "Ouvrir Suppressions ↗"
+   }
+  ]
+ },
+ {
+  "id": "mesure-spam-retire",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 1,
+  "action": "Vérifier (inspection d'URL et requête « fitmates ») que /cs/news/… et /tom/mad/… ne sont plus indexées",
+  "impact": "Relevé du 11/11 : /cs/news/… indexée (dernier passage Google le 04/10), 35 apparitions en 90 jours",
+  "lien": "",
+  "statut": "prévu 18/11"
  }
 ]
