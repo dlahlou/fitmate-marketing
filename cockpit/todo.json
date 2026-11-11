@@ -595,7 +595,7 @@
   "action": "Lot de décembre selon la direction artistique v2 (canaux/social/direction-artistique.md)",
   "impact": "Pas de trou de publication après le lot de novembre",
   "lien": "",
-  "statut": "bloqué : validation du plan Instagram v3 par Driss"
+  "statut": "écarté : décision de Driss du 11/11 (focus recherche organique)"
  },
  {
   "id": "ig-premiers-chiffres",
@@ -805,7 +805,7 @@
   "action": "Chaque mercredi soir (pour une validation avant jeudi) : préparer le post « sorties de la semaine » (python -m scripts.social_weekly --dry-run) et le présenter à Driss pour accord ; aucune publication sans son « ok »",
   "impact": "Rendez-vous hebdomadaire qui montre une communauté réelle et renvoie vers l'app · dernier préparé : 05/11 (2 sorties, en attente de l'accord de Driss)",
   "lien": "",
-  "statut": "à faire"
+  "statut": "écarté : décision de Driss du 11/11 (focus recherche organique)"
  },
  {
   "id": "modele-openagenda",
@@ -946,7 +946,7 @@
   "action": "Re-rendre le Reel « fourmi » (meta-campagne/video/reel.html) dans la charte du site, si Driss compte l'utiliser",
   "impact": "Cohérence de marque de la campagne Meta",
   "lien": "",
-  "statut": "à faire"
+  "statut": "écarté : décision de Driss du 11/11 (focus recherche organique)"
  },
  {
   "id": "bilan-v3",
@@ -956,7 +956,7 @@
   "action": "Bilan réseaux 2 semaines après la première publication v3 : portée, abonnés, visites par post (utm v3-<id>), conversions GA4",
   "impact": "Choisir les formats qui amènent des visites et des inscriptions",
   "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/mesure/bilan-reseaux-j7-2026-11-02.md",
-  "statut": "bloqué : publications v3 en attente de l'accord de Driss"
+  "statut": "écarté : décision de Driss du 11/11 (focus recherche organique)"
  },
  {
   "id": "bing-webmaster",
@@ -1281,7 +1281,7 @@
   "action": "Valider (ou non) le post Instagram « Sorties de la semaine » du 12/11 : 4 randonnées les 14 et 15 novembre (mis à jour le 11/11)",
   "impact": "Rendez-vous hebdomadaire qui montre une communauté réelle ; rien n'est publié sans ton « ok »",
   "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/canaux/social/hebdo/2026-11-12/semaine.png",
-  "statut": "à faire",
+  "statut": "écarté : décision de Driss du 11/11 (focus recherche organique)",
   "duree": "2 min",
   "etapes": [
    {
@@ -1300,5 +1300,15 @@
     "libelle_lien": "Répondre à Claude ↗"
    }
   ]
+ },
+ {
+  "id": "seo-boucle",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 1,
+  "action": "À chaque passage : lire Search Console, GA4 et Bing (cockpit/data), choisir la page qui a le plus d'apparitions avec un clic faible ou une position 5 à 20, la réécrire (title, description, réponse en tête, maillage), mettre en ligne, noter le relevé avant et la date de mesure",
+  "impact": "Décision de Driss du 11/11 : améliorer en continu le classement Google et Bing (base de ChatGPT) d'après les chiffres",
+  "lien": "",
+  "statut": "à faire"
  }
 ]

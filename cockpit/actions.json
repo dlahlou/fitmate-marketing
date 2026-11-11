@@ -436,5 +436,11 @@
   "canal": "Réseaux sociaux",
   "action": "Post « Sorties de la semaine » du 12/11 préparé deux jours avant (3 randonnées les 14 et 15/11). Script : titres et lieux saisis en majuscules remis en casse de titre. Non publié : en attente de l'accord de Driss",
   "statut": "en attente de Driss"
+ },
+ {
+  "date": "2026-11-11",
+  "canal": "Google",
+  "action": "Décision de Driss : arrêt des posts, focus recherche organique Google et Bing. Tâches réseaux écartées ; lecture de Bing Webmaster Tools ajoutée au cockpit (en attente de la clé d'API et de l'accès réseau à ssl.bing.com)",
+  "statut": "fait"
  }
 ]

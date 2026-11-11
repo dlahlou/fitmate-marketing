@@ -9,7 +9,7 @@ import json
 from collections import Counter
 
 from fitmates_mkt.config import ROOT, MissingAccess
-from fitmates_mkt.sources import app_store, backend, google_play, google_web, social, store_search
+from fitmates_mkt.sources import app_store, backend, bing, google_play, google_web, social, store_search
 
 OUT = ROOT / "cockpit" / "data"
 TODAY = dt.date.today()
@@ -83,6 +83,29 @@ def gsc_queries() -> list[dict]:
     return [{"requete": r["query"], "clics": int(r["clicks"]), "impressions": int(r["impressions"]),
              "ctr": round(r["ctr"], 4), "position": round(r["position"], 1)}
             for r in sorted(rows, key=lambda r: (-r["impressions"], -r["clicks"]))[:300]]
+
+
+def _bing_agg(rows: list[dict], key: str, label: str) -> list[dict]:
+    agg: dict[str, dict] = {}
+    for r in rows:
+        k = r.get(key) or ""
+        if label == "page":
+            k = k.split("fitmates.net", 1)[-1] or "/"
+        a = agg.setdefault(k, {label: k, "clics": 0, "impressions": 0, "_pos": 0.0})
+        imp = int(r.get("Impressions") or 0)
+        a["clics"] += int(r.get("Clicks") or 0); a["impressions"] += imp
+        a["_pos"] += float(r.get("AvgImpressionPosition") or 0) * imp
+    out = [{label: a[label], "clics": a["clics"], "impressions": a["impressions"],
+            "position": round(a["_pos"] / a["impressions"], 1) if a["impressions"] else None} for a in agg.values()]
+    return sorted(out, key=lambda r: (-r["impressions"], -r["clics"]))[:300]
+
+
+def bing_requetes() -> list[dict]:
+    return _bing_agg(bing.query_stats(), "Query", "requete")
+
+
+def bing_pages() -> list[dict]:
+    return _bing_agg(bing.page_stats(), "Query", "page")
 
 
 def gsc_pages() -> list[dict]:
@@ -318,6 +341,9 @@ def listes_attente() -> list[dict]:
 ACCESS = [
     ("Site : trafic (GA4)", lambda: google_web.ga4_property_id(), "", ""),
     ("Google : recherche (Search Console)", lambda: google_web.search_analytics(d(9), d(2), ("date",), 1), "", ""),
+    ("Bing : recherche (Bing Webmaster Tools, base de ChatGPT)", lambda: bing.query_stats(),
+     "Importer le site depuis Search Console dans Bing Webmaster Tools, puis créer une clé d'API (Paramètres → API Access) et l'ajouter comme variable BING_WEBMASTER_API_KEY de l'environnement",
+     "https://www.bing.com/webmasters"),
     ("Google Play : fiche et avis", lambda: google_play.reviews(), "", ""),
     ("Google Play : installations et visites de fiche", lambda: play_stats(),
      "Donner au compte claude-aso la permission « Voir les informations sur l'application et télécharger les rapports groupés » au niveau du compte (effet sous 24 h)", "https://play.google.com/console/u/0/developers/7410630646260977899/users-and-permissions"),
@@ -459,7 +485,7 @@ def kpis() -> list[dict]:
 
 
 JOBS = {"ga4_jour": ga4_daily, "ga4_audience": ga4_audience, "ga4_campagnes": ga4_campagnes, "ga4_canaux": ga4_channels, "ga4_pages": ga4_pages, "ga4_evenements": ga4_events,
-        "gsc_jour": gsc_daily, "gsc_requetes": gsc_queries, "gsc_pages": gsc_pages,
+        "gsc_jour": gsc_daily, "gsc_requetes": gsc_queries, "gsc_pages": gsc_pages, "bing_requetes": bing_requetes, "bing_pages": bing_pages,
         "stores": stores, "app_store_stats": app_store_stats, "play_stats": play_stats, "reseaux": reseaux, "publications": publications, "sorties": sorties, "listes_attente": listes_attente, "backend_kpis": backend_kpis, "acces": acces, "actions": actions, "a_faire": a_faire, "kpis": kpis}
 
 

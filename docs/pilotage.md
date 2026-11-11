@@ -3,6 +3,15 @@
 Claude n'attend pas Driss : une tâche planifiée le relance plusieurs fois par jour, et chaque passage fait avancer la
 liste de tâches. Driss intervient seulement pour ce qui lui revient (actions « Toi » du cockpit, avec leurs étapes).
 
+## Priorité depuis le 11/11/2026 : la recherche organique
+
+Décision de Driss : plus de production de posts (réseaux sociaux en pause). Chaque passage sert à améliorer le
+classement du site dans Google et dans Bing (index de la recherche web de ChatGPT), d'après les chiffres :
+`cockpit/data/gsc_requetes.json`, `gsc_pages.json`, `bing_requetes.json`, `bing_pages.json`, `ga4_pages.json`,
+`ga4_campagnes.json`. Méthode : page avec beaucoup d'apparitions et peu de clics, ou en position 5 à 20 →
+title, description, réponse en tête, maillage interne ; page qui convertit (GA4) → lui envoyer des liens.
+Relevé avant, mise en ligne vérifiée, mesure 3 à 4 semaines après. Ne pas retoucher une page avant sa mesure.
+
 ## À chaque passage
 
 1. `git pull origin main` dans `fitmate-marketing` (et dans `fitmate-landing-page` s'il est cloné ; sinon le cloner).
