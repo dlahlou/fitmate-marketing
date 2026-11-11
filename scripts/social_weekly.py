@@ -81,7 +81,9 @@ def _casse(s: str) -> str:
     """Un titre ou un lieu saisi TOUT EN MAJUSCULES passe en casse de titre (« Gare SNCF Fontainebleau Avon »)."""
     lettres = [c for c in s if c.isalpha()]
     if len(lettres) < 4 or sum(c.isupper() for c in lettres) / len(lettres) < 0.8:
-        return s
+        # Casse déjà mixte : seulement les sigles (« Rer C » → « RER C ») et l'espace avant les deux-points
+        s = re.sub(r"\b(" + "|".join(SIGLES) + r")\b", lambda m: m.group(1).upper(), s, flags=re.I)
+        return re.sub(r"(\w):(\s)", r"\1 :\2", s)
     mots = []
     for i, m in enumerate(s.split(" ")):
         brut = m.strip(".,;:!?()")

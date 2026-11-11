@@ -5,6 +5,17 @@
       "jour": "sam.",
       "num": "14",
       "mois": "nov.",
+      "heure": "10h20",
+      "titre": "Chamarande : Boucle de 20 km",
+      "ville": "Chamarande, RER C",
+      "niveau": "Intermédiaire",
+      "niveau_cls": "l2",
+      "prix": ""
+    },
+    {
+      "jour": "sam.",
+      "num": "14",
+      "mois": "nov.",
       "heure": "10h30",
       "titre": "Randonnée Saint-Chéron",
       "ville": "Saint-Chéron",
