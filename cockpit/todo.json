@@ -1307,7 +1307,7 @@
   "canal": "Google",
   "priorite": 1,
   "action": "À chaque passage : lire Search Console, GA4 et Bing (cockpit/data), choisir la page qui a le plus d'apparitions avec un clic faible ou une position 5 à 20, la réécrire (title, description, réponse en tête, maillage), mettre en ligne, noter le relevé avant et la date de mesure",
-  "impact": "Décision de Driss du 11/11 : améliorer en continu le classement Google et Bing (base de ChatGPT) d'après les chiffres · 11/11 : pages /organiser, /sports, /evenements examinées : elles n'apparaissent que sur la requête « fitmates » (liens annexes), rien à réécrire",
+  "impact": "Décision de Driss du 11/11 : améliorer en continu le classement Google et Bing (base de ChatGPT) d'après les chiffres · 11/11 : pages /organiser, /sports, /evenements examinées : elles n'apparaissent que sur la requête « fitmates » (liens annexes), rien à réécrire · 12/11 : pages candidates sans requêtes exploitables (volumes masqués ou concurrence locale) ; levier technique traité à la place (polices)",
   "lien": "",
   "statut": "à faire"
  },
@@ -1343,5 +1343,15 @@
   "impact": "Relevé du 11/11 : /cs/news/… indexée (dernier passage Google le 04/10), 35 apparitions en 90 jours",
   "lien": "",
   "statut": "prévu 18/11"
+ },
+ {
+  "id": "seo-vitesse-js",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 1,
+  "action": "Vitesse mobile : découper le JavaScript du site (pages chargées à la demande, React.lazy) pour réduire le bundle de 760 Ko ; l'élément LCP (paragraphe du hero) attend l'hydratation : 2,3 s de « render delay » sur 2,9 s",
+  "impact": "Lighthouse mobile local au 12/11 : FCP 2,0 s, LCP 2,9 à 3,1 s, CLS 0. Objectif : LCP < 2,5 s (seuil « bon » de Google)",
+  "lien": "",
+  "statut": "à faire"
  }
 ]

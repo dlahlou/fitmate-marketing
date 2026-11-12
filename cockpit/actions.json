@@ -448,5 +448,11 @@
   "canal": "Google",
   "action": "Deux URL de spam (« /cs/news/xxx… », « /tom/mad/video-xxx… ») encore indexées par Google, l'une visible sur la requête « fitmates » : le site répond désormais 410 avec noindex sur /cs/ et /tom/ ; retrait manuel demandé à Driss",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-12",
+  "canal": "Google",
+  "action": "Vitesse mobile : polices Bricolage Grotesque et Inter auto-hébergées et préchargées (plus de Google Fonts sur les pages du site). PageSpeed mobile avant : FCP et LCP 3,7 s, CLS 0 ; Lighthouse mobile après (2 essais) : FCP 2,0 s, LCP 2,9 à 3,1 s, CLS 0. Suite : découper le JavaScript",
+  "statut": "fait"
  }
 ]
