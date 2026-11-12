@@ -460,5 +460,11 @@
   "canal": "Google",
   "action": "Vitesse : découpage du JavaScript étudié puis abandonné. Mesure réelle (bridage mobile) : plus grand élément à 2,7 s avec JavaScript, 2,4 s sans ; pas d'erreur d'hydratation",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-12",
+  "canal": "Google",
+  "action": "/padel/lyon : title « Padel Lyon : 7 clubs dont la Part-Dieu, prix d'un terrain ». Relevé avant : « padel part dieu » 9 apparitions, position 9,6, 0 clic (30 j). Les autres couples requête-page sans clic portent sur des pages réécrites du 03 au 07/11, en attente de mesure",
+  "statut": "fait"
  }
 ]
