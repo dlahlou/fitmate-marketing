@@ -1350,8 +1350,8 @@
   "canal": "Google",
   "priorite": 1,
   "action": "Vitesse mobile : découper le JavaScript du site (pages chargées à la demande, React.lazy) pour réduire le bundle de 760 Ko ; l'élément LCP (paragraphe du hero) attend l'hydratation : 2,3 s de « render delay » sur 2,9 s",
-  "impact": "Lighthouse mobile local au 12/11 : FCP 2,0 s, LCP 2,9 à 3,1 s, CLS 0. Objectif : LCP < 2,5 s (seuil « bon » de Google)",
+  "impact": "Lighthouse mobile local au 12/11 : FCP 2,0 s, LCP 2,9 à 3,1 s, CLS 0. Objectif : LCP < 2,5 s (seuil « bon » de Google) · 12/11 : mesuré avant d'agir. Avec un vrai bridage réseau mobile (Lighthouse « devtools »), la page avec JavaScript affiche son plus grand élément en 2,7 s, sans JavaScript en 2,4 s : le JavaScript ne coûte que 0,3 s, aucune erreur d'hydratation. L'écart de la mesure simulée vient du modèle de Lighthouse. Découpage abandonné : gain faible, risque élevé (le prérendu ne gère pas le chargement différé)",
   "lien": "",
-  "statut": "à faire"
+  "statut": "fait"
  }
 ]
