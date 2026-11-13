@@ -1353,5 +1353,15 @@
   "impact": "Lighthouse mobile local au 12/11 : FCP 2,0 s, LCP 2,9 à 3,1 s, CLS 0. Objectif : LCP < 2,5 s (seuil « bon » de Google) · 12/11 : mesuré avant d'agir. Avec un vrai bridage réseau mobile (Lighthouse « devtools »), la page avec JavaScript affiche son plus grand élément en 2,7 s, sans JavaScript en 2,4 s : le JavaScript ne coûte que 0,3 s, aucune erreur d'hydratation. L'écart de la mesure simulée vient du modèle de Lighthouse. Découpage abandonné : gain faible, risque élevé (le prérendu ne gère pas le chargement différé)",
   "lien": "",
   "statut": "fait"
+ },
+ {
+  "id": "seo-longueurs",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Raccourcir les title de plus de 70 caractères (39 pages, suffixe « | Fitmates » compris) et les descriptions de plus de 165 (40 pages), en commençant par les pages qui ne sont pas en attente de mesure ; envisager de ne pas ajouter « | Fitmates » quand le title dépasse 60 caractères",
+  "impact": "Audit du 13/11 sur les 108 pages prérendues : aucun title ni description en double, un seul h1 par page, JSON-LD valide partout ; seules les longueurs dépassent (Google tronque)",
+  "lien": "",
+  "statut": "prévu 17/11"
  }
 ]

@@ -466,5 +466,11 @@
   "canal": "Google",
   "action": "/padel/lyon : title « Padel Lyon : 7 clubs dont la Part-Dieu, prix d'un terrain ». Relevé avant : « padel part dieu » 9 apparitions, position 9,6, 0 clic (30 j). Les autres couples requête-page sans clic portent sur des pages réécrites du 03 au 07/11, en attente de mesure",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-13",
+  "canal": "Google",
+  "action": "Audit technique des 108 pages prérendues : aucun title ni description en double, un h1 par page, JSON-LD valide. 39 title de plus de 70 caractères et 40 descriptions de plus de 165 : passe de raccourcissement prévue après le point d'étape du 16/11",
+  "statut": "fait"
  }
 ]
