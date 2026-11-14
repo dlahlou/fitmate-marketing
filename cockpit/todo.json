@@ -1363,5 +1363,23 @@
   "impact": "Audit du 13/11 sur les 108 pages prérendues : aucun title ni description en double, un seul h1 par page, JSON-LD valide partout ; seules les longueurs dépassent (Google tronque)",
   "lien": "",
   "statut": "prévu 17/11"
+ },
+ {
+  "id": "apple-contrat",
+  "qui": "Driss",
+  "canal": "Stores",
+  "priorite": 1,
+  "action": "Accepter le contrat Apple en attente (App Store Connect → Business)",
+  "impact": "Depuis le 14/11, Apple bloque l'API App Store Connect (FORBIDDEN.REQUIRED_AGREEMENTS_MISSING_OR_EXPIRED) : plus de statistiques App Store dans le cockpit, et d'autres actions du compte peuvent être bloquées",
+  "lien": "https://appstoreconnect.apple.com/business",
+  "statut": "à faire",
+  "duree": "2 min",
+  "etapes": [
+   {
+    "texte": "Ouvre App Store Connect → Business et accepte le contrat ou les conditions mis à jour (titulaire du compte uniquement).",
+    "lien": "https://appstoreconnect.apple.com/business",
+    "libelle_lien": "Ouvrir Business ↗"
+   }
+  ]
  }
 ]
