@@ -1372,7 +1372,7 @@
   "action": "Accepter le contrat Apple en attente (App Store Connect → Business)",
   "impact": "Depuis le 14/11, Apple bloque l'API App Store Connect (FORBIDDEN.REQUIRED_AGREEMENTS_MISSING_OR_EXPIRED) : plus de statistiques App Store dans le cockpit, et d'autres actions du compte peuvent être bloquées",
   "lien": "https://appstoreconnect.apple.com/business",
-  "statut": "à faire",
+  "statut": "fait",
   "duree": "2 min",
   "etapes": [
    {
