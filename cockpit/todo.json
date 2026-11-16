@@ -282,7 +282,7 @@
   "action": "Contenus rando de novembre : Chevreuse et Vexin intégrés et vérifiés (27/10) ; reste Rambouillet après la fin de l'interdiction autour des étangs de Hollande (vérifier la préfecture le 16/11)",
   "impact": "Positions sur les requêtes rando IDF avant la saison",
   "lien": "https://github.com/dlahlou/fitmate-marketing/tree/main/canaux/seo/brouillons/novembre-2026",
-  "statut": "prévu 16/11"
+  "statut": "fait"
  },
  {
   "id": "confirmation-attente",
@@ -1404,5 +1404,15 @@
     "libelle_lien": "Ouvrir Search Console ↗"
    }
   ]
+ },
+ {
+  "id": "mesure-rambouillet",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Comparer /randonnee/foret-de-rambouillet au relevé du 16/11 et revérifier l'état des chemins (ONF) ; « randonnée forêt de rambouillet » : 170 recherches par mois",
+  "impact": "Page de la zone ouverte (Yvelines) enrichie de 2 itinéraires officiels",
+  "lien": "https://www.fitmates.net/randonnee/foret-de-rambouillet",
+  "statut": "prévu 14/12"
  }
 ]

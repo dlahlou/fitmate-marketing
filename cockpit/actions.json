@@ -478,5 +478,11 @@
   "canal": "Google",
   "action": "Point d'étape SEO : Google n'a revisité aucune des pages réécrites du 03 au 08/11 (dernier passage entre le 24 et le 29/10), donc leurs chiffres ne mesurent pas encore les réécritures. Plusieurs pages d'intention sont tombées à 0 apparition sur la période (marcher pour maigrir 75 → 0, rencontrer du monde 44 → 0, se sentir seul 29 → 0) alors qu'elles restent indexées. Site entier : environ 250 apparitions par jour fin octobre, 175 mi-novembre. Correctif : dates de mise à jour réelles dans le sitemap ; demande d'indexation à faire par Driss",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-16",
+  "canal": "Google",
+  "action": "/randonnee/foret-de-rambouillet : fin de l'interdiction d'accès aux étangs de Hollande (arrêté jusqu'au 15/11 inclus, pas de prolongation publiée ; l'ONF signale encore des chemins fermés et des chantiers vers l'étang de la Tour et l'étang d'Or). Ajout des itinéraires officiels « Les rigoles du Roi Soleil » (14,1 km, gare à gare) et « Les fabuleux trésors du parc de Rambouillet » (8 km), sourcés ; traversée Visorando non reprise. Title « Randonnée forêt de Rambouillet en train : 2 itinéraires »",
+  "statut": "fait"
  }
 ]
