@@ -490,5 +490,11 @@
   "canal": "Google",
   "action": "Gabarit des descriptions des pages sport par département en liste d'attente : jusqu'à 236 caractères ramenés sous 165 (2 lieux, préposition correcte, « Liste d'attente Fitmates pour partir en groupe. »)",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-16",
+  "canal": "Google",
+  "action": "Titles : suffixe « | Fitmates » retiré quand le titre dépasse 60 caractères (balise title seulement). Accueil : « Fitmates : le sport à plusieurs, sorties et partenaires » (l'ancien promettait des partenaires « près de chez vous »). Le push n'avait pas déclenché de déploiement Vercel : déploiement relancé à la main",
+  "statut": "fait"
  }
 ]

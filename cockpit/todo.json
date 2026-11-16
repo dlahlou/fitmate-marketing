@@ -1360,9 +1360,9 @@
   "canal": "Google",
   "priorite": 2,
   "action": "Raccourcir les title de plus de 70 caractères (39 pages, suffixe « | Fitmates » compris) et les descriptions de plus de 165 (40 pages), en commençant par les pages qui ne sont pas en attente de mesure ; envisager de ne pas ajouter « | Fitmates » quand le title dépasse 60 caractères",
-  "impact": "Audit du 13/11 sur les 108 pages prérendues : aucun title ni description en double, un seul h1 par page, JSON-LD valide partout ; seules les longueurs dépassent (Google tronque) · 16/11 : descriptions des 26 pages sport par département raccourcies (gabarit) ; reste les title et les pages en attente de mesure (après le 05/12)",
+  "impact": "Audit du 13/11 sur les 108 pages prérendues : aucun title ni description en double, un seul h1 par page, JSON-LD valide partout ; seules les longueurs dépassent (Google tronque) · 16/11 : descriptions des 26 pages sport par département raccourcies (gabarit) ; reste les title et les pages en attente de mesure (après le 05/12) · 16/11 soir : au-delà de 60 caractères, la balise title n'ajoute plus « | Fitmates » ; accueil et guides coach / club raccourcis",
   "lien": "",
-  "statut": "prévu 17/11"
+  "statut": "fait"
  },
  {
   "id": "apple-contrat",
