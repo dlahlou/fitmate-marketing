@@ -484,5 +484,11 @@
   "canal": "Google",
   "action": "/randonnee/foret-de-rambouillet : fin de l'interdiction d'accès aux étangs de Hollande (arrêté jusqu'au 15/11 inclus, pas de prolongation publiée ; l'ONF signale encore des chemins fermés et des chantiers vers l'étang de la Tour et l'étang d'Or). Ajout des itinéraires officiels « Les rigoles du Roi Soleil » (14,1 km, gare à gare) et « Les fabuleux trésors du parc de Rambouillet » (8 km), sourcés ; traversée Visorando non reprise. Title « Randonnée forêt de Rambouillet en train : 2 itinéraires »",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-16",
+  "canal": "Google",
+  "action": "Gabarit des descriptions des pages sport par département en liste d'attente : jusqu'à 236 caractères ramenés sous 165 (2 lieux, préposition correcte, « Liste d'attente Fitmates pour partir en groupe. »)",
+  "statut": "fait"
  }
 ]

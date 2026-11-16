@@ -483,9 +483,9 @@
   "canal": "Google",
   "priorite": 2,
   "action": "Relevé Search Console : pages et requêtes avec des apparitions mais peu de clics → réécrire title, description et réponse en tête de page (dépôt du site)",
-  "impact": "Relevé du 26/10 : 249 apparitions / 30 j, surtout sur « fitmates » (la marque, position 1 à 4) ; pages rando indexées le 26/10. À refaire quand les pages rando auront 3 semaines de données",
+  "impact": "Relevé du 26/10 : 249 apparitions / 30 j, surtout sur « fitmates » (la marque, position 1 à 4) ; pages rando indexées le 26/10. À refaire quand les pages rando auront 3 semaines de données · 16/11 : fondu dans la boucle SEO (seo-boucle), traité page par page depuis le 03/11",
   "lien": "",
-  "statut": "prévu 16/11"
+  "statut": "fait"
  },
  {
   "id": "social-lot2",
@@ -1360,7 +1360,7 @@
   "canal": "Google",
   "priorite": 2,
   "action": "Raccourcir les title de plus de 70 caractères (39 pages, suffixe « | Fitmates » compris) et les descriptions de plus de 165 (40 pages), en commençant par les pages qui ne sont pas en attente de mesure ; envisager de ne pas ajouter « | Fitmates » quand le title dépasse 60 caractères",
-  "impact": "Audit du 13/11 sur les 108 pages prérendues : aucun title ni description en double, un seul h1 par page, JSON-LD valide partout ; seules les longueurs dépassent (Google tronque)",
+  "impact": "Audit du 13/11 sur les 108 pages prérendues : aucun title ni description en double, un seul h1 par page, JSON-LD valide partout ; seules les longueurs dépassent (Google tronque) · 16/11 : descriptions des 26 pages sport par département raccourcies (gabarit) ; reste les title et les pages en attente de mesure (après le 05/12)",
   "lien": "",
   "statut": "prévu 17/11"
  },
