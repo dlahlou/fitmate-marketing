@@ -572,7 +572,7 @@
   "qui": "Claude",
   "canal": "Mesure",
   "priorite": 3,
-  "action": "Relevé hebdomadaire (scripts.snapshot) chaque lundi, commité dans data/snapshots (dernier : 09/11)",
+  "action": "Relevé hebdomadaire (scripts.snapshot) chaque lundi, commité dans data/snapshots (dernier : 16/11)",
   "impact": "Base des comparaisons avant/après",
   "lien": "",
   "statut": "à faire"
@@ -1271,7 +1271,7 @@
   "action": "Lundi 16/11 : premier point d'étape sur les pages réécrites du 03 au 07/11 (GR20, padel Paris, marcher pour maigrir, Strava, amis, rencontrer du monde, organiser, départements rando) : apparitions, clics, position, sans conclure avant 3 semaines",
   "impact": "Repérer tôt une page qui chute après réécriture",
   "lien": "",
-  "statut": "prévu 16/11"
+  "statut": "fait"
  },
  {
   "id": "valider-sorties-semaine-2026-11-12",
@@ -1379,6 +1379,29 @@
     "texte": "Ouvre App Store Connect → Business et accepte le contrat ou les conditions mis à jour (titulaire du compte uniquement).",
     "lien": "https://appstoreconnect.apple.com/business",
     "libelle_lien": "Ouvrir Business ↗"
+   }
+  ]
+ },
+ {
+  "id": "gsc-demander-indexation",
+  "qui": "Driss",
+  "canal": "Google",
+  "priorite": 1,
+  "action": "Demander à Google de relire les 10 pages réécrites (il ne les a pas revisitées depuis fin octobre)",
+  "impact": "Google voit encore les anciennes versions : les réécritures du 03 au 08/11 ne peuvent pas jouer tant qu'il ne repasse pas. Le compte de service n'a que la lecture, la demande doit venir de toi",
+  "lien": "https://search.google.com/search-console",
+  "statut": "à faire",
+  "duree": "10 min",
+  "etapes": [
+   {
+    "texte": "Search Console → Sitemaps → renvoyer https://www.fitmates.net/sitemap.xml",
+    "lien": "https://search.google.com/search-console/sitemaps",
+    "libelle_lien": "Ouvrir Sitemaps ↗"
+   },
+   {
+    "texte": "Pour chaque adresse, coller dans la barre « Inspecter une URL » puis « Demander une indexation » : https://www.fitmates.net/randonnees-week-end-ile-de-france, https://www.fitmates.net/sport/randonnee/seine-et-marne, https://www.fitmates.net/perdre-du-poids-en-marchant, https://www.fitmates.net/comment-se-faire-des-amis, https://www.fitmates.net/activites-pour-rencontrer-du-monde, https://www.fitmates.net/se-sentir-seul, https://www.fitmates.net/strava-ou-fitmates, https://www.fitmates.net/randonnee/gr20, https://www.fitmates.net/sport/padel/paris, https://www.fitmates.net/organiser/groupe-randonnee",
+    "lien": "https://search.google.com/search-console",
+    "libelle_lien": "Ouvrir Search Console ↗"
    }
   ]
  }

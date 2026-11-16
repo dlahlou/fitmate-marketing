@@ -472,5 +472,11 @@
   "canal": "Google",
   "action": "Audit technique des 108 pages prérendues : aucun title ni description en double, un h1 par page, JSON-LD valide. 39 title de plus de 70 caractères et 40 descriptions de plus de 165 : passe de raccourcissement prévue après le point d'étape du 16/11",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-16",
+  "canal": "Google",
+  "action": "Point d'étape SEO : Google n'a revisité aucune des pages réécrites du 03 au 08/11 (dernier passage entre le 24 et le 29/10), donc leurs chiffres ne mesurent pas encore les réécritures. Plusieurs pages d'intention sont tombées à 0 apparition sur la période (marcher pour maigrir 75 → 0, rencontrer du monde 44 → 0, se sentir seul 29 → 0) alors qu'elles restent indexées. Site entier : environ 250 apparitions par jour fin octobre, 175 mi-novembre. Correctif : dates de mise à jour réelles dans le sitemap ; demande d'indexation à faire par Driss",
+  "statut": "fait"
  }
 ]
