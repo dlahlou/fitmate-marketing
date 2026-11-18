@@ -496,5 +496,11 @@
   "canal": "Google",
   "action": "Titles : suffixe « | Fitmates » retiré quand le titre dépasse 60 caractères (balise title seulement). Accueil : « Fitmates : le sport à plusieurs, sorties et partenaires » (l'ancien promettait des partenaires « près de chez vous »). Le push n'avait pas déclenché de déploiement Vercel : déploiement relancé à la main",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-18",
+  "canal": "Google",
+  "action": "Contrôle du spam : /cs/news/…?ojuz encore indexée (Google n'est pas repassé depuis le 04/10), mais 0 apparition depuis le 08/11. Le retrait manuel dans Search Console reste le moyen le plus rapide",
+  "statut": "fait"
  }
 ]

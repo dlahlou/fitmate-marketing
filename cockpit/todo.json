@@ -1340,9 +1340,9 @@
   "canal": "Google",
   "priorite": 1,
   "action": "Vérifier (inspection d'URL et requête « fitmates ») que /cs/news/… et /tom/mad/… ne sont plus indexées",
-  "impact": "Relevé du 11/11 : /cs/news/… indexée (dernier passage Google le 04/10), 35 apparitions en 90 jours",
+  "impact": "Relevé du 11/11 : /cs/news/… indexée (dernier passage Google le 04/10), 35 apparitions en 90 jours · 18/11 : toujours indexée (dernier passage de Google le 04/10, il n'a pas encore vu le 410) ; aucune apparition depuis le 08/11",
   "lien": "",
-  "statut": "prévu 18/11"
+  "statut": "prévu 25/11"
  },
  {
   "id": "seo-vitesse-js",
