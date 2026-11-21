@@ -1421,8 +1421,8 @@
   "canal": "Google",
   "priorite": 1,
   "action": "/sport/randonnee/paris : 42 apparitions, 0 clic, position 6,1 (12-19/11) → regarder les requêtes, enrichir sur le modèle « lieu sourcé » (itinéraires officiels au départ de Paris, gares) et title à l'intention",
-  "impact": "Zone ouverte ; le modèle sourcé a fait passer Fontainebleau de la position 27 à 9",
+  "impact": "Zone ouverte ; le modèle sourcé a fait passer Fontainebleau de la position 27 à 9 · 21/11 : les 58 apparitions de la page (22/10-19/11) viennent toutes de la requête « fitmates » (lien annexe sous l'accueil), aucune de « randonnée paris » : rien à réécrire",
   "lien": "https://www.fitmates.net/sport/randonnee/paris",
-  "statut": "à faire"
+  "statut": "écarté : fausse piste"
  }
 ]
