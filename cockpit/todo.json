@@ -915,8 +915,8 @@
   "priorite": 2,
   "action": "Mesurer les pages retravaillées le 31/10 (rando IDF associations, run-clubs-paris, reseau-social-sportif, basketball, escalade Fontainebleau) contre la référence du 22-29/10 : impressions, position, CTR (Search Console) et join_waitlist / generate_lead par source (GA4)",
   "impact": "Savoir si le travail SEO apporte des leads",
-  "lien": "",
-  "statut": "prévu 21/11"
+  "lien": "https://github.com/dlahlou/fitmate-marketing/blob/main/mesure/bilan-seo-2026-11-21.md",
+  "statut": "fait"
  },
  {
   "id": "padel-accroche",
@@ -1414,5 +1414,15 @@
   "impact": "Page de la zone ouverte (Yvelines) enrichie de 2 itinéraires officiels",
   "lien": "https://www.fitmates.net/randonnee/foret-de-rambouillet",
   "statut": "prévu 14/12"
+ },
+ {
+  "id": "seo-rando-paris",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 1,
+  "action": "/sport/randonnee/paris : 42 apparitions, 0 clic, position 6,1 (12-19/11) → regarder les requêtes, enrichir sur le modèle « lieu sourcé » (itinéraires officiels au départ de Paris, gares) et title à l'intention",
+  "impact": "Zone ouverte ; le modèle sourcé a fait passer Fontainebleau de la position 27 à 9",
+  "lien": "https://www.fitmates.net/sport/randonnee/paris",
+  "statut": "à faire"
  }
 ]

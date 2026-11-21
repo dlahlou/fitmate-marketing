@@ -502,5 +502,11 @@
   "canal": "Google",
   "action": "Contrôle du spam : /cs/news/…?ojuz encore indexée (Google n'est pas repassé depuis le 04/10), mais 0 apparition depuis le 08/11. Le retrait manuel dans Search Console reste le moyen le plus rapide",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-21",
+  "canal": "Google",
+  "action": "Bilan SEO des pages retravaillées le 30-31/10 (mesure/bilan-seo-2026-11-21.md) : escalade Fontainebleau position 27,4 → 9,2 et +60 % d'apparitions, Étretat 16,8 → 4,6, rando Paris apparitions ×4 ; recul de /run-clubs-paris et /reseau-social-sportif ; Nice et basketball absents cette semaine. Recherche Google 75 → 36 sessions par semaine, clics stores 15 → 8 : baisse de tout le site, et pages de novembre pas encore relues par Google",
+  "statut": "fait"
  }
 ]
