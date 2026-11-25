@@ -520,5 +520,11 @@
   "canal": "Mesure",
   "action": "Relevé du 23/11 (28 j glissants) : Search Console 219 clics, 6 070 apparitions (189 et 5 082 au 16/11 ; 147 et 3 689 au 09/11) ; GA4 recherche Google 225 sessions, 60 conversions (188 et 42 au 09/11) ; assistants IA 42 sessions, 11 conversions (23 et 6 au 09/11) ; Instagram 25 abonnés. Google a relu /sport/padel/paris (17/11) et /randonnees-week-end-ile-de-france (18/11) ; les autres pages réécrites pas encore",
   "statut": "fait"
+ },
+ {
+  "date": "2026-11-25",
+  "canal": "Google",
+  "action": "Spam /cs/news/… : toujours indexé (dernier passage de Google le 04/10), 0 apparition depuis le 08/11. Les pages réécrites du 03-08/11 ne sont toujours pas relues (perdre du poids, GR20, amis : derniers passages 24-26/10)",
+  "statut": "fait"
  }
 ]

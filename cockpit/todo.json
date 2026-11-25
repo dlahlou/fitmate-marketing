@@ -1340,9 +1340,9 @@
   "canal": "Google",
   "priorite": 1,
   "action": "Vérifier (inspection d'URL et requête « fitmates ») que /cs/news/… et /tom/mad/… ne sont plus indexées",
-  "impact": "Relevé du 11/11 : /cs/news/… indexée (dernier passage Google le 04/10), 35 apparitions en 90 jours · 18/11 : toujours indexée (dernier passage de Google le 04/10, il n'a pas encore vu le 410) ; aucune apparition depuis le 08/11",
+  "impact": "Relevé du 11/11 : /cs/news/… indexée (dernier passage Google le 04/10), 35 apparitions en 90 jours · 18/11 : toujours indexée (dernier passage de Google le 04/10, il n'a pas encore vu le 410) ; aucune apparition depuis le 08/11 · 25/11 : toujours dans l'index (Google pas repassé depuis le 04/10) mais 0 apparition depuis le 08/11 : plus visible. Le retrait manuel (action Driss) reste ouvert",
   "lien": "",
-  "statut": "prévu 25/11"
+  "statut": "fait"
  },
  {
   "id": "seo-vitesse-js",
