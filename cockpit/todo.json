@@ -792,7 +792,7 @@
   "qui": "Claude",
   "canal": "Google",
   "priorite": 2,
-  "action": "Revérification mensuelle des pages Fontainebleau (rando, escalade, trail) contre la carte ONF des secteurs ouverts et l'arrêté préfectoral ; corriger le site si un secteur rouvre ou ferme",
+  "action": "Revérification mensuelle des pages Fontainebleau (rando, escalade, trail) contre la carte ONF des secteurs ouverts et l'arrêté préfectoral ; corriger le site si un secteur rouvre ou ferme ; en même temps, title et description : « bloc a bleau » et « bloc à bleau » sont en position 9 (144 apparitions, 0 clic, 30/10-26/11) et « bloc bleau 77 » en position 45 : remplacer la date du 19 octobre par l'état vérifié",
   "impact": "Pages Fontainebleau exactes (forte saisonnalité de recherche)",
   "lien": "https://www.onf.fr/vivre-la-foret/+/2d9a::foret-de-fontainebleau-carte-des-sentiers-et-routes-forestieres-accessibles.html",
   "statut": "prévu 29/11"
