@@ -1416,6 +1416,16 @@
   "statut": "prévu 14/12"
  },
  {
+  "id": "mesure-padel-bordeaux",
+  "qui": "Claude",
+  "canal": "Google",
+  "priorite": 2,
+  "action": "Comparer /padel/bordeaux au relevé du 27/11 (134 apparitions, 0 clic, position 26,3 ; « padel bordeaux lac » en 11,2) : clics et position sur « padel bordeaux lac », « padel bordeaux lac tarif » et « padel bordeaux »",
+  "impact": "Requêtes Bordeaux Lac à une marche de la première page",
+  "lien": "https://www.fitmates.net/padel/bordeaux",
+  "statut": "prévu 21/12"
+ },
+ {
   "id": "seo-rando-paris",
   "qui": "Claude",
   "canal": "Google",
